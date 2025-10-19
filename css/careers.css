@@ -52,29 +52,50 @@ body {
     padding: 1rem 20px;
 }
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+/* Standardized Header Logo Link */
+.header-logo-link {
+    text-decoration: none; /* Removes underline */
+    display: flex; /* Aligns image and text horizontally */
+    align-items: center; /* Vertically centers image and text */
+    gap: 0.5rem; /* Space between logo image and text */
+    color: #FFFFFF;
+    transition: opacity 0.3s ease;
 }
 
-.logo-img {
-    height: 40px;
+/* Remove underline on hover for the logo link specifically */
+.header-logo-link:hover {
+    text-decoration: none;
+    opacity: 0.8; /* Slight fade on hover */
+}
+
+/* Style for the logo image within the header */
+.header-logo-image {
+    height: 40px; /* Adjust height as needed for header fit */
     width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
-.logo h1 {
-    font-size: 1.5rem;
-    font-weight: 700;
+.header-logo-image:hover {
+    transform: scale(1.1);
+}
+
+/* Style for the "GKS" part of the text */
+.header-logo-link .gks-text {
+    color: var(--primary-color, #003087); /* Using CSS variable for dark blue */
+    font-weight: 700; /* Bold for impact */
+    font-size: 1.5rem; /* Adjust font size as needed */
+    line-height: 1; /* Helps with vertical alignment */
     margin: 0;
 }
 
-.gks-text {
-    color: #dc2626;
-}
-
-.logistics-text {
-    color: #fff;
+/* Style for the "LOGISTICS" part of the text */
+.header-logo-link .logistics-text {
+    color: red; /* Explicitly set to red */
+    font-weight: 500; /* Slightly less bold than "GKS" */
+    font-size: 1.5rem; /* Match "GKS" font size */
+    line-height: 1; /* Helps with vertical alignment */
+    margin: 0;
 }
 
 .nav ul {
@@ -137,11 +158,26 @@ body {
 
 .menu-toggle {
     display: none;
-    background: none;
+    background: #003087;
     border: none;
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 48px;
+    min-width: 48px;
+    border-radius: 4px;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.menu-toggle:hover {
+    color: #FFFFFF;
+    background: #003087;
+    text-decoration: underline;
+    text-decoration-color: #CC3333;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
 }
 
 /* Hero Section */
@@ -1192,9 +1228,57 @@ body {
     .header .container {
         padding: 1rem 15px;
     }
+
+    .header-logo-link .gks-text,
+    .header-logo-link .logistics-text {
+        font-size: 1.2rem;
+    }
+
+    .header-logo-image {
+        height: 35px;
+    }
     
     .nav {
         display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
+        padding: 1rem 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+
+    .nav.active {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 0 1rem;
+    }
+
+    .nav ul li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    .nav ul li a {
+        display: block;
+        padding: 1rem 0;
+        font-size: 1.1rem;
+        color: white;
     }
     
     .menu-toggle {
@@ -1321,5 +1405,17 @@ body {
     
     .sidebar-widget {
         padding: 1.5rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .header-logo-link .gks-text,
+    .header-logo-link .logistics-text {
+        font-size: 1rem;
+    }
+
+    .header-logo-image {
+        height: 30px;
     }
 }

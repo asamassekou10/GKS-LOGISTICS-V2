@@ -495,14 +495,14 @@ h1, h2, h3, h4 {
 /* Floating CTA Button */
 .floating-cta {
   position: fixed;
-  bottom: 90px;
+  bottom: 120px;
   right: 20px;
   background: linear-gradient(45deg, #1E90FF, #003087);
   color: white;
   padding: 1rem 2rem;
   border-radius: var(--radius-full);
   box-shadow: 0 8px 25px rgba(30, 144, 255, 0.4);
-  z-index: 3000;
+  z-index: 6000;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
@@ -517,7 +517,6 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  animation: pulse 2s infinite;
 }
 
 .floating-cta:hover {
@@ -529,7 +528,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 480px) {
   .floating-cta {
-    bottom: 80px;
+    bottom: 100px;
     right: 15px;
     padding: 0.8rem 1.5rem;
     font-size: 0.9rem;
@@ -751,40 +750,50 @@ h1, h2, h3, h4 {
   justify-content: space-between;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 0;
+/* Standardized Header Logo Link */
+.header-logo-link {
+  text-decoration: none; /* Removes underline */
+  display: flex; /* Aligns image and text horizontally */
+  align-items: center; /* Vertically centers image and text */
+  gap: 0.5rem; /* Space between logo image and text */
+  color: #FFFFFF;
+  transition: opacity 0.3s ease;
 }
 
-.logo-img {
-  width: 60px;
-  height: 60px;
+/* Remove underline on hover for the logo link specifically */
+.header-logo-link:hover {
+  text-decoration: none;
+  opacity: 0.8; /* Slight fade on hover */
+}
+
+/* Style for the logo image within the header */
+.header-logo-image {
+  height: 40px; /* Adjust height as needed for header fit */
+  width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
 
-.logo-img:hover {
+.header-logo-image:hover {
   transform: scale(1.1);
 }
 
-.logo h1 {
-  font-size: 2rem;
-  color: #FFFFFF;
+/* Style for the "GKS" part of the text */
+.header-logo-link .gks-text {
+  color: var(--primary-color, #003087); /* Using CSS variable for dark blue */
+  font-weight: 700; /* Bold for impact */
+  font-size: 1.5rem; /* Adjust font size as needed */
+  line-height: 1; /* Helps with vertical alignment */
   margin: 0;
-  transition: color 0.3s ease;
 }
 
-.header.scrolled .logo h1 {
-  color: #003087;
-}
-
-.gks-text {
-  color: #003087;
-}
-
-.logistics-text {
-  color: #CC3333;
+/* Style for the "LOGISTICS" part of the text */
+.header-logo-link .logistics-text {
+  color: red; /* Explicitly set to red */
+  font-weight: 500; /* Slightly less bold than "GKS" */
+  font-size: 1.5rem; /* Match "GKS" font size */
+  line-height: 1; /* Helps with vertical alignment */
+  margin: 0;
 }
 
 .nav ul {
@@ -876,7 +885,7 @@ h1, h2, h3, h4 {
 
 .menu-toggle {
   display: none;
-  background: none;
+  background: #003087;
   border: none;
   font-size: 1.5rem;
   color: #FFFFFF;
@@ -886,15 +895,21 @@ h1, h2, h3, h4 {
   min-width: 48px;
   border-radius: var(--radius-sm);
   padding: 0.5rem;
+  position: relative;
 }
 
 .menu-toggle:hover {
-  color: #CC3333;
-  background: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+  background: #003087;
+  text-decoration: underline;
+  text-decoration-color: #CC3333;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 .header.scrolled .menu-toggle {
-  color: #003087;
+  color: #FFFFFF;
+  background: #003087;
 }
 
 /* Mobile Navigation */
@@ -945,7 +960,8 @@ h1, h2, h3, h4 {
   filter: brightness(50%);
 }
 
-.hero-content {
+/* Hero content styles - only for index page */
+.hero-slider .hero-content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -958,7 +974,7 @@ h1, h2, h3, h4 {
   width: 90%;
 }
 
-.hero-content h1 {
+.hero-slider .hero-content h1 {
   font-size: 3.5rem;
   margin-bottom: 1rem;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
@@ -966,7 +982,7 @@ h1, h2, h3, h4 {
   font-weight: 800;
 }
 
-.hero-content p {
+.hero-slider .hero-content p {
   font-size: 1.3rem;
   margin-bottom: 2rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
@@ -1357,13 +1373,14 @@ h1, h2, h3, h4 {
   color: #ffffff;
 }
 
-.timeline {
+/* Timeline styles - only for about page */
+.about-timeline .timeline {
   position: relative;
   max-width: 800px;
   margin: 0 auto;
 }
 
-.timeline::before {
+.about-timeline .timeline::before {
   content: '';
   position: absolute;
   top: 0;
@@ -1374,29 +1391,29 @@ h1, h2, h3, h4 {
   transform: translateX(-50%);
 }
 
-.timeline-item {
+.about-timeline .timeline-item {
   position: relative;
   margin-bottom: 4rem;
   width: 50%;
   opacity: 0;
 }
 
-.timeline-item.visible {
+.about-timeline .timeline-item.visible {
   animation: fadeInUp 0.6s ease forwards;
 }
 
-.timeline-item.left {
+.about-timeline .timeline-item.left {
   left: 0;
   text-align: right;
   padding-right: 3rem;
 }
 
-.timeline-item.right {
+.about-timeline .timeline-item.right {
   left: 50%;
   padding-left: 3rem;
 }
 
-.timeline-item::before {
+.about-timeline .timeline-item::before {
   content: '';
   position: absolute;
   top: 20px;
@@ -1407,15 +1424,15 @@ h1, h2, h3, h4 {
   z-index: 1;
 }
 
-.timeline-item.left::before {
+.about-timeline .timeline-item.left::before {
   right: -12px;
 }
 
-.timeline-item.right::before {
+.about-timeline .timeline-item.right::before {
   left: -12px;
 }
 
-.timeline-content {
+.about-timeline .timeline-content {
   background: rgba(255, 255, 255, 0.9);
   border-radius: 10px;
   padding: 1.5rem;
@@ -1423,18 +1440,18 @@ h1, h2, h3, h4 {
   position: relative;
 }
 
-.timeline-content h3 {
+.about-timeline .timeline-content h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
-.timeline-content p {
+.about-timeline .timeline-content p {
   font-size: 1rem;
   color: #333333;
   margin-bottom: 1rem;
 }
 
-.timeline-content img {
+.about-timeline .timeline-content img {
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -3102,6 +3119,18 @@ h1, h2, h3, h4 {
 }
 
 /* Mobile Optimization */
+/* Tablet screens */
+@media (max-width: 1024px) {
+  .header-logo-link .gks-text,
+  .header-logo-link .logistics-text {
+    font-size: 1.4rem;
+  }
+
+  .header-logo-image {
+    height: 35px;
+  }
+}
+
 @media (max-width: 768px) {
   /* Better touch targets */
   .btn {
@@ -3118,6 +3147,16 @@ h1, h2, h3, h4 {
   .container {
     width: 95%;
     padding: 0 1rem;
+  }
+
+  /* Responsive logo text sizing */
+  .header-logo-link .gks-text,
+  .header-logo-link .logistics-text {
+    font-size: 1.3rem;
+  }
+
+  .header-logo-image {
+    height: 30px;
   }
   
   /* Better text handling on mobile */
@@ -3231,17 +3270,17 @@ h1, h2, h3, h4 {
     height: 100vh;
   }
 
-  .hero-content {
+  .hero-slider .hero-content {
     top: 65%;
     padding: 1.5rem;
   }
 
-  .hero-content h1 {
+  .hero-slider .hero-content h1 {
     font-size: 1.75rem;
     line-height: 1.2;
   }
 
-  .hero-content p {
+  .hero-slider .hero-content p {
     font-size: 0.95rem;
   }
   
@@ -3301,28 +3340,28 @@ h1, h2, h3, h4 {
     font-size: 1rem;
   }
 
-  .timeline::before {
+  .about-timeline .timeline::before {
     left: 20px;
   }
 
-  .timeline-item {
+  .about-timeline .timeline-item {
     width: 100%;
     padding-left: 3rem;
     padding-right: 1rem;
     text-align: left;
   }
 
-  .timeline-item.left,
-  .timeline-item.right {
+  .about-timeline .timeline-item.left,
+  .about-timeline .timeline-item.right {
     left: 0;
   }
 
-  .timeline-item.left::before,
-  .timeline-item.right::before {
+  .about-timeline .timeline-item.left::before,
+  .about-timeline .timeline-item.right::before {
     left: 8px;
   }
 
-  .timeline-content img {
+  .about-timeline .timeline-content img {
     height: 150px;
   }
 
@@ -3489,7 +3528,7 @@ h1, h2, h3, h4 {
 
   /* Floating CTA */
   .floating-cta {
-    bottom: 80px;
+    bottom: 100px;
     right: 15px;
     padding: 0.75rem 1.5rem;
     font-size: 0.9rem;
@@ -3539,9 +3578,13 @@ h1, h2, h3, h4 {
     text-align: center;
   }
   
-  .logo-img {
-    width: 45px;
-    height: 45px;
+  .header-logo-image {
+    height: 25px;
+  }
+
+  .header-logo-link .gks-text,
+  .header-logo-link .logistics-text {
+    font-size: 1.1rem;
   }
   
   .footer-logo-img {
@@ -3562,7 +3605,16 @@ h1, h2, h3, h4 {
 
 /* Very small screens */
 @media (max-width: 480px) {
-  .hero-content h1 {
+  .logo h1 {
+    font-size: 1.2rem;
+  }
+
+  .logo-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hero-slider .hero-content h1 {
     font-size: 1.5rem;
   }
   
@@ -3717,12 +3769,21 @@ h1, h2, h3, h4 {
     width: 98%;
     padding: 0 0.5rem;
   }
+
+  .header-logo-link .gks-text,
+  .header-logo-link .logistics-text {
+    font-size: 0.9rem;
+  }
+
+  .header-logo-image {
+    height: 20px;
+  }
   
-  .hero-content h1 {
+  .hero-slider .hero-content h1 {
     font-size: 1.3rem;
   }
   
-  .hero-content p {
+  .hero-slider .hero-content p {
     font-size: 0.85rem;
   }
   

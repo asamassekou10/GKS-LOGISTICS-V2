@@ -12,7 +12,7 @@ const translations = {
     'nav-contact': 'Contact',
     
     // Article Content
-    'article-title': 'Navigating the Boom: Why West Africa is the Next Logistics Frontier & How GKS Logistics Leads the Way',
+    'article-title': 'GKS Logistics and the Logistics Revolution in West Africa',
     'article-author': 'By GKS Logistics Insights',
     'article-date': 'December 10, 2024',
     'article-category': 'West African Logistics, Market Growth',
@@ -104,7 +104,7 @@ const translations = {
     'nav-contact': 'Contact',
     
     // Article Content
-    'article-title': 'Naviguer dans l\'Explosion : Pourquoi l\'Afrique de l\'Ouest est la Nouvelle Frontière Logistique & Comment GKS Logistics Montre la Voie',
+    'article-title': 'GKS Logistics et la Révolution Logistique en Afrique de l\'Ouest',
     'article-author': 'Par GKS Logistics Insights',
     'article-date': '10 Décembre 2024',
     'article-category': 'Logistique Afrique de l\'Ouest, Croissance du Marché',

@@ -191,12 +191,16 @@ body {
 
 .hero-content {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 3rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1200px;
+  padding: 2rem;
   color: #FFFFFF;
   z-index: 2;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .article-title {
@@ -204,14 +208,21 @@ body {
   font-weight: 700;
   margin-bottom: 2rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  line-height: 1.2;
+  line-height: 1.3;
+  color: #FFFFFF;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  width: 100%;
+  max-width: 100%;
+  display: block;
 }
 
 .article-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: .5rem;
 }
 
 .meta-item {
@@ -1016,8 +1027,14 @@ body {
     color: #1A1A1A;
   }
 
+  .hero-content {
+    width: 95%;
+    padding: 1.5rem;
+  }
+
   .article-title {
     font-size: 2.2rem;
+    line-height: 1.4;
   }
 
   .article-meta {

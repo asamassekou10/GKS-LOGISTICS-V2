@@ -175,16 +175,31 @@ img {
 
 .menu-toggle {
   display: none;
-  background: none;
+  background: #003087;
   border: none;
   font-size: 1.5rem;
   color: #FFFFFF;
   cursor: pointer;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  min-height: 48px;
+  min-width: 48px;
+  border-radius: 4px;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.menu-toggle:hover {
+  color: #FFFFFF;
+  background: #003087;
+  text-decoration: underline;
+  text-decoration-color: #CC3333;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 .header.scrolled .menu-toggle {
-  color: #003087;
+  color: #FFFFFF;
+  background: #003087;
 }
 
 /* --- Main Page Content --- */
@@ -1165,6 +1180,15 @@ img {
   .container {
       width: 95%;
   }
+
+  .logo h1 {
+      font-size: 1.8rem;
+  }
+
+  .logo-img {
+      width: 35px;
+      height: 35px;
+  }
   
   .page-content {
       padding-top: 5rem;
@@ -1306,5 +1330,17 @@ img {
   .insight-meta {
       flex-direction: column;
       gap: 0.5rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .logo h1 {
+      font-size: 1.4rem;
+  }
+
+  .logo-img {
+      width: 30px;
+      height: 30px;
   }
 }

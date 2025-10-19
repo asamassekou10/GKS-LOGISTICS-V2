@@ -80,61 +80,6 @@
   </script>
 </head>
 <body>
-  <!-- Page Loader -->
-  <div class="page-loader" id="pageLoader">
-    <!-- Animated Background -->
-    <div class="loader-background">
-      <div class="gradient-orb orb-1"></div>
-      <div class="gradient-orb orb-2"></div>
-      <div class="gradient-orb orb-3"></div>
-    </div>
-
-    <!-- Main Loader -->
-    <div class="loader-container">
-      <div class="logo-container">
-        <!-- Route Lines -->
-        <div class="route-lines">
-          <div class="route-line"></div>
-          <div class="route-line"></div>
-          <div class="route-line"></div>
-          <div class="route-line"></div>
-          <div class="route-line"></div>
-          <div class="route-line"></div>
-          <div class="route-line"></div>
-          <div class="route-line"></div>
-        </div>
-
-        <!-- Progress Ring -->
-        <svg class="progress-ring">
-          <defs>
-            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style="stop-color:#1E90FF;stop-opacity:1" />
-              <stop offset="100%" style="stop-color:#CC3333;stop-opacity:1" />
-            </linearGradient>
-          </defs>
-          <circle class="progress-ring-circle" cx="110" cy="110" r="110"></circle>
-          <circle class="progress-ring-progress" cx="110" cy="110" r="110"></circle>
-        </svg>
-
-        <!-- Liquid Logo -->
-        <div class="liquid-logo">
-          <div class="shimmer"></div>
-          <div class="logo-content">
-            <img src="logo.png" alt="GKS Logo">
-            <div class="logo-text">
-              <span class="gks-text">GKS</span>
-              <span class="logistics-text">LOGISTICS</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Progress Info -->
-      <div class="progress-percentage" id="progressPercentage">0%</div>
-      <div class="loading-text">Loading Experience</div>
-      <div class="loading-message" id="loadingMessage">Preparing your journey...</div>
-    </div>
-  </div>
 
   <!-- Skip to Content Link -->
   <a href="#main-content" class="skip-to-content">Skip to main content</a>
@@ -144,10 +89,10 @@
     <div class="shade-overlay"></div>
     <header class="header">
       <div class="container">
-        <div class="logo">
-          <img src="logo.png" alt="GKS Logistics Logo" class="logo-img">
-          <h1><span class="gks-text">GKS</span> <span class="logistics-text">LOGISTICS</span></h1>
-        </div>
+        <a href="index.html" class="header-logo-link">
+          <img src="logo.png" alt="GKS Logistics Logo" class="header-logo-image">
+          <span class="gks-text">GKS</span> <span class="logistics-text">LOGISTICS</span>
+        </a>
         <button class="menu-toggle" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
         </button>

@@ -108,10 +108,26 @@ body {
 
 .menu-toggle {
     display: none;
-    background: none;
+    background: #003087;
     border: none;
     font-size: 1.5rem;
+    color: #FFFFFF;
     cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 48px;
+    min-width: 48px;
+    border-radius: 4px;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.menu-toggle:hover {
+    color: #FFFFFF;
+    background: #003087;
+    text-decoration: underline;
+    text-decoration-color: #CC3333;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
 }
 
 /* Hero Section */
@@ -614,6 +630,15 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .logo-img {
+        height: 35px;
+        width: 35px;
+    }
+
     .menu-toggle {
         display: block;
     }
@@ -696,5 +721,17 @@ body {
     .value-card p {
         word-wrap: break-word;
         overflow-wrap: break-word;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1rem;
+    }
+
+    .logo-img {
+        height: 30px;
+        width: 30px;
     }
 }

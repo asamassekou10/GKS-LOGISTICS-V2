@@ -20,7 +20,7 @@ body {
 
 /* Header Styles */
 .header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -35,22 +35,28 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, #dc2626, #ef4444);
+    height: 3px;
+    background: linear-gradient(90deg, #1E90FF, #003087);
+    width: 0%;
+    transition: width 0.3s ease;
+    z-index: 1001;
 }
 
 .header.scrolled {
-    background: rgba(0, 0, 0, 0.95);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow-lg);
 }
 
-.header .container {
+.header.scrolled::after {
+    width: 100%;
+  }
+  
+  .header .container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem 20px;
-}
+    justify-content: space-between;
+  }
 
 .logo {
     display: flex;
@@ -137,11 +143,26 @@ body {
 
 .menu-toggle {
     display: none;
-    background: none;
+    background: #003087;
     border: none;
     color: #fff;
     font-size: 1.5rem;
     cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 48px;
+    min-width: 48px;
+    border-radius: 4px;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.menu-toggle:hover {
+    color: #FFFFFF;
+    background: #003087;
+    text-decoration: underline;
+    text-decoration-color: #CC3333;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
 }
 
 /* Hero Section */
@@ -167,7 +188,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(0.4) blur(1px);
+    filter: brightness(0.4) blur(.5px);
 }
 
 .hero-overlay {
@@ -186,12 +207,12 @@ body {
     width: 100%;
     text-align: center;
     color: #fff;
-    max-width: 800px;
+    max-width: 100%;
     padding: 0 20px;
 }
 
 .article-title {
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -266,7 +287,7 @@ body {
 
 .btn-secondary:hover {
     background: #fff;
-    color: #dc2626;
+    color: #ffffff;
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
 }
@@ -1001,6 +1022,15 @@ body {
     .header .container {
         padding: 1rem 15px;
     }
+
+    .logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .logo-img {
+        height: 35px;
+        width: 35px;
+    }
     
     .nav {
         display: none;
@@ -1215,5 +1245,17 @@ body {
     .blog-card {
         break-inside: avoid;
         margin-bottom: 1rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 1rem;
+    }
+
+    .logo-img {
+        height: 30px;
+        width: 30px;
     }
 }
