@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="tu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>GKS Logistics - Uluslararası Lojistik Çözümleri | Hava, Deniz ve Kara Taşımacılığı</title>
+  <meta name="description" content="GKS Logistics, Batı Afrika, Avrupa, Kuzey Amerika'da kapsamlı lojistik çözümleri sunar. 2019'dan beri hava kargo, denizcilik, kara taşımacılığı ve güvenli depolama.">
+  <meta name="keywords" content="lojistik Mali, hava kargo Afrika, deniz taşımacılığı, GKS Logistics, uluslararası lojistik, depolama Bamako, Batı Afrika taşımacılığı, uluslararası kargo, Mali gümrük">
+  <meta name="author" content="GKS Logistics">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.gkslogistics.com/tu/template.html">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{CANONICAL_URL}}">
+  <meta property="og:title" content="GKS Logistics - Uluslararası Lojistik Çözümleri">
+  <meta property="og:description" content="Batı Afrika'da önde gelen lojistik çözümleri. 2019'dan beri hava kargo, denizcilik, kara taşımacılığı ve depolama hizmetleri.">
+  <meta property="og:image" content="https://www.gkslogistics.com/assets/GKS%20ORIGINAL%20LOGO.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="{{CANONICAL_URL}}">
+  <meta property="twitter:title" content="GKS Logistics - Uluslararası Lojistik Çözümleri">
+  <meta property="twitter:description" content="Batı Afrika'da önde gelen lojistik çözümleri. Hava kargo, denizcilik, kara taşımacılığı ve depolama hizmetleri.">
+  <meta property="twitter:image" content="https://www.gkslogistics.com/assets/GKS%20ORIGINAL%20LOGO.png">
+  
+  <!-- Hreflang Tags -->
+  {{HREFLANG_TAGS}}
+  
+  <link rel="icon" href="/favicon.png" type="image/x-icon">
+  <link rel="preload" href="/css/styles.css" as="style">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/enhanced-chatbot.css">
+  <link rel="stylesheet" href="/css/process-animation.css">
+  <link rel="stylesheet" href="/css/language-switcher.css">
+  <!-- Swiper CSS pour l'animation du processus -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+  <!-- Structured Data for Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "GKS Logistics",
+    "url": "https://www.gkslogistics.com",
+    "logo": "https://www.gkslogistics.com/assets/GKS%20ORIGINAL%20LOGO.png",
+    "description": "{{META_DESCRIPTION}}",
+    "foundingDate": "2019",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Zone aéroportuaire- fret",
+      "addressLocality": "Bamako",
+      "addressCountry": "ML"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+223-90-92-92-73",
+      "contactType": "customer service",
+      "email": "sales@gkslogistics.com",
+      "availableLanguage": ["fr", "en", "tu", "md"]
+    },
+    "sameAs": [
+      "https://www.facebook.com/share/1FHxSfs3pN/",
+      "https://x.com/gks_logistics",
+      "https://www.linkedin.com/company/gks-logistics/"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "500"
+    }
+  }
+  </script>
+
+  <!-- Google Analytics - Replace G-XXXXXXXXXX with your actual ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <link rel="alternate" hreflang="x-default" href="https://www.gkslogistics.com/template.html" />
+  <link rel="alternate" hreflang="fr" href="https://www.gkslogistics.com/template.html" />
+  <link rel="alternate" hreflang="en" href="https://www.gkslogistics.com/en/template.html" />
+  <link rel="alternate" hreflang="tu" href="https://www.gkslogistics.com/tu/template.html" />
+  <link rel="alternate" hreflang="md" href="https://www.gkslogistics.com/md/template.html" />
+</head>
+<body>
+
+
+  <!-- Skip to Content Link -->
+  <a href="#main-content" class="skip-to-content">{{ACCESSIBILITY_SKIP_CONTENT}}</a>
+
+  <!-- Hero Section with Integrated Header -->
+  <section class="hero">
+    <div class="shade-overlay"></div>
+    <header class="header">
+      <div class="container">
+        <a href="{{HOME_URL}}" class="header-logo-link">
+          <img src="/logo.png" alt="GKS Logistics Logo" class="header-logo-image">
+          <span class="gks-text">{{NAV_LOGO_GKS}}</span> <span class="logistics-text">{{NAV_LOGO_LOGISTICS}}</span>
+        </a>
+        <button class="menu-toggle" aria-label="{{ACCESSIBILITY_TOGGLE_NAV}}">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a href="#services">{{NAV_SERVICES}}</a></li>
+            <li><a href="#about">{{NAV_ABOUT}}</a></li>
+            <li><a href="{{BLOG_URL}}">{{NAV_BLOG}}</a></li>
+            <li><a href="{{CAREERS_URL}}">{{NAV_CAREERS}}</a></li>
+            <li><a href="{{NEWS_URL}}">{{NAV_NEWS}}</a></li>
+            <li><a href="#contact">{{NAV_CONTACT}}</a></li>
+          </ul>
+        </nav>
+        <div class="language-toggle">
+          <div class="language-dropdown">
+            <button id="languageToggle" class="language-dropdown-toggle">
+              <i class="fas fa-globe"></i>
+              <span class="lang-text">{{CURRENT_LANG}}</span>
+              <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="language-dropdown-menu">
+              <a href="/template.html" class="language-option {{FR_ACTIVE}}">Français</a>
+              <a href="/en/template.html" class="language-option {{EN_ACTIVE}}">English</a>
+              <a href="/tu/template.html" class="language-option {{TU_ACTIVE}}">Türkçe</a>
+              <a href="/md/template.html" class="language-option {{MD_ACTIVE}}">中文</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="hero-slider" id="heroSlider">
+      <div class="hero-slide active">
+        <img src="/assets/banner.png" alt="{{HERO_TITLE_1}} - GKS Logistics" loading="eager">
+        <div class="hero-content">
+          <h1>{{HERO_TITLE_1}}</h1>
+          <p>{{HERO_SUBTITLE_1}}</p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn">{{HERO_CTA_1}}</a>
+            <a href="#about" class="btn btn-secondary">{{HERO_CTA_2}}</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide">
+        <img src="/assets/PLANE2.png" alt="{{HERO_TITLE_2}} - Fret aérien" loading="lazy">
+        <div class="hero-content">
+          <h1>{{HERO_TITLE_2}}</h1>
+          <p>{{HERO_SUBTITLE_2}}</p>
+          <div class="hero-buttons">
+            <a href="#services" class="btn">{{HERO_CTA_3}}</a>
+            <a href="#presence" class="btn btn-secondary">{{HERO_CTA_4}}</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-slide">
+        <img src="/assets/SHIP.png" alt="{{HERO_TITLE_3}} - Transport maritime" loading="lazy">
+        <div class="hero-content">
+          <h1>{{HERO_TITLE_3}}</h1>
+          <p>{{HERO_SUBTITLE_3}}</p>
+          <div class="hero-buttons">
+            <a href="#testimonials" class="btn">{{HERO_CTA_5}}</a>
+            <a href="#contact" class="btn btn-secondary">{{HERO_CTA_6}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Hero Slide Indicators -->
+    <div class="hero-indicators">
+      <span class="indicator active" data-slide="0"></span>
+      <span class="indicator" data-slide="1"></span>
+      <span class="indicator" data-slide="2"></span>
+    </div>
+    <!-- Scroll Down Indicator -->
+    <div class="scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main id="main-content">
+  <!-- Services Section -->
+  <section id="services" class="services reveal">
+    <div class="shade-overlay"></div>
+    <div class="services-hero">
+      <div class="services-hero-content">
+        <h2><span>{{SERVICES_TITLE}}</span> <span id="typed-services"></span></h2>
+        <p>{{SERVICES_SUBTITLE}}</p>
+        <a href="#services-content" class="btn">{{SERVICES_CTA}}</a>
+      </div>
+    </div>
+    <div class="container services-content" id="services-content">
+      <div class="service-cards">
+        <div class="card" data-service="air">
+          <i class="fas fa-plane"></i>
+          <h3>{{SERVICE_AIR_TITLE}}</h3>
+          <p>{{SERVICE_AIR_DESC}}</p>
+          <div class="progress-bar">
+            <span>{{SERVICE_AIR_PROGRESS}}</span>
+            <div class="progress" style="width: 98%;"></div>
+          </div>
+          <a href="#" class="btn quote-btn" style="margin-top: 1rem; font-size: 0.9rem; padding: 0.5rem 1.5rem;">{{REQUEST_QUOTE}}</a>
+          <div class="service-card-stats">
+            <div class="stat-item">
+              <i class="fas fa-clock"></i>
+              <span>{{STATS_24_7}}</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-globe"></i>
+              <span>{{STATS_15_COUNTRIES}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-service="sea">
+          <i class="fas fa-ship"></i>
+          <h3>{{SERVICE_SEA_TITLE}}</h3>
+          <p>{{SERVICE_SEA_DESC}}</p>
+          <div class="progress-bar">
+            <span>{{SERVICE_SEA_PROGRESS}}</span>
+            <div class="progress" style="width: 95%;"></div>
+          </div>
+          <a href="#" class="btn quote-btn" style="margin-top: 1rem; font-size: 0.9rem; padding: 0.5rem 1.5rem;">{{REQUEST_QUOTE}}</a>
+          <div class="service-card-stats">
+            <div class="stat-item">
+              <i class="fas fa-clock"></i>
+              <span>{{STATS_24_7}}</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-globe"></i>
+              <span>{{STATS_15_COUNTRIES}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-service="land">
+          <i class="fas fa-truck"></i>
+          <h3>{{SERVICE_LAND_TITLE}}</h3>
+          <p>{{SERVICE_LAND_DESC}}</p>
+          <div class="progress-bar">
+            <span>{{SERVICE_LAND_PROGRESS}}</span>
+            <div class="progress" style="width: 97%;"></div>
+          </div>
+          <a href="#" class="btn quote-btn" style="margin-top: 1rem; font-size: 0.9rem; padding: 0.5rem 1.5rem;">{{REQUEST_QUOTE}}</a>
+          <div class="service-card-stats">
+            <div class="stat-item">
+              <i class="fas fa-clock"></i>
+              <span>{{STATS_24_7}}</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-globe"></i>
+              <span>{{STATS_15_COUNTRIES}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" data-service="storage">
+          <i class="fas fa-warehouse"></i>
+          <h3>{{SERVICE_STORAGE_TITLE}}</h3>
+          <p>{{SERVICE_STORAGE_DESC}}</p>
+          <div class="progress-bar">
+            <span>{{SERVICE_STORAGE_PROGRESS}}</span>
+            <div class="progress" style="width: 99%;"></div>
+          </div>
+          <a href="#" class="btn quote-btn" style="margin-top: 1rem; font-size: 0.9rem; padding: 0.5rem 1.5rem;">{{REQUEST_QUOTE}}</a>
+          <div class="service-card-stats">
+            <div class="stat-item">
+              <i class="fas fa-clock"></i>
+              <span>{{STATS_24_7}}</span>
+            </div>
+            <div class="stat-item">
+              <i class="fas fa-globe"></i>
+              <span>{{STATS_15_COUNTRIES}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#contact" class="btn btn-explore">{{SERVICES_EXPLORE}}</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about reveal">
+    <div class="shade-overlay"></div>
+    <div class="container philosophy-section">
+        <div class="section-header">
+            <h2>{{ABOUT_PHILOSOPHY_TITLE}}</h2>
+            <p>{{ABOUT_PHILOSOPHY_SUBTITLE}}</p>
+        </div>
+        <div class="philosophy-cards-container">
+            <div class="philosophy-card">
+                <div class="card-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>{{ABOUT_MISSION_TITLE}}</h3>
+                <p>{{ABOUT_MISSION_DESC}}</p>
+            </div>
+            
+            <div class="philosophy-card">
+                <div class="card-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <h3>{{ABOUT_VISION_TITLE}}</h3>
+                <p>{{ABOUT_VISION_DESC}}</p>
+            </div>
+            
+            <div class="philosophy-card">
+                <div class="card-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>{{ABOUT_COMMITMENT_TITLE}}</h3>
+                <p>{{ABOUT_COMMITMENT_DESC}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="container about-timeline">
+      <h2>{{ABOUT_HISTORY_TITLE}}</h2>
+      <div class="timeline">
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h3>{{ABOUT_TIMELINE_2019_TITLE}}</h3>
+            <p>{{ABOUT_TIMELINE_2019_DESC}}</p>
+            <img src="/assets/GKS ORIGINAL LOGO.png" alt="Fondation GKS Logistics 2019" loading="lazy">
+          </div>
+        </div>
+        <div class="timeline-item right">
+          <div class="timeline-content">
+            <h3>{{ABOUT_TIMELINE_2020_TITLE}}</h3>
+            <p>{{ABOUT_TIMELINE_2020_DESC}}</p>
+            <img src="/assets/west africa.png" alt="Expansion Afrique de l'Ouest 2020" loading="lazy">
+          </div>
+        </div>
+        <div class="timeline-item left">
+          <div class="timeline-content">
+            <h3>{{ABOUT_TIMELINE_2025_TITLE}}</h3>
+            <p>{{ABOUT_TIMELINE_2025_DESC}}</p>
+            <img src="/assets/world presence.png" alt="Présence mondiale GKS 2025" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="about-stats" aria-label="Nos Réalisations">
+      <div class="shade-overlay"></div>
+      <div class="container">
+        <div class="stat">
+          <div class="stat-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3 class="stat-number">15</h3>
+          <p>{{ABOUT_STATS_COUNTRIES}}</p>
+        </div>
+        <div class="stat">
+          <div class="stat-icon">
+            <i class="fas fa-shipping-fast"></i>
+          </div>
+          <h3 class="stat-number">50,000</h3>
+          <p>{{ABOUT_STATS_SHIPMENTS}}</p>
+        </div>
+        <div class="stat">
+          <div class="stat-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 class="stat-number">1,000</h3>
+          <p>{{ABOUT_STATS_CLIENTS}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact reveal">
+    <div class="shade-overlay"></div>
+    <div class="container contact-container">
+      <h2>{{CONTACT_TITLE}}</h2>
+      <p>{{CONTACT_SUBTITLE}}</p>
+      <!-- Quick Contact Options -->
+      <div class="quick-contact-options">
+        <a href="tel:+22390929273" class="quick-contact-btn">
+          <i class="fas fa-phone"></i>
+          <span>{{CONTACT_CALL}}</span>
+        </a>
+        <a href="mailto:sales@gkslogistics.com" class="quick-contact-btn">
+          <i class="fas fa-envelope"></i>
+          <span>{{CONTACT_EMAIL}}</span>
+        </a>
+        <a href="https://wa.me/22390929273" class="quick-contact-btn">
+          <i class="fab fa-whatsapp"></i>
+          <span>{{CONTACT_WHATSAPP}}</span>
+        </a>
+      </div>
+
+      <div class="contact-content">
+        <div class="contact-image">
+          <img src="/assets/gks employee.png" alt="Équipe GKS Logistics" loading="lazy">
+          <div class="image-overlay">
+            <h3>{{CONTACT_TEAM_TITLE}}</h3>
+            <p>{{CONTACT_TEAM_SUBTITLE}}</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" id="name" name="name" required>
+                <label for="name">{{CONTACT_FORM_NAME}}</label>
+                <span class="focus-border"></span>
+              </div>
+              <div class="form-group">
+                <select id="service" name="service" required>
+                  <option value="" disabled selected>{{CONTACT_FORM_SERVICE_PLACEHOLDER}}</option>
+                  <option value="individual">{{CONTACT_FORM_SERVICE_INDIVIDUAL}}</option>
+                  <option value="small-business">{{CONTACT_FORM_SERVICE_SMALL}}</option>
+                  <option value="enterprise">{{CONTACT_FORM_SERVICE_ENTERPRISE}}</option>
+                  <option value="other">{{CONTACT_FORM_SERVICE_OTHER}}</option>
+                </select>
+                <label for="service">{{CONTACT_FORM_SERVICE}}</label>
+                <span class="focus-border"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" required>
+              <label for="email">{{CONTACT_FORM_EMAIL}}</label>
+              <span class="focus-border"></span>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" rows="5" required></textarea>
+              <label for="message">{{CONTACT_FORM_MESSAGE}}</label>
+              <span class="focus-border"></span>
+            </div>
+            <button type="submit" class="btn">{{CONTACT_FORM_SUBMIT}}</button>
+          </form>
+          <div id="contactConfirmation" class="confirmation-block" style="display: none;" aria-live="polite">
+            <p>{{CONTACT_SUCCESS_MESSAGE}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-info">
+        <a href="mailto:sales@gkslogistics.com" class="info-item">
+          <i class="fas fa-envelope"></i>
+          <span>{{CONTACT_EMAIL_ADDRESS}}</span>
+        </a>
+        <a href="tel:+22390929273" class="info-item">
+          <i class="fas fa-phone"></i>
+          <span>{{CONTACT_PHONE_NUMBER}}</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Mobile Bottom Navigation -->
+  <nav class="mobile-bottom-nav">
+    <a href="#services" class="nav-item">
+      <i class="fas fa-concierge-bell"></i>
+      <span>{{MOBILE_NAV_SERVICES}}</span>
+    </a>
+    <a href="#about" class="nav-item">
+      <i class="fas fa-info-circle"></i>
+      <span>{{MOBILE_NAV_ABOUT}}</span>
+    </a>
+    <a href="#contact" class="nav-item">
+      <i class="fas fa-envelope"></i>
+      <span>{{MOBILE_NAV_CONTACT}}</span>
+    </a>
+    <button class="nav-item menu-toggle-mobile">
+      <i class="fas fa-bars"></i>
+      <span>{{MOBILE_NAV_MENU}}</span>
+    </button>
+  </nav>
+
+  <!-- Floating CTA Button -->
+  <a href="#" class="floating-cta">
+    <i class="fas fa-file-invoice" style="margin-right: 0.5rem;"></i>
+    <span>{{FLOATING_CTA}}</span>
+  </a>
+
+  <!-- Chatbot -->
+  <div id="chatbotContainer" class="chatbot-container">
+    <button id="chatbotToggle" class="chatbot-toggle" aria-label="{{ACCESSIBILITY_TOGGLE_CHATBOT}}">
+      <i class="fas fa-comment"></i>
+    </button>
+    <div id="chatbot" class="chatbot" style="display: none;">
+      <div class="chatbot-header">
+        <h3>{{CHATBOT_TITLE}}</h3>
+      </div>
+      <div class="chatbot-messages" id="chatbotMessages">
+        <div class="message bot-message">
+          <p>{{CHATBOT_WELCOME}}</p>
+        </div>
+      </div>
+      <div class="chatbot-input">
+        <input type="text" id="chatbotInput" aria-label="{{ACCESSIBILITY_CHATBOT_INPUT}}">
+        <button class="chatbot-send" id="chatbotSend">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+ <!-- Footer -->
+ <footer class="footer">
+  <div class="shade-overlay"></div>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <div class="footer-logo-header">
+          <img src="/logo.png" alt="GKS Logistics Logo" class="footer-logo-img">
+          <h3><span class="footer-gks-text">{{NAV_LOGO_GKS}}</span> <span class="footer-logistics-text">{{NAV_LOGO_LOGISTICS}}</span></h3>
+        </div>
+        <p>{{FOOTER_ABOUT}}</p>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/share/1FHxSfs3pN/?mibextid=wwXIfr" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/gks_logistics" aria-label="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/company/gks-logistics/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>{{FOOTER_LINKS_TITLE}}</h4>
+        <ul>
+          <li><a href="#services">{{NAV_SERVICES}}</a></li>
+          <li><a href="#about">{{NAV_ABOUT}}</a></li>
+          <li><a href="{{BLOG_URL}}">{{NAV_BLOG}}</a></li>
+          <li><a href="{{CAREERS_URL}}">{{NAV_CAREERS}}</a></li>
+          <li><a href="#contact">{{NAV_CONTACT}}</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>{{FOOTER_CONTACT_TITLE}}</h4>
+        <p>Email: <a href="mailto:sales@gkslogistics.com">{{CONTACT_EMAIL_ADDRESS}}</a></p>
+        <p>Téléphone: <a href="tel:+22390929273">{{CONTACT_PHONE_NUMBER}}</a></p>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <p class="footer-copy">{{FOOTER_COPYRIGHT}}</p>
+  </div>
+  <button class="back-to-top" aria-label="{{ACCESSIBILITY_BACK_TO_TOP}}">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+</footer>
+
+  <!-- JS Scripts -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" as="script">
+  <link rel="preload" href="/js/language-manager.js" as="script">
+  <link rel="preload" href="/js/script.js" as="script">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
+  <script src="/js/language-manager.js"></script>
+  <script src="/js/language-switcher.js" defer></script>
+  <script src="/js/script.js" defer></script>
+  <script src="/js/quote-modal.js" defer></script>
+  <script src="/js/ultimate-chatbot.js" defer></script>
+  <script src="/js/chatbot-enhanced-ui.js" defer></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('🔍 Initializing Process Section...');
+    
+    // Wait a bit for all resources to load
+    setTimeout(() => {
+        if (typeof Swiper === 'undefined') {
+            console.error('❌ SWIPER NOT LOADED!');
+            return;
+        }
+        
+        console.log('✅ Swiper loaded successfully');
+        
+        const processSlider = document.querySelector('.gks-process-slider');
+        if (!processSlider) {
+            console.error('❌ Process slider element not found!');
+            return;
+        }
+        
+        console.log('✅ Process slider element found');
+        
+        // Check slides structure
+        const slides = processSlider.querySelectorAll('.swiper-slide');
+        console.log('Found slides:', slides.length);
+        slides.forEach((slide, index) => {
+            console.log(`Slide ${index}:`, slide.querySelector('h3')?.textContent || 'No title');
+        });
+        
+        const processSwiper = new Swiper('.gks-process-slider', {
+            effect: 'fade',
+            fadeEffect: { 
+                crossFade: true 
+            },
+            speed: 800,
+            loop: true,
+            initialSlide: 0,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+                stopOnLastSlide: false,
+            },
+            on: {
+                init: function() {
+                    console.log('✅ Process Swiper initialized successfully!');
+                    console.log('Total slides:', this.slides.length);
+                    console.log('Active slide index:', this.activeIndex);
+                    console.log('Autoplay running:', this.autoplay.running);
+                },
+                slideChange: function() {
+                    console.log('Slide changed to:', this.activeIndex);
+                    console.log('Active slide element:', this.slides[this.activeIndex]);
+                },
+                autoplayStart: function() {
+                    console.log('✅ Autoplay started');
+                },
+                autoplayStop: function() {
+                    console.log('❌ Autoplay stopped');
+                }
+            }
+        });
+        
+        // Verify Swiper is working
+        setTimeout(() => {
+            const activeSlide = processSlider.querySelector('.swiper-slide-active');
+            if (activeSlide) {
+                console.log('✅ Active slide found, Swiper is working');
+            } else {
+                console.log('❌ No active slide found, Swiper may have issues');
+            }
+            
+            // Test manual slide change
+            setTimeout(() => {
+                if (processSwiper && processSwiper.slideNext) {
+                    console.log('Testing manual slide change...');
+                    processSwiper.slideNext();
+                    
+                    // Test if autoplay is working
+                    setTimeout(() => {
+                        console.log('Current slide after manual change:', processSwiper.activeIndex);
+                        if (processSwiper.autoplay && processSwiper.autoplay.running) {
+                            console.log('✅ Autoplay is running');
+                        } else {
+                            console.log('❌ Autoplay is not running');
+                        }
+                    }, 1000);
+                }
+            }, 2000);
+        }, 1000);
+        
+    }, 500);
+});
+</script>
+</body>
+</html>

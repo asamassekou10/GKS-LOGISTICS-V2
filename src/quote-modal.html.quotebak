@@ -1,0 +1,186 @@
+<!-- Quote Request Modal CSS and JS -->
+<link rel="stylesheet" href="/css/quote-modal.css">
+<script src="/js/quote-modal.js"></script>
+
+<!-- Quote Request Modal -->
+<div id="quoteModal" class="quote-modal-overlay">
+    <div class="quote-modal-content">
+        <div class="quote-modal-header">
+            <h2 data-translate="quote-form-title">Demander un Devis</h2>
+            <button class="quote-modal-close" aria-label="Close modal">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="quote-modal-body">
+            <p class="quote-form-subtitle" data-translate="quote-form-subtitle">
+                Veuillez remplir le formulaire ci-dessous pour obtenir un devis personnalisé pour vos besoins logistiques.
+            </p>
+            
+            <form name="quote-request" data-netlify="true" id="quoteRequestForm">
+                <!-- Contact Information Section -->
+                <fieldset class="form-section">
+                    <legend>
+                        <h3 data-translate="contact-info-headline">Vos Coordonnées</h3>
+                    </legend>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName" data-translate="full-name-label">Nom Complet *</label>
+                            <input type="text" id="fullName" name="fullName" required 
+                                   data-translate-placeholder="full-name-placeholder" 
+                                   placeholder="Nom Complet *">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="companyName" data-translate="company-name-label">Nom de l'Entreprise *</label>
+                            <input type="text" id="companyName" name="companyName" required 
+                                   data-translate-placeholder="company-name-placeholder" 
+                                   placeholder="Nom de l'Entreprise *">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email" data-translate="email-label">Email Professionnel *</label>
+                            <input type="email" id="email" name="email" required 
+                                   data-translate-placeholder="email-placeholder" 
+                                   placeholder="Email Professionnel *">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phoneNumber" data-translate="phone-label">Téléphone *</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" required 
+                                   data-translate-placeholder="phone-placeholder" 
+                                   placeholder="Téléphone *">
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <!-- Shipment Details Section -->
+                <fieldset class="form-section">
+                    <legend>
+                        <h3 data-translate="shipment-details-headline">Détails de l'Expédition</h3>
+                    </legend>
+                    
+                    <div class="form-group">
+                        <label for="freightType" data-translate="freight-type-label">Type de Fret *</label>
+                        <select id="freightType" name="freightType" required>
+                            <option value="" data-translate="select-freight-type">Sélectionner le type de fret</option>
+                            <option value="air" data-translate="freight-air">Fret Aérien</option>
+                            <option value="fcl" data-translate="freight-fcl">Fret Maritime (Conteneur Complet - FCL)</option>
+                            <option value="lcl" data-translate="freight-lcl">Fret Maritime (Conteneur Partiel - LCL)</option>
+                            <option value="road" data-translate="freight-road">Fret Routier</option>
+                            <option value="project" data-translate="freight-project">Logistique de Projet / Fret Hors Gabarit</option>
+                            <option value="temp-controlled" data-translate="freight-temp-controlled">Logistique à Température Contrôlée</option>
+                            <option value="other" data-translate="freight-other">Autres</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cargoNature" data-translate="cargo-nature-label">Nature de la Marchandise</label>
+                        <input type="text" id="cargoNature" name="cargoNature" 
+                               data-translate-placeholder="cargo-nature-placeholder" 
+                               placeholder="Nature de la Marchandise (ex: Électronique, Textile, Produits périssables)">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="origin" data-translate="origin-label">Pays/Ville d'Origine *</label>
+                            <input type="text" id="origin" name="origin" required 
+                                   data-translate-placeholder="origin-placeholder" 
+                                   placeholder="Pays/Ville d'Origine *">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="destination" data-translate="destination-label">Pays/Ville de Destination *</label>
+                            <input type="text" id="destination" name="destination" required 
+                                   data-translate-placeholder="destination-placeholder" 
+                                   placeholder="Pays/Ville de Destination *">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="preferredDate" data-translate="preferred-date-label">Date d'Expédition Souhaitée</label>
+                        <input type="date" id="preferredDate" name="preferredDate">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="dimensionsWeight" data-translate="dimensions-weight-label">Dimensions et Poids *</label>
+                            <input type="text" id="dimensionsWeight" name="dimensionsWeight" required 
+                                   data-translate-placeholder="dimensions-weight-placeholder" 
+                                   placeholder="Dimensions Approx. (cm) et Poids (kg) *">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="quantityPackages" data-translate="quantity-packages-label">Quantité / Nombre de Colis *</label>
+                            <input type="text" id="quantityPackages" name="quantityPackages" required 
+                                   data-translate-placeholder="quantity-packages-placeholder" 
+                                   placeholder="Quantité / Nombre de Colis *">
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <!-- Additional Services Section -->
+                <fieldset class="form-section">
+                    <legend>
+                        <h3 data-translate="additional-services-headline">Services Additionnels (Optionnel)</h3>
+                    </legend>
+                    
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="serviceCustoms" name="additionalServices[]" value="customs">
+                            <label for="serviceCustoms" data-translate="service-customs">Dédouanement</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="serviceInsurance" name="additionalServices[]" value="insurance">
+                            <label for="serviceInsurance" data-translate="service-insurance">Assurance Fret</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="serviceWarehousing" name="additionalServices[]" value="warehousing">
+                            <label for="serviceWarehousing" data-translate="service-warehousing">Entreposage</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="serviceLastMile" name="additionalServices[]" value="lastMile">
+                            <label for="serviceLastMile" data-translate="service-last-mile">Distribution / Dernier Kilomètre</label>
+                        </div>
+                        
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="servicePackaging" name="additionalServices[]" value="packaging">
+                            <label for="servicePackaging" data-translate="service-packaging">Emballage Spécialisé</label>
+                        </div>
+                    </div>
+                </fieldset>
+                
+                <!-- Additional Message Section -->
+                <fieldset class="form-section">
+                    <legend>
+                        <h3 data-translate="additional-message-headline">Votre Message ou Besoins Spécifiques</h3>
+                    </legend>
+                    
+                    <div class="form-group">
+                        <label for="message" data-translate="message-label">Message Supplémentaire</label>
+                        <textarea id="message" name="message" rows="4" 
+                                  data-translate-placeholder="message-placeholder" 
+                                  placeholder="Décrivez vos besoins ou toute autre information pertinente."></textarea>
+                    </div>
+                </fieldset>
+                
+                <!-- Required Fields Indicator -->
+                <p class="required-fields-indicator" data-translate="required-fields-indicator">
+                    * Champs obligatoires
+                </p>
+                
+                <!-- Form Buttons -->
+                <div class="form-buttons">
+                    <button type="button" class="btn-cancel" data-translate="cancel-button">Annuler</button>
+                    <button type="submit" class="btn-submit" data-translate="submit-request">Envoyer ma Demande</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
