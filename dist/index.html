@@ -12,6 +12,13 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.gkslogistics.com/index.html">
   
+  <!-- Hreflang Tags for Multi-Language Support -->
+  <link rel="alternate" hreflang="fr" href="https://www.gkslogistics.com/index.html"/>
+  <link rel="alternate" hreflang="en" href="https://www.gkslogistics.com/en/index.html"/>
+  <link rel="alternate" hreflang="tr" href="https://www.gkslogistics.com/tu/index.html"/>
+  <link rel="alternate" hreflang="zh" href="https://www.gkslogistics.com/md/index.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://www.gkslogistics.com/index.html"/>
+  
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.gkslogistics.com/">
@@ -145,7 +152,8 @@
     </header>
     <div class="hero-slider" id="heroSlider">
       <div class="hero-slide active">
-        <img src="/assets/banner.png" alt="Solutions logistiques fiables - GKS Logistics" loading="eager">
+        <img src="/assets/banner.png" alt="Solutions logistiques fiables - GKS Logistics" loading="eager" class="hero-img-desktop">
+        <img src="/assets/truck-mobile.png" alt="Solutions logistiques fiables - GKS Logistics" loading="eager" class="hero-img-mobile">
         <div class="hero-content">
           <h1 data-translate="hero-title-1">Solutions Logistiques Fiables</h1>
           <p data-translate="hero-subtitle-1">Votre partenaire pour un transport rapide et sécurisé</p>
@@ -156,7 +164,8 @@
         </div>
       </div>
       <div class="hero-slide">
-        <img src="/assets/PLANE2.png" alt="Présence internationale - Fret aérien" loading="lazy">
+        <img src="/assets/PLANE2.png" alt="Présence internationale - Fret aérien" loading="lazy" class="hero-img-desktop">
+        <img src="/assets/plane-mobile.png" alt="Présence internationale - Fret aérien" loading="lazy" class="hero-img-mobile">
         <div class="hero-content">
           <h1 data-translate="hero-title-2">Présence Internationale</h1>
           <p data-translate="hero-subtitle-2">Des solutions logistiques adaptées partout dans le monde</p>
@@ -167,7 +176,8 @@
         </div>
       </div>
       <div class="hero-slide">
-        <img src="/assets/SHIP.png" alt="Services de qualité - Transport maritime" loading="lazy">
+        <img src="/assets/SHIP.png" alt="Services de qualité - Transport maritime" loading="lazy" class="hero-img-desktop">
+        <img src="/assets/BannerMobile.png" alt="Services de qualité - Transport maritime" loading="lazy" class="hero-img-mobile">
         <div class="hero-content">
           <h1 data-translate="hero-title-3">Services de Qualité</h1>
           <p data-translate="hero-subtitle-3">Une équipe dédiée pour répondre à vos besoins</p>
@@ -196,13 +206,65 @@
   <section id="services" class="services reveal">
     <div class="shade-overlay"></div>
     <div class="services-hero">
-      <div class="services-hero-content">
-        <h2 data-translate="services-hero-title">Bienvenue chez GKS LOGISTICS</h2>
-        <p data-translate="services-subtitle">Des solutions logistiques conçues pour votre succès.</p>
-        <a href="#services-content" class="btn" data-translate="services-cta">Découvrir</a>
+      <!-- Floating particles background -->
+      <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+      </div>
+      
+      <div class="services-hero-content modern-welcome-card">
+        <!-- Decorative elements -->
+        <div class="card-glow"></div>
+        <div class="corner-accent top-left"></div>
+        <div class="corner-accent top-right"></div>
+        <div class="corner-accent bottom-left"></div>
+        <div class="corner-accent bottom-right"></div>
+        
+        <!-- Main content -->
+        <div class="welcome-badge" data-translate="services-badge">✨ Votre Partenaire Logistique</div>
+        <h2 class="gradient-text" data-translate="services-hero-title">Bienvenue chez GKS LOGISTICS</h2>
+        <p class="welcome-subtitle" data-translate="services-subtitle">Des solutions logistiques conçues pour votre succès.</p>
+        
+        <!-- Mini stats -->
+        <div class="welcome-stats">
+          <div class="welcome-stat-item">
+            <div class="stat-icon-mini">
+              <i class="fas fa-globe"></i>
+            </div>
+            <span class="stat-value">10+</span>
+            <span class="stat-label" data-translate="welcome-stat-countries">Pays</span>
+          </div>
+          <div class="welcome-stat-item">
+            <div class="stat-icon-mini">
+              <i class="fas fa-shipping-fast"></i>
+            </div>
+            <span class="stat-value">50K+</span>
+            <span class="stat-label" data-translate="welcome-stat-shipments">Expéditions</span>
+          </div>
+          <div class="welcome-stat-item">
+            <div class="stat-icon-mini">
+              <i class="fas fa-clock"></i>
+            </div>
+            <span class="stat-value">90%</span>
+            <span class="stat-label" data-translate="welcome-stat-ontime">À Temps</span>
+          </div>
+        </div>
+        
+        <!-- Dual CTA buttons -->
+        <div class="welcome-cta-buttons">
+          <a href="#" class="btn btn-primary btn-pulse quote-btn" data-translate="services-cta-quote">Obtenir un Devis</a>
+          <a href="#services-content" class="btn btn-secondary btn-glow" data-translate="services-cta">Découvrir Nos Services</a>
+        </div>
       </div>
     </div>
     <div class="container services-content" id="services-content">
+      <h2 class="services-section-title" data-translate="services-section-title">Nos Services</h2>
       <div class="service-cards">
         <div class="card" data-service="air">
           <i class="fas fa-plane"></i>
@@ -858,7 +920,7 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
               <i class="far fa-star"></i>
             </div>
           </div>

@@ -4,7 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GKS Logistics - International Logistics Solutions | Air, Sea & Land Freight</title>
-    <link rel="icon" href="/favicon.png" type="image/x-icon">
+  <link rel="canonical" href="https://www.gkslogistics.com/en/news.html">
+  
+  <!-- Hreflang Tags for Multi-Language Support -->
+  <link rel="alternate" hreflang="fr" href="https://www.gkslogistics.com/news.html"/>
+  <link rel="alternate" hreflang="en" href="https://www.gkslogistics.com/en/news.html"/>
+  <link rel="alternate" hreflang="tr" href="https://www.gkslogistics.com/tu/news.html"/>
+  <link rel="alternate" hreflang="zh" href="https://www.gkslogistics.com/md/news.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://www.gkslogistics.com/news.html"/>
+  
+  <link rel="icon" href="/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="/css/styles.css">
   <link rel="stylesheet" href="/css/news.css">
   <link rel="stylesheet" href="/css/language-switcher.css">
@@ -205,7 +214,7 @@
                     </a>
                 </div>
                 <div class="view-all-articles">
-                    <a href="Blog.html" class="btn-secondary" data-translate="view-all-articles">Voir tous les articles</a>
+                    <a href="Blog.html" class="btn-secondary" data-translate="view-all-articles">View all articles</a>
                 </div>
             </div>
 
@@ -362,13 +371,13 @@
       <div class="footer-contact">
         <h4 data-translate="footer-contact-title">Contact Us</h4>
                     <p>Email: <a href="mailto:sales@gkslogistics.com" data-translate="contact-email">Email</a></p>
-                    <p>Téléphone: <a href="tel:+22390929273" data-translate="contact-phone">+223 90929273</a></p>
+                    <p>Phone: <a href="tel:+22390929273" data-translate="contact-phone">+223 90929273</a></p>
                 </div>
             </div>
             <div class="footer-divider"></div>
             <p class="footer-copy" data-translate="footer-copy">© 2025 GKS Logistics. All rights reserved.</p>
       </div>
-        <button class="back-to-top" aria-label="Retour en haut">
+        <button class="back-to-top" aria-label="Back to top">
     <i class="fas fa-chevron-up"></i>
   </button>
 </footer>
@@ -378,14 +387,14 @@
   <div id="quoteModal" class="quote-modal-overlay">
       <div class="quote-modal-content">
           <div class="quote-modal-header">
-              <h2 data-translate="quote-form-title" data-translate="quote-button">Demander un Devis</h2>
+              <h2 data-translate="quote_modal-form_title">Demander un Devis</h2>
               <button class="quote-modal-close" aria-label="Close modal">
                   <i class="fas fa-times"></i>
               </button>
           </div>
           
           <div class="quote-modal-body">
-              <p class="quote-form-subtitle" data-translate="quote-form-subtitle">
+              <p class="quote-form-subtitle" data-translate="quote_modal-form_subtitle">
                   Veuillez remplir le formulaire ci-dessous pour obtenir un devis personnalisé pour vos besoins logistiques.
               </p>
               
@@ -398,26 +407,27 @@
                       
                       <div class="form-row">
                           <div class="form-group">
-                              <label for="fullName" data-translate="full-name-label">Full Name *</label>
+                              <label for="fullName" data-translate="full-name-label" data-translate="form-full-name">Full Name *</label>
                               <input type="text" id="fullName" name="fullName" required 
                                      data-translate="full-name-placeholder">
                           </div>
                           
                           <div class="form-group">
-                              <label for="companyName" data-translate="company-name-label">Company Name *</label>
+                              <label for="companyName" data-translate="company-name-label" data-translate="form-company-name">Company Name *</label>
                               <input type="text" id="companyName" name="companyName" required 
-                                     data-translate="company-name-placeholder">Your company</div>
+                                     data-translate="company-name-placeholder">
+                          </div>
                       </div>
                       
                       <div class="form-row">
                           <div class="form-group">
-                              <label for="email" data-translate="email-label">Email:</label>
+                              <label for="email" data-translate="email-label" data-translate="form-email">Your Email</label>
                               <input type="email" id="email" name="email" required 
                                      data-translate="email-placeholder">
                           </div>
                           
                           <div class="form-group">
-                              <label for="phoneNumber" data-translate="phone-label">Phone:</label>
+                              <label for="phoneNumber" data-translate="phone-label" data-translate="form-phone">Phone:</label>
                               <input type="tel" id="phoneNumber" name="phoneNumber" required 
                                      data-translate="phone-placeholder">
                           </div>
@@ -447,17 +457,18 @@
                       <div class="form-group">
                           <label for="cargoNature" data-translate="cargo-nature-label">Cargo Nature</label>
                           <input type="text" id="cargoNature" name="cargoNature" 
-                                 data-translate="cargo-nature-placeholder">Describe the cargo</div>
+                                 data-translate="cargo-nature-placeholder">
+                      </div>
                       
                       <div class="form-row">
                           <div class="form-group">
-                              <label for="origin" data-translate="origin-label">Origin Country/City *</label>
+                              <label for="origin" data-translate="origin-label" data-translate="form-origin">Origin Country/City *</label>
                               <input type="text" id="origin" name="origin" required 
                                      data-translate="origin-placeholder">
                           </div>
                           
                           <div class="form-group">
-                              <label for="destination" data-translate="destination-label">Destination Country/City *</label>
+                              <label for="destination" data-translate="destination-label" data-translate="form-destination">Destination Country/City *</label>
                               <input type="text" id="destination" name="destination" required 
                                      data-translate="destination-placeholder">
                           </div>
@@ -476,7 +487,7 @@
                           </div>
                           
                           <div class="form-group">
-                              <label for="quantityPackages" data-translate="quantity-packages-label">Quantity / Number of Packages *</label>
+                              <label for="quantityPackages" data-translate="quantity-packages-label" data-translate="form-quantity">Quantity / Number of Packages *</label>
                               <input type="text" id="quantityPackages" name="quantityPackages" required 
                                      data-translate="quantity-packages-placeholder">
                           </div>

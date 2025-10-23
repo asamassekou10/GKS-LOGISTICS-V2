@@ -12,6 +12,13 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.gkslogistics.com/md/index.html">
   
+  <!-- Hreflang Tags for Multi-Language Support -->
+  <link rel="alternate" hreflang="fr" href="https://www.gkslogistics.com/index.html"/>
+  <link rel="alternate" hreflang="en" href="https://www.gkslogistics.com/en/index.html"/>
+  <link rel="alternate" hreflang="tr" href="https://www.gkslogistics.com/tu/index.html"/>
+  <link rel="alternate" hreflang="zh" href="https://www.gkslogistics.com/md/index.html"/>
+  <link rel="alternate" hreflang="x-default" href="https://www.gkslogistics.com/index.html"/>
+  
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.gkslogistics.com/">
@@ -145,7 +152,8 @@
     </header>
     <div class="hero-slider" id="heroSlider">
       <div class="hero-slide active">
-        <img src="/assets/banner.png" alt="Solutions logistiques fiables - GKS Logistics" loading="eager">
+        <img src="/assets/banner.png" alt="Solutions logistiques fiables - GKS Logistics" loading="eager" class="hero-img-desktop">
+        <img src="/assets/truck-mobile.png" alt="Solutions logistiques fiables - GKS Logistics" loading="eager" class="hero-img-mobile">
         <div class="hero-content">
           <h1 data-translate="hero-title-1">可靠的物流解决方案</h1>
           <p data-translate="hero-subtitle-1">您快速安全运输的合作伙伴</p>
@@ -156,7 +164,8 @@
         </div>
       </div>
       <div class="hero-slide">
-        <img src="/assets/PLANE2.png" alt="Présence internationale - Fret aérien" loading="lazy">
+        <img src="/assets/PLANE2.png" alt="Présence internationale - Fret aérien" loading="lazy" class="hero-img-desktop">
+        <img src="/assets/plane-mobile.png" alt="Présence internationale - Fret aérien" loading="lazy" class="hero-img-mobile">
         <div class="hero-content">
           <h1 data-translate="hero-title-2">国际存在</h1>
           <p data-translate="hero-subtitle-2">适应全球的物流解决方案</p>
@@ -167,7 +176,8 @@
         </div>
       </div>
       <div class="hero-slide">
-        <img src="/assets/SHIP.png" alt="Services de qualité - Transport maritime" loading="lazy">
+        <img src="/assets/SHIP.png" alt="Services de qualité - Transport maritime" loading="lazy" class="hero-img-desktop">
+        <img src="/assets/BannerMobile.png" alt="Services de qualité - Transport maritime" loading="lazy" class="hero-img-mobile">
         <div class="hero-content">
           <h1 data-translate="hero-title-3">优质服务</h1>
           <p data-translate="hero-subtitle-3">致力于满足您需求的团队</p>
@@ -196,13 +206,65 @@
   <section id="services" class="services reveal">
     <div class="shade-overlay"></div>
     <div class="services-hero">
-      <div class="services-hero-content">
-        <h2 data-translate="services-hero-title">欢迎来到 GKS LOGISTICS</h2>
-        <p data-translate="services-subtitle">为您的成功而设计的物流解决方案。</p>
-        <a href="#services-content" class="btn" data-translate="services-cta">探索</a>
+      <!-- Floating particles background -->
+      <div class="particles-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+      </div>
+      
+      <div class="services-hero-content modern-welcome-card">
+        <!-- Decorative elements -->
+        <div class="card-glow"></div>
+        <div class="corner-accent top-left"></div>
+        <div class="corner-accent top-right"></div>
+        <div class="corner-accent bottom-left"></div>
+        <div class="corner-accent bottom-right"></div>
+        
+        <!-- Main content -->
+        <div class="welcome-badge" data-translate="services-badge">✨ 您的物流合作伙伴</div>
+        <h2 class="gradient-text" data-translate="services-hero-title">欢迎来到 GKS LOGISTICS</h2>
+        <p class="welcome-subtitle" data-translate="services-subtitle">为您的成功而设计的物流解决方案。</p>
+        
+        <!-- Mini stats -->
+        <div class="welcome-stats">
+          <div class="welcome-stat-item">
+            <div class="stat-icon-mini">
+              <i class="fas fa-globe"></i>
+            </div>
+            <span class="stat-value">10+</span>
+            <span class="stat-label" data-translate="welcome-stat-countries">Pays</span>
+          </div>
+          <div class="welcome-stat-item">
+            <div class="stat-icon-mini">
+              <i class="fas fa-shipping-fast"></i>
+            </div>
+            <span class="stat-value">50K+</span>
+            <span class="stat-label" data-translate="welcome-stat-shipments">Expéditions</span>
+          </div>
+          <div class="welcome-stat-item">
+            <div class="stat-icon-mini">
+              <i class="fas fa-clock"></i>
+            </div>
+            <span class="stat-value">90%</span>
+            <span class="stat-label" data-translate="welcome-stat-ontime">À Temps</span>
+          </div>
+        </div>
+        
+        <!-- Dual CTA buttons -->
+        <div class="welcome-cta-buttons">
+          <a href="#" class="btn btn-primary btn-pulse quote-btn" data-translate="services-cta-quote">获取报价</a>
+          <a href="#services-content" class="btn btn-secondary btn-glow" data-translate="services-cta">探索我们的服务</a>
+        </div>
       </div>
     </div>
     <div class="container services-content" id="services-content">
+      <h2 class="services-section-title" data-translate="services-section-title">我们的服务</h2>
       <div class="service-cards">
         <div class="card" data-service="air">
           <i class="fas fa-plane"></i>
@@ -858,7 +920,7 @@
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
               <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
               <i class="far fa-star"></i>
             </div>
           </div>
@@ -1050,7 +1112,7 @@
     <div class="footer-divider"></div>
     <p class="footer-copy" data-translate="footer-copyright">© 2025 GKS Logistics。保留所有权利。</p>
   </div>
-  <button class="back-to-top" data-translate-attr="aria-label:accessibility-back-to-top" aria-label="Retour en haut">
+  <button class="back-to-top" data-translate-attr="aria-label:accessibility-back-to-top" aria-label="返回顶部">
     <i class="fas fa-chevron-up"></i>
   </button>
 </footer>
@@ -1061,7 +1123,7 @@
       <div class="quote-modal-content">
           <div class="quote-modal-header">
               <h2 data-translate="quote-modal-title">获取报价</h2>
-              <button class="quote-modal-close" aria-label="Close modal">
+              <button class="quote-modal-close" aria-label="关闭模态框">
                   <i class="fas fa-times"></i>
               </button>
           </div>

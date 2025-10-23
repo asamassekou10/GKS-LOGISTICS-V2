@@ -167,19 +167,56 @@ function replaceContentWithTranslations(html, translations, langCode, currentPag
   result = result.replace(/<span class="current-lang">[^<]*<\/span>/g, `<span class="current-lang">${langCode.toUpperCase()}</span>`);
 
   // SMART DATA-TRANSLATE REPLACEMENT
-  // This regex finds all data-translate attributes and replaces their content with the corresponding translation
-  // using the getTranslationValue function which intelligently maps attribute names to JSON structure
-  result = result.replace(/data-translate="([^"]+)"[^>]*>([^<]*)</g, (match, attributeKey) => {
-    const translatedValue = getTranslationValue(t, attributeKey);
+  // Enhanced replacement that handles attributes in any order and nested content
+  
+  // Method 1: Handle standard tags with data-translate anywhere in the attributes
+  result = result.replace(/<([a-zA-Z0-9]+)([^>]*?)data-translate="([^"]+)"([^>]*?)>([^<]*?)<\/\1>/g, 
+    (match, tagName, beforeAttrs, attributeKey, afterAttrs, content) => {
+      const translatedValue = getTranslationValue(t, attributeKey);
 
-    // Only replace if we found a translation
-    if (translatedValue) {
-      return `data-translate="${attributeKey}">${translatedValue}<`;
-    }
+      // Only replace if we found a translation
+      if (translatedValue) {
+        return `<${tagName}${beforeAttrs}data-translate="${attributeKey}"${afterAttrs}>${translatedValue}</${tagName}>`;
+      }
 
-    // Keep original if no translation found
-    return match;
-  });
+      return match; // Return original if no translation found
+    });
+  
+  // Method 2: Handle simple cases with direct text content (catches remaining cases)
+  result = result.replace(/(<[^>]*\sdata-translate="([^"]+)"[^>]*>)([^<]+)(<)/g, 
+    (match, openTag, attributeKey, content, closeStart) => {
+      const translatedValue = getTranslationValue(t, attributeKey);
+
+      if (translatedValue && content.trim()) {
+        return `${openTag}${translatedValue}${closeStart}`;
+      }
+
+      return match;
+    });
+  
+  // Replace aria-label attributes with translations
+  if (langInfo.name === 'English') {
+    result = result.replace(/aria-label="Retour en haut"/g, 'aria-label="Back to top"');
+    result = result.replace(/aria-label="Close modal"/g, 'aria-label="Close modal"');
+    result = result.replace(/aria-label="Fermer"/g, 'aria-label="Close"');
+  } else if (langInfo.name === 'Türkçe') {
+    result = result.replace(/aria-label="Retour en haut"/g, 'aria-label="Yukarı dön"');
+    result = result.replace(/aria-label="Close modal"/g, 'aria-label="Modalı kapat"');
+    result = result.replace(/aria-label="Fermer"/g, 'aria-label="Kapat"');
+  } else if (langInfo.name === '中文') {
+    result = result.replace(/aria-label="Retour en haut"/g, 'aria-label="返回顶部"');
+    result = result.replace(/aria-label="Close modal"/g, 'aria-label="关闭模态框"');
+    result = result.replace(/aria-label="Fermer"/g, 'aria-label="关闭"');
+  }
+  
+  // Fix hardcoded "Téléphone:" label
+  if (langInfo.name === 'English') {
+    result = result.replace(/Téléphone:/g, 'Phone:');
+  } else if (langInfo.name === 'Türkçe') {
+    result = result.replace(/Téléphone:/g, 'Telefon:');
+  } else if (langInfo.name === '中文') {
+    result = result.replace(/Téléphone:/g, '电话:');
+  }
   
   return result;
 }

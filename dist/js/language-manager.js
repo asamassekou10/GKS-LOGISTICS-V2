@@ -1,11 +1,37 @@
 // Simple and reliable Language Manager
 class LanguageManager {
   constructor() {
-    this.currentLang = localStorage.getItem('preferredLang') || 'fr';
+    // Detect language from URL path first, then localStorage, then default to French
+    this.currentLang = this.detectLanguageFromURL() || localStorage.getItem('preferredLang') || 'fr';
     this.translations = null;
     this.chatbotResponses = null;
     this.isInitialized = false;
     console.log('🚀 LanguageManager instance created. Current language:', this.currentLang);
+    console.log('🌍 Detected from URL path:', this.detectLanguageFromURL());
+  }
+  
+  // Detect language from URL path
+  detectLanguageFromURL() {
+    const path = window.location.pathname;
+    console.log('🔍 Checking URL path:', path);
+    
+    // Check if path starts with a language code
+    if (path.startsWith('/en/') || path.includes('/en/')) {
+      console.log('✅ Detected English from URL');
+      return 'en';
+    }
+    if (path.startsWith('/tu/') || path.includes('/tu/')) {
+      console.log('✅ Detected Turkish from URL');
+      return 'tu';
+    }
+    if (path.startsWith('/md/') || path.includes('/md/')) {
+      console.log('✅ Detected Chinese from URL');
+      return 'md';
+    }
+    
+    // Default to French if no language code in path
+    console.log('✅ Defaulting to French (no language code in URL)');
+    return 'fr';
   }
 
   async loadLanguage(lang) {
@@ -60,6 +86,43 @@ class LanguageManager {
     }
   }
 
+  // Helper function to get nested translation value
+  getTranslation(key) {
+    if (!this.translations) return null;
+    
+    // Try direct lookup first (flat key)
+    if (this.translations[key]) {
+      return this.translations[key];
+    }
+    
+    // Convert hyphenated key to nested path with underscores
+    // e.g., "hero-title-1" -> ["hero", "title_1"] -> translations.hero.title_1
+    const parts = key.split('-');
+    let value = this.translations;
+    
+    // Navigate through nested structure
+    for (let i = 0; i < parts.length; i++) {
+      const part = parts[i];
+      
+      // Try the part as-is first
+      if (value && typeof value === 'object' && part in value) {
+        value = value[part];
+        continue;
+      }
+      
+      // Try converting remaining parts to underscore notation
+      const remaining = parts.slice(i).join('_');
+      if (value && typeof value === 'object' && remaining in value) {
+        return value[remaining];
+      }
+      
+      // Not found
+      return null;
+    }
+    
+    return typeof value === 'string' ? value : null;
+  }
+
   updatePageContent() {
     console.log('🔄 Updating page content...');
     
@@ -76,7 +139,7 @@ class LanguageManager {
     
     elements.forEach(element => {
       const key = element.getAttribute('data-translate');
-      const translation = this.translations[key];
+      const translation = this.getTranslation(key);
       
       if (translation) {
         if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
@@ -162,8 +225,16 @@ async function initializeLanguageSystem() {
   console.log('🌐 Current language:', langManager.currentLang);
   
   try {
+    // Load the translations for the current language
     await langManager.loadLanguage(langManager.currentLang);
-    langManager.updatePageContent();
+    
+    // DO NOT call updatePageContent() on initial load!
+    // The HTML is already pre-rendered in the correct language by the build system
+    // Only update content when user explicitly switches languages
+    console.log('✅ Translations loaded. Keeping pre-rendered content.');
+    console.log('ℹ️  Content will only update if user switches language via toggle');
+    
+    // Initialize the language toggle dropdown
     initializeLanguageToggle();
     console.log('✅ Language system initialized successfully');
     
@@ -177,25 +248,15 @@ async function initializeLanguageSystem() {
       }
     });
     
-    // Additional update after a short delay to ensure all content is loaded
+    // Make sure all sections are visible (no content updates!)
     setTimeout(() => {
-      console.log('🔄 Performing delayed content update...');
-      langManager.updatePageContent();
-    }, 200);
-    
-    // Final update after a longer delay to ensure everything is loaded
-    setTimeout(() => {
-      console.log('🔄 Final content update...');
-      langManager.updatePageContent();
-      
-      // Force all content sections to be visible
       const allSections = document.querySelectorAll('main, section, .hero, .services, .about, .presence, .testimonials, .contact');
       allSections.forEach(el => {
         el.style.display = 'block';
         el.style.visibility = 'visible';
         el.style.opacity = '1';
       });
-    }, 1000);
+    }, 100);
     
   } catch (error) {
     console.error('❌ Failed to initialize language system:', error);
@@ -284,7 +345,8 @@ setTimeout(() => {
 setTimeout(() => {
   console.log('🔧 Final language system update...');
   if (langManager.translations) {
-    langManager.updatePageContent();
+    // DO NOT call updatePageContent() - page is already pre-rendered correctly!
+    // langManager.updatePageContent();
     console.log('✅ Language system fully initialized and ready!');
     console.log('🌐 Current language:', langManager.currentLang);
     console.log('📊 Available translations:', Object.keys(langManager.translations).length);
