@@ -55,69 +55,71 @@
   <link rel="alternate" hreflang="md" href="https://www.gkslogistics.com/md/Blog.html" />
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="header-logo-link">
-                <img src="/logo.png" alt="GKS Logistics Logo" class="header-logo-image">
-                <span class="gks-text">GKS</span> <span class="logistics-text">LOGISTICS</span>
-            </a>
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.html#services">Services</a></li>
-                    <li><a href="index.html#about">À Propos</a></li>
-                    <li><a href="Blog.html" class="active">Blogs</a></li>
-                    <li><a href="careers.html">Carrières</a></li>
-                    <li><a href="news.html">Actualités</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="language-dropdown">
-                <button class="language-dropdown-toggle" aria-label="Select language" aria-expanded="false">
-                    <i class="fas fa-globe"></i>
-                    <span class="current-lang">EN</span>
-                    <i class="fas fa-chevron-down"></i>
+    <!-- Hero Section with Integrated Header -->
+    <section class="hero">
+        <div class="shade-overlay"></div>
+        <header class="header">
+            <div class="container">
+                <a href="index.html" class="header-logo-link">
+                    <img src="/logo.png" alt="GKS Logistics Logo" class="header-logo-image">
+                    <span class="gks-text" data-translate="logo-gks">GKS</span> <span class="logistics-text" data-translate="logo-logistics">LOGISTICS</span>
+                </a>
+                <button class="menu-toggle" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
                 </button>
-                <div class="language-dropdown-menu" role="menu">
-                    <a href="/Blog.html" class="language-option" role="menuitem" data-lang="fr">
-                        <i class="fas fa-flag"></i>
-                        <span>Français</span>
-                    </a>
-                    <a href="/en/Blog.html" class="language-option" role="menuitem" data-lang="en">
-                        <i class="fas fa-flag"></i>
-                        <span>English</span>
-                    </a>
-                    <a href="/tu/Blog.html" class="language-option" role="menuitem" data-lang="tu">
-                        <i class="fas fa-flag"></i>
-                        <span>Türkçe</span>
-                    </a>
-                    <a href="/md/Blog.html" class="language-option" role="menuitem" data-lang="md">
-                        <i class="fas fa-flag"></i>
-                        <span>中文</span>
-                    </a>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html#services" data-translate="nav-services">Services</a></li>
+                        <li><a href="index.html#about" data-translate="nav-about">About</a></li>
+                        <li><a href="Blog.html" class="active" data-translate="nav-blog">Blog</a></li>
+                        <li><a href="careers.html" data-translate="nav-careers">Careers</a></li>
+                        <li><a href="news.html" data-translate="nav-news">News</a></li>
+                        <li><a href="index.html#contact" data-translate="nav-contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="language-dropdown">
+                    <button class="language-dropdown-toggle" aria-label="Select language" aria-expanded="false">
+                        <i class="fas fa-globe"></i>
+                        <span class="current-lang">EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="language-dropdown-menu" role="menu">
+                        <a href="/Blog.html" class="language-option" role="menuitem" data-lang="fr">
+                            <i class="fas fa-flag"></i>
+                            <span>Français</span>
+                        </a>
+                        <a href="/en/Blog.html" class="language-option" role="menuitem" data-lang="en">
+                            <i class="fas fa-flag"></i>
+                            <span>English</span>
+                        </a>
+                        <a href="/tu/Blog.html" class="language-option" role="menuitem" data-lang="tu">
+                            <i class="fas fa-flag"></i>
+                            <span>Türkçe</span>
+                        </a>
+                        <a href="/md/Blog.html" class="language-option" role="menuitem" data-lang="md">
+                            <i class="fas fa-flag"></i>
+                            <span>中文</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="hero-slider" id="heroSlider">
+            <div class="hero-slide active">
+                <img src="/assets/banner.png" alt="GKS Logistics Blog - Actualités & Perspectives" loading="eager">
+                <div class="hero-content">
+                    <h1 data-translate="blog-main-title">Logistics News & Analysis</h1>
+                    <p data-translate="blog-main-subtitle">Discover the latest trends and analysis from the logistics sector in West Africa</p>
+                    <div class="hero-buttons">
+                        <a href="#blog-content" class="btn" data-translate="discover-articles">Discover Articles</a>
+                        <a href="#" class="btn btn-secondary" data-translate="get-free-quote">Get Free Quote</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="article-hero">
-        <div class="hero-background">
-            <img src="/assets/banner.png" alt="GKS Logistics Blog Background" class="hero-bg-image">
-            <div class="hero-overlay"></div>
-        </div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="article-title" data-translate="blog-main-title">Logistics News & Analysis</h1>
-                <p class="hero-subtitle" data-translate="blog-main-subtitle">Discover the latest trends and analysis from the logistics sector in West Africa</p>
-                <div class="hero-buttons">
-                    <a href="#blog-content" class="btn-primary" data-translate="discover-articles">Discover Articles</a>
-                    <a href="#" class="btn-secondary" data-translate="get-free-quote">Get Free Quote</a>
-                </div>
-            </div>
+        <!-- Scroll Down Indicator -->
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
@@ -458,7 +460,7 @@
                         </legend>
                         
                         <div class="form-group">
-                            <label for="message" data-translate="quote-modal-additional-message">Additional Message</label>
+                            <label for="message" data-translate="quote-modal-additional-message">Your request details *</label>
                             <textarea id="message" name="message" rows="4" 
                                      ></textarea>
                         </div>

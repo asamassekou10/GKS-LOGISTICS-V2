@@ -53,68 +53,73 @@
   <link rel="alternate" hreflang="md" href="https://www.gkslogistics.com/md/careers.html" />
 </head>
 <body>
-  <!-- Header -->
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="header-logo-link">
-        <img src="/logo.png" alt="GKS Logistics Logo" class="header-logo-image">
-        <span class="gks-text" data-translate="logo-gks">GKS</span> <span class="logistics-text" data-translate="logo-logistics">LOGISTICS</span>
-      </a>
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-      <nav class="nav">
-        <ul>
-          <li><a href="index.html#services" data-translate="nav-services">Services</a></li>
-          <li><a href="index.html#about" data-translate="nav-about">About</a></li>
-          <li><a href="Blog.html" data-translate="nav-blog">Blog</a></li>
-          <li><a href="careers.html" class="active" data-translate="nav-careers">Careers</a></li>
-          <li><a href="news.html" data-translate="nav-news">News</a></li>
-          <li><a href="index.html#contact" data-translate="nav-contact">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="language-dropdown">
-                <button class="language-dropdown-toggle" aria-label="Select language" aria-expanded="false">
-                    <i class="fas fa-globe"></i>
-                    <span class="current-lang">EN</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="language-dropdown-menu" role="menu">
-                    <a href="/careers.html" class="language-option" role="menuitem" data-lang="fr">
-                        <i class="fas fa-flag"></i>
-                        <span>Français</span>
-                    </a>
-                    <a href="/en/careers.html" class="language-option" role="menuitem" data-lang="en">
-                        <i class="fas fa-flag"></i>
-                        <span>English</span>
-                    </a>
-                    <a href="/tu/careers.html" class="language-option" role="menuitem" data-lang="tu">
-                        <i class="fas fa-flag"></i>
-                        <span>Türkçe</span>
-                    </a>
-                    <a href="/md/careers.html" class="language-option" role="menuitem" data-lang="md">
-                        <i class="fas fa-flag"></i>
-                        <span>中文</span>
-                    </a>
-                </div>
+  <!-- Hero Section with Integrated Header -->
+  <section class="hero">
+    <div class="shade-overlay"></div>
+    <header class="header">
+      <div class="container">
+        <a href="index.html" class="header-logo-link">
+          <img src="/logo.png" alt="GKS Logistics Logo" class="header-logo-image">
+          <span class="gks-text" data-translate="logo-gks">GKS</span> <span class="logistics-text" data-translate="logo-logistics">LOGISTICS</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html#services" data-translate="nav-services">Services</a></li>
+            <li><a href="index.html#about" data-translate="nav-about">About</a></li>
+            <li><a href="Blog.html" data-translate="nav-blog">Blog</a></li>
+            <li><a href="careers.html" class="active" data-translate="nav-careers">Careers</a></li>
+            <li><a href="news.html" data-translate="nav-news">News</a></li>
+            <li><a href="index.html#contact" data-translate="nav-contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="language-dropdown">
+          <button class="language-dropdown-toggle" aria-label="Select language" aria-expanded="false">
+            <i class="fas fa-globe"></i>
+            <span class="current-lang">EN</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="language-dropdown-menu" role="menu">
+            <a href="/careers.html" class="language-option" role="menuitem" data-lang="fr">
+              <i class="fas fa-flag"></i>
+              <span>Français</span>
+            </a>
+            <a href="/en/careers.html" class="language-option" role="menuitem" data-lang="en">
+              <i class="fas fa-flag"></i>
+              <span>English</span>
+            </a>
+            <a href="/tu/careers.html" class="language-option" role="menuitem" data-lang="tu">
+              <i class="fas fa-flag"></i>
+              <span>Türkçe</span>
+            </a>
+            <a href="/md/careers.html" class="language-option" role="menuitem" data-lang="md">
+              <i class="fas fa-flag"></i>
+              <span>中文</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="hero-slider" id="heroSlider">
+      <div class="hero-slide active">
+        <img src="/assets/career hero bg.png" alt="Carrières GKS Logistics - Rejoignez notre Équipe" loading="eager">
+        <div class="hero-content">
+          <h1 data-translate="careers-hero-title">Join Our Team</h1>
+          <p data-translate="careers-hero-subtitle">Build the future of logistics in Africa</p>
+          <div class="hero-buttons">
+            <a href="#job-opportunities" class="btn" data-translate="view-jobs-button">View All Jobs</a>
+            <a href="#culture-values-section" class="btn btn-secondary" data-translate="cta-careers">Join Our Team</a>
+          </div>
+        </div>
       </div>
     </div>
-  </header>
-
-    <!-- Hero Section -->
-    <section class="article-hero">
-        <div class="hero-background">
-            <img src="/assets/SHIP.png" alt="GKS Logistics Team" class="hero-bg-image">
-            <div class="hero-overlay"></div>
-        </div>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="article-title" data-translate="careers-hero-title">Join Our Team</h1>
-                <p class="hero-subtitle" data-translate="careers-hero-subtitle">Build the future of logistics in Africa</p>
-                <a href="#job-opportunities" class="hero-cta-btn" data-translate="view-jobs-button">View All Jobs</a>
-            </div>
-        </div>
-    </section>
+    <!-- Scroll Down Indicator -->
+    <div class="scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
 
     <!-- Main Content -->
     <main class="main-content">
@@ -123,7 +128,7 @@
                 <!-- Main Content Area -->
                 <div class="careers-content">
                     <!-- Culture & Values Section -->
-                    <section class="culture-values-section">
+                    <section id="culture-values-section" class="culture-values-section">
                         <h2 data-translate="culture-values-title">Our Core Values</h2>
                         <p class="section-intro" data-translate="culture-intro">At GKS Logistics, we believe our success is built on the quality of our team and our corporate culture.</p>
                         
@@ -189,16 +194,16 @@
                                 <div class="benefit-icon">
                                     <i class="fas fa-dollar-sign"></i>
                                 </div>
-                                <h3 data-translate="benefit-compensation-title">Competitive Compensation</h3>
-                                <p data-translate="benefit-compensation-desc">Attractive salary and performance bonuses</p>
+                                <h3 data-translate="benefit-compensation-title">Innovation and Excellence</h3>
+                                <p data-translate="benefit-compensation-desc">Encouraging innovation and commitment to excellence in all our services and processes.</p>
                             </div>
                             
                             <div class="benefit-card">
                                 <div class="benefit-icon">
                                     <i class="fas fa-balance-scale"></i>
                                 </div>
-                                <h3 data-translate="benefit-balance-title">Work-Life Balance</h3>
-                                <p data-translate="benefit-balance-desc">Flexible schedules and generous paid leave</p>
+                                <h3 data-translate="benefit-balance-title">Responsibility and Efficiency</h3>
+                                <p data-translate="benefit-balance-desc">Structured work environment valuing autonomy, accountability and operational efficiency.</p>
                             </div>
                             
                             <div class="benefit-card">
@@ -213,8 +218,8 @@
                                 <div class="benefit-icon">
                                     <i class="fas fa-heart"></i>
                                 </div>
-                                <h3 data-translate="benefit-health-title">Health Insurance</h3>
-                                <p data-translate="benefit-health-desc">Comprehensive medical coverage for you and your family</p>
+                                <h3 data-translate="benefit-health-title">Performance and Engagement</h3>
+                                <p data-translate="benefit-health-desc">Performance culture with recognition and opportunities for engagement in strategic projects.</p>
         </div>
                             
                             <div class="benefit-card">
@@ -524,7 +529,7 @@
                       </legend>
                       
                       <div class="form-group">
-                          <label for="message" data-translate="quote-modal-additional-message">Additional Message</label>
+                          <label for="message" data-translate="quote-modal-additional-message">Your request details *</label>
                           <textarea id="message" name="message" rows="4" 
                                     data-translate="message-placeholder"></textarea>
                       </div>
@@ -545,9 +550,177 @@
       </div>
   </div>
 
+  <!-- Career Application Modal -->
+  <link rel="stylesheet" href="/css/career-application.css">
+  <div id="careerApplicationModal" class="career-modal-overlay">
+      <div class="career-modal-content">
+          <div class="career-modal-header">
+              <h2 data-translate="career-application-modal-title">Job Application</h2>
+              <button class="career-modal-close" aria-label="Close modal">
+                  <i class="fas fa-times"></i>
+              </button>
+          </div>
+          
+          <div class="career-modal-body">
+              <p class="career-form-subtitle" data-translate="career-application-modal-subtitle">Fill out the form below to submit your application.</p>
+              
+              <form name="career-application" data-netlify="true" id="careerApplicationForm" enctype="multipart/form-data">
+                  <!-- Personal Information Section -->
+                  <fieldset class="form-section">
+                      <legend>
+                          <h3 data-translate="career-app-personal-info">Personal Information</h3>
+                      </legend>
+                      
+                      <div class="form-row">
+                          <div class="form-group">
+                              <label for="applicantName" data-translate="career-app-full-name">Full Name *</label>
+                              <input type="text" id="applicantName" name="applicantName" required>
+                          </div>
+                          
+                          <div class="form-group">
+                              <label for="applicantEmail" data-translate="career-app-email">Email Address *</label>
+                              <input type="email" id="applicantEmail" name="applicantEmail" required>
+                          </div>
+                      </div>
+                      
+                      <div class="form-row">
+                          <div class="form-group">
+                              <label for="applicantPhone" data-translate="career-app-phone">Phone Number *</label>
+                              <input type="tel" id="applicantPhone" name="applicantPhone" required>
+                          </div>
+                          
+                          <div class="form-group">
+                              <label for="applicantCity" data-translate="career-app-city">City of Residence *</label>
+                              <input type="text" id="applicantCity" name="applicantCity" required>
+                          </div>
+                      </div>
+                  </fieldset>
+                  
+                  <!-- Position Information Section -->
+                  <fieldset class="form-section">
+                      <legend>
+                          <h3 data-translate="career-app-position-info">Desired Position</h3>
+                      </legend>
+                      
+                      <div class="form-row">
+                          <div class="form-group">
+                              <label for="desiredPosition" data-translate="career-app-position">Position *</label>
+                              <input type="text" id="desiredPosition" name="desiredPosition" required 
+                                     data-translate="career-app-position-placeholder">E.g.: Logistics Manager</div>
+                          
+                          <div class="form-group">
+                              <label for="department" data-translate="career-app-department">Department *</label>
+                              <select id="department" name="department" required>
+                                  <option value="">--</option>
+                                  <option value="operations" data-translate="career-app-dept-operations">Operations</option>
+                                  <option value="commercial" data-translate="career-app-dept-commercial">Commercial</option>
+                                  <option value="hr" data-translate="career-app-dept-hr">Human Resources</option>
+                                  <option value="finance" data-translate="career-app-dept-finance">Finance</option>
+                                  <option value="it" data-translate="career-app-dept-it">IT</option>
+                                  <option value="other" data-translate="career-app-dept-other">Other</option>
+                              </select>
+                          </div>
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="experience" data-translate="career-app-experience">Years of Experience *</label>
+                          <select id="experience" name="experience" required>
+                              <option value="">--</option>
+                              <option value="0-1" data-translate="career-app-exp-0-1">0-1 year</option>
+                              <option value="1-3" data-translate="career-app-exp-1-3">1-3 years</option>
+                              <option value="3-5" data-translate="career-app-exp-3-5">3-5 years</option>
+                              <option value="5-10" data-translate="career-app-exp-5-10">5-10 years</option>
+                              <option value="10+" data-translate="career-app-exp-10plus">10+ years</option>
+                          </select>
+                      </div>
+                  </fieldset>
+                  
+                  <!-- Qualifications Section -->
+                  <fieldset class="form-section">
+                      <legend>
+                          <h3 data-translate="career-app-qualifications">Qualifications and Education</h3>
+                      </legend>
+                      
+                      <div class="form-group">
+                          <label for="education" data-translate="career-app-education">Education Level *</label>
+                          <select id="education" name="education" required>
+                              <option value="">--</option>
+                              <option value="high-school" data-translate="career-app-edu-high-school">High School</option>
+                              <option value="bachelor" data-translate="career-app-edu-bachelor">Bachelor's Degree</option>
+                              <option value="master" data-translate="career-app-edu-master">Master's Degree</option>
+                              <option value="phd" data-translate="career-app-edu-phd">PhD</option>
+                              <option value="other" data-translate="career-app-edu-other">Other</option>
+                          </select>
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="skills" data-translate="career-app-skills">Key Skills</label>
+                          <textarea id="skills" name="skills" rows="3" 
+                                    data-translate="career-app-skills-placeholder">E.g.: Project Management, Leadership, International Logistics...</textarea>
+                      </div>
+                  </fieldset>
+                  
+                  <!-- Documents Section -->
+                  <fieldset class="form-section">
+                      <legend>
+                          <h3 data-translate="career-app-documents">Documents</h3>
+                      </legend>
+                      
+                      <div class="form-group">
+                          <label for="cvFile" data-translate="career-app-cv-label">CV/Resume *</label>
+                          <input type="file" id="cvFile" name="cvFile" accept=".pdf,.doc,.docx" required>
+                          <small class="form-help" data-translate="career-app-cv-help">Accepted format: PDF, DOC, DOCX (Max 5MB)</small>
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="coverLetterFile" data-translate="career-app-cover-letter">Cover Letter</label>
+                          <input type="file" id="coverLetterFile" name="coverLetterFile" accept=".pdf,.doc,.docx">
+                          <small class="form-help" data-translate="career-app-cover-letter-help">Accepted format: PDF, DOC, DOCX (Max 5MB)</small>
+                      </div>
+                  </fieldset>
+                  
+                  <!-- Additional Information Section -->
+                  <fieldset class="form-section">
+                      <legend>
+                          <h3 data-translate="career-app-additional-info">Additional Information</h3>
+                      </legend>
+                      
+                      <div class="form-group">
+                          <label for="motivation" data-translate="career-app-motivation">Why do you want to join GKS Logistics? *</label>
+                          <textarea id="motivation" name="motivation" rows="5" required 
+                                    data-translate="career-app-motivation-placeholder">Tell us about your motivation...</textarea>
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="availability" data-translate="career-app-availability">Availability *</label>
+                          <select id="availability" name="availability" required>
+                              <option value="">--</option>
+                              <option value="immediate" data-translate="career-app-avail-immediate">Immediate</option>
+                              <option value="1month" data-translate="career-app-avail-1month">In 1 month</option>
+                              <option value="2months" data-translate="career-app-avail-2months">In 2 months</option>
+                              <option value="3months" data-translate="career-app-avail-3months">In 3+ months</option>
+                              <option value="negotiate" data-translate="career-app-avail-negotiate">Negotiable</option>
+                          </select>
+                      </div>
+                  </fieldset>
+                  
+                  <!-- Required Fields Indicator -->
+                  <p class="required-fields-indicator" data-translate="career-app-required-note">* Required fields</p>
+                  
+                  <!-- Form Buttons -->
+                  <div class="form-buttons">
+                      <button type="button" class="btn-cancel" data-translate="career-app-cancel">Cancel</button>
+                      <button type="submit" class="btn-submit" data-translate="career-app-submit">Submit Application</button>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </div>
+
     <script src="/js/language-manager.js"></script>
     <script src="/js/careers.js" defer></script>
   <script src="/js/quote-modal.js" defer></script>
+  <script src="/js/career-application.js" defer></script>
   <script src="/js/language-switcher.js" defer></script>
 </body>
 </html>

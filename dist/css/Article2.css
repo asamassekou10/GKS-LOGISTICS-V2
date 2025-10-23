@@ -436,13 +436,14 @@ body {
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: #FFFFFF;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .cta-content p {
   font-size: 1.2rem;
   margin-bottom: 2.5rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #FFFFFF;
 }
 
 .cta-buttons {
@@ -463,16 +464,16 @@ body {
 }
 
 .btn-primary {
-  background: #1E90FF;
+  background: #dc2626;
   color: #FFFFFF;
-  border: 2px solid #1E90FF;
+  border: 2px solid #dc2626;
 }
 
 .btn-primary:hover {
-  background: #003087;
-  border-color: #003087;
+  background: #b91c1c;
+  border-color: #b91c1c;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(204, 51, 51, 0.3);
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.4);
 }
 
 .btn-secondary {
@@ -599,16 +600,16 @@ body {
 }
 
 .btn-primary-sidebar {
-  background: #1E90FF;
+  background: #dc2626;
   color: #FFFFFF;
-  border: 2px solid #1E90FF;
+  border: 2px solid #dc2626;
 }
 
 .btn-primary-sidebar:hover {
-  background: #003087;
-  border-color: #003087;
+  background: #b91c1c;
+  border-color: #b91c1c;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(204, 51, 51, 0.3);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
 }
 
 .btn-secondary-sidebar {

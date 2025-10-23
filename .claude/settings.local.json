@@ -7,7 +7,9 @@
       "Bash(for key in \"timeline_2019\" \"timeline_2020\" \"timeline_2021\")",
       "Bash(for key in \"freight_temp_controlled\" \"preferred_date_label\" \"form_quantity\" \"additional_message_headline\")",
       "Bash(for page in employee1 employee2 employee3)",
-      "Bash(do echo \"=== $page.html ===\")"
+      "Bash(do echo \"=== $page.html ===\")",
+      "Bash(awk:*)",
+      "Bash(start dist/index.html)"
     ],
     "deny": [],
     "ask": []

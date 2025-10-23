@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GKS Logistics - Uluslararası Lojistik Çözümleri | Hava, Deniz ve Kara Taşımacılığı</title>
-  <link rel="icon" href="/favicon.png" type="image/x-icon">
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/css/employee3.css">
-  <link rel="stylesheet" href="/css/language-switcher.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/employee3.css">
+    <link rel="stylesheet" href="/css/language-switcher.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <link rel="alternate" hreflang="x-default" href="https://www.gkslogistics.com/employee3.html" />
   <link rel="alternate" hreflang="fr" href="https://www.gkslogistics.com/employee3.html" />
   <link rel="alternate" hreflang="en" href="https://www.gkslogistics.com/en/employee3.html" />
@@ -19,117 +19,162 @@
 <body>
     <!-- Header -->
     <header class="header">
-        <div class="container">
-            <a href="index.html" class="header-logo-link">
-                <img src="/logo.png" alt="GKS Logistics Logo" class="header-logo-image">
-                <span class="gks-text" data-translate="logo-gks">GKS</span> <span class="logistics-text" data-translate="logo-logistics">LOGISTICS</span>
+      <div class="container">
+        <a href="index.html" class="header-logo-link">
+          <img src="/logo.png" alt="GKS Logistics Logo" class="header-logo-image">
+          <span class="gks-text" data-translate="logo-gks">GKS</span> <span class="logistics-text" data-translate="logo-logistics">LOGISTICS</span>
+        </a>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav class="nav">
+          <ul>
+            <li><a href="index.html#services" data-translate="nav-services">Hizmetler</a></li>
+            <li><a href="index.html#about" data-translate="nav-about">Hakkımızda</a></li>
+            <li><a href="Blog.html" data-translate="nav-blog">Blog</a></li>
+            <li><a href="careers.html" data-translate="nav-careers">Kariyer</a></li>
+            <li><a href="news.html" data-translate="nav-news">Haberler</a></li>
+            <li><a href="index.html#contact" data-translate="nav-contact">İletişim</a></li>
+          </ul>
+        </nav>
+        <div class="language-dropdown">
+          <button class="language-dropdown-toggle" aria-label="Select language" aria-expanded="false">
+            <i class="fas fa-globe"></i>
+            <span class="current-lang">TU</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="language-dropdown-menu" role="menu">
+            <a href="/employee3.html" class="language-option" role="menuitem" data-lang="fr">
+              <i class="fas fa-flag"></i>
+              <span>Français</span>
             </a>
-            <button class="menu-toggle" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav class="nav">
-                <ul>
-                    <li><a href="index.html#services" data-translate="nav-services">Hizmetler</a></li>
-                    <li><a href="index.html#about" data-translate="nav-about">Hakkımızda</a></li>
-                    <li><a href="Blog.html" data-translate="nav-blog">Blog</a></li>
-                    <li><a href="careers.html" data-translate="nav-careers">Kariyer</a></li>
-                    <li><a href="news.html" data-translate="nav-news">Haberler</a></li>
-                    <li><a href="index.html#contact" data-translate="nav-contact">İletişim</a></li>
-                </ul>
-            </nav>
-            <div class="language-dropdown">
-                <button class="language-dropdown-toggle" aria-label="Select language" aria-expanded="false">
-                    <i class="fas fa-globe"></i>
-                    <span class="current-lang">TU</span>
-                    <i class="fas fa-chevron-down"></i>
-                </button>
-                <div class="language-dropdown-menu" role="menu">
-                    <a href="/employee3.html" class="language-option" role="menuitem" data-lang="fr">
-                        <i class="fas fa-flag"></i>
-                        <span>Français</span>
-                    </a>
-                    <a href="/en/employee3.html" class="language-option" role="menuitem" data-lang="en">
-                        <i class="fas fa-flag"></i>
-                        <span>English</span>
-                    </a>
-                    <a href="/tu/employee3.html" class="language-option" role="menuitem" data-lang="tu">
-                        <i class="fas fa-flag"></i>
-                        <span>Türkçe</span>
-                    </a>
-                    <a href="/md/employee3.html" class="language-option" role="menuitem" data-lang="md">
-                        <i class="fas fa-flag"></i>
-                        <span>中文</span>
-                    </a>
-                </div>
-            </div>
+            <a href="/en/employee3.html" class="language-option" role="menuitem" data-lang="en">
+              <i class="fas fa-flag"></i>
+              <span>English</span>
+            </a>
+            <a href="/tu/employee3.html" class="language-option" role="menuitem" data-lang="tu">
+              <i class="fas fa-flag"></i>
+              <span>Türkçe</span>
+            </a>
+            <a href="/md/employee3.html" class="language-option" role="menuitem" data-lang="md">
+              <i class="fas fa-flag"></i>
+              <span>中文</span>
+            </a>
+          </div>
         </div>
+      </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div class="hero-background">
-            <img src="/assets/banner.png" alt="GKS Logistics Team Background" class="hero-bg-image">
-            <div class="hero-overlay"></div>
-        </div>
+    <section class="team-hero-section">
+        <div class="hero-background-image"></div>
+        <div class="hero-background-pattern"></div>
         <div class="container">
-            <div class="hero-content">
-                <div class="back-button">
-                    <a href="news.html" class="btn-back">
-                        <i class="fas fa-arrow-left"></i>
-                        <span data-translate="back-to-news">Haberlere Dön</span>
-                    </a>
+            <div class="back-navigation">
+                <a href="news.html" class="back-link">
+                    <i class="fas fa-arrow-left"></i>
+                    <span data-translate="team_page-back_to_news">Haberlere Dön</span>
+                </a>
+            </div>
+            <div class="hero-content-wrapper">
+                <div class="hero-badge">
+                    <i class="fas fa-users"></i>
+                    <span data-translate="team_page-team_badge">Ekibimiz</span>
                 </div>
-                <div class="team-hero">
-                    <h1 class="team-title" data-translate="team-title">Ekibimiz</h1>
-                    <p class="team-subtitle" data-translate="team-subtitle">Başarınıza adanmış</p>
-                    <div class="team-stats">
-                        <div class="stat">
-                            <span class="stat-number" data-translate="stats-20-plus">20+</span>
-                            <span class="stat-label" data-translate="team-members">150+ ekip üyesi</span>
+                <h1 class="hero-title" data-translate="team_page-team_title">Ekibimiz</h1>
+                <p class="hero-subtitle" data-translate="team_page-team_subtitle">GKS Logistics'i Afrika'da lojistik lideri yapan tutkulu profesyonelleri tanıyın</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-user-tie"></i>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number" data-translate="stats-10-plus">10+</span>
-                            <span class="stat-label" data-translate="years-experience">Yıllık deneyim</span>
+                        <div class="stat-content">
+                            <span class="stat-number" data-translate="team_page-stats_20_plus">20+</span>
+                            <span class="stat-label" data-translate="team_page-team_members">Ekip üyeleri</span>
                         </div>
-                        <div class="stat">
-                            <span class="stat-number" data-translate="stats-10-plus">10+</span>
-                            <span class="stat-label" data-translate="countries">Pays couverts</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number" data-translate="team_page-stats_10_plus">10+</span>
+                            <span class="stat-label" data-translate="team_page-years_experience">Yıllık deneyim</span>
+                        </div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-globe-africa"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-number" data-translate="team_page-stats_10_plus">10+</span>
+                            <span class="stat-label" data-translate="team_page-countries">Kapsanan ülkeler</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="hero-shape-divider">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path>
+                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path>
+                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path>
+            </svg>
+        </div>
     </section>
 
     <!-- Main Content -->
-    <main class="main-content">
+    <main class="team-main-content">
         <div class="container">
             <!-- Leadership Team Section -->
             <section class="leadership-section">
                 <div class="section-header">
-                    <h2 class="section-title" data-translate="leadership-title">Liderlik Ekibi</h2>
-                    <p class="section-subtitle" data-translate="leadership-subtitle">Liderlerimizle tanışın</p>
+                    <div class="section-badge">
+                        <i class="fas fa-crown"></i>
+                        <span data-translate="team_page-leadership_badge">Liderlik</span>
+                    </div>
+                    <h2 class="section-title" data-translate="team_page-leadership_title">Yönetim Ekibi</h2>
+                    <p class="section-subtitle" data-translate="team_page-leadership_subtitle">GKS Logistics'i mükemmelliğe yönlendiren vizyoner liderlerimiz</p>
                 </div>
                 <div class="leadership-grid">
-                    <a href="employee1.html" class="leader-card">
-                        <div class="leader-image">
+                    <a href="employee1.html" class="modern-leader-card">
+                        <div class="card-background"></div>
+                        <div class="leader-image-wrapper">
                             <img src="/assets/gks employee.png" alt="Aboubacar Sidiki Konate">
+                            <div class="image-overlay">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
                         </div>
-                        <div class="leader-info">
-                            <h3 class="leader-name" data-translate="leader-1-name">Dr. Ibrahim Sarr</h3>
-                            <p class="leader-role" data-translate="leader-1-role">CEO ve Kurucu</p>
-                            <p class="leader-quote" data-translate="leader-1-quote">Vizyonumuz, inovasyon ve mükemmellik yoluyla Afrika'da lojistiği dönüştürmektir.</p>
+                        <div class="leader-content">
+                            <h3 class="leader-name" data-translate="team_page-leader_1_name">Aboubacar Sidiki Konate</h3>
+                            <p class="leader-role" data-translate="team_page-leader_1_role">CEO ve Kurucu</p>
+                            <p class="leader-quote" data-translate="team_page-leader_1_quote">"Vizyonumuz, mükemmel lojistik ile dünyayı birleştirmek..."</p>
+                            <div class="card-action">
+                                <span data-translate="team_page-view_profile">Profili görüntüle</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
                         </div>
                     </a>
                     
-                    <a href="employee2.html" class="leader-card">
-                        <div class="leader-image">
+                    <a href="employee2.html" class="modern-leader-card">
+                        <div class="card-background"></div>
+                        <div class="leader-image-wrapper">
                             <img src="/assets/gks employee.png" alt="Alimata Konate">
+                            <div class="image-overlay">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
                         </div>
-                        <div class="leader-info">
-                            <h3 class="leader-name" data-translate="leader-2-name">Mariam Keita</h3>
-                            <p class="leader-role" data-translate="leader-2-role">Operasyon Müdürü</p>
-                            <p class="leader-quote" data-translate="leader-2-quote">Afrika lojistiğinin geleceğini proje proje inşa ediyoruz.</p>
+                        <div class="leader-content">
+                            <h3 class="leader-name" data-translate="team_page-leader_2_name">Alimata Konate</h3>
+                            <p class="leader-role" data-translate="team_page-leader_2_role">Genel Müdür</p>
+                            <p class="leader-quote" data-translate="team_page-leader_2_quote">"Lojistikte mükemmellik sadece mal taşımaktan ibaret değildir..."</p>
+                            <div class="card-action">
+                                <span data-translate="team_page-view_profile">Profili görüntüle</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -138,41 +183,50 @@
             <!-- Department Teams Section -->
             <section class="departments-section">
                 <div class="section-header">
-                    <h2 class="section-title" data-translate="departments-title">Departmanlarımız</h2>
-                    <p class="section-subtitle" data-translate="departments-subtitle">Farklı ekiplerimizdeki fırsatları keşfedin</p>
+                    <div class="section-badge">
+                        <i class="fas fa-building"></i>
+                        <span data-translate="team_page-departments_badge">Departmanlar</span>
+                    </div>
+                    <h2 class="section-title" data-translate="team_page-departments_title">Departmanlarımız</h2>
+                    <p class="section-subtitle" data-translate="team_page-departments_subtitle">Lojistik mükemmelliğe adanmış uzman ekipler</p>
                 </div>
                 <div class="departments-grid">
-                    <div class="department-card">
-                        <div class="department-icon">
+                    <div class="modern-department-card">
+                        <div class="department-icon-wrapper">
+                            <div class="icon-background"></div>
                             <i class="fas fa-truck"></i>
                         </div>
-                        <h3 class="department-name" data-translate="dept-operations">Operasyonlar</h3>
-                        <p class="department-desc" data-translate="dept-operations-desc">Lojistik akış yönetimi ve süreç optimizasyonu</p>
+                        <h3 class="department-name" data-translate="team_page-dept_operations">Operasyonlar</h3>
+                        <p class="department-desc" data-translate="team_page-dept_operations_desc">Lojistik akış yönetimi ve süreç optimizasyonu</p>
                         <div class="department-stats">
-                            <span class="stat" data-translate="dept-operations-count">3 açık pozisyon</span>
+                            <i class="fas fa-users"></i>
+                            <span data-translate="team_page-dept_operations_count">10+ üye</span>
                         </div>
                     </div>
                     
-                    <div class="department-card">
-                        <div class="department-icon">
+                    <div class="modern-department-card">
+                        <div class="department-icon-wrapper">
+                            <div class="icon-background"></div>
                             <i class="fas fa-handshake"></i>
                         </div>
-                        <h3 class="department-name" data-translate="dept-commercial">Ticari</h3>
-                        <p class="department-desc" data-translate="dept-commercial-desc">İş geliştirme ve müşteri ilişkileri</p>
+                        <h3 class="department-name" data-translate="team_page-dept_commercial">Ticari</h3>
+                        <p class="department-desc" data-translate="team_page-dept_commercial_desc">Müşteri ilişkileri ve iş geliştirme</p>
                         <div class="department-stats">
-                            <span class="stat" data-translate="dept-commercial-count">2 açık pozisyon</span>
+                            <i class="fas fa-users"></i>
+                            <span data-translate="team_page-dept_commercial_count">5+ üye</span>
                         </div>
                     </div>
                     
-                    
-                    <div class="department-card">
-                        <div class="department-icon">
+                    <div class="modern-department-card">
+                        <div class="department-icon-wrapper">
+                            <div class="icon-background"></div>
                             <i class="fas fa-users"></i>
                         </div>
-                        <h3 class="department-name" data-translate="dept-hr">İnsan Kaynakları</h3>
-                        <p class="department-desc" data-translate="dept-hr-desc">Personel yönetimi ve yetenek geliştirme</p>
+                        <h3 class="department-name" data-translate="team_page-dept_hr">İnsan Kaynakları</h3>
+                        <p class="department-desc" data-translate="team_page-dept_hr_desc">İnsan sermayesi yönetimi ve yetenek geliştirme</p>
                         <div class="department-stats">
-                            <span class="stat" data-translate="dept-hr-count">1 açık pozisyon</span>
+                            <i class="fas fa-users"></i>
+                            <span data-translate="team_page-dept_hr_count">5+ üye</span>
                         </div>
                     </div>
                 </div>
@@ -181,52 +235,66 @@
             <!-- Team Values Section -->
             <section class="values-section">
                 <div class="section-header">
-                    <h2 class="section-title" data-translate="values-title">Ekip Değerlerimiz</h2>
-                    <p class="section-subtitle" data-translate="values-subtitle">Ekibimizi birleştiren ve yönlendiren ilkeler</p>
+                    <div class="section-badge">
+                        <i class="fas fa-heart"></i>
+                        <span data-translate="team_page-values_badge">Değerlerimiz</span>
+                    </div>
+                    <h2 class="section-title" data-translate="team_page-values_title">Ekip Değerlerimiz</h2>
+                    <p class="section-subtitle" data-translate="team_page-values_subtitle">Ekibimizi birleştiren ve yönlendiren ilkeler</p>
                 </div>
                 <div class="values-grid">
-                    <div class="value-card">
-                        <div class="value-icon">
+                    <div class="modern-value-card">
+                        <div class="value-icon-wrapper">
                             <i class="fas fa-star"></i>
                         </div>
-                        <h3 class="value-name" data-translate="value-excellence">Excellence</h3>
-                        <p class="value-desc" data-translate="value-excellence-desc">Tüm hizmetlerimizde en yüksek kalite standartlarına ulaşmaya çalışıyoruz.</p>
+                        <h3 class="value-name" data-translate="team_page-value_excellence">Mükemmellik</h3>
+                        <p class="value-desc" data-translate="team_page-value_excellence_desc">Yaptığımız her şeyde en yüksek standartlara ulaşmaya çalışıyoruz</p>
                     </div>
                     
-                    <div class="value-card">
-                        <div class="value-icon">
+                    <div class="modern-value-card">
+                        <div class="value-icon-wrapper">
                             <i class="fas fa-users"></i>
                         </div>
-                        <h3 class="value-name" data-translate="value-collaboration">Collaboration</h3>
-                        <p class="value-desc" data-translate="value-collaboration-desc">Takım çalışması ve işbirliğinin gücüne inanıyoruz.</p>
+                        <h3 class="value-name" data-translate="team_page-value_collaboration">İşbirliği</h3>
+                        <p class="value-desc" data-translate="team_page-value_collaboration_desc">Ekip çalışmasının ve iş birliğinin gücüne inanıyoruz</p>
                     </div>
                     
-                    <div class="value-card">
-                        <div class="value-icon">
+                    <div class="modern-value-card">
+                        <div class="value-icon-wrapper">
                             <i class="fas fa-lightbulb"></i>
                         </div>
-                        <h3 class="value-name" data-translate="value-innovation">Innovation</h3>
-                        <p class="value-desc" data-translate="value-innovation-desc">Lojistik çözümlerimizi geliştirmek için en son teknolojileri benimsiyoruz.</p>
+                        <h3 class="value-name" data-translate="team_page-value_innovation">İnovasyon</h3>
+                        <p class="value-desc" data-translate="team_page-value_innovation_desc">Yaratıcılığı ve sürekli gelişmeyi teşvik ediyoruz</p>
                     </div>
                     
-                    <div class="value-card">
-                        <div class="value-icon">
+                    <div class="modern-value-card">
+                        <div class="value-icon-wrapper">
                             <i class="fas fa-shield-alt"></i>
                         </div>
-                        <h3 class="value-name" data-translate="value-integrity">Intégrité</h3>
-                        <p class="value-desc" data-translate="value-integrity-desc">Tüm ilişkilerimizde en yüksek etik standartları koruyoruz.</p>
+                        <h3 class="value-name" data-translate="team_page-value_integrity">Dürüstlük</h3>
+                        <p class="value-desc" data-translate="team_page-value_integrity_desc">Tüm ilişkilerimizde dürüstlük ve şeffaflıkla hareket ediyoruz</p>
                     </div>
                 </div>
             </section>
 
             <!-- Call to Action -->
-            <section class="cta-section">
-                <div class="cta-card">
-                    <h3 data-translate="cta-title">Afrika'nın Dönüşümüne Katılmaya Hazır mısınız?</h3>
-                    <p data-translate="cta-text">Memnun müşterilerimize katılın</p>
+            <section class="modern-cta-section">
+                <div class="cta-background-pattern"></div>
+                <div class="cta-content-wrapper">
+                    <div class="cta-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="cta-title" data-translate="team_page-cta_title">Ekibimize Katılın</h3>
+                    <p class="cta-text" data-translate="team_page-cta_text">GKS Logistics'te kariyer fırsatlarını keşfedin ve misyonumuzun bir parçası olun</p>
                     <div class="cta-buttons">
-                        <a href="careers.html" class="btn btn-primary" data-translate="cta-careers">Ekibimize Katıl</a>
-                        <a href="index.html#contact" class="btn btn-secondary" data-translate="cta-contact">[object Object]</a>
+                        <a href="careers.html" class="cta-btn-primary">
+                            <span data-translate="team_page-cta_careers">Fırsatları Görüntüle</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <button class="cta-btn-secondary open-application-modal">
+                            <i class="fas fa-file-alt"></i>
+                            <span data-translate="team_page-cta_apply">Başvurun</span>
+                        </button>
                     </div>
                 </div>
             </section>
@@ -235,47 +303,215 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="shade-overlay"></div>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <div class="footer-logo-header">
-                        <img src="/logo.png" alt="GKS Logistics Logo" class="footer-logo-img">
-                        <h3><span class="footer-gks-text" data-translate="logo-gks">GKS</span> <span class="footer-logistics-text" data-translate="logo-logistics">LOGISTICS</span></h3>
-                    </div>
-                    <p data-translate="footer-about">Küresel lojistik ortağınız</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/share/1FHxSfs3pN/?mibextid=wwXIfr" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://x.com/gks_logistics" aria-label="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.linkedin.com/company/gks-logistics/" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4 data-translate="footer-links-title">Faydalı Bağlantılar</h4>
-                    <ul>
-                        <li><a href="index.html#services" data-translate="nav-services">Hizmetler</a></li>
-                        <li><a href="index.html#about" data-translate="nav-about">Hakkımızda</a></li>
-                        <li><a href="Blog.html" data-translate="nav-blog">Blog</a></li>
-                        <li><a href="careers.html" data-translate="nav-careers">Kariyer</a></li>
-                        <li><a href="index.html#contact" data-translate="nav-contact">İletişim</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4 data-translate="footer-contact-title">İletişime Geçin</h4>
-                    <p>Email: <a href="mailto:sales@gkslogistics.com" data-translate="contact-email">E-posta</a></p>
-                    <p>Téléphone: <a href="tel:+22390929273" data-translate="contact-phone">+223 90929273</a></p>
-                </div>
+      <div class="shade-overlay"></div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <div class="footer-logo-header">
+              <img src="/logo.png" alt="GKS Logistics Logo" class="footer-logo-img">
+              <h3><span class="footer-gks-text" data-translate="nav-logo-gks">GKS</span> <span class="footer-logistics-text" data-translate="nav-logo-logistics">LOGISTICS</span></h3>
             </div>
-            <div class="footer-divider"></div>
-            <p class="footer-copy" data-translate="footer-copy">© 2025 GKS Logistics. Tous droits réservés.</p>
+            <p data-translate="footer-about">Küresel lojistik ortağınız</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/share/1FHxSfs3pN/?mibextid=wwXIfr" data-translate-attr="aria-label:accessibility-facebook" aria-label="Facebook" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://x.com/gks_logistics" data-translate-attr="aria-label:accessibility-twitter" aria-label="Twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/company/gks-logistics/" data-translate-attr="aria-label:accessibility-linkedin" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h4 data-translate="footer-links-title">Faydalı Bağlantılar</h4>
+            <ul>
+              <li><a href="index.html#services" data-translate="nav-services">Hizmetler</a></li>
+              <li><a href="index.html#about" data-translate="nav-about">Hakkımızda</a></li>
+              <li><a href="Blog.html" data-translate="nav-blog">Blog</a></li>
+              <li><a href="careers.html" data-translate="nav-careers">Kariyer</a></li>
+              <li><a href="index.html#contact" data-translate="nav-contact">İletişim</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4 data-translate="footer-contact-title">İletişime Geçin</h4>
+            <p><span data-translate="footer-email-label">E-posta:</span> <a href="mailto:sales@gkslogistics.com">sales@gkslogistics.com</a></p>
+            <p><span data-translate="footer-phone-label">Telefon:</span> <a href="tel:+22390929273">+223 90929273</a></p>
+          </div>
         </div>
-        <button class="back-to-top" aria-label="Retour en haut">
-            <i class="fas fa-chevron-up"></i>
-        </button>
+        <div class="footer-divider"></div>
+        <p class="footer-copy" data-translate="footer-copyright">© 2025 GKS Logistics. Tüm hakları saklıdır.</p>
+      </div>
+      <button class="back-to-top" data-translate-attr="aria-label:accessibility-back-to-top" aria-label="Retour en haut">
+        <i class="fas fa-chevron-up"></i>
+      </button>
     </footer>
 
+    <!-- Career Application Modal -->
+    <link rel="stylesheet" href="/css/career-application.css">
+    <div id="careerApplicationModal" class="career-modal-overlay">
+        <div class="career-modal-content">
+            <div class="career-modal-header">
+                <h2 data-translate="career-application-modal-title">İş Başvurusu</h2>
+                <button class="career-modal-close" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="career-modal-body">
+                <p class="career-form-subtitle" data-translate="career-application-modal-subtitle">Başvurunuzu göndermek için aşağıdaki formu doldurun.</p>
+                
+                <form name="career-application" data-netlify="true" id="careerApplicationForm" enctype="multipart/form-data">
+                    <!-- Personal Information Section -->
+                    <fieldset class="form-section">
+                        <legend>
+                            <h3 data-translate="career-app-personal-info">Kişisel Bilgiler</h3>
+                        </legend>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="applicantName" data-translate="career-app-full-name">Ad Soyad *</label>
+                                <input type="text" id="applicantName" name="applicantName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="applicantEmail" data-translate="career-app-email">E-posta Adresi *</label>
+                                <input type="email" id="applicantEmail" name="applicantEmail" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="applicantPhone" data-translate="career-app-phone">Telefon Numarası *</label>
+                                <input type="tel" id="applicantPhone" name="applicantPhone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="applicantCity" data-translate="career-app-city">İkamet Şehri *</label>
+                                <input type="text" id="applicantCity" name="applicantCity" required>
+                            </div>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Position Information Section -->
+                    <fieldset class="form-section">
+                        <legend>
+                            <h3 data-translate="career-app-position-info">İstenen Pozisyon</h3>
+                        </legend>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="desiredPosition" data-translate="career-app-position">Pozisyon *</label>
+                                <input type="text" id="desiredPosition" name="desiredPosition" required 
+                                       data-translate="career-app-position-placeholder">Örn: Lojistik Müdürü</div>
+                            
+                            <div class="form-group">
+                                <label for="department" data-translate="career-app-department">Departman *</label>
+                                <select id="department" name="department" required>
+                                    <option value="">--</option>
+                                    <option value="operations" data-translate="career-app-dept-operations">Operasyonlar</option>
+                                    <option value="commercial" data-translate="career-app-dept-commercial">Ticari</option>
+                                    <option value="hr" data-translate="career-app-dept-hr">İnsan Kaynakları</option>
+                                    <option value="finance" data-translate="career-app-dept-finance">Finans</option>
+                                    <option value="it" data-translate="career-app-dept-it">Bilgi Teknolojileri</option>
+                                    <option value="other" data-translate="career-app-dept-other">Diğer</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="experience" data-translate="career-app-experience">Deneyim Yılı *</label>
+                            <select id="experience" name="experience" required>
+                                <option value="">--</option>
+                                <option value="0-1" data-translate="career-app-exp-0-1">0-1 yıl</option>
+                                <option value="1-3" data-translate="career-app-exp-1-3">1-3 yıl</option>
+                                <option value="3-5" data-translate="career-app-exp-3-5">3-5 yıl</option>
+                                <option value="5-10" data-translate="career-app-exp-5-10">5-10 yıl</option>
+                                <option value="10+" data-translate="career-app-exp-10plus">10+ yıl</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Qualifications Section -->
+                    <fieldset class="form-section">
+                        <legend>
+                            <h3 data-translate="career-app-qualifications">Nitelikler ve Eğitim</h3>
+                        </legend>
+                        
+                        <div class="form-group">
+                            <label for="education" data-translate="career-app-education">Eğitim Seviyesi *</label>
+                            <select id="education" name="education" required>
+                                <option value="">--</option>
+                                <option value="high-school" data-translate="career-app-edu-high-school">Lise</option>
+                                <option value="bachelor" data-translate="career-app-edu-bachelor">Lisans</option>
+                                <option value="master" data-translate="career-app-edu-master">Yüksek Lisans</option>
+                                <option value="phd" data-translate="career-app-edu-phd">Doktora</option>
+                                <option value="other" data-translate="career-app-edu-other">Diğer</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="skills" data-translate="career-app-skills">Temel Yetenekler</label>
+                            <textarea id="skills" name="skills" rows="3" 
+                                      data-translate="career-app-skills-placeholder">Örn: Proje Yönetimi, Liderlik, Uluslararası Lojistik...</textarea>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Documents Section -->
+                    <fieldset class="form-section">
+                        <legend>
+                            <h3 data-translate="career-app-documents">Belgeler</h3>
+                        </legend>
+                        
+                        <div class="form-group">
+                            <label for="cvFile" data-translate="career-app-cv-label">CV/Özgeçmiş *</label>
+                            <input type="file" id="cvFile" name="cvFile" accept=".pdf,.doc,.docx" required>
+                            <small class="form-help" data-translate="career-app-cv-help">Kabul edilen format: PDF, DOC, DOCX (Maks 5MB)</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="coverLetterFile" data-translate="career-app-cover-letter">Niyet Mektubu</label>
+                            <input type="file" id="coverLetterFile" name="coverLetterFile" accept=".pdf,.doc,.docx">
+                            <small class="form-help" data-translate="career-app-cover-letter-help">Kabul edilen format: PDF, DOC, DOCX (Maks 5MB)</small>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Additional Information Section -->
+                    <fieldset class="form-section">
+                        <legend>
+                            <h3 data-translate="career-app-additional-info">Ek Bilgiler</h3>
+                        </legend>
+                        
+                        <div class="form-group">
+                            <label for="motivation" data-translate="career-app-motivation">Neden GKS Logistics'e katılmak istiyorsunuz? *</label>
+                            <textarea id="motivation" name="motivation" rows="5" required 
+                                      data-translate="career-app-motivation-placeholder">Motivasyonunuz hakkında bize bilgi verin...</textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="availability" data-translate="career-app-availability">Müsaitlik *</label>
+                            <select id="availability" name="availability" required>
+                                <option value="">--</option>
+                                <option value="immediate" data-translate="career-app-avail-immediate">Hemen</option>
+                                <option value="1month" data-translate="career-app-avail-1month">1 ay içinde</option>
+                                <option value="2months" data-translate="career-app-avail-2months">2 ay içinde</option>
+                                <option value="3months" data-translate="career-app-avail-3months">3+ ay içinde</option>
+                                <option value="negotiate" data-translate="career-app-avail-negotiate">Müzakere edilebilir</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    
+                    <!-- Required Fields Indicator -->
+                    <p class="required-fields-indicator" data-translate="career-app-required-note">* Zorunlu alanlar</p>
+                    
+                    <!-- Form Buttons -->
+                    <div class="form-buttons">
+                        <button type="button" class="btn-cancel" data-translate="career-app-cancel">İptal</button>
+                        <button type="submit" class="btn-submit" data-translate="career-app-submit">Başvuruyu Gönder</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script src="/js/language-manager.js"></script>
-    <script src="/js/employee3.js?v=20250118"></script>
+    <script src="/js/script.js" defer></script>
+    <script src="/js/career-application.js" defer></script>
     <script src="/js/language-switcher.js" defer></script>
 </body>
 </html>
