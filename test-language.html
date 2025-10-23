@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-section { margin: 20px 0; padding: 20px; border: 1px solid #ccc; }
+        button { padding: 10px 20px; margin: 10px; background: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>Language System Test</h1>
+    
+    <div class="test-section">
+        <h2>Navigation Test</h2>
+        <nav>
+            <a href="#" data-translate="nav-services">Services</a> |
+            <a href="#" data-translate="nav-about">About</a> |
+            <a href="#" data-translate="nav-blog">Blog</a> |
+            <a href="#" data-translate="nav-careers">Careers</a> |
+            <a href="#" data-translate="nav-contact">Contact</a>
+        </nav>
+    </div>
+    
+    <div class="test-section">
+        <h2>Content Test</h2>
+        <h3 data-translate="hero-title-1">Reliable Logistics Solutions</h3>
+        <p data-translate="hero-subtitle-1">Your partner for fast and secure transport</p>
+        <button data-translate="hero-cta-1">Request a Quote</button>
+    </div>
+    
+    <div class="test-section">
+        <h2>Language Toggle</h2>
+        <button id="languageToggle">
+            <span class="lang-text">FR</span>
+        </button>
+        <p>Current language: <span id="currentLang">fr</span></p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Console Logs</h2>
+        <p>Check the browser console for language system logs.</p>
+    </div>
+    
+    <script src="js/language-manager.js"></script>
+    <script>
+        // Update current language display
+        setInterval(() => {
+            const currentLang = document.getElementById('currentLang');
+            if (window.langManager) {
+                currentLang.textContent = window.langManager.currentLang;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
+

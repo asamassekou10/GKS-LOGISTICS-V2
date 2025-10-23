@@ -1,0 +1,23 @@
+{
+  "name": "gks-logistics-i18n",
+  "version": "1.0.0",
+  "description": "GKS Logistics internationalization build system",
+  "main": "build-translations.js",
+  "scripts": {
+    "build": "node build-translations-complete.js",
+    "dev": "node build-translations-complete.js && echo 'Build completed. Open dist/index.html to view the site.'",
+    "deploy": "node build-translations-complete.js && node deploy.js",
+    "preview": "node build-translations-complete.js && echo 'Build completed. Open dist/index.html to preview the site.'"
+  },
+  "keywords": [
+    "i18n",
+    "internationalization",
+    "static-site-generator",
+    "logistics"
+  ],
+  "author": "GKS Logistics",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

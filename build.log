@@ -1,0 +1,234 @@
+
+> gks-logistics-i18n@1.0.0 build
+> node build-translations-complete.js
+
+🚀 Starting GKS Logistics complete internationalization build...
+
+✅ Loaded translations for Français
+✅ Loaded translations for English
+✅ Loaded translations for Türkçe
+✅ Loaded translations for 中文
+📁 Found 13 HTML files in src directory: Article1.html, Article2.html, Blog.html, careers.html, employee1.html, employee2.html, employee3.html, index.html, Insight.html, news.html, Precess.html, quote-modal.html, template.html
+
+📄 Processing Article1.html...
+  🌐 Building Français version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\Article1.html
+  🌐 Building English version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\en\Article1.html
+  🌐 Building Türkçe version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\tu\Article1.html
+  🌐 Building 中文 version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\md\Article1.html
+
+📄 Processing Article2.html...
+  🌐 Building Français version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\Article2.html
+  🌐 Building English version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\en\Article2.html
+  🌐 Building Türkçe version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\tu\Article2.html
+  🌐 Building 中文 version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\md\Article2.html
+
+📄 Processing Blog.html...
+  🌐 Building Français version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\Blog.html
+  🌐 Building English version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\en\Blog.html
+  🌐 Building Türkçe version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\tu\Blog.html
+  🌐 Building 中文 version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\md\Blog.html
+
+📄 Processing careers.html...
+  🌐 Building Français version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\careers.html
+  🌐 Building English version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\en\careers.html
+  🌐 Building Türkçe version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\tu\careers.html
+  🌐 Building 中文 version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\md\careers.html
+
+📄 Processing employee1.html...
+  🌐 Building Français version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\employee1.html
+  🌐 Building English version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\en\employee1.html
+  🌐 Building Türkçe version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\tu\employee1.html
+  🌐 Building 中文 version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\md\employee1.html
+
+📄 Processing employee2.html...
+  🌐 Building Français version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\employee2.html
+  🌐 Building English version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\en\employee2.html
+  🌐 Building Türkçe version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\tu\employee2.html
+  🌐 Building 中文 version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\md\employee2.html
+
+📄 Processing employee3.html...
+  🌐 Building Français version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\employee3.html
+  🌐 Building English version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\en\employee3.html
+  🌐 Building Türkçe version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\tu\employee3.html
+  🌐 Building 中文 version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\md\employee3.html
+
+📄 Processing index.html...
+  🌐 Building Français version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\index.html
+  🌐 Building English version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\en\index.html
+  🌐 Building Türkçe version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\tu\index.html
+  🌐 Building 中文 version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\md\index.html
+
+📄 Processing Insight.html...
+  🌐 Building Français version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\Insight.html
+  🌐 Building English version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\en\Insight.html
+  🌐 Building Türkçe version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\tu\Insight.html
+  🌐 Building 中文 version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\md\Insight.html
+
+📄 Processing news.html...
+  🌐 Building Français version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\news.html
+  🌐 Building English version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\en\news.html
+  🌐 Building Türkçe version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\tu\news.html
+  🌐 Building 中文 version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\md\news.html
+
+📄 Processing Precess.html...
+  🌐 Building Français version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\Precess.html
+  🌐 Building English version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\en\Precess.html
+  🌐 Building Türkçe version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\tu\Precess.html
+  🌐 Building 中文 version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\md\Precess.html
+
+📄 Processing quote-modal.html...
+  🌐 Building Français version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\quote-modal.html
+  🌐 Building English version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\en\quote-modal.html
+  🌐 Building Türkçe version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\tu\quote-modal.html
+  🌐 Building 中文 version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\md\quote-modal.html
+
+📄 Processing template.html...
+  🌐 Building Français version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\template.html
+  🌐 Building English version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\en\template.html
+  🌐 Building Türkçe version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\tu\template.html
+  🌐 Building 中文 version...
+    ✅ Generated: C:\Users\alhas\OneDrive\Documents\GKS Upgrade\dist\md\template.html
+📋 Copied: css
+📋 Copied: js
+📋 Copied: assets
+📋 Copied: logo.png
+📋 Copied: favicon.png
+
+📦 Converting translation files for runtime use...
+  ✅ Converted and copied fr.json to /lang/
+  ✅ Converted and copied en.json to /lang/
+  ✅ Converted and copied tu.json to /lang/
+  ✅ Converted and copied md.json to /lang/
+
+🎉 Complete build completed successfully!
+
+📁 Generated files:
+
+📄 Article1.html:
+   Français: /Article1.html
+   English: /en/Article1.html
+   Türkçe: /tu/Article1.html
+   中文: /md/Article1.html
+
+📄 Article2.html:
+   Français: /Article2.html
+   English: /en/Article2.html
+   Türkçe: /tu/Article2.html
+   中文: /md/Article2.html
+
+📄 Blog.html:
+   Français: /Blog.html
+   English: /en/Blog.html
+   Türkçe: /tu/Blog.html
+   中文: /md/Blog.html
+
+📄 careers.html:
+   Français: /careers.html
+   English: /en/careers.html
+   Türkçe: /tu/careers.html
+   中文: /md/careers.html
+
+📄 employee1.html:
+   Français: /employee1.html
+   English: /en/employee1.html
+   Türkçe: /tu/employee1.html
+   中文: /md/employee1.html
+
+📄 employee2.html:
+   Français: /employee2.html
+   English: /en/employee2.html
+   Türkçe: /tu/employee2.html
+   中文: /md/employee2.html
+
+📄 employee3.html:
+   Français: /employee3.html
+   English: /en/employee3.html
+   Türkçe: /tu/employee3.html
+   中文: /md/employee3.html
+
+📄 index.html:
+   Français: /index.html
+   English: /en/index.html
+   Türkçe: /tu/index.html
+   中文: /md/index.html
+
+📄 Insight.html:
+   Français: /Insight.html
+   English: /en/Insight.html
+   Türkçe: /tu/Insight.html
+   中文: /md/Insight.html
+
+📄 news.html:
+   Français: /news.html
+   English: /en/news.html
+   Türkçe: /tu/news.html
+   中文: /md/news.html
+
+📄 Precess.html:
+   Français: /Precess.html
+   English: /en/Precess.html
+   Türkçe: /tu/Precess.html
+   中文: /md/Precess.html
+
+📄 quote-modal.html:
+   Français: /quote-modal.html
+   English: /en/quote-modal.html
+   Türkçe: /tu/quote-modal.html
+   中文: /md/quote-modal.html
+
+📄 template.html:
+   Français: /template.html
+   English: /en/template.html
+   Türkçe: /tu/template.html
+   中文: /md/template.html

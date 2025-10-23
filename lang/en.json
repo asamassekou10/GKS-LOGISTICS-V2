@@ -1,0 +1,363 @@
+{
+  "translations": {
+    "nav-services": "Services",
+    "nav-about": "About",
+    "nav-blog": "Blogs",
+    "nav-careers": "Careers",
+    "nav-contact": "Contact",
+    "nav-news": "News",
+    "hero-title-1": "Reliable Logistics Solutions",
+    "hero-subtitle-1": "Your partner for fast and secure transport",
+    "hero-cta-1": "Request a Quote",
+    "hero-cta-2": "Learn More",
+    "hero-title-2": "International Presence",
+    "hero-subtitle-2": "Tailored logistics solutions worldwide",
+    "hero-cta-3": "Our Services",
+    "hero-cta-4": "Our Network",
+    "hero-title-3": "Quality Services",
+    "hero-subtitle-3": "A dedicated team to meet your needs",
+    "hero-cta-5": "Client Reviews",
+    "hero-cta-6": "Contact Us",
+    "services-title": "Related Services",
+    "services-subtitle": "Logistics solutions designed for your success.",
+    "services-cta": "Discover",
+    "services-explore": "Explore All Our Services",
+    "services-typed-1": "Solutions",
+    "services-typed-2": "Expertise",
+    "services-typed-3": "Reliability",
+    "service-air-title": "Air Freight",
+    "service-air-desc": "Fast and secure international deliveries.",
+    "service-air-progress": "98% On-Time",
+    "service-sea-title": "Sea Freight",
+    "service-sea-desc": "Cost-effective transport for large cargo.",
+    "service-sea-progress": "95% Efficiency",
+    "service-land-title": "Land Transport",
+    "service-land-desc": "Optimized regional network for your needs.",
+    "service-land-progress": "97% Coverage",
+    "service-storage-title": "Warehousing",
+    "service-storage-desc": "Modern and secure storage solutions.",
+    "service-storage-progress": "99% Security",
+    "about-philosophy-title": "Our Philosophy",
+    "about-philosophy-subtitle": "The principles that guide our every move.",
+    "about-mission-title": "Our Mission",
+    "about-mission-desc": "Connecting the world with innovative logistics solutions.",
+    "about-vision-title": "Our Vision",
+    "about-vision-desc": "Redefining logistics through technology and sustainability.",
+    "about-commitment-title": "Our Commitment",
+    "about-commitment-desc": "Ensuring excellence and reliability at every step.",
+    "about-history-title": "Our History",
+    "about-timeline-2019-title": "2019",
+    "about-timeline-2019-desc": "Foundation of GKS Logistics in Bamako. Created in 2019, GKS Logistics is a company that operates in the field of transport and logistics with the necessary skills and experience to acquire the market.",
+    "about-timeline-2020-title": "2020",
+    "about-timeline-2020-desc": "Expansion in West Africa. In 2020, it received the award for the best logistics company due to its experience and expertise and its ambitions to conquer the national and international territory.",
+    "about-timeline-2025-title": "2025",
+    "about-timeline-2025-desc": "GKS Logistics is present worldwide in more than 15 countries, with a strong presence in West Africa, as well as in Europe, North America and the Middle East. Thanks to our international network, we offer integrated, reliable and flexible logistics solutions, adapted to the specific needs of each market.",
+    "about-stats-countries": "Countries Served",
+    "about-stats-shipments": "Shipments",
+    "about-stats-clients": "Satisfied Clients",
+    "presence-title": "Our International Presence",
+    "presence-mali-title": "Mali",
+    "presence-mali-desc": "Comprehensive logistics services for your local operations.",
+    "presence-turkey-title": "Turkey",
+    "presence-turkey-desc": "Dynamic connections between Africa and Asia.",
+    "presence-france-title": "France",
+    "presence-france-desc": "Advanced solutions for Europe.",
+    "presence-usa-title": "United States",
+    "presence-usa-desc": "Robust network for international trade.",
+    "presence-ivorycoast-title": "Côte d'Ivoire",
+    "presence-ivorycoast-desc": "Logistics adapted to regional needs.",
+    "presence-guinea-title": "Guinea",
+    "presence-guinea-desc": "Reliable logistics services in West Africa.",
+    "presence-burkina-title": "Burkina Faso",
+    "presence-burkina-desc": "Logistics solutions for regional trade.",
+    "presence-niger-title": "Niger",
+    "presence-niger-desc": "Logistics services in West Africa.",
+    "presence-dubai-title": "Dubai",
+    "presence-dubai-desc": "Dubai is an essential transit point for international trade.",
+    "testimonials-title": "What our employees say",
+    "testimonials-subtitle": "Discover why our clients trust us for their logistics needs",
+    "testimonial-1": "GKS Logistics has transformed our supply chain with reliable and fast deliveries.",
+    "testimonial-name-1": "Amadou K.",
+    "testimonial-role-1": "Food distributor, Bamako",
+    "testimonial-date-1": "2 weeks ago",
+    "testimonial-2": "Impeccable service and simplified customs procedures. A trusted partner.",
+    "testimonial-name-2": "Aïcha B.",
+    "testimonial-role-2": "Textile company, Niamey",
+    "testimonial-date-2": "1 month ago",
+    "testimonial-3": "Respect for deadlines and goods in perfect condition. I highly recommend.",
+    "testimonial-name-3": "Mamadou S.",
+    "testimonial-role-3": "Pharmaceutical company, Conakry",
+    "testimonial-date-3": "3 weeks ago",
+    "verified-client": "Verified Client",
+    "testimonials-cta-text": "Join our satisfied clients",
+    "testimonials-cta-button": "Get a Quote",
+    "contact-title": "Contact Us",
+    "contact-subtitle": "Connect with our team for customized logistics solutions.",
+    "contact-image-title": "Our Team",
+    "contact-image-desc": "Dedicated to your success",
+    "contact-name": "Your Name",
+    "contact-name-placeholder": "Your name",
+    "contact-service": "Service",
+    "contact-service-placeholder": "Desired service",
+    "contact-service-default": "Service Type",
+    "contact-service-individual": "Individual",
+    "contact-service-small-business": "Small Business",
+    "contact-service-enterprise": "Enterprise",
+    "contact-service-other": "Other",
+    "contact-email": "sales@gkslogistics.com",
+    "contact-email-placeholder": "Your email",
+    "contact-message": "Your Message",
+    "contact-message-placeholder": "Your message",
+    "contact-submit": "Send Now",
+    "contact-confirmation": "Message sent successfully!",
+    "chatbot-title": "GKS Assistant",
+    "chatbot-welcome": "Hello! Welcome to GKS Logistics. How can I assist you today?",
+    "chatbot-placeholder": "Type your question here...",
+    "chatbot-fallback": "Sorry, I didn't understand. Can you rephrase or contact us at sales@gkslogistics.com?",
+    "footer-about": "Your global logistics partner",
+    "footer-links-title": "Useful Links",
+    "footer-contact-title": "Contact Us",
+    "footer-newsletter-title": "Newsletter",
+    "newsletter-placeholder": "Your email",
+    "newsletter-cta": "Subscribe",
+    "newsletter-confirmation": "Thank you for subscribing!",
+    "footer-copy": "© 2025 GKS Logistics. All rights reserved.",
+    "floating-cta": "Free Quote",
+    "blog-title": "Our Blog",
+    "blog-subtitle": "Logistics news and advice",
+    "blog-read-more": "Read more",
+    "blog-category": "Category",
+    "blog-date": "Date",
+    "blog-author": "Author",
+    "careers-title": "Join Our Team",
+    "careers-subtitle": "Build your career at GKS Logistics",
+    "careers-apply": "Apply Now",
+    "careers-location": "Location",
+    "careers-type": "Type",
+    "careers-department": "Department",
+    "news-title": "News",
+    "news-subtitle": "Latest news from GKS Logistics",
+    "news-read-more": "Read more",
+    "news-latest": "Latest News",
+    "news-archive": "Archive",
+    "article-title": "Unlocking Africa's Economic Potential: The Role of Integrated Logistics and Infrastructure Development",
+    "article-subtitle": "Article Subtitle",
+    "article-content": "Article Content",
+    "article-author": "By GKS Logistics Research Team",
+    "article-date": "November 15, 2024",
+    "article-share": "Share",
+    "article-tags": "Tags",
+    "employee-name": "Aboubacar Sidiki KONATE",
+    "employee-position": "Position",
+    "employee-bio": "Biography",
+    "employee-contact": "Contact",
+    "insight-title": "Logistics Trends 2025",
+    "insight-subtitle": "Analysis and perspectives",
+    "insight-category": "Category",
+    "insight-date": "January 2025",
+    "back-to-top": "Back to top",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "close": "Close",
+    "open": "Open",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "view": "View",
+    "download": "Download",
+    "upload": "Upload",
+    "print": "Print",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "website": "Website",
+    "social-media": "Social Media",
+    "skip-to-main-content": "Skip to main content",
+    "logo-gks": "GKS",
+    "logo-logistics": "LOGISTICS",
+    "quote-button": "Request a Quote",
+    "stats-24-7": "24/7",
+    "stats-15-countries": "15+ countries",
+    "close-button": "×",
+    "call-button": "Call",
+    "email-button": "Email",
+    "whatsapp-button": "WhatsApp",
+    "contact-phone": "+223 90929273",
+    "menu-button": "Menu",
+    "form-full-name": "Full Name *",
+    "form-company-name": "Company Name *",
+    "form-email": "Professional Email *",
+    "form-phone": "Phone *",
+    "form-cargo-nature": "Cargo Nature (ex: Electronics, Textiles, Perishables)",
+    "form-origin": "Country/City of Origin *",
+    "form-destination": "Country/City of Destination *",
+    "form-dimensions": "Approximate Dimensions (cm) and Weight (kg) *",
+    "form-quantity": "Quantity / Number of Packages *",
+    "form-message": "Describe your needs or any other relevant information.",
+    "newsletter-email": "Your email address",
+    "social-linkedin": "LinkedIn",
+    "social-twitter": "Twitter",
+    "social-facebook": "Facebook",
+    "stats-10-plus": "10+",
+    "stats-1000-plus": "1000+",
+    "stats-20-plus": "20+",
+    "full-name-placeholder": "Full name",
+    "company-name-placeholder": "Company name",
+    "email-placeholder": "Professional email",
+    "phone-placeholder": "Phone",
+    "cargo-nature-placeholder": "Cargo nature",
+    "origin-placeholder": "Country/City of origin",
+    "destination-placeholder": "Country/City of destination",
+    "dimensions-weight-placeholder": "Dimensions and weight",
+    "quantity-packages-placeholder": "Quantity/Packages",
+    "message-placeholder": "Your message"
+  },
+  "chatbotResponses": [
+    {
+      "keywords": ["hi", "hello", "bonjour", "salut"],
+      "response": "Hello! Welcome to GKS Logistics. How can I assist you today?"
+    },
+    {
+      "keywords": ["who", "what", "company", "entreprise"],
+      "response": "GKS Logistics is a global logistics company founded in 2019 in Bamako, Mali. We specialize in transport and logistics, offering air freight, sea freight, land transport, and warehousing services."
+    },
+    {
+      "keywords": ["founded", "créé", "fondé", "2019"],
+      "response": "GKS Logistics was founded in 2019 in Bamako, Mali."
+    },
+    {
+      "keywords": ["mission", "mission"],
+      "response": "Our mission is to connect the world with innovative logistics solutions."
+    },
+    {
+      "keywords": ["vision", "vision"],
+      "response": "Our vision is to redefine logistics through technology and sustainability."
+    },
+    {
+      "keywords": ["commitment", "engagement"],
+      "response": "We are committed to ensuring excellence and reliability at every step."
+    },
+    {
+      "keywords": ["award", "prix", "2020"],
+      "response": "In 2020, GKS Logistics received the award for the best logistics company due to our experience and expertise."
+    },
+    {
+      "keywords": ["services", "services"],
+      "response": "GKS Logistics offers air freight, sea freight, land transport, and warehousing services tailored to your needs."
+    },
+    {
+      "keywords": ["air", "aérien", "fret aérien"],
+      "response": "Our air freight service ensures fast and secure international deliveries with 98% on-time performance."
+    },
+    {
+      "keywords": ["sea", "maritime", "fret maritime"],
+      "response": "Sea freight is cost-effective for large cargo, with 95% efficiency."
+    },
+    {
+      "keywords": ["land", "terrestre", "transport terrestre"],
+      "response": "Our land transport service provides an optimized regional network with 97% coverage."
+    },
+    {
+      "keywords": ["warehouse", "entreposage", "stockage"],
+      "response": "We offer modern and secure warehousing solutions with 99% security."
+    },
+    {
+      "keywords": ["countries", "pays", "présence"],
+      "response": "GKS Logistics operates in over 15 countries, including Mali, Turkey, France, USA, Dubai, Côte d'Ivoire, Guinea, Burkina Faso, and Niger."
+    },
+    {
+      "keywords": ["mali", "bamako"],
+      "response": "In Mali, we provide comprehensive logistics services for local operations. Contact us at sales@gkslogistics.com."
+    },
+    {
+      "keywords": ["turkey", "turquie"],
+      "response": "In Turkey, we offer dynamic connections between Africa and Asia. Reach us at sales@gkslogistics.com."
+    },
+    {
+      "keywords": ["france", "paris"],
+      "response": "In France, we provide advanced logistics solutions for Europe. Email us at paris@gkslogistics.com."
+    },
+    {
+      "keywords": ["usa", "united states", "états-unis"],
+      "response": "In the USA, we have a robust network for international trade. Contact us at sales@gkslogistics.com."
+    },
+    {
+      "keywords": ["ivory coast", "côte d'ivoire", "abidjan"],
+      "response": "In Côte d'Ivoire, our logistics are tailored to regional needs. Email salesabidjan@gkslogistics.com."
+    },
+    {
+      "keywords": ["guinea", "guinée", "conakry"],
+      "response": "In Guinea, we offer reliable logistics services. Contact us at sales@gkslogistics.com."
+    },
+    {
+      "keywords": ["burkina faso", "ouagadougou"],
+      "response": "In Burkina Faso, we provide logistics solutions for regional trade. Email sales@gkslogistics.com."
+    },
+    {
+      "keywords": ["niger", "niamey"],
+      "response": "In Niger, we offer logistics services in West Africa. Contact salesniger@gkslogistics.com."
+    },
+    {
+      "keywords": ["dubai", "uae"],
+      "response": "In Dubai, we provide logistics services as a key transit point. Contact mohamed.keita@gkslogistics.com."
+    },
+    {
+      "keywords": ["contact", "contacter", "email", "phone", "téléphone"],
+      "response": "You can contact GKS Logistics at sales@gkslogistics.com or call +223 90929273."
+    },
+    {
+      "keywords": ["careers", "carrières", "emploi", "job"],
+      "response": "Explore career opportunities at GKS Logistics on our Careers page: careers.html."
+    },
+    {
+      "keywords": ["newsletter", "newsletter"],
+      "response": "Subscribe to our newsletter in the footer to stay updated on GKS Logistics news."
+    },
+    {
+      "keywords": ["navigation", "menu", "sections"],
+      "response": "Use the navigation menu to explore Services, About, Case Studies, Careers, News, and Contact sections."
+    },
+    {
+      "keywords": ["track", "suivi", "expédition", "shipment"],
+      "response": "To track your shipment, contact our team at sales@gkslogistics.com with your shipment details."
+    },
+    {
+      "keywords": ["customs", "douane", "dédouanement"],
+      "response": "We offer customs clearance services to simplify international shipping. Contact us for details."
+    },
+    {
+      "keywords": ["fcl", "lcl", "container", "conteneur"],
+      "response": "FCL (Full Container Load) means you book a full container for your cargo. LCL (Less than Container Load) means you share container space with other shippers, which is more cost-effective for smaller shipments."
+    },
+    {
+      "keywords": ["cold chain", "chaîne du froid", "température", "pharmaceutical"],
+      "response": "Yes, we offer specialized temperature-controlled logistics (cold chain) for sensitive goods like pharmaceuticals and perishables. Our solutions ensure product integrity from origin to destination."
+    },
+    {
+      "keywords": ["dangerous goods", "marchandises dangereuses", "hazardous"],
+      "response": "We handle dangerous goods transportation with full compliance to international regulations. Our certified team ensures safe handling and documentation for hazardous materials."
+    },
+    {
+      "keywords": ["insurance", "assurance", "cargo insurance"],
+      "response": "We provide comprehensive cargo insurance options to protect your shipments. Our insurance partners offer competitive rates and full coverage for international transport."
+    },
+    {
+      "keywords": ["packaging", "emballage", "packing"],
+      "response": "We offer professional packaging services to ensure your goods are properly protected during transit. Our team uses industry-standard materials and techniques."
+    },
+    {
+      "keywords": ["customs clearance", "dédouanement", "clearance"],
+      "response": "Our team of experts handles the entire customs clearance process, including documentation, duties, and compliance, to ensure your shipments cross borders smoothly and without delay."
+    },
+    {
+      "keywords": ["headquarters", "siège", "bamako"],
+      "response": "Our headquarters is located in Bamako, Mali. We have a modern facility with state-of-the-art equipment and a team of logistics professionals ready to serve you."
+    }
+  ]
+}
