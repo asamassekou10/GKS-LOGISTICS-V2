@@ -1,1 +1,13 @@
-dist/assets/*.pdf
+# PDFs are tracked using Git LFS
+# Configured with: git lfs track "dist/assets/*.pdf"
+# See .gitattributes for LFS configuration
+
+# Node modules and build artifacts
+node_modules/
+.DS_Store
+*.log
+
+# Temporary files
+temp_keys.txt
+*.tmp
+dist/temp_keys.txt

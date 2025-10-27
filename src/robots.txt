@@ -1,0 +1,26 @@
+# Robots.txt for GKS Logistics
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.gkslogistics.com/sitemap.xml
+
+# Disallow temporary or development files
+Disallow: /temp_keys.txt
+Disallow: /*.tmp
+
+# Allow all language versions
+Allow: /en/
+Allow: /tu/
+Allow: /md/
+
+# Allow important resources
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+Allow: /lang/
+
+# Crawl-delay (optional - uncomment if needed)
+# Crawl-delay: 1

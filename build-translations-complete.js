@@ -314,6 +314,18 @@ function buildSite() {
     }
   }
 
+  // Copy sitemap.xml and robots.txt from src to dist
+  const seoFiles = ['sitemap.xml', 'robots.txt'];
+  for (const seoFile of seoFiles) {
+    const srcPath = path.join(__dirname, 'src', seoFile);
+    const destPath = path.join(distPath, seoFile);
+
+    if (fs.existsSync(srcPath)) {
+      fs.copyFileSync(srcPath, destPath);
+      console.log(`📋 Copied: ${seoFile}`);
+    }
+  }
+
   // Convert and copy translation files to /lang/ directory for runtime language manager
   console.log('\n📦 Converting translation files for runtime use...');
   const langDir = path.join(distPath, 'lang');
