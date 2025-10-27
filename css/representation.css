@@ -1,0 +1,399 @@
+/* Our Representation Page Styles */
+
+:root {
+  --primary-color: #0D253F;
+  --secondary-color: #CC3333;
+  --accent-color: #E55A5A;
+  --text-dark: #333;
+  --text-light: #666;
+  --bg-light: #F7F9FC;
+  --white: #FFFFFF;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.16);
+}
+
+/* Hero Section */
+.representation-hero {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 8rem 2rem 4rem;
+  background: linear-gradient(135deg, rgba(13, 37, 63, 0.95), rgba(204, 51, 51, 0.85)), 
+              url('/assets/world presence.png') center/cover;
+}
+
+.representation-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Interactive Map Section */
+.map-section {
+  padding: 5rem 2rem;
+  background: var(--bg-light);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.map-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.interactive-map {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background: linear-gradient(135deg, #e8f4f8 0%, #f5f9fc 100%);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.map-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+/* Map Pins */
+.map-pin {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: var(--secondary-color);
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(204, 51, 51, 0.4);
+  transition: all 0.3s ease;
+  animation: pinBounce 2s ease-in-out infinite;
+}
+
+.map-pin::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+}
+
+.map-pin:hover {
+  transform: rotate(-45deg) scale(1.2);
+  box-shadow: 0 6px 20px rgba(204, 51, 51, 0.6);
+  animation: none;
+  z-index: 10;
+}
+
+@keyframes pinBounce {
+  0%, 100% {
+    transform: rotate(-45deg) translateY(0);
+  }
+  50% {
+    transform: rotate(-45deg) translateY(-10px);
+  }
+}
+
+/* Pin Tooltip */
+.pin-tooltip {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  background: var(--primary-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+}
+
+.map-pin:hover .pin-tooltip {
+  opacity: 1;
+}
+
+/* Pin Positions - Approximate world map coordinates */
+.pin-niger { top: 42%; left: 48%; }
+.pin-ivoire { top: 50%; left: 46%; }
+.pin-senegal { top: 45%; left: 42%; }
+.pin-mali { top: 46%; left: 46%; }
+.pin-burkina { top: 47%; left: 47%; }
+.pin-guinea { top: 50%; left: 44%; }
+.pin-france { top: 30%; left: 49%; }
+.pin-dubai { top: 42%; left: 60%; }
+.pin-turkey { top: 35%; left: 54%; }
+.pin-usa { top: 38%; left: 20%; }
+
+/* Country Cards Section */
+.countries-section {
+  padding: 5rem 2rem;
+  background: white;
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  justify-items: center;
+}
+
+.country-card {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-md);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+}
+
+.country-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.country-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: var(--shadow-lg);
+}
+
+.country-card:hover::before {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.country-flag {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.country-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  padding: 1rem;
+}
+
+.country-icon {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.4s ease;
+}
+
+.country-card:hover .country-icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+.country-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+}
+
+.country-card:hover .country-name {
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .interactive-map {
+    height: 500px;
+  }
+  
+  .countries-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+  }
+  
+  .country-card {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .representation-hero {
+    min-height: 60vh;
+    padding: 6rem 1rem 3rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .map-section,
+  .countries-section {
+    padding: 3rem 1rem;
+  }
+  
+  .interactive-map {
+    height: 400px;
+  }
+  
+  .map-pin {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .map-pin::before {
+    width: 15px;
+    height: 15px;
+  }
+  
+  .countries-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .country-card {
+    width: 130px;
+    height: 130px;
+  }
+  
+  .country-icon {
+    font-size: 2.5rem;
+  }
+  
+  .country-name {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  
+  .interactive-map {
+    height: 300px;
+  }
+  
+  .countries-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .country-card {
+    width: 120px;
+    height: 120px;
+  }
+}
+

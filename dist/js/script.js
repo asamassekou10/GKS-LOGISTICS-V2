@@ -499,3 +499,24 @@ if (document.readyState === 'loading') {
   console.log('Typed available:', typeof Typed !== 'undefined');
   console.log('Language Manager available:', typeof window.langManager !== 'undefined');
 }); // End of DOMContentLoaded
+
+// Philosophy Accordion Toggle Function for Country Pages
+function toggleAccordion(header) {
+  const accordionItem = header.parentElement;
+  const content = accordionItem.querySelector('.accordion-content');
+  const isActive = header.classList.contains('active');
+
+  // Close all other accordion items in this accordion
+  const accordion = accordionItem.parentElement;
+  const allHeaders = accordion.querySelectorAll('.accordion-header');
+  const allContents = accordion.querySelectorAll('.accordion-content');
+
+  allHeaders.forEach(h => h.classList.remove('active'));
+  allContents.forEach(c => c.classList.remove('active'));
+
+  // Toggle the clicked item
+  if (!isActive) {
+    header.classList.add('active');
+    content.classList.add('active');
+  }
+}
