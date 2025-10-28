@@ -33,6 +33,7 @@
     <link rel="icon" href="/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/Blog.css">
+    <link rel="stylesheet" href="/css/blog-filters.css">
     <link rel="stylesheet" href="/css/language-switcher.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -131,6 +132,35 @@
             <div class="content-layout">
                 <!-- Main Blog Content -->
                 <div class="blog-content" id="blog-content">
+                    
+                    <!-- Blog Filters -->
+                    <div class="blog-filters">
+                        <h2 class="filters-title" data-translate="blog-filter-title">Filtrer par localisation</h2>
+                        <div class="filter-tabs">
+                            <button class="filter-tab active" data-filter="all" data-translate="filter-all">
+                                <i class="fas fa-globe"></i> Tous
+                            </button>
+                            <button class="filter-tab" data-filter="mali" data-translate="filter-mali">
+                                <i class="fas fa-map-marker-alt"></i> Mali
+                            </button>
+                            <button class="filter-tab" data-filter="ivoire" data-translate="filter-ivoire">
+                                <i class="fas fa-map-marker-alt"></i> Côte d'Ivoire
+                            </button>
+                            <button class="filter-tab" data-filter="senegal" data-translate="filter-senegal">
+                                <i class="fas fa-map-marker-alt"></i> Sénégal
+                            </button>
+                            <button class="filter-tab" data-filter="dubai" data-translate="filter-dubai">
+                                <i class="fas fa-map-marker-alt"></i> Dubai
+                            </button>
+                            <button class="filter-tab" data-filter="burkina" data-translate="filter-burkina">
+                                <i class="fas fa-map-marker-alt"></i> Burkina Faso
+                            </button>
+                            <button class="filter-tab" data-filter="insights" data-translate="filter-insights">
+                                <i class="fas fa-lightbulb"></i> Insights
+                            </button>
+                        </div>
+                    </div>
+                    
                     <!-- Blog Post Grid -->
                     <div class="blog-grid">
                         <!-- Blog Post Card 1 -->

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>GKS Logistics - Solutions Logistiques Internationales | Fret Aérien, Maritime & Terrestre</title>
+  <meta name="description" content="GKS Logistics offre des solutions logistiques complètes en Afrique de l'Ouest, Europe, Amérique du Nord. Fret aérien, maritime, transport terrestre et entreposage sécurisé depuis 2019.">
+  <meta name="keywords" content="logistique Mali, fret aérien Afrique, transport maritime, GKS Logistics, logistique internationale, entreposage Bamako, transport Afrique de l'Ouest, fret international, douane Mali">
+  
+  <link rel="icon" href="/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/language-switcher.css">
+  <link rel="stylesheet" href="/css/whatsapp-float.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Green Logistics Page Specific Styles */
+    .green-hero {
+      background: linear-gradient(135deg, rgba(34, 139, 34, 0.95) 0%, rgba(0, 100, 0, 0.95) 100%), 
+                  url('/assets/logistics-3.png') center/cover;
+      min-height: 65vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 4rem 2rem;
+      position: relative;
+    }
+    
+    .green-hero h1 {
+      font-size: 3.5rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+    
+    .green-hero p {
+      font-size: 1.3rem;
+      color: rgba(255, 255, 255, 0.95);
+      max-width: 800px;
+      margin: 0 auto 2rem;
+    }
+    
+    .commitments-section {
+      padding: 5rem 0;
+      background: white;
+    }
+    
+    .commitments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+    
+    .commitment-card {
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+      border-radius: 20px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+    }
+    
+    .commitment-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(34, 139, 34, 0.2);
+      border-color: #228B22;
+    }
+    
+    .commitment-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #228B22 0%, #32CD32 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      color: white;
+      font-size: 2.5rem;
+      box-shadow: 0 8px 20px rgba(34, 139, 34, 0.3);
+    }
+    
+    .commitment-card h3 {
+      color: #228B22;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    
+    .initiatives-section {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, #f0f8f0 0%, #e8f5e9 100%);
+    }
+    
+    .initiatives-timeline {
+      max-width: 900px;
+      margin: 3rem auto;
+      position: relative;
+    }
+    
+    .initiative-item {
+      background: white;
+      border-radius: 15px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      border-left: 5px solid #228B22;
+      transition: all 0.3s ease;
+    }
+    
+    .initiative-item:hover {
+      transform: translateX(10px);
+      box-shadow: 0 12px 32px rgba(34, 139, 34, 0.2);
+    }
+    
+    .initiative-year {
+      display: inline-block;
+      background: #228B22;
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 25px;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .stats-green {
+      padding: 5rem 0;
+      background: #228B22;
+      color: white;
+      text-align: center;
+    }
+    
+    .stats-green-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+    
+    .stat-green-item {
+      padding: 2rem;
+    }
+    
+    .stat-green-number {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+    
+    .stat-green-label {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+    
+    .partnerships-green {
+      padding: 5rem 0;
+      background: white;
+    }
+    
+    .partners-green-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .partner-green-card {
+      background: #f8f9fa;
+      border-radius: 15px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .partner-green-card:hover {
+      background: #e8f5e9;
+      transform: translateY(-5px);
+    }
+    
+    .actions-section {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, #228B22 0%, #32CD32 100%);
+      color: white;
+      text-align: center;
+    }
+    
+    .actions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .action-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 2rem;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease;
+    }
+    
+    .action-card:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-5px);
+    }
+    
+    .action-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    
+    @media (max-width: 768px) {
+      .green-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .commitments-grid,
+      .stats-green-grid,
+      .partners-green-grid,
+      .actions-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <link rel="alternate" hreflang="x-default" href="https://www.gkslogistics.com/green-logistics.html" />
+  <link rel="alternate" hreflang="fr" href="https://www.gkslogistics.com/green-logistics.html" />
+  <link rel="alternate" hreflang="en" href="https://www.gkslogistics.com/en/green-logistics.html" />
+  <link rel="alternate" hreflang="tu" href="https://www.gkslogistics.com/tu/green-logistics.html" />
+  <link rel="alternate" hreflang="md" href="https://www.gkslogistics.com/md/green-logistics.html" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header-logo-link">
+        <img src="/logo.png" alt="GKS Logistics Logo" class="header-logo-image">
+        <span class="gks-text" data-translate="logo-gks">GKS</span> <span class="logistics-text" data-translate="logo-logistics">LOGISTICS</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html#services" data-translate="nav-services">Services</a></li>
+          <li><a href="groupage.html" data-translate="nav-groupage">Groupage</a></li>
+          <li><a href="#" class="active" data-translate="nav-green">GKS Green</a></li>
+          <li><a href="index.html#about" data-translate="nav-about">À Propos</a></li>
+          <li><a href="our-representation.html" data-translate="nav-representation">Notre Présence</a></li>
+          <li><a href="Blog.html" data-translate="nav-blog">Blogs</a></li>
+          <li><a href="careers.html" data-translate="nav-careers">Carrières</a></li>
+          <li><a href="index.html#contact" data-translate="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="language-dropdown">
+        <button class="language-dropdown-toggle" aria-label="Select language">
+          <i class="fas fa-globe"></i>
+          <span class="current-lang">FR</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="language-dropdown-menu" role="menu">
+          <a href="/green-logistics.html" class="language-option" role="menuitem" data-lang="fr">
+            <i class="fas fa-flag"></i>
+            <span>Français</span>
+          </a>
+          <a href="/en/green-logistics.html" class="language-option" role="menuitem" data-lang="en">
+            <i class="fas fa-flag"></i>
+            <span>English</span>
+          </a>
+          <a href="/tu/green-logistics.html" class="language-option" role="menuitem" data-lang="tu">
+            <i class="fas fa-flag"></i>
+            <span>Türkçe</span>
+          </a>
+          <a href="/md/green-logistics.html" class="language-option" role="menuitem" data-lang="md">
+            <i class="fas fa-flag"></i>
+            <span>中文</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="green-hero">
+    <div class="container">
+      <h1 data-translate="green-hero-title">🌱 GKS Green Logistics</h1>
+      <p data-translate="green-hero-subtitle">Engagés pour un transport durable et une logistique responsable. Ensemble, construisons un avenir plus vert.</p>
+      <a href="#actions" class="btn" style="background: white; color: #228B22;" data-translate="green-hero-cta">Découvrir nos actions</a>
+    </div>
+  </section>
+
+  <!-- Commitments Section -->
+  <section class="commitments-section">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 1rem; color: #228B22;" data-translate="green-commitments-title">Nos Engagements RSE</h2>
+      <p style="text-align: center; color: #6c757d; max-width: 700px; margin: 0 auto;" data-translate="green-commitments-subtitle">La responsabilité environnementale au cœur de notre stratégie</p>
+      
+      <div class="commitments-grid">
+        <div class="commitment-card">
+          <div class="commitment-icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3 data-translate="commitment-co2-title">Réduction CO₂</h3>
+          <p data-translate="commitment-co2-desc">Nous nous engageons à réduire nos émissions de CO₂ de 30% d'ici 2030 grâce à l'optimisation des routes et l'utilisation de véhicules moins polluants.</p>
+        </div>
+        
+        <div class="commitment-card">
+          <div class="commitment-icon">
+            <i class="fas fa-recycle"></i>
+          </div>
+          <h3 data-translate="commitment-recycle-title">Recyclage & Réutilisation</h3>
+          <p data-translate="commitment-recycle-desc">Programme de recyclage des palettes, emballages et matériaux. 85% de nos palettes sont recyclées ou réutilisées.</p>
+        </div>
+        
+        <div class="commitment-card">
+          <div class="commitment-icon">
+            <i class="fas fa-solar-panel"></i>
+          </div>
+          <h3 data-translate="commitment-energy-title">Énergies Renouvelables</h3>
+          <p data-translate="commitment-energy-desc">Installation de panneaux solaires dans nos entrepôts pour réduire notre dépendance aux énergies fossiles.</p>
+        </div>
+        
+        <div class="commitment-card">
+          <div class="commitment-icon">
+            <i class="fas fa-route"></i>
+          </div>
+          <h3 data-translate="commitment-optimize-title">Optimisation Logistique</h3>
+          <p data-translate="commitment-optimize-desc">Utilisation d'algorithmes avancés pour optimiser les routes et réduire les kilomètres parcourus à vide.</p>
+        </div>
+        
+        <div class="commitment-card">
+          <div class="commitment-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3 data-translate="commitment-training-title">Formation & Sensibilisation</h3>
+          <p data-translate="commitment-training-desc">Formation continue de nos équipes aux pratiques éco-responsables et à la conduite écologique.</p>
+        </div>
+        
+        <div class="commitment-card">
+          <div class="commitment-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h3 data-translate="commitment-certification-title">Certifications</h3>
+          <p data-translate="commitment-certification-desc">Nous travaillons vers l'obtention de certifications environnementales internationales (ISO 14001).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Initiatives Timeline -->
+  <section class="initiatives-section">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 1rem; color: #228B22;" data-translate="green-initiatives-title">Nos Initiatives Concrètes</h2>
+      <p style="text-align: center; color: #6c757d; max-width: 700px; margin: 0 auto;" data-translate="green-initiatives-subtitle">Actions mises en place depuis 2020</p>
+      
+      <div class="initiatives-timeline">
+        <div class="initiative-item">
+          <span class="initiative-year">2020</span>
+          <h3 data-translate="initiative-2020-title">🌍 Audit Environnemental</h3>
+          <p data-translate="initiative-2020-desc">Premier audit environnemental complet de nos opérations pour identifier les axes d'amélioration prioritaires.</p>
+        </div>
+        
+        <div class="initiative-item">
+          <span class="initiative-year">2021</span>
+          <h3 data-translate="initiative-2021-title">♻️ Programme de Recyclage</h3>
+          <p data-translate="initiative-2021-desc">Lancement du programme de recyclage des palettes à Bamako et Abidjan. Plus de 10,000 palettes recyclées la première année.</p>
+        </div>
+        
+        <div class="initiative-item">
+          <span class="initiative-year">2022</span>
+          <h3 data-translate="initiative-2022-title">🚛 Flotte Éco-responsable</h3>
+          <p data-translate="initiative-2022-desc">Introduction de véhicules conformes aux normes Euro 6 et formation des chauffeurs à l'éco-conduite.</p>
+        </div>
+        
+        <div class="initiative-item">
+          <span class="initiative-year">2023</span>
+          <h3 data-translate="initiative-2023-title">☀️ Énergie Solaire</h3>
+          <p data-translate="initiative-2023-desc">Installation de 200 m² de panneaux solaires sur notre entrepôt principal à Bamako, réduisant de 40% notre consommation électrique.</p>
+        </div>
+        
+        <div class="initiative-item">
+          <span class="initiative-year">2024</span>
+          <h3 data-translate="initiative-2024-title">📊 Digitalisation & Optimisation</h3>
+          <p data-translate="initiative-2024-desc">Déploiement d'un système de gestion logistique intelligent pour optimiser les routes et réduire notre empreinte carbone.</p>
+        </div>
+        
+        <div class="initiative-item">
+          <span class="initiative-year">2025</span>
+          <h3 data-translate="initiative-2025-title">🌱 Objectif Carbon Neutral</h3>
+          <p data-translate="initiative-2025-desc">Lancement de notre feuille de route vers la neutralité carbone d'ici 2030, avec compensation des émissions résiduelles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Green Stats -->
+  <section class="stats-green">
+    <div class="container">
+      <h2 style="margin-bottom: 1rem;" data-translate="green-stats-title">Impact Environnemental en Chiffres</h2>
+      <p style="opacity: 0.95;" data-translate="green-stats-subtitle">Nos résultats concrets</p>
+      
+      <div class="stats-green-grid">
+        <div class="stat-green-item">
+          <span class="stat-green-number" data-translate="green-stat-co2-number">-25%</span>
+          <span class="stat-green-label" data-translate="green-stat-co2-label">Réduction CO₂ depuis 2020</span>
+        </div>
+        <div class="stat-green-item">
+          <span class="stat-green-number" data-translate="green-stat-pallets-number">50K+</span>
+          <span class="stat-green-label" data-translate="green-stat-pallets-label">Palettes recyclées</span>
+        </div>
+        <div class="stat-green-item">
+          <span class="stat-green-number" data-translate="green-stat-solar-number">200m²</span>
+          <span class="stat-green-label" data-translate="green-stat-solar-label">Panneaux solaires</span>
+        </div>
+        <div class="stat-green-item">
+          <span class="stat-green-number" data-translate="green-stat-efficiency-number">+30%</span>
+          <span class="stat-green-label" data-translate="green-stat-efficiency-label">Efficacité énergétique</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="actions-section" id="actions">
+    <div class="container">
+      <h2 style="margin-bottom: 1rem;" data-translate="green-actions-title">Agissons Ensemble</h2>
+      <p style="font-size: 1.2rem; opacity: 0.95; max-width: 700px; margin: 0 auto 3rem;" data-translate="green-actions-subtitle">Vous aussi, contribuez à un transport plus durable</p>
+      
+      <div class="actions-grid">
+        <div class="action-card">
+          <div class="action-icon">📦</div>
+          <h3 data-translate="action-packaging-title">Emballages Éco-responsables</h3>
+          <p data-translate="action-packaging-desc">Optez pour nos solutions d'emballage recyclable et biodégradable</p>
+        </div>
+        
+        <div class="action-card">
+          <div class="action-icon">🚢</div>
+          <h3 data-translate="action-consolidation-title">Consolidation de Fret</h3>
+          <p data-translate="action-consolidation-desc">Utilisez nos services de groupage pour réduire l'impact environnemental</p>
+        </div>
+        
+        <div class="action-card">
+          <div class="action-icon">📊</div>
+          <h3 data-translate="action-reporting-title">Rapport Carbone</h3>
+          <p data-translate="action-reporting-desc">Recevez un rapport détaillé de l'empreinte carbone de vos expéditions</p>
+        </div>
+      </div>
+      
+      <div style="margin-top: 3rem;">
+        <a href="index.html#contact" class="btn" style="background: white; color: #228B22; padding: 1rem 3rem; font-size: 1.1rem;" data-translate="green-contact-cta">
+          Contactez-nous pour en savoir plus
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>GKS LOGISTICS</h3>
+          <p>Votre partenaire logistique responsable</p>
+        </div>
+        <div class="footer-links">
+          <h4>Liens Rapides</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="groupage.html">Groupage</a></li>
+            <li><a href="green-logistics.html">GKS Green</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p><i class="fas fa-phone"></i> +223 90 92 92 73</p>
+          <p><i class="fas fa-envelope"></i> sales@gkslogistics.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 GKS Logistics. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/language-manager.js"></script>
+  <script src="/js/script.js" defer></script>
+  <script src="/js/whatsapp-integration.js" defer></script>
+  <script src="/js/language-switcher.js" defer></script>
+</body>
+</html>
+

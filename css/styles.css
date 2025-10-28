@@ -30,11 +30,11 @@ main, section, .hero, .services, .about, .presence, .partners, .testimonials, .c
 
 /* CSS Variables (Design System) */
 :root {
-  /* Colors */
-  --primary-color: #003087;
-  --secondary-color: #CC3333;
-  --accent-color: #E55A5A;
-  --neutral-100: #FFFFFF;
+  /* Colors - GKS Charter */
+  --primary-color: #003087; /* GKS Blue - Main backgrounds */
+  --secondary-color: #DC143C; /* GKS Logistics Red - CTAs and accents */
+  --accent-color: #DC143C; /* GKS Logistics Red - Unified with secondary */
+  --neutral-100: #FFFFFF; /* White - Main elements (text, cards) */
   --neutral-200: #F8F9FA;
   --neutral-300: #E9ECEF;
   --neutral-400: #DEE2E6;
@@ -483,40 +483,81 @@ img, .slider-track, .hero-slide img {
   z-index: 1;
 }
 
-h1, h2, h3, h4 {
+/* Enhanced Typography Hierarchy */
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  color: var(--primary-color);
+  font-size: 3rem;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+h2 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  color: #003087;
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+}
+
+h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 1.75rem;
+  line-height: 1.4;
+}
+
+h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--neutral-800);
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+p {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--neutral-700);
+  margin-bottom: 1rem;
 }
 
 .btn {
   display: inline-block;
   padding: 0.75rem 2rem;
-  background: linear-gradient(45deg, #CC3333, #E55A5A);
-  color: #FFFFFF;
+  background: var(--secondary-color);
+  color: var(--neutral-100);
   border-radius: 50px;
   text-align: center;
   text-decoration: none;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
   min-height: 44px; /* Better touch target */
   min-width: 44px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(220, 20, 60, 0.3);
 }
 
 .btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(220, 20, 60, 0.5);
+  background: #C5112D;
 }
 
 .btn-secondary {
   background: transparent;
-  border: 2px solid #CC3333;
-  color: #CC3333;
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+  box-shadow: none;
 }
 
 .btn-secondary:hover {
-  background: linear-gradient(45deg, #CC3333, #E55A5A);
-  color: #FFFFFF;
-  border-color: transparent;
+  background: var(--secondary-color);
+  color: var(--neutral-100);
+  border-color: var(--secondary-color);
 }
 
 .shade-overlay {
@@ -785,14 +826,15 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
-/* Standardized Header Logo Link */
+/* Standardized Header Logo Link - Back to left position */
 .header-logo-link {
-  text-decoration: none; /* Removes underline */
-  display: flex; /* Aligns image and text horizontally */
-  align-items: center; /* Vertically centers image and text */
-  gap: 0.5rem; /* Space between logo image and text */
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   color: #FFFFFF;
   transition: opacity 0.3s ease;
 }
@@ -800,12 +842,12 @@ h1, h2, h3, h4 {
 /* Remove underline on hover for the logo link specifically */
 .header-logo-link:hover {
   text-decoration: none;
-  opacity: 0.8; /* Slight fade on hover */
+  opacity: 0.8;
 }
 
 /* Style for the logo image within the header */
 .header-logo-image {
-  height: 40px; /* Adjust height as needed for header fit */
+  height: 40px;
   width: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -817,19 +859,19 @@ h1, h2, h3, h4 {
 
 /* Style for the "GKS" part of the text */
 .header-logo-link .gks-text {
-  color: var(--primary-color, #003087); /* Using CSS variable for dark blue */
-  font-weight: 700; /* Bold for impact */
-  font-size: 1.5rem; /* Adjust font size as needed */
-  line-height: 1; /* Helps with vertical alignment */
+  color: var(--primary-color, #003087);
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1;
   margin: 0;
 }
 
 /* Style for the "LOGISTICS" part of the text */
 .header-logo-link .logistics-text {
-  color: red; /* Explicitly set to red */
-  font-weight: 500; /* Slightly less bold than "GKS" */
-  font-size: 1.5rem; /* Match "GKS" font size */
-  line-height: 1; /* Helps with vertical alignment */
+  color: var(--secondary-color);
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
   margin: 0;
 }
 
@@ -874,7 +916,7 @@ h1, h2, h3, h4 {
 }
 
 .nav ul li a:hover {
-  color: #CC3333;
+  color: var(--secondary-color);
 }
 
 .nav ul li a.active {
@@ -956,6 +998,315 @@ h1, h2, h3, h4 {
 
 .nav {
   transition: transform 0.3s ease;
+}
+
+/* Package Tracking Section */
+.tracking-section {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.tracking-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(0, 48, 135, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(220, 20, 60, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.tracking-widget {
+  background: white;
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.tracking-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tracking-header i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.tracking-header h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.tracking-header p {
+  color: var(--neutral-600);
+  font-size: 1rem;
+}
+
+.tracking-form {
+  margin-top: 2rem;
+}
+
+.tracking-input-group {
+  display: flex;
+  align-items: center;
+  background: #f8f9fa;
+  border-radius: 50px;
+  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  gap: 1rem;
+}
+
+.tracking-input-group > i {
+  color: var(--neutral-500);
+  font-size: 1.2rem;
+}
+
+.tracking-input-group input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 0.75rem 0.5rem;
+  font-size: 1.05rem;
+  outline: none;
+  color: var(--neutral-800);
+}
+
+.tracking-input-group input::placeholder {
+  color: var(--neutral-500);
+}
+
+.btn-track {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 2rem;
+  white-space: nowrap;
+}
+
+.tracking-types {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.tracking-type-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--neutral-700);
+}
+
+.tracking-type-option input[type="radio"] {
+  accent-color: var(--secondary-color);
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.tracking-result {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+  border-left: 4px solid var(--secondary-color);
+}
+
+.tracking-result.success {
+  border-left-color: var(--success-color);
+  background: #d4edda;
+}
+
+.tracking-result.error {
+  border-left-color: var(--error-color);
+  background: #f8d7da;
+}
+
+/* Tracking Results */
+.tracking-number-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.tracking-type-badge {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.25rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.tracking-timeline {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.tracking-timeline::before {
+  content: '';
+  position: absolute;
+  left: 1.25rem;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #e9ecef;
+}
+
+.tracking-step {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.tracking-step:last-child {
+  padding-bottom: 0;
+}
+
+.step-marker {
+  position: absolute;
+  left: -3rem;
+  top: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: white;
+  border: 3px solid var(--neutral-300);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.tracking-step.completed .step-marker {
+  background: var(--success-color);
+  border-color: var(--success-color);
+  color: white;
+}
+
+.tracking-step.active .step-marker {
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: white;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(220, 20, 60, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(220, 20, 60, 0);
+  }
+}
+
+.step-content h4 {
+  margin: 0 0 0.5rem 0;
+  color: var(--primary-color);
+  font-size: 1.15rem;
+}
+
+.step-content p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+  color: var(--neutral-600);
+}
+
+.step-location, .step-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.step-location i, .step-date i {
+  color: var(--secondary-color);
+}
+
+.tracking-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e9ecef;
+}
+
+.tracking-loading, .tracking-error {
+  text-align: center;
+  padding: 2rem;
+}
+
+.tracking-loading i {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.tracking-error i {
+  font-size: 2.5rem;
+  color: var(--error-color);
+  margin-bottom: 1rem;
+}
+
+/* Responsive tracking section */
+@media (max-width: 768px) {
+  .tracking-widget {
+    padding: 2rem 1.5rem;
+  }
+  
+  .tracking-input-group {
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 15px;
+  }
+  
+  .tracking-input-group input {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .btn-track {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .tracking-types {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .tracking-number-display {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  
+  .tracking-actions {
+    flex-direction: column;
+  }
+  
+  .tracking-actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 /* Hero Section */
@@ -1060,8 +1411,8 @@ h1, h2, h3, h4 {
 }
 
 .hero-buttons .btn-secondary:hover {
-  background: linear-gradient(45deg, #CC3333, #E55A5A);
-  border-color: #CC3333;
+  background: var(--secondary-color);
+  border-color: var(--secondary-color);
 }
 
 /* Hero Indicators */
@@ -2323,14 +2674,22 @@ h1, h2, h3, h4 {
   padding: 4rem 0;
   position: relative;
   z-index: 1;
-  background: #081925;
+  background: linear-gradient(135deg, #081925 0%, #0a2540 100%);
 }
 
 .about-timeline h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   color: #ffffff;
+  font-weight: 800;
+}
+
+.timeline-intro {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
 }
 
 /* Timeline styles - only for about page */
@@ -2393,29 +2752,68 @@ h1, h2, h3, h4 {
 }
 
 .about-timeline .timeline-content {
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 10px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(204, 51, 51, 0.2);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   position: relative;
+  border: 2px solid rgba(220, 20, 60, 0.1);
+  transition: all 0.3s ease;
+}
+
+.about-timeline .timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(220, 20, 60, 0.3);
+}
+
+.timeline-year {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--secondary-color) 0%, #ff1744 100%);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 12px rgba(220, 20, 60, 0.3);
+}
+
+.timeline-icon {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #1565C0 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 48, 135, 0.3);
 }
 
 .about-timeline .timeline-content h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+  font-weight: 700;
 }
 
 .about-timeline .timeline-content p {
-  font-size: 1rem;
-  color: #333333;
-  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  color: var(--neutral-700);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
 }
 
 .about-timeline .timeline-content img {
   width: 100%;
-  height: 200px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   filter: brightness(50%);
 }
 
@@ -3768,14 +4166,15 @@ h1, h2, h3, h4 {
   font-size: 1.2rem;
   border: none;
   cursor: pointer;
-  background: linear-gradient(45deg, #CC3333, #E55A5A);
-  box-shadow: 0 5px 15px rgba(204, 51, 51, 0.4);
+  background: var(--secondary-color);
+  box-shadow: 0 5px 15px rgba(220, 20, 60, 0.4);
   transition: all 0.3s ease;
 }
 
 .contact-form .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(204, 51, 51, 0.5);
+  box-shadow: 0 8px 20px rgba(220, 20, 60, 0.5);
+  background: #C5112D;
 }
 
 .confirmation-block {

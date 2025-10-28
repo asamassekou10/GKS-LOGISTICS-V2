@@ -180,3 +180,47 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Location-based Blog Filters
+function initializeLocationFilters() {
+  const filterTabs = document.querySelectorAll('.filter-tab');
+  const blogCards = document.querySelectorAll('.blog-card');
+  
+  if (filterTabs.length > 0) {
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        // Remove active class from all tabs
+        filterTabs.forEach(t => t.classList.remove('active'));
+        
+        // Add active class to clicked tab
+        this.classList.add('active');
+        
+        // Get filter value
+        const filter = this.getAttribute('data-filter');
+        
+        // Filter blog cards
+        blogCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          
+          if (filter === 'all') {
+            card.classList.remove('hidden');
+            card.style.display = 'block';
+            card.style.animation = 'fadeIn 0.5s ease';
+          } else if (category && category.includes(filter)) {
+            card.classList.remove('hidden');
+            card.style.display = 'block';
+            card.style.animation = 'fadeIn 0.5s ease';
+          } else {
+            card.classList.add('hidden');
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  }
+}
+
+// Initialize location filters when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+  initializeLocationFilters();
+});

@@ -39,6 +39,7 @@
   <link rel="stylesheet" href="/css/enhanced-chatbot.css">
   <link rel="stylesheet" href="/css/process-animation.css">
   <link rel="stylesheet" href="/css/language-switcher.css">
+  <link rel="stylesheet" href="/css/whatsapp-float.css">
   <!-- Swiper CSS pour l'animation du processus -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
@@ -108,17 +109,18 @@
         <button class="menu-toggle" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
         </button>
-        <nav class="nav">
-          <ul>
-            <li><a href="#services" data-translate="nav-services">Services</a></li>
-            <li><a href="#about" data-translate="nav-about">À Propos</a></li>
-            <li><a href="our-representation.html" data-translate="nav-representation">Notre Représentation</a></li>
-            <li><a href="Blog.html" data-translate="nav-blog">Blogs</a></li>
-            <li><a href="careers.html" data-translate="nav-careers">Carrières</a></li>
-            <li><a href="news.html" data-translate="nav-news">Actualités</a></li>
-            <li><a href="#contact" data-translate="nav-contact">Contact</a></li>
-          </ul>
-        </nav>
+      <nav class="nav">
+        <ul>
+          <li><a href="#services" data-translate="nav-services">Services</a></li>
+          <li><a href="groupage.html" data-translate="nav-groupage">Groupage</a></li>
+          <li><a href="green-logistics.html" data-translate="nav-green">GKS Green</a></li>
+          <li><a href="our-representation.html" data-translate="nav-representation">Notre Représentation</a></li>
+          <li><a href="Blog.html" data-translate="nav-blog">Blogs</a></li>
+          <li><a href="careers.html" data-translate="nav-careers">Carrières</a></li>
+          <li><a href="news.html" data-translate="nav-news">Actualités</a></li>
+          <li><a href="#contact" data-translate="nav-contact">Contact</a></li>
+        </ul>
+      </nav>
         <div class="language-dropdown">
           <button class="language-dropdown-toggle" aria-label="Select language" aria-expanded="false">
             <i class="fas fa-globe"></i>
@@ -198,6 +200,7 @@
 
   <!-- Main Content -->
   <main id="main-content">
+  
   <!-- Services Section -->
   <section id="services" class="services reveal">
     <div class="shade-overlay"></div>
@@ -462,27 +465,40 @@
         </div>
     </div>
     <div class="container about-timeline">
-      <h2 data-translate="about-history-title">Notre Histoire</h2>
+      <h2 data-translate="about-history-title">Notre Histoire depuis 2019</h2>
+      <p class="timeline-intro" data-translate="about-timeline-intro">Découvrez les étapes clés de notre développement</p>
       <div class="timeline">
         <div class="timeline-item left">
           <div class="timeline-content">
-            <h3 data-translate="about-timeline-2019-title">2019</h3>
-            <p data-translate="about-timeline-2019-desc">Fondation de GKS Logistics à Bamako. Créé en 2019, GKS Logistics est une entreprise qui évolue dans le domaine du transport et de la logistique avec les compétences et expériences nécessaires pour acquérir le marché.</p>
-            <img src="/assets/GKS ORIGINAL LOGO.png" alt="Fondation GKS Logistics 2019" loading="lazy">
+            <div class="timeline-year">2019</div>
+            <h3 data-translate="about-timeline-2019-title">Fondation à Bamako</h3>
+            <p data-translate="about-timeline-2019-desc">Créé en 2019, GKS Logistics démarre ses activités à Bamako, Mali, avec une vision claire : devenir un acteur majeur de la logistique en Afrique de l'Ouest.</p>
+            <div class="timeline-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <img src="/assets/mali.png" alt="Fondation GKS Logistics à Bamako 2019" loading="lazy">
           </div>
         </div>
         <div class="timeline-item right">
           <div class="timeline-content">
-            <h3 data-translate="about-timeline-2020-title">2020</h3>
-            <p data-translate="about-timeline-2020-desc">Expansion en Afrique de l'Ouest. En 2020, elle a reçu le prix de la meilleure entreprise de logistique de par son expérience et son savoir-faire et ses ambitions de conquérir le territoire national et international.</p>
-            <img src="/assets/west africa.png" alt="Expansion Afrique de l'Ouest 2020" loading="lazy">
+            <div class="timeline-year">2021</div>
+            <h3 data-translate="about-timeline-2021-title">Expansion à Abidjan</h3>
+            <p data-translate="about-timeline-2021-desc">Ouverture de notre bureau à Abidjan, Côte d'Ivoire, marquant notre première expansion régionale et renforçant notre présence en Afrique de l'Ouest.</p>
+            <div class="timeline-icon">
+              <i class="fas fa-building"></i>
+            </div>
+            <img src="/assets/Abidjan1.png" alt="Expansion GKS à Abidjan 2021" loading="lazy">
           </div>
         </div>
         <div class="timeline-item left">
           <div class="timeline-content">
-            <h3 data-translate="about-timeline-2025-title">2025</h3>
-            <p data-translate="about-timeline-2025-desc">GKS Logistics est présent mondialement dans plus de 10 pays, avec une forte implantation en Afrique de l'Ouest, ainsi qu'en Europe, en Amérique du Nord et au Moyen-Orient. Grâce à notre réseau international, nous offrons des solutions logistiques intégrées, fiables et flexibles, adaptées aux besoins spécifiques de chaque marché.</p>
-            <img src="/assets/world presence.png" alt="Présence mondiale GKS 2025" loading="lazy">
+            <div class="timeline-year">2024</div>
+            <h3 data-translate="about-timeline-2024-title">Lancement Dubaï</h3>
+            <p data-translate="about-timeline-2024-desc">Ouverture stratégique de notre hub à Dubaï, EAU, nous positionnant comme un acteur international et facilitant les échanges entre l'Afrique, le Moyen-Orient et l'Asie.</p>
+            <div class="timeline-icon">
+              <i class="fas fa-globe-asia"></i>
+            </div>
+            <img src="/assets/Dubai.png" alt="Lancement GKS Dubaï 2024" loading="lazy">
           </div>
         </div>
       </div>
@@ -1142,6 +1158,7 @@
    <div class="container">
      <div class="partners-marquee-header">
        <h2 data-translate="partners-title">Nos Partenaires</h2>
+       <p data-translate="partners-subtitle" style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-top: 1rem;">Des partenariats stratégiques pour mieux vous servir</p>
      </div>
    </div>
    <div class="marquee-container">
@@ -1187,7 +1204,50 @@
    </div>
  </section>
 
- <!-- Footer -->
+<!-- Package Tracking Section -->
+<section class="tracking-section">
+  <div class="container">
+    <div class="tracking-widget">
+      <div class="tracking-header">
+        <i class="fas fa-box-open"></i>
+        <h3 data-translate="tracking-title">Suivez votre colis</h3>
+        <p data-translate="tracking-subtitle">Entrez votre numéro GKS pour suivre votre envoi en temps réel</p>
+      </div>
+      <form class="tracking-form" id="trackingForm">
+        <div class="tracking-input-group">
+          <i class="fas fa-search"></i>
+          <input 
+            type="text" 
+            id="trackingNumber" 
+            placeholder="Ex: GKS-123456789" 
+            data-translate-placeholder="tracking-placeholder"
+            required
+            pattern="[A-Za-z0-9-]+"
+          />
+          <button type="submit" class="btn btn-track" data-translate="tracking-button">
+            <span>Suivre</span>
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+        <div class="tracking-types">
+          <label class="tracking-type-option">
+            <input type="radio" name="trackingType" value="individual" checked>
+            <span data-translate="tracking-individual">Colis individuel</span>
+          </label>
+          <label class="tracking-type-option">
+            <input type="radio" name="trackingType" value="groupage">
+            <span data-translate="tracking-groupage">Groupage</span>
+          </label>
+        </div>
+      </form>
+      <div id="trackingResult" class="tracking-result" style="display: none;">
+        <!-- Results will be displayed here -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
  <footer class="footer">
   <div class="shade-overlay"></div>
   <div class="container">
@@ -1347,6 +1407,8 @@
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
   <script src="/js/language-manager.js"></script>
   <script src="/js/script.js" defer></script>
+  <script src="/js/tracking.js" defer></script>
+  <script src="/js/whatsapp-integration.js" defer></script>
   <script src="/js/quote-modal.js" defer></script>
   <script src="/js/ultimate-chatbot.js" defer></script>
   <script src="/js/chatbot-enhanced-ui.js" defer></script>

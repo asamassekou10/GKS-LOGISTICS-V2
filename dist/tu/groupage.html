@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="tu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>GKS Logistics - Uluslararası Lojistik Çözümleri | Hava, Deniz ve Kara Taşımacılığı</title>
+  <meta name="description" content="GKS Logistics, Batı Afrika, Avrupa, Kuzey Amerika'da kapsamlı lojistik çözümleri sunar. 2019'dan beri hava kargo, denizcilik, kara taşımacılığı ve güvenli depolama.">
+  <meta name="keywords" content="lojistik Mali, hava kargo Afrika, deniz taşımacılığı, GKS Logistics, uluslararası lojistik, depolama Bamako, Batı Afrika taşımacılığı, uluslararası kargo, Mali gümrük">
+  
+  <link rel="icon" href="/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/language-switcher.css">
+  <link rel="stylesheet" href="/css/whatsapp-float.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* Groupage Page Specific Styles */
+    .groupage-hero {
+      background: linear-gradient(135deg, rgba(0, 48, 135, 0.95) 0%, rgba(10, 37, 64, 0.95) 100%), 
+                  url('/assets/SHIP.png') center/cover;
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 4rem 2rem;
+      position: relative;
+    }
+    
+    .groupage-hero h1 {
+      font-size: 3.5rem;
+      color: white;
+      margin-bottom: 1rem;
+    }
+    
+    .groupage-hero p {
+      font-size: 1.3rem;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 700px;
+      margin: 0 auto 2rem;
+    }
+    
+    .routes-section {
+      padding: 5rem 0;
+      background: #f8f9fa;
+    }
+    
+    .routes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+    
+    .route-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
+    
+    .route-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    }
+    
+    .route-header {
+      background: linear-gradient(135deg, var(--primary-color) 0%, #1565C0 100%);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    .route-header h3 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+    
+    .route-path {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    
+    .route-body {
+      padding: 2rem;
+    }
+    
+    .route-features {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+    }
+    
+    .route-features li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid #e9ecef;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .route-features li:last-child {
+      border-bottom: none;
+    }
+    
+    .route-features i {
+      color: var(--secondary-color);
+      font-size: 1.1rem;
+    }
+    
+    .calendar-section {
+      padding: 5rem 0;
+      background: white;
+    }
+    
+    .departures-calendar {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    
+    .calendar-header {
+      background: var(--primary-color);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    
+    .calendar-body {
+      padding: 2rem;
+    }
+    
+    .departure-row {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr 1.5fr;
+      gap: 1rem;
+      padding: 1.5rem;
+      border-bottom: 1px solid #e9ecef;
+      align-items: center;
+    }
+    
+    .departure-row:hover {
+      background: #f8f9fa;
+    }
+    
+    .departure-row:last-child {
+      border-bottom: none;
+    }
+    
+    .booking-section {
+      padding: 5rem 0;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+    
+    .booking-form {
+      max-width: 700px;
+      margin: 3rem auto;
+      background: white;
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: var(--neutral-800);
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 2px solid #e9ecef;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+    }
+    
+    .testimonials-groupage {
+      padding: 5rem 0;
+      background: white;
+    }
+    
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .testimonial-card {
+      background: #f8f9fa;
+      padding: 2rem;
+      border-radius: 15px;
+      border-left: 4px solid var(--secondary-color);
+    }
+    
+    @media (max-width: 768px) {
+      .groupage-hero h1 {
+        font-size: 2rem;
+      }
+      
+      .routes-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .departure-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+      
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <link rel="alternate" hreflang="x-default" href="https://www.gkslogistics.com/groupage.html" />
+  <link rel="alternate" hreflang="fr" href="https://www.gkslogistics.com/groupage.html" />
+  <link rel="alternate" hreflang="en" href="https://www.gkslogistics.com/en/groupage.html" />
+  <link rel="alternate" hreflang="tu" href="https://www.gkslogistics.com/tu/groupage.html" />
+  <link rel="alternate" hreflang="md" href="https://www.gkslogistics.com/md/groupage.html" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header-logo-link">
+        <img src="/logo.png" alt="GKS Logistics Logo" class="header-logo-image">
+        <span class="gks-text" data-translate="logo-gks">GKS</span> <span class="logistics-text" data-translate="logo-logistics">LOGISTICS</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html#services" data-translate="nav-services">Hizmetler</a></li>
+          <li><a href="index.html#about" data-translate="nav-about">Hakkımızda</a></li>
+          <li><a href="our-representation.html" data-translate="nav-representation">Temsilciliklerimiz</a></li>
+          <li><a href="Blog.html" data-translate="nav-blog">Blog</a></li>
+          <li><a href="careers.html" data-translate="nav-careers">Kariyer</a></li>
+          <li><a href="news.html" data-translate="nav-news">Haberler</a></li>
+          <li><a href="index.html#contact" data-translate="nav-contact">İletişim</a></li>
+        </ul>
+      </nav>
+      <div class="language-dropdown">
+        <button class="language-dropdown-toggle" aria-label="Select language">
+          <i class="fas fa-globe"></i>
+          <span class="current-lang">TU</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="language-dropdown-menu" role="menu">
+          <a href="/groupage.html" class="language-option" role="menuitem" data-lang="fr">
+            <i class="fas fa-flag"></i>
+            <span>Français</span>
+          </a>
+          <a href="/en/groupage.html" class="language-option" role="menuitem" data-lang="en">
+            <i class="fas fa-flag"></i>
+            <span>English</span>
+          </a>
+          <a href="/tu/groupage.html" class="language-option" role="menuitem" data-lang="tu">
+            <i class="fas fa-flag"></i>
+            <span>Türkçe</span>
+          </a>
+          <a href="/md/groupage.html" class="language-option" role="menuitem" data-lang="md">
+            <i class="fas fa-flag"></i>
+            <span>中文</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="groupage-hero">
+    <div class="container">
+      <h1 data-translate="groupage-hero-title">Service de Groupage GKS</h1>
+      <p data-translate="groupage-hero-subtitle">Des solutions de transport groupé économiques et fiables sur nos routes stratégiques</p>
+      <a href="#booking" class="btn" data-translate="groupage-hero-cta">Réserver un envoi</a>
+    </div>
+  </section>
+
+  <!-- Routes Section -->
+  <section class="routes-section">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 1rem;" data-translate="groupage-routes-title">Nos Routes Stratégiques</h2>
+      <p style="text-align: center; color: #6c757d; max-width: 700px; margin: 0 auto;" data-translate="groupage-routes-subtitle">Transport groupé optimisé pour vos envois volumineux</p>
+      
+      <div class="routes-grid">
+        <!-- Dubai-Bamako Route -->
+        <div class="route-card">
+          <div class="route-header">
+            <h3 data-translate="route-dubai-bamako">Route Dubaï - Bamako</h3>
+            <div class="route-path">
+              <span>🇦🇪 Dubai</span>
+              <i class="fas fa-arrow-right"></i>
+              <span>🇲🇱 Bamako</span>
+            </div>
+          </div>
+          <div class="route-body">
+            <ul class="route-features">
+              <li><i class="fas fa-check-circle"></i> <span data-translate="route-dubai-feature-1">Départs hebdomadaires</span></li>
+              <li><i class="fas fa-check-circle"></i> <span data-translate="route-dubai-feature-2">Transit 7-10 jours</span></li>
+              <li><i class="fas fa-check-circle"></i> <span data-translate="route-dubai-feature-3">Idéal pour électronique et marchandises</span></li>
+              <li><i class="fas fa-check-circle"></i> <span data-translate="route-dubai-feature-4">Suivi en temps réel</span></li>
+              <li><i class="fas fa-check-circle"></i> <span data-translate="route-dubai-feature-5">Assistance douanière incluse</span></li>
+            </ul>
+            <a href="#booking" class="btn" style="width: 100%; margin-top: 1rem;" data-translate="route-cta">Réserver cette route</a>
+          </div>
+        </div>
+
+        <!-- Turkey-Bamako Route -->
+        <div class="route-card">
+          <div class="route-header">
+            <h3 data-translate="route-turkey-bamako">Route Turquie - Bamako</h3>
+            <div class="route-path">
+              <span>🇹🇷 Istanbul</span>
+              <i class="fas fa-arrow-right"></i>
+              <span>🇲🇱 Bamako</span>
+            </div>
+          </div>
+          <div class="route-body">
+            <ul class="route-features">
+              <li><i class="fas fa-check-circle"></i> <span data-translate="route-turkey-feature-1">Départs bi-hebdomadaires</span></li>
+              <li><i class="fas fa-check-circle"></i> <span data-translate="route-turkey-feature-2">Transit 10-14 jours</span></li>
+              <li><i class="fas fa-check-circle"></i> <span data-translate="route-turkey-feature-3">Spécialiste textile et mobilier</span></li>
+              <li><i class="fas fa-check-circle"></i> <span data-translate="route-turkey-feature-4">Tarifs compétitifs</span></li>
+              <li><i class="fas fa-check-circle"></i> <span data-translate="route-turkey-feature-5">Consolidation optimisée</span></li>
+            </ul>
+            <a href="#booking" class="btn" style="width: 100%; margin-top: 1rem;" data-translate="route-cta">Réserver cette route</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calendar Section -->
+  <section id="calendar" class="calendar-section">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 1rem;" data-translate="calendar-title">Calendrier des Départs</h2>
+      <p style="text-align: center; color: #6c757d;" data-translate="calendar-subtitle">Prochains départs prévus</p>
+      
+      <div class="departures-calendar">
+        <div class="calendar-header">
+          <h3 data-translate="calendar-month">Novembre - Décembre 2025</h3>
+        </div>
+        <div class="calendar-body">
+          <div class="departure-row" style="font-weight: 600; background: #f8f9fa;">
+            <span data-translate="calendar-date">Date</span>
+            <span data-translate="calendar-route">Route</span>
+            <span data-translate="calendar-status">Statut</span>
+            <span data-translate="calendar-action">Action</span>
+          </div>
+          <div class="departure-row">
+            <span>05 Nov 2025</span>
+            <span>🇦🇪 Dubai → 🇲🇱 Bamako</span>
+            <span style="color: #28a745; font-weight: 600;">Places disponibles</span>
+            <a href="#booking" class="btn btn-secondary" style="padding: 0.5rem 1rem;">Réserver</a>
+          </div>
+          <div class="departure-row">
+            <span>08 Nov 2025</span>
+            <span>🇹🇷 Istanbul → 🇲🇱 Bamako</span>
+            <span style="color: #28a745; font-weight: 600;">Places disponibles</span>
+            <a href="#booking" class="btn btn-secondary" style="padding: 0.5rem 1rem;">Réserver</a>
+          </div>
+          <div class="departure-row">
+            <span>12 Nov 2025</span>
+            <span>🇦🇪 Dubai → 🇲🇱 Bamako</span>
+            <span style="color: #ffc107; font-weight: 600;">Places limitées</span>
+            <a href="#booking" class="btn btn-secondary" style="padding: 0.5rem 1rem;">Réserver</a>
+          </div>
+          <div class="departure-row">
+            <span>15 Nov 2025</span>
+            <span>🇹🇷 Istanbul → 🇲🇱 Bamako</span>
+            <span style="color: #28a745; font-weight: 600;">Places disponibles</span>
+            <a href="#booking" class="btn btn-secondary" style="padding: 0.5rem 1rem;">Réserver</a>
+          </div>
+          <div class="departure-row">
+            <span>19 Nov 2025</span>
+            <span>🇦🇪 Dubai → 🇲🇱 Bamako</span>
+            <span style="color: #28a745; font-weight: 600;">Places disponibles</span>
+            <a href="#booking" class="btn btn-secondary" style="padding: 0.5rem 1rem;">Réserver</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form Section -->
+  <section id="booking" class="booking-section">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 1rem;" data-translate="booking-title">Formulaire de Réservation</h2>
+      <p style="text-align: center; color: #6c757d;" data-translate="booking-subtitle">Réservez votre envoi groupé en quelques clics</p>
+      
+      <form class="booking-form" id="groupageBookingForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label data-translate="booking-firstname">Prénom *</label>
+            <input type="text" required placeholder="Votre prénom">
+          </div>
+          <div class="form-group">
+            <label data-translate="booking-lastname">Nom *</label>
+            <input type="text" required placeholder="Votre nom">
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label data-translate="booking-email">Email *</label>
+            <input type="email" required placeholder="votre@email.com">
+          </div>
+          <div class="form-group">
+            <label data-translate="booking-phone">Téléphone *</label>
+            <input type="tel" required placeholder="+223 XX XX XX XX">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label data-translate="booking-route">Route *</label>
+          <select required>
+            <option value="">Sélectionnez une route</option>
+            <option value="dubai-bamako">Dubai → Bamako</option>
+            <option value="turkey-bamako">Turquie → Bamako</option>
+          </select>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label data-translate="booking-weight">Poids estimé (kg)</label>
+            <input type="number" placeholder="Ex: 50">
+          </div>
+          <div class="form-group">
+            <label data-translate="booking-volume">Volume estimé (m³)</label>
+            <input type="number" step="0.1" placeholder="Ex: 1.5">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label data-translate="booking-description">Description de la marchandise</label>
+          <textarea rows="4" placeholder="Décrivez brièvement votre marchandise..."></textarea>
+        </div>
+        
+        <button type="submit" class="btn" style="width: 100%; padding: 1rem; font-size: 1.1rem;" data-translate="booking-submit">
+          <i class="fas fa-paper-plane"></i> Envoyer la demande
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials-groupage">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 1rem;" data-translate="testimonials-title">Çalışan Görüşleri</h2>
+      <p style="text-align: center; color: #6c757d;" data-translate="testimonials-subtitle">Ekip üyelerimizin GKS Logistics'teki deneyimleri hakkında ne düşündüklerini keşfedin</p>
+      
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <p data-translate="testimonial-groupage-1">"Service impeccable ! Mon envoi de Dubai est arrivé en 8 jours exactement comme prévu. Je recommande vivement GKS pour le groupage."</p>
+          <strong>- Amadou K., Commerçant, Bamako</strong>
+        </div>
+        <div class="testimonial-card">
+          <p data-translate="testimonial-groupage-2">"Excellent rapport qualité-prix. J'utilise régulièrement la route Turquie-Bamako pour mes importations de textile. Très satisfait."</p>
+          <strong>- Fatoumata S., Importatrice, Bamako</strong>
+        </div>
+        <div class="testimonial-card">
+          <p data-translate="testimonial-groupage-3">"Équipe professionnelle et réactive. Le suivi en temps réel est un vrai plus. Je ne passe plus que par GKS."</p>
+          <strong>- Ibrahim D., Entrepreneur, Bamako</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <h3>GKS LOGISTICS</h3>
+          <p>Votre partenaire logistique de confiance</p>
+        </div>
+        <div class="footer-links">
+          <h4>Liens Rapides</h4>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="groupage.html">Groupage</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <p><i class="fas fa-phone"></i> +223 90 92 92 73</p>
+          <p><i class="fas fa-envelope"></i> sales@gkslogistics.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 GKS Logistics. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/js/language-manager.js"></script>
+  <script src="/js/script.js" defer></script>
+  <script src="/js/whatsapp-integration.js" defer></script>
+  <script src="/js/language-switcher.js" defer></script>
+  
+  <script>
+    // Booking form handler
+    document.getElementById('groupageBookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Votre demande a été envoyée ! Notre équipe vous contactera sous 24h.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
+
