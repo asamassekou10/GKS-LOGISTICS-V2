@@ -16,7 +16,12 @@ function loadTranslations() {
   for (const [langCode, langInfo] of Object.entries(LANGUAGES)) {
     const filePath = path.join(__dirname, 'locales', `${langCode}.json`);
     try {
-      translations[langCode] = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+      let content = fs.readFileSync(filePath, 'utf8');
+      // Remove BOM if present
+      if (content.charCodeAt(0) === 0xFEFF) {
+        content = content.slice(1);
+      }
+      translations[langCode] = JSON.parse(content);
       console.log(`✅ Loaded translations for ${langInfo.name}`);
     } catch (error) {
       console.error(`❌ Error loading ${langCode}.json:`, error.message);
@@ -99,7 +104,7 @@ function getTranslationValue(t, attributeKey) {
   const fullKey = attributeKey.replace(/-/g, '_');
   const commonSections = ['services', 'about', 'hero', 'nav', 'contact', 'footer', 'testimonials', 'process', 'presence',
                          'article1', 'article2', 'blog', 'news', 'careers', 'insight', 'quote_modal', 'chatbot',
-                         'mobile_nav', 'accessibility', 'floating_cta', 'employee1', 'employee2', 'employee3'];
+                         'mobile_nav', 'accessibility', 'floating_cta', 'employee1', 'employee2', 'employee3', 'gallery'];
 
   for (const commonSection of commonSections) {
     if (t[commonSection] && typeof t[commonSection] === 'object') {
@@ -165,6 +170,29 @@ function replaceContentWithTranslations(html, translations, langCode, currentPag
 
   // Replace current language in switcher
   result = result.replace(/<span class="current-lang">[^<]*<\/span>/g, `<span class="current-lang">${langCode.toUpperCase()}</span>`);
+  
+  // Replace NAV placeholders ({{NAV_*}} format)
+  if (t.nav) {
+    result = result.replace(/{{NAV_SERVICES}}/g, t.nav.services || '');
+    result = result.replace(/{{NAV_SERVICES_OVERVIEW}}/g, t.nav.services_overview || '');
+    result = result.replace(/{{NAV_ABOUT}}/g, t.nav.about || '');
+    result = result.replace(/{{NAV_ABOUT_OVERVIEW}}/g, t.nav.about_overview || '');
+    result = result.replace(/{{NAV_BLOG}}/g, t.nav.blog || '');
+    result = result.replace(/{{NAV_NEWS}}/g, t.nav.news || '');
+    result = result.replace(/{{NAV_CONTACT}}/g, t.nav.contact || '');
+    result = result.replace(/{{NAV_REPRESENTATION}}/g, t.nav.representation || '');
+    result = result.replace(/{{NAV_GROUPAGE}}/g, t.nav.groupage || '');
+    result = result.replace(/{{NAV_GREEN}}/g, t.nav.green || '');
+    result = result.replace(/{{NAV_RESOURCES}}/g, t.nav.resources || '');
+    result = result.replace(/{{NAV_CAREERS}}/g, t.nav.careers || '');
+    result = result.replace(/{{NAV_TEAM}}/g, t.nav.team || '');
+    result = result.replace(/{{NAV_TEAM_OVERVIEW}}/g, t.nav.team_overview || '');
+    result = result.replace(/{{NAV_TEAM_GKS}}/g, t.nav.team_gks || '');
+    result = result.replace(/{{NAV_TEAM_CEO}}/g, t.nav.team_ceo || '');
+    result = result.replace(/{{NAV_EMPLOYEE1}}/g, t.nav.employee1 || '');
+    result = result.replace(/{{NAV_EMPLOYEE2}}/g, t.nav.employee2 || '');
+    result = result.replace(/{{NAV_EMPLOYEE3}}/g, t.nav.employee3 || '');
+  }
 
   // SMART DATA-TRANSLATE REPLACEMENT
   // Enhanced replacement that handles attributes in any order and nested content
@@ -193,6 +221,32 @@ function replaceContentWithTranslations(html, translations, langCode, currentPag
 
       return match;
     });
+  
+  // Replace gallery placeholders ({{GALLERY_*}} format)
+  if (t.gallery) {
+    result = result.replace(/{{GALLERY_TITLE}}/g, t.gallery.title || '');
+    result = result.replace(/{{GALLERY_SUBTITLE}}/g, t.gallery.subtitle || '');
+    result = result.replace(/{{GALLERY_ITEM_1_TITLE}}/g, t.gallery.item_1_title || '');
+    result = result.replace(/{{GALLERY_ITEM_1_DESC}}/g, t.gallery.item_1_desc || '');
+    result = result.replace(/{{GALLERY_ITEM_2_TITLE}}/g, t.gallery.item_2_title || '');
+    result = result.replace(/{{GALLERY_ITEM_2_DESC}}/g, t.gallery.item_2_desc || '');
+    result = result.replace(/{{GALLERY_ITEM_3_TITLE}}/g, t.gallery.item_3_title || '');
+    result = result.replace(/{{GALLERY_ITEM_3_DESC}}/g, t.gallery.item_3_desc || '');
+    result = result.replace(/{{GALLERY_ITEM_4_TITLE}}/g, t.gallery.item_4_title || '');
+    result = result.replace(/{{GALLERY_ITEM_4_DESC}}/g, t.gallery.item_4_desc || '');
+  } else {
+    // Fallback to top-level gallery keys
+    result = result.replace(/{{GALLERY_TITLE}}/g, getTranslationValue(t, 'gallery-title') || '');
+    result = result.replace(/{{GALLERY_SUBTITLE}}/g, getTranslationValue(t, 'gallery-subtitle') || '');
+    result = result.replace(/{{GALLERY_ITEM_1_TITLE}}/g, getTranslationValue(t, 'gallery-item-1-title') || '');
+    result = result.replace(/{{GALLERY_ITEM_1_DESC}}/g, getTranslationValue(t, 'gallery-item-1-desc') || '');
+    result = result.replace(/{{GALLERY_ITEM_2_TITLE}}/g, getTranslationValue(t, 'gallery-item-2-title') || '');
+    result = result.replace(/{{GALLERY_ITEM_2_DESC}}/g, getTranslationValue(t, 'gallery-item-2-desc') || '');
+    result = result.replace(/{{GALLERY_ITEM_3_TITLE}}/g, getTranslationValue(t, 'gallery-item-3-title') || '');
+    result = result.replace(/{{GALLERY_ITEM_3_DESC}}/g, getTranslationValue(t, 'gallery-item-3-desc') || '');
+    result = result.replace(/{{GALLERY_ITEM_4_TITLE}}/g, getTranslationValue(t, 'gallery-item-4-title') || '');
+    result = result.replace(/{{GALLERY_ITEM_4_DESC}}/g, getTranslationValue(t, 'gallery-item-4-desc') || '');
+  }
   
   // Replace aria-label attributes with translations
   if (langInfo.name === 'English') {
@@ -337,7 +391,12 @@ function buildSite() {
 
     if (fs.existsSync(srcTranslationPath)) {
       // Read the source translation file
-      const sourceData = JSON.parse(fs.readFileSync(srcTranslationPath, 'utf8'));
+      let translationContent = fs.readFileSync(srcTranslationPath, 'utf8');
+      // Remove BOM if present
+      if (translationContent.charCodeAt(0) === 0xFEFF) {
+        translationContent = translationContent.slice(1);
+      }
+      const sourceData = JSON.parse(translationContent);
 
       // Convert to the format expected by language-manager.js
       const runtimeFormat = {

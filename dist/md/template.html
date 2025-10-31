@@ -35,6 +35,8 @@
   <link rel="stylesheet" href="/css/enhanced-chatbot.css">
   <link rel="stylesheet" href="/css/process-animation.css">
   <link rel="stylesheet" href="/css/language-switcher.css">
+  <link rel="stylesheet" href="/css/quote-calculator.css">
+  <link rel="stylesheet" href="/css/calculator-modal.css">
   <!-- Swiper CSS pour l'animation du processus -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
@@ -111,12 +113,46 @@
         </button>
         <nav class="nav">
           <ul>
-            <li><a href="#services">{{NAV_SERVICES}}</a></li>
-            <li><a href="#about">{{NAV_ABOUT}}</a></li>
-            <li><a href="{{BLOG_URL}}">{{NAV_BLOG}}</a></li>
-            <li><a href="{{CAREERS_URL}}">{{NAV_CAREERS}}</a></li>
-            <li><a href="{{NEWS_URL}}">{{NAV_NEWS}}</a></li>
-            <li><a href="#contact">{{NAV_CONTACT}}</a></li>
+            <!-- Services Dropdown -->
+            <li class="nav-item-dropdown">
+              <a href="#services" class="nav-link-dropdown">服务</a>
+              <ul class="dropdown-menu">
+                <li><a href="#services"><i class="fas fa-briefcase"></i> 我们的服务</a></li>
+                <li><a href="groupage.html"><i class="fas fa-boxes"></i> 拼箱</a></li>
+                <li><a href="green-logistics.html"><i class="fas fa-leaf"></i> 绿色物流</a></li>
+              </ul>
+            </li>
+            
+            <!-- About Dropdown -->
+            <li class="nav-item-dropdown">
+              <a href="#about" class="nav-link-dropdown">关于我们</a>
+              <ul class="dropdown-menu">
+                <li><a href="#about"><i class="fas fa-building"></i> 公司信息</a></li>
+                <li><a href="our-representation.html"><i class="fas fa-map-marked-alt"></i> 我们的代表处</a></li>
+                <li><a href="{{CAREERS_URL}}"><i class="fas fa-briefcase"></i> 职业</a></li>
+              </ul>
+            </li>
+            
+            <!-- Resources Dropdown -->
+            <li class="nav-item-dropdown">
+              <a href="{{BLOG_URL}}" class="nav-link-dropdown">资源</a>
+              <ul class="dropdown-menu">
+                <li><a href="{{BLOG_URL}}"><i class="fas fa-blog"></i> 博客</a></li>
+                <li><a href="{{NEWS_URL}}"><i class="fas fa-newspaper"></i> 新闻</a></li>
+              </ul>
+            </li>
+            
+            <!-- Our Team Dropdown -->
+            <li class="nav-item-dropdown">
+              <a href="#about" class="nav-link-dropdown">我们的团队</a>
+              <ul class="dropdown-menu">
+                <li><a href="employee3.html"><i class="fas fa-users"></i> GKS团队</a></li>
+                <li><a href="employee1.html"><i class="fas fa-user-tie"></i> 我们的CEO</a></li>
+              </ul>
+            </li>
+            
+            <!-- Contact -->
+            <li><a href="#contact">联系我们</a></li>
           </ul>
         </nav>
         <div class="language-toggle">
@@ -138,29 +174,32 @@
     </header>
     <div class="hero-slider" id="heroSlider">
       <div class="hero-slide active">
-        <img src="/assets/banner.png" alt="{{HERO_TITLE_1}} - GKS Logistics" loading="eager">
+        <img src="/assets/E1.jpg" alt="{{HERO_TITLE_1}} - GKS Logistics" loading="eager" class="hero-img-desktop">
+        <img src="/assets/E1.jpg" alt="{{HERO_TITLE_1}} - GKS Logistics" loading="eager" class="hero-img-mobile">
         <div class="hero-content">
           <h1>{{HERO_TITLE_1}}</h1>
           <p>{{HERO_SUBTITLE_1}}</p>
           <div class="hero-buttons">
-            <a href="#contact" class="btn">{{HERO_CTA_1}}</a>
+            <a href="javascript:void(0)" onclick="openQuoteCalculator()" class="btn">{{HERO_CTA_1}}</a>
             <a href="#about" class="btn btn-secondary">{{HERO_CTA_2}}</a>
           </div>
         </div>
       </div>
       <div class="hero-slide">
-        <img src="/assets/PLANE2.png" alt="{{HERO_TITLE_2}} - Fret aérien" loading="lazy">
+        <img src="/assets/E2.jpg" alt="{{HERO_TITLE_2}} - Fret aérien" loading="lazy" class="hero-img-desktop">
+        <img src="/assets/E2.jpg" alt="{{HERO_TITLE_2}} - Fret aérien" loading="lazy" class="hero-img-mobile">
         <div class="hero-content">
           <h1>{{HERO_TITLE_2}}</h1>
           <p>{{HERO_SUBTITLE_2}}</p>
           <div class="hero-buttons">
-            <a href="#services" class="btn">{{HERO_CTA_3}}</a>
+            <a href="javascript:void(0)" onclick="openQuoteCalculator()" class="btn">{{HERO_CTA_3}}</a>
             <a href="#presence" class="btn btn-secondary">{{HERO_CTA_4}}</a>
           </div>
         </div>
       </div>
       <div class="hero-slide">
-        <img src="/assets/SHIP.png" alt="{{HERO_TITLE_3}} - Transport maritime" loading="lazy">
+        <img src="/assets/E3.jpg" alt="{{HERO_TITLE_3}} - Transport maritime" loading="lazy" class="hero-img-desktop">
+        <img src="/assets/E3.jpg" alt="{{HERO_TITLE_3}} - Transport maritime" loading="lazy" class="hero-img-mobile">
         <div class="hero-content">
           <h1>{{HERO_TITLE_3}}</h1>
           <p>{{HERO_SUBTITLE_3}}</p>
@@ -476,7 +515,7 @@
   </nav>
 
   <!-- Floating CTA Button -->
-  <a href="#" class="floating-cta">
+  <a href="javascript:void(0)" onclick="openQuoteCalculator()" class="floating-cta">
     <i class="fas fa-file-invoice" style="margin-right: 0.5rem;"></i>
     <span>{{FLOATING_CTA}}</span>
   </a>
@@ -524,11 +563,11 @@
       <div class="footer-links">
         <h4>{{FOOTER_LINKS_TITLE}}</h4>
         <ul>
-          <li><a href="#services">{{NAV_SERVICES}}</a></li>
-          <li><a href="#about">{{NAV_ABOUT}}</a></li>
-          <li><a href="{{BLOG_URL}}">{{NAV_BLOG}}</a></li>
-          <li><a href="{{CAREERS_URL}}">{{NAV_CAREERS}}</a></li>
-          <li><a href="#contact">{{NAV_CONTACT}}</a></li>
+          <li><a href="#services">服务</a></li>
+          <li><a href="#about">关于我们</a></li>
+          <li><a href="{{BLOG_URL}}">博客</a></li>
+          <li><a href="{{CAREERS_URL}}">职业</a></li>
+          <li><a href="#contact">联系我们</a></li>
         </ul>
       </div>
       <div class="footer-contact">
@@ -551,6 +590,8 @@
   <link rel="preload" href="/js/script.js" as="script">
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" defer></script>
   <script src="/js/language-manager.js"></script>
+  <script src="/js/calculator-modal.js"></script>
+  <script src="/js/quote-calculator.js"></script>
   <script src="/js/language-switcher.js" defer></script>
   <script src="/js/script.js" defer></script>
   <script src="/js/quote-modal.js" defer></script>
@@ -660,5 +701,189 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 500);
 });
 </script>
+
+  <!-- Quote Calculator Modal -->
+  <div id="quoteCalculatorModal" class="calculator-modal">
+    <div class="calculator-modal-overlay"></div>
+    <div class="calculator-modal-content">
+      <button class="calculator-modal-close" aria-label="Close calculator">
+        <i class="fas fa-times"></i>
+      </button>
+      
+      <div class="calculator-header">
+        <h2 data-translate="calculator-title">Calculateur de Devis Instantané</h2>
+        <p data-translate="calculator-subtitle">Obtenez un devis précis en quelques secondes pour votre expédition</p>
+      </div>
+
+      <div class="quote-calculator-card">
+        <form id="quoteCalculatorForm" class="calculator-form">
+          <!-- Currency Selection -->
+          <div class="form-section form-section-currency">
+            <h3 class="form-section-title">
+              <i class="fas fa-money-bill-wave"></i>
+              <span data-translate="calculator-section-currency">Devise de Paiement</span>
+            </h3>
+            <div class="form-group-calc">
+              <label data-translate="calculator-currency">
+                Choisissez votre devise <span class="required">*</span>
+              </label>
+              <select id="currency" required>
+                <option value="XOF">🇲🇱 FCFA (XOF) - Franc CFA</option>
+                <option value="EUR">🇪🇺 EUR (€) - Euro</option>
+                <option value="AED">🇦🇪 AED (د.إ) - Dirham des EAU</option>
+                <option value="TRY">🇹🇷 TRY (₺) - Livre Turque</option>
+                <option value="USD">🇺🇸 USD ($) - Dollar Américain</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- Transport Details -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <i class="fas fa-shipping-fast"></i>
+              <span data-translate="calculator-section-transport">Détails du Transport</span>
+            </h3>
+            <div class="form-grid">
+              <div class="form-group-calc">
+                <label data-translate="calculator-transport-type">
+                  Type de transport <span class="required">*</span>
+                </label>
+                <select id="transportType" required>
+                  <option value="" data-translate="calculator-select-placeholder">Sélectionnez...</option>
+                  <option value="air" data-translate="calculator-type-air">Fret Aérien</option>
+                  <option value="sea" data-translate="calculator-type-sea">Fret Maritime</option>
+                  <option value="land" data-translate="calculator-type-land">Transport Terrestre</option>
+                </select>
+              </div>
+
+              <div class="form-group-calc">
+                <label data-translate="calculator-route">
+                  Route <span class="required">*</span>
+                </label>
+                <select id="route" required>
+                  <option value="" data-translate="calculator-select-route-placeholder">Sélectionnez d'abord le type</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shipment Details -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <i class="fas fa-box"></i>
+              <span data-translate="calculator-section-shipment">Détails de l'Envoi</span>
+            </h3>
+            <div class="form-grid">
+              <div class="form-group-calc">
+                <label data-translate="calculator-weight">
+                  Poids (kg) <span class="required">*</span>
+                </label>
+                <div class="input-with-unit">
+                  <input type="number" id="weight" min="0.1" step="0.1" required placeholder="Ex: 50">
+                  <span class="input-unit">kg</span>
+                </div>
+              </div>
+
+              <div class="form-group-calc">
+                <label data-translate="calculator-length">
+                  Longueur (cm)
+                </label>
+                <div class="input-with-unit">
+                  <input type="number" id="length" min="0" step="0.1" placeholder="Ex: 100">
+                  <span class="input-unit">cm</span>
+                </div>
+              </div>
+
+              <div class="form-group-calc">
+                <label data-translate="calculator-width">
+                  Largeur (cm)
+                </label>
+                <div class="input-with-unit">
+                  <input type="number" id="width" min="0" step="0.1" placeholder="Ex: 80">
+                  <span class="input-unit">cm</span>
+                </div>
+              </div>
+
+              <div class="form-group-calc">
+                <label data-translate="calculator-height">
+                  Hauteur (cm)
+                </label>
+                <div class="input-with-unit">
+                  <input type="number" id="height" min="0" step="0.1" placeholder="Ex: 60">
+                  <span class="input-unit">cm</span>
+                </div>
+              </div>
+
+              <div class="form-group-calc">
+                <label data-translate="calculator-declared-value">
+                  Valeur déclarée (USD)
+                </label>
+                <div class="input-with-unit">
+                  <input type="number" id="declaredValue" min="0" step="0.01" placeholder="Ex: 1000">
+                  <span class="input-unit">$</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="checkbox-group checkbox-group-inline">
+              <div class="checkbox-item">
+                <input type="checkbox" id="isContainer">
+                <label for="isContainer" data-translate="calculator-container">
+                  Container complet (fret maritime uniquement)
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Services -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <i class="fas fa-plus-circle"></i>
+              <span data-translate="calculator-section-services">Services Additionnels</span>
+            </h3>
+
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input type="checkbox" id="doorDelivery">
+                <label for="doorDelivery" data-translate="calculator-door-delivery">
+                  Livraison à domicile (+$30)
+                </label>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group-calc">
+                <label data-translate="calculator-packaging">Type d'emballage</label>
+                <select id="packaging">
+                  <option value="" data-translate="calculator-packaging-none">Sans emballage</option>
+                  <option value="standard" data-translate="calculator-packaging-standard">Standard (+$20)</option>
+                  <option value="fragile" data-translate="calculator-packaging-fragile">Fragile (+$50)</option>
+                  <option value="heavy" data-translate="calculator-packaging-heavy">Lourd (+$100)</option>
+                </select>
+              </div>
+
+              <div class="form-group-calc">
+                <label data-translate="calculator-customs">Dédouanement</label>
+                <select id="customs">
+                  <option value="" data-translate="calculator-customs-none">Sans service douanier</option>
+                  <option value="standard" data-translate="calculator-customs-standard">Standard (+$50)</option>
+                  <option value="express" data-translate="calculator-customs-express">Express (+$150)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="calculate-btn" onclick="if(window.calculateQuoteNow) window.calculateQuoteNow(); else console.error('Function not loaded');">
+            <i class="fas fa-calculator"></i>
+            <span data-translate="calculator-calculate-btn">Calculer mon devis</span>
+          </button>
+        </form>
+
+        <!-- Quote Result -->
+        <div id="quoteResult"></div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>

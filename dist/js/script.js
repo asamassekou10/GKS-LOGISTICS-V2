@@ -246,45 +246,66 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Contact Form
   const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(contactForm);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const service = formData.get('service');
-    const message = formData.get('message');
-    
-    // Simple validation
-    if (!name || !email || !message) {
-      alert('Please fill in all required fields.');
-      return;
-    }
-    
-    // Simulate form submission
-    const submitButton = contactForm.querySelector('button[type="submit"]');
-    const originalText = submitButton.textContent;
-    submitButton.textContent = 'Sending...';
-    submitButton.disabled = true;
-    
-    setTimeout(() => {
-      submitButton.textContent = originalText;
-      submitButton.disabled = false;
-      contactForm.reset();
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
       
-      // Show success message
-      const successMessage = document.createElement('div');
-      successMessage.className = 'success-message';
-      successMessage.textContent = window.langManager ? window.langManager.translations['contact-confirmation'] : 'Message sent successfully!';
-      contactForm.appendChild(successMessage);
+      // Get form data
+      const formData = new FormData(contactForm);
+      const name = formData.get('name');
+      const email = formData.get('email');
+      const service = formData.get('service');
+      const message = formData.get('message');
       
-      setTimeout(() => {
-        successMessage.remove();
-      }, 3000);
-    }, 2000);
-  });
+      // Simple validation
+      if (!name || !email || !message) {
+        const errorMsg = window.langManager ? window.langManager.translations['contact-error'] || 'Please fill in all required fields.' : 'Please fill in all required fields.';
+        alert(errorMsg);
+        return;
+      }
+      
+      // Add form-name for Netlify
+      formData.append('form-name', 'contact');
+      
+      // Show loading state
+      const submitButton = contactForm.querySelector('button[type="submit"]');
+      const originalText = submitButton.textContent;
+      submitButton.textContent = window.langManager ? window.langManager.translations['contact-sending'] || 'Sending...' : 'Sending...';
+      submitButton.disabled = true;
+      
+      // Submit to Netlify Forms
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      })
+      .then(response => {
+        if (response.ok) {
+          submitButton.textContent = originalText;
+          submitButton.disabled = false;
+          contactForm.reset();
+          
+          // Show success message
+          const successMessage = document.createElement('div');
+          successMessage.className = 'success-message';
+          successMessage.textContent = window.langManager ? window.langManager.translations['contact-confirmation'] || 'Message sent successfully!' : 'Message sent successfully!';
+          contactForm.appendChild(successMessage);
+          
+          setTimeout(() => {
+            successMessage.remove();
+          }, 5000);
+        } else {
+          throw new Error('Form submission failed');
+        }
+      })
+      .catch(error => {
+        console.error('Error submitting contact form:', error);
+        submitButton.textContent = originalText;
+        submitButton.disabled = false;
+        const errorMsg = window.langManager ? window.langManager.translations['contact-error'] || 'Failed to send message. Please try again.' : 'Failed to send message. Please try again.';
+        alert(errorMsg);
+      });
+    });
   }
 
   // Newsletter Form
@@ -355,8 +376,8 @@ if (contactForm) {
       menuToggle.classList.toggle('active');
     });
     
-    // Close mobile menu when clicking on a link
-    nav.querySelectorAll('a').forEach(link => {
+    // Close mobile menu when clicking on a non-dropdown link
+    nav.querySelectorAll('a:not(.nav-link-dropdown)').forEach(link => {
       link.addEventListener('click', () => {
         nav.classList.remove('active');
         menuToggle.classList.remove('active');
@@ -371,6 +392,93 @@ if (contactForm) {
       }
     });
   }
+
+  // Dropdown menu functionality
+  const dropdownToggles = document.querySelectorAll('.nav-link-dropdown');
+  
+  dropdownToggles.forEach(toggle => {
+    // Click handler for both desktop and mobile
+    toggle.addEventListener('click', (e) => {
+      // On mobile/tablet, prevent default and toggle dropdown
+      if (window.innerWidth <= 1024) {
+        e.preventDefault();
+        const parentItem = toggle.closest('.nav-item-dropdown');
+        
+        // Close other dropdowns on mobile
+        document.querySelectorAll('.nav-item-dropdown').forEach(item => {
+          if (item !== parentItem) {
+            item.classList.remove('active');
+            const link = item.querySelector('.nav-link-dropdown');
+            if (link) link.setAttribute('aria-expanded', 'false');
+          }
+        });
+        
+        // Toggle current dropdown
+        const isActive = parentItem.classList.toggle('active');
+        toggle.setAttribute('aria-expanded', isActive);
+      }
+    });
+    
+    // Keyboard navigation support
+    toggle.addEventListener('keydown', (e) => {
+      const parentItem = toggle.closest('.nav-item-dropdown');
+      const dropdownMenu = parentItem.querySelector('.dropdown-menu');
+      
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        if (window.innerWidth <= 1024) {
+          const isActive = parentItem.classList.toggle('active');
+          toggle.setAttribute('aria-expanded', isActive);
+        }
+      } else if (e.key === 'Escape') {
+        parentItem.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      } else if (e.key === 'ArrowDown' && dropdownMenu) {
+        e.preventDefault();
+        const firstLink = dropdownMenu.querySelector('a');
+        if (firstLink) firstLink.focus();
+      }
+    });
+  });
+  
+  // Handle dropdown menu keyboard navigation
+  document.querySelectorAll('.dropdown-menu a').forEach((link, index, links) => {
+    link.addEventListener('keydown', (e) => {
+      const dropdown = link.closest('.dropdown-menu');
+      const toggle = dropdown.previousElementSibling;
+      
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        const nextLink = links[index + 1];
+        if (nextLink) nextLink.focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (index === 0) {
+          toggle.focus();
+        } else {
+          links[index - 1].focus();
+        }
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        const parentItem = link.closest('.nav-item-dropdown');
+        parentItem.classList.remove('active');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
+    });
+  });
+  
+  // Close dropdowns when clicking outside (desktop only)
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-item-dropdown')) {
+      document.querySelectorAll('.nav-item-dropdown').forEach(item => {
+        item.classList.remove('active');
+        const link = item.querySelector('.nav-link-dropdown');
+        if (link) link.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
 
   // Progress Bar Animation
   function initializeProgressBarAnimation() {

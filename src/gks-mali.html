@@ -57,6 +57,8 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/language-switcher.css">
+    <link rel="stylesheet" href="/css/quote-calculator.css">
+    <link rel="stylesheet" href="/css/calculator-modal.css">
     <link rel="stylesheet" href="/css/country-page.css">
     
     <!-- Font Awesome -->
@@ -76,17 +78,44 @@
         <button class="menu-toggle" aria-label="Toggle navigation">
           <i class="fas fa-bars"></i>
         </button>
-        <nav class="nav">
-          <ul>
-            <li><a href="index.html#services" data-translate="nav-services">Services</a></li>
-            <li><a href="index.html#about" data-translate="nav-about">À Propos</a></li>
-            <li><a href="our-representation.html" data-translate="nav-representation">Notre Représentation</a></li>
-            <li><a href="Blog.html" data-translate="nav-blog">Blogs</a></li>
-            <li><a href="careers.html" data-translate="nav-careers">Carrières</a></li>
-            <li><a href="news.html" data-translate="nav-news">Actualités</a></li>
-            <li><a href="index.html#contact" data-translate="nav-contact">Contact</a></li>
-          </ul>
-        </nav>
+                    <nav class="nav">
+        <ul>
+          <!-- Services Dropdown -->
+          <li class="nav-item-dropdown">
+            <a href="index.html#services" class="nav-link-dropdown" data-translate="nav-services" aria-haspopup="true" aria-expanded="false">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html#services" data-translate="nav-services_overview">Nos Services</a></li>
+              <li><a href="groupage.html" data-translate="nav-groupage">Groupage</a></li>
+              <li><a href="green-logistics.html" data-translate="nav-green">GKS Green</a></li>
+            </ul>
+          </li>
+          
+          <!-- About Dropdown -->
+          <li class="nav-item-dropdown">
+            <a href="index.html#about" class="nav-link-dropdown" data-translate="nav-about" aria-haspopup="true" aria-expanded="false">À Propos</a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html#about" data-translate="nav-about_overview">Notre Entreprise</a></li>
+              <li><a href="our-representation.html" data-translate="nav-representation">Notre Présence</a></li>
+              <li><a href="careers.html" data-translate="nav-careers">Carrières</a></li>
+            </ul>
+          </li>
+          
+          <!-- Resources Dropdown -->
+          <li class="nav-item-dropdown">
+            <a href="Blog.html" class="nav-link-dropdown" data-translate="nav-resources" aria-haspopup="true" aria-expanded="false">Ressources</a>
+            <ul class="dropdown-menu">
+              <li><a href="Blog.html" data-translate="nav-blog">Blog</a></li>
+              <li><a href="news.html" data-translate="nav-news">Actualités</a></li>
+            </ul>
+          </li>
+          
+          <!-- Contact -->
+          <li><a href="index.html#contact" data-translate="nav-contact">Contact</a></li>
+        </ul>
+        
+        <!-- CTA Button for Instant Quote -->
+        <a href="index.html#quote-calculator" class="nav-cta-button" data-translate="nav-quote">Devis Instantané</a>
+      </nav>
         <div class="language-dropdown">
           <button class="language-dropdown-toggle" aria-label="Select language" aria-expanded="false">
             <i class="fas fa-globe"></i>
@@ -116,7 +145,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="country-hero" style="background: linear-gradient(135deg, rgba(20, 170, 80, 0.95), rgba(252, 209, 22, 0.85), rgba(206, 17, 38, 0.85)), url('/assets/mali.png') center/cover;">
+    <section class="country-hero" style="background: linear-gradient(135deg, rgba(20, 170, 80, 0.85), rgba(252, 209, 22, 0.75), rgba(206, 17, 38, 0.75)), url('/assets/E7.jpg') center/cover;">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-badge">
@@ -556,9 +585,193 @@
 
     <!-- Scripts -->
     <script src="/js/language-manager.js"></script>
+  <script src="/js/calculator-modal.js"></script>
+  <script src="/js/quote-calculator.js"></script>
     <script src="/js/language-switcher.js"></script>
     <script src="/js/script.js"></script>
     <script src="/js/quote-modal.js" defer></script>
+
+  <!-- Quote Calculator Modal -->
+  <div id="quoteCalculatorModal" class="calculator-modal">
+    <div class="calculator-modal-overlay"></div>
+    <div class="calculator-modal-content">
+      <button class="calculator-modal-close" aria-label="Close calculator">
+        <i class="fas fa-times"></i>
+      </button>
+      
+      <div class="calculator-header">
+        <h2 data-translate="calculator-title">Calculateur de Devis Instantané</h2>
+        <p data-translate="calculator-subtitle">Obtenez un devis précis en quelques secondes pour votre expédition</p>
+      </div>
+
+      <div class="quote-calculator-card">
+        <form id="quoteCalculatorForm" class="calculator-form">
+          <!-- Currency Selection -->
+          <div class="form-section form-section-currency">
+            <h3 class="form-section-title">
+              <i class="fas fa-money-bill-wave"></i>
+              <span data-translate="calculator-section-currency">Devise de Paiement</span>
+            </h3>
+            <div class="form-group-calc">
+              <label data-translate="calculator-currency">
+                Choisissez votre devise <span class="required">*</span>
+              </label>
+              <select id="currency" required>
+                <option value="XOF">🇲🇱 FCFA (XOF) - Franc CFA</option>
+                <option value="EUR">🇪🇺 EUR (€) - Euro</option>
+                <option value="AED">🇦🇪 AED (د.إ) - Dirham des EAU</option>
+                <option value="TRY">🇹🇷 TRY (₺) - Livre Turque</option>
+                <option value="USD">🇺🇸 USD ($) - Dollar Américain</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- Transport Details -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <i class="fas fa-shipping-fast"></i>
+              <span data-translate="calculator-section-transport">Détails du Transport</span>
+            </h3>
+            <div class="form-grid">
+              <div class="form-group-calc">
+                <label data-translate="calculator-transport-type">
+                  Type de transport <span class="required">*</span>
+                </label>
+                <select id="transportType" required>
+                  <option value="" data-translate="calculator-select-placeholder">Sélectionnez...</option>
+                  <option value="air" data-translate="calculator-type-air">Fret Aérien</option>
+                  <option value="sea" data-translate="calculator-type-sea">Fret Maritime</option>
+                  <option value="land" data-translate="calculator-type-land">Transport Terrestre</option>
+                </select>
+              </div>
+
+              <div class="form-group-calc">
+                <label data-translate="calculator-route">
+                  Route <span class="required">*</span>
+                </label>
+                <select id="route" required>
+                  <option value="" data-translate="calculator-select-route-placeholder">Sélectionnez d'abord le type</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Shipment Details -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <i class="fas fa-box"></i>
+              <span data-translate="calculator-section-shipment">Détails de l'Envoi</span>
+            </h3>
+            <div class="form-grid">
+              <div class="form-group-calc">
+                <label data-translate="calculator-weight">
+                  Poids (kg) <span class="required">*</span>
+                </label>
+                <div class="input-with-unit">
+                  <input type="number" id="weight" min="0.1" step="0.1" required placeholder="Ex: 50">
+                  <span class="input-unit">kg</span>
+                </div>
+              </div>
+
+              <div class="form-group-calc">
+                <label data-translate="calculator-length">
+                  Longueur (cm)
+                </label>
+                <div class="input-with-unit">
+                  <input type="number" id="length" min="0" step="0.1" placeholder="Ex: 100">
+                  <span class="input-unit">cm</span>
+                </div>
+              </div>
+
+              <div class="form-group-calc">
+                <label data-translate="calculator-width">
+                  Largeur (cm)
+                </label>
+                <div class="input-with-unit">
+                  <input type="number" id="width" min="0" step="0.1" placeholder="Ex: 80">
+                  <span class="input-unit">cm</span>
+                </div>
+              </div>
+
+              <div class="form-group-calc">
+                <label data-translate="calculator-height">
+                  Hauteur (cm)
+                </label>
+                <div class="input-with-unit">
+                  <input type="number" id="height" min="0" step="0.1" placeholder="Ex: 60">
+                  <span class="input-unit">cm</span>
+                </div>
+              </div>
+
+              <div class="form-group-calc">
+                <label data-translate="calculator-declared-value">
+                  Valeur déclarée (USD)
+                </label>
+                <div class="input-with-unit">
+                  <input type="number" id="declaredValue" min="0" step="0.01" placeholder="Ex: 1000">
+                  <span class="input-unit">$</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="checkbox-group checkbox-group-inline">
+              <div class="checkbox-item">
+                <input type="checkbox" id="isContainer">
+                <label for="isContainer" data-translate="calculator-container">
+                  Container complet (fret maritime uniquement)
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Services -->
+          <div class="form-section">
+            <h3 class="form-section-title">
+              <i class="fas fa-plus-circle"></i>
+              <span data-translate="calculator-section-services">Services Additionnels</span>
+            </h3>
+
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input type="checkbox" id="doorDelivery">
+                <label for="doorDelivery" data-translate="calculator-door-delivery">
+                  Livraison à domicile (+$30)
+                </label>
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="form-group-calc">
+                <label data-translate="calculator-packaging">Type d'emballage</label>
+                <select id="packaging">
+                  <option value="" data-translate="calculator-packaging-none">Sans emballage</option>
+                  <option value="standard" data-translate="calculator-packaging-standard">Standard (+$20)</option>
+                  <option value="fragile" data-translate="calculator-packaging-fragile">Fragile (+$50)</option>
+                  <option value="heavy" data-translate="calculator-packaging-heavy">Lourd (+$100)</option>
+                </select>
+              </div>
+
+              <div class="form-group-calc">
+                <label data-translate="calculator-customs">Dédouanement</label>
+                <select id="customs">
+                  <option value="" data-translate="calculator-customs-none">Sans service douanier</option>
+                  <option value="standard" data-translate="calculator-customs-standard">Standard (+$50)</option>
+                  <option value="express" data-translate="calculator-customs-express">Express (+$150)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="calculate-btn" onclick="if(window.calculateQuoteNow) window.calculateQuoteNow(); else console.error('Function not loaded');">
+            <i class="fas fa-calculator"></i>
+            <span data-translate="calculator-calculate-btn">Calculer mon devis</span>
+          </button>
+        </form>
+        <div id="quoteResult"></div>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
 

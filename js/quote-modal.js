@@ -129,6 +129,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Submit form to Netlify
             const formData = new FormData(quoteForm);
             
+            // Ensure form-name is included for Netlify
+            if (!formData.get('form-name')) {
+                formData.append('form-name', 'quote-request');
+            }
+            
             fetch('/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
