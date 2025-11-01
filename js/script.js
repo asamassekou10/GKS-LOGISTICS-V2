@@ -374,36 +374,78 @@ document.addEventListener('DOMContentLoaded', function() {
     menuToggle.addEventListener('click', () => {
       nav.classList.toggle('active');
       menuToggle.classList.toggle('active');
+      // Prevent body scroll when menu is open
+      if (nav.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
     });
-    
+
     // Close mobile menu when clicking on a non-dropdown link
     nav.querySelectorAll('a:not(.nav-link-dropdown)').forEach(link => {
       link.addEventListener('click', () => {
         nav.classList.remove('active');
         menuToggle.classList.remove('active');
+        document.body.style.overflow = '';
       });
     });
-    
-    // Close mobile menu when clicking outside
+
+    // Close dropdown menu items when clicking on dropdown links
+    nav.querySelectorAll('.dropdown-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        // Small delay for better UX
+        setTimeout(() => {
+          nav.classList.remove('active');
+          menuToggle.classList.remove('active');
+          document.body.style.overflow = '';
+          // Close all dropdowns
+          document.querySelectorAll('.nav-item-dropdown').forEach(item => {
+            item.classList.remove('active');
+          });
+        }, 150);
+      });
+    });
+
+    // Close mobile menu when clicking outside/overlay
     document.addEventListener('click', (e) => {
-      if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+      if (nav.classList.contains('active') && !nav.contains(e.target) && !menuToggle.contains(e.target)) {
         nav.classList.remove('active');
         menuToggle.classList.remove('active');
+        document.body.style.overflow = '';
+        // Close all dropdowns
+        document.querySelectorAll('.nav-item-dropdown').forEach(item => {
+          item.classList.remove('active');
+        });
+      }
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('active')) {
+        nav.classList.remove('active');
+        menuToggle.classList.remove('active');
+        document.body.style.overflow = '';
+        // Close all dropdowns
+        document.querySelectorAll('.nav-item-dropdown').forEach(item => {
+          item.classList.remove('active');
+        });
       }
     });
   }
 
   // Dropdown menu functionality
   const dropdownToggles = document.querySelectorAll('.nav-link-dropdown');
-  
+
   dropdownToggles.forEach(toggle => {
     // Click handler for both desktop and mobile
     toggle.addEventListener('click', (e) => {
-      // On mobile/tablet, prevent default and toggle dropdown
-      if (window.innerWidth <= 1024) {
+      // On mobile/tablet, prevent default and toggle dropdown ONLY (no scrolling)
+      if (window.innerWidth <= 992) {
         e.preventDefault();
+        e.stopPropagation();
         const parentItem = toggle.closest('.nav-item-dropdown');
-        
+
         // Close other dropdowns on mobile
         document.querySelectorAll('.nav-item-dropdown').forEach(item => {
           if (item !== parentItem) {
@@ -412,10 +454,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (link) link.setAttribute('aria-expanded', 'false');
           }
         });
-        
-        // Toggle current dropdown
+
+        // Toggle current dropdown - ONLY toggle, no navigation
         const isActive = parentItem.classList.toggle('active');
         toggle.setAttribute('aria-expanded', isActive);
+
+        // Return false to ensure no navigation occurs
+        return false;
       }
     });
     
