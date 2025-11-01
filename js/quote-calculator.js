@@ -4,33 +4,217 @@ console.log('🚀 Quote Calculator Script Loaded!');
 (function() {
   'use strict';
 
-  // Pricing Configuration (in USD per kg) - REDUCED PRICES
+  // Realistic Pricing Configuration for Mali-based Logistics Company (USD per kg)
   const pricingMatrix = {
     air: {
-      'dubai-bamako': { baseRate: 3.0, minCharge: 35, volumetricFactor: 167 },
-      'dubai-abidjan': { baseRate: 3.5, minCharge: 40, volumetricFactor: 167 },
-      'turkey-bamako': { baseRate: 4.0, minCharge: 45, volumetricFactor: 167 },
-      'turkey-abidjan': { baseRate: 4.5, minCharge: 48, volumetricFactor: 167 },
-      'france-bamako': { baseRate: 4.8, minCharge: 50, volumetricFactor: 167 },
-      'france-abidjan': { baseRate: 5.0, minCharge: 55, volumetricFactor: 167 },
-      'usa-bamako': { baseRate: 5.5, minCharge: 60, volumetricFactor: 167 },
-      'china-bamako': { baseRate: 3.5, minCharge: 40, volumetricFactor: 167 }
+      // From/To Mali
+      'mali-france': { baseRate: 4.5, minCharge: 80, volumetricFactor: 167 },
+      'france-mali': { baseRate: 4.5, minCharge: 80, volumetricFactor: 167 },
+      'mali-turkey': { baseRate: 3.8, minCharge: 65, volumetricFactor: 167 },
+      'turkey-mali': { baseRate: 3.8, minCharge: 65, volumetricFactor: 167 },
+      'mali-dubai': { baseRate: 3.2, minCharge: 55, volumetricFactor: 167 },
+      'dubai-mali': { baseRate: 3.2, minCharge: 55, volumetricFactor: 167 },
+      'mali-usa': { baseRate: 5.5, minCharge: 100, volumetricFactor: 167 },
+      'usa-mali': { baseRate: 5.5, minCharge: 100, volumetricFactor: 167 },
+      'mali-senegal': { baseRate: 2.5, minCharge: 40, volumetricFactor: 167 },
+      'senegal-mali': { baseRate: 2.5, minCharge: 40, volumetricFactor: 167 },
+      'mali-ivorycoast': { baseRate: 2.8, minCharge: 45, volumetricFactor: 167 },
+      'ivorycoast-mali': { baseRate: 2.8, minCharge: 45, volumetricFactor: 167 },
+      'mali-burkinafaso': { baseRate: 2.2, minCharge: 35, volumetricFactor: 167 },
+      'burkinafaso-mali': { baseRate: 2.2, minCharge: 35, volumetricFactor: 167 },
+      'mali-guinea': { baseRate: 2.6, minCharge: 42, volumetricFactor: 167 },
+      'guinea-mali': { baseRate: 2.6, minCharge: 42, volumetricFactor: 167 },
+      'mali-niger': { baseRate: 2.4, minCharge: 38, volumetricFactor: 167 },
+      'niger-mali': { baseRate: 2.4, minCharge: 38, volumetricFactor: 167 },
+
+      // Inter-African routes
+      'senegal-ivorycoast': { baseRate: 2.9, minCharge: 48, volumetricFactor: 167 },
+      'ivorycoast-senegal': { baseRate: 2.9, minCharge: 48, volumetricFactor: 167 },
+      'senegal-burkinafaso': { baseRate: 2.4, minCharge: 40, volumetricFactor: 167 },
+      'burkinafaso-senegal': { baseRate: 2.4, minCharge: 40, volumetricFactor: 167 },
+      'senegal-guinea': { baseRate: 2.7, minCharge: 44, volumetricFactor: 167 },
+      'guinea-senegal': { baseRate: 2.7, minCharge: 44, volumetricFactor: 167 },
+      'senegal-niger': { baseRate: 2.6, minCharge: 42, volumetricFactor: 167 },
+      'niger-senegal': { baseRate: 2.6, minCharge: 42, volumetricFactor: 167 },
+      'ivorycoast-burkinafaso': { baseRate: 2.5, minCharge: 42, volumetricFactor: 167 },
+      'burkinafaso-ivorycoast': { baseRate: 2.5, minCharge: 42, volumetricFactor: 167 },
+      'ivorycoast-guinea': { baseRate: 2.8, minCharge: 46, volumetricFactor: 167 },
+      'guinea-ivorycoast': { baseRate: 2.8, minCharge: 46, volumetricFactor: 167 },
+      'ivorycoast-niger': { baseRate: 2.7, minCharge: 44, volumetricFactor: 167 },
+      'niger-ivorycoast': { baseRate: 2.7, minCharge: 44, volumetricFactor: 167 },
+      'burkinafaso-guinea': { baseRate: 2.4, minCharge: 40, volumetricFactor: 167 },
+      'guinea-burkinafaso': { baseRate: 2.4, minCharge: 40, volumetricFactor: 167 },
+      'burkinafaso-niger': { baseRate: 2.1, minCharge: 35, volumetricFactor: 167 },
+      'niger-burkinafaso': { baseRate: 2.1, minCharge: 35, volumetricFactor: 167 },
+      'guinea-niger': { baseRate: 2.8, minCharge: 46, volumetricFactor: 167 },
+      'niger-guinea': { baseRate: 2.8, minCharge: 46, volumetricFactor: 167 },
+
+      // West Africa to International
+      'senegal-france': { baseRate: 4.2, minCharge: 75, volumetricFactor: 167 },
+      'france-senegal': { baseRate: 4.2, minCharge: 75, volumetricFactor: 167 },
+      'senegal-turkey': { baseRate: 3.6, minCharge: 62, volumetricFactor: 167 },
+      'turkey-senegal': { baseRate: 3.6, minCharge: 62, volumetricFactor: 167 },
+      'senegal-dubai': { baseRate: 3.0, minCharge: 52, volumetricFactor: 167 },
+      'dubai-senegal': { baseRate: 3.0, minCharge: 52, volumetricFactor: 167 },
+      'senegal-usa': { baseRate: 5.2, minCharge: 95, volumetricFactor: 167 },
+      'usa-senegal': { baseRate: 5.2, minCharge: 95, volumetricFactor: 167 },
+
+      'ivorycoast-france': { baseRate: 4.4, minCharge: 78, volumetricFactor: 167 },
+      'france-ivorycoast': { baseRate: 4.4, minCharge: 78, volumetricFactor: 167 },
+      'ivorycoast-turkey': { baseRate: 3.7, minCharge: 64, volumetricFactor: 167 },
+      'turkey-ivorycoast': { baseRate: 3.7, minCharge: 64, volumetricFactor: 167 },
+      'ivorycoast-dubai': { baseRate: 3.1, minCharge: 54, volumetricFactor: 167 },
+      'dubai-ivorycoast': { baseRate: 3.1, minCharge: 54, volumetricFactor: 167 },
+      'ivorycoast-usa': { baseRate: 5.3, minCharge: 98, volumetricFactor: 167 },
+      'usa-ivorycoast': { baseRate: 5.3, minCharge: 98, volumetricFactor: 167 },
+
+      'burkinafaso-france': { baseRate: 4.6, minCharge: 82, volumetricFactor: 167 },
+      'france-burkinafaso': { baseRate: 4.6, minCharge: 82, volumetricFactor: 167 },
+      'burkinafaso-turkey': { baseRate: 3.9, minCharge: 67, volumetricFactor: 167 },
+      'turkey-burkinafaso': { baseRate: 3.9, minCharge: 67, volumetricFactor: 167 },
+      'burkinafaso-dubai': { baseRate: 3.3, minCharge: 57, volumetricFactor: 167 },
+      'dubai-burkinafaso': { baseRate: 3.3, minCharge: 57, volumetricFactor: 167 },
+      'burkinafaso-usa': { baseRate: 5.6, minCharge: 102, volumetricFactor: 167 },
+      'usa-burkinafaso': { baseRate: 5.6, minCharge: 102, volumetricFactor: 167 },
+
+      'guinea-france': { baseRate: 4.3, minCharge: 76, volumetricFactor: 167 },
+      'france-guinea': { baseRate: 4.3, minCharge: 76, volumetricFactor: 167 },
+      'guinea-turkey': { baseRate: 3.8, minCharge: 65, volumetricFactor: 167 },
+      'turkey-guinea': { baseRate: 3.8, minCharge: 65, volumetricFactor: 167 },
+      'guinea-dubai': { baseRate: 3.2, minCharge: 55, volumetricFactor: 167 },
+      'dubai-guinea': { baseRate: 3.2, minCharge: 55, volumetricFactor: 167 },
+      'guinea-usa': { baseRate: 5.4, minCharge: 99, volumetricFactor: 167 },
+      'usa-guinea': { baseRate: 5.4, minCharge: 99, volumetricFactor: 167 },
+
+      'niger-france': { baseRate: 4.7, minCharge: 84, volumetricFactor: 167 },
+      'france-niger': { baseRate: 4.7, minCharge: 84, volumetricFactor: 167 },
+      'niger-turkey': { baseRate: 4.0, minCharge: 68, volumetricFactor: 167 },
+      'turkey-niger': { baseRate: 4.0, minCharge: 68, volumetricFactor: 167 },
+      'niger-dubai': { baseRate: 3.4, minCharge: 58, volumetricFactor: 167 },
+      'dubai-niger': { baseRate: 3.4, minCharge: 58, volumetricFactor: 167 },
+      'niger-usa': { baseRate: 5.7, minCharge: 104, volumetricFactor: 167 },
+      'usa-niger': { baseRate: 5.7, minCharge: 104, volumetricFactor: 167 },
+
+      // International to International
+      'france-turkey': { baseRate: 2.8, minCharge: 50, volumetricFactor: 167 },
+      'turkey-france': { baseRate: 2.8, minCharge: 50, volumetricFactor: 167 },
+      'france-dubai': { baseRate: 3.2, minCharge: 55, volumetricFactor: 167 },
+      'dubai-france': { baseRate: 3.2, minCharge: 55, volumetricFactor: 167 },
+      'france-usa': { baseRate: 4.5, minCharge: 85, volumetricFactor: 167 },
+      'usa-france': { baseRate: 4.5, minCharge: 85, volumetricFactor: 167 },
+      'turkey-dubai': { baseRate: 2.5, minCharge: 45, volumetricFactor: 167 },
+      'dubai-turkey': { baseRate: 2.5, minCharge: 45, volumetricFactor: 167 },
+      'turkey-usa': { baseRate: 5.0, minCharge: 90, volumetricFactor: 167 },
+      'usa-turkey': { baseRate: 5.0, minCharge: 90, volumetricFactor: 167 },
+      'dubai-usa': { baseRate: 4.8, minCharge: 88, volumetricFactor: 167 },
+      'usa-dubai': { baseRate: 4.8, minCharge: 88, volumetricFactor: 167 }
     },
     sea: {
-      'dubai-bamako': { baseRate: 0.5, minCharge: 100, volumetricFactor: 1000, containerRate: 1800 },
-      'dubai-abidjan': { baseRate: 0.6, minCharge: 110, volumetricFactor: 1000, containerRate: 2000 },
-      'turkey-bamako': { baseRate: 0.7, minCharge: 120, volumetricFactor: 1000, containerRate: 2200 },
-      'turkey-abidjan': { baseRate: 0.8, minCharge: 130, volumetricFactor: 1000, containerRate: 2400 },
-      'france-bamako': { baseRate: 0.9, minCharge: 150, volumetricFactor: 1000, containerRate: 2600 },
-      'france-abidjan': { baseRate: 1.0, minCharge: 160, volumetricFactor: 1000, containerRate: 2800 },
-      'china-bamako': { baseRate: 0.6, minCharge: 110, volumetricFactor: 1000, containerRate: 1900 }
+      // From/To Mali (via ports)
+      'mali-france': { baseRate: 0.85, minCharge: 180, volumetricFactor: 1000, containerRate: 2400 },
+      'france-mali': { baseRate: 0.85, minCharge: 180, volumetricFactor: 1000, containerRate: 2400 },
+      'mali-turkey': { baseRate: 0.70, minCharge: 155, volumetricFactor: 1000, containerRate: 2100 },
+      'turkey-mali': { baseRate: 0.70, minCharge: 155, volumetricFactor: 1000, containerRate: 2100 },
+      'mali-dubai': { baseRate: 0.55, minCharge: 130, volumetricFactor: 1000, containerRate: 1750 },
+      'dubai-mali': { baseRate: 0.55, minCharge: 130, volumetricFactor: 1000, containerRate: 1750 },
+      'mali-usa': { baseRate: 1.10, minCharge: 220, volumetricFactor: 1000, containerRate: 2900 },
+      'usa-mali': { baseRate: 1.10, minCharge: 220, volumetricFactor: 1000, containerRate: 2900 },
+
+      'senegal-france': { baseRate: 0.75, minCharge: 165, volumetricFactor: 1000, containerRate: 2200 },
+      'france-senegal': { baseRate: 0.75, minCharge: 165, volumetricFactor: 1000, containerRate: 2200 },
+      'senegal-turkey': { baseRate: 0.65, minCharge: 145, volumetricFactor: 1000, containerRate: 1950 },
+      'turkey-senegal': { baseRate: 0.65, minCharge: 145, volumetricFactor: 1000, containerRate: 1950 },
+      'senegal-dubai': { baseRate: 0.50, minCharge: 120, volumetricFactor: 1000, containerRate: 1650 },
+      'dubai-senegal': { baseRate: 0.50, minCharge: 120, volumetricFactor: 1000, containerRate: 1650 },
+      'senegal-usa': { baseRate: 1.00, minCharge: 200, volumetricFactor: 1000, containerRate: 2700 },
+      'usa-senegal': { baseRate: 1.00, minCharge: 200, volumetricFactor: 1000, containerRate: 2700 },
+
+      'ivorycoast-france': { baseRate: 0.78, minCharge: 168, volumetricFactor: 1000, containerRate: 2250 },
+      'france-ivorycoast': { baseRate: 0.78, minCharge: 168, volumetricFactor: 1000, containerRate: 2250 },
+      'ivorycoast-turkey': { baseRate: 0.68, minCharge: 148, volumetricFactor: 1000, containerRate: 2000 },
+      'turkey-ivorycoast': { baseRate: 0.68, minCharge: 148, volumetricFactor: 1000, containerRate: 2000 },
+      'ivorycoast-dubai': { baseRate: 0.52, minCharge: 122, volumetricFactor: 1000, containerRate: 1680 },
+      'dubai-ivorycoast': { baseRate: 0.52, minCharge: 122, volumetricFactor: 1000, containerRate: 1680 },
+      'ivorycoast-usa': { baseRate: 1.02, minCharge: 205, volumetricFactor: 1000, containerRate: 2750 },
+      'usa-ivorycoast': { baseRate: 1.02, minCharge: 205, volumetricFactor: 1000, containerRate: 2750 },
+
+      'burkinafaso-france': { baseRate: 0.88, minCharge: 185, volumetricFactor: 1000, containerRate: 2450 },
+      'france-burkinafaso': { baseRate: 0.88, minCharge: 185, volumetricFactor: 1000, containerRate: 2450 },
+      'burkinafaso-turkey': { baseRate: 0.73, minCharge: 160, volumetricFactor: 1000, containerRate: 2150 },
+      'turkey-burkinafaso': { baseRate: 0.73, minCharge: 160, volumetricFactor: 1000, containerRate: 2150 },
+      'burkinafaso-dubai': { baseRate: 0.58, minCharge: 135, volumetricFactor: 1000, containerRate: 1800 },
+      'dubai-burkinafaso': { baseRate: 0.58, minCharge: 135, volumetricFactor: 1000, containerRate: 1800 },
+      'burkinafaso-usa': { baseRate: 1.13, minCharge: 225, volumetricFactor: 1000, containerRate: 2950 },
+      'usa-burkinafaso': { baseRate: 1.13, minCharge: 225, volumetricFactor: 1000, containerRate: 2950 },
+
+      'guinea-france': { baseRate: 0.80, minCharge: 170, volumetricFactor: 1000, containerRate: 2300 },
+      'france-guinea': { baseRate: 0.80, minCharge: 170, volumetricFactor: 1000, containerRate: 2300 },
+      'guinea-turkey': { baseRate: 0.67, minCharge: 150, volumetricFactor: 1000, containerRate: 2050 },
+      'turkey-guinea': { baseRate: 0.67, minCharge: 150, volumetricFactor: 1000, containerRate: 2050 },
+      'guinea-dubai': { baseRate: 0.53, minCharge: 125, volumetricFactor: 1000, containerRate: 1700 },
+      'dubai-guinea': { baseRate: 0.53, minCharge: 125, volumetricFactor: 1000, containerRate: 1700 },
+      'guinea-usa': { baseRate: 1.05, minCharge: 210, volumetricFactor: 1000, containerRate: 2800 },
+      'usa-guinea': { baseRate: 1.05, minCharge: 210, volumetricFactor: 1000, containerRate: 2800 },
+
+      'niger-france': { baseRate: 0.90, minCharge: 190, volumetricFactor: 1000, containerRate: 2500 },
+      'france-niger': { baseRate: 0.90, minCharge: 190, volumetricFactor: 1000, containerRate: 2500 },
+      'niger-turkey': { baseRate: 0.75, minCharge: 165, volumetricFactor: 1000, containerRate: 2200 },
+      'turkey-niger': { baseRate: 0.75, minCharge: 165, volumetricFactor: 1000, containerRate: 2200 },
+      'niger-dubai': { baseRate: 0.60, minCharge: 140, volumetricFactor: 1000, containerRate: 1850 },
+      'dubai-niger': { baseRate: 0.60, minCharge: 140, volumetricFactor: 1000, containerRate: 1850 },
+      'niger-usa': { baseRate: 1.15, minCharge: 230, volumetricFactor: 1000, containerRate: 3000 },
+      'usa-niger': { baseRate: 1.15, minCharge: 230, volumetricFactor: 1000, containerRate: 3000 },
+
+      // International to International
+      'france-turkey': { baseRate: 0.45, minCharge: 110, volumetricFactor: 1000, containerRate: 1500 },
+      'turkey-france': { baseRate: 0.45, minCharge: 110, volumetricFactor: 1000, containerRate: 1500 },
+      'france-dubai': { baseRate: 0.55, minCharge: 130, volumetricFactor: 1000, containerRate: 1750 },
+      'dubai-france': { baseRate: 0.55, minCharge: 130, volumetricFactor: 1000, containerRate: 1750 },
+      'france-usa': { baseRate: 0.90, minCharge: 185, volumetricFactor: 1000, containerRate: 2450 },
+      'usa-france': { baseRate: 0.90, minCharge: 185, volumetricFactor: 1000, containerRate: 2450 },
+      'turkey-dubai': { baseRate: 0.40, minCharge: 95, volumetricFactor: 1000, containerRate: 1350 },
+      'dubai-turkey': { baseRate: 0.40, minCharge: 95, volumetricFactor: 1000, containerRate: 1350 },
+      'turkey-usa': { baseRate: 1.00, minCharge: 200, volumetricFactor: 1000, containerRate: 2650 },
+      'usa-turkey': { baseRate: 1.00, minCharge: 200, volumetricFactor: 1000, containerRate: 2650 },
+      'dubai-usa': { baseRate: 0.95, minCharge: 190, volumetricFactor: 1000, containerRate: 2550 },
+      'usa-dubai': { baseRate: 0.95, minCharge: 190, volumetricFactor: 1000, containerRate: 2550 }
     },
     land: {
-      'bamako-abidjan': { baseRate: 1.5, minCharge: 60, volumetricFactor: 300 },
-      'bamako-dakar': { baseRate: 1.7, minCharge: 65, volumetricFactor: 300 },
-      'bamako-ouagadougou': { baseRate: 1.3, minCharge: 55, volumetricFactor: 300 },
-      'abidjan-bamako': { baseRate: 1.5, minCharge: 60, volumetricFactor: 300 },
-      'abidjan-dakar': { baseRate: 1.8, minCharge: 70, volumetricFactor: 300 }
+      // West Africa Regional (land transport only makes sense here)
+      'mali-senegal': { baseRate: 0.95, minCharge: 55, volumetricFactor: 300 },
+      'senegal-mali': { baseRate: 0.95, minCharge: 55, volumetricFactor: 300 },
+      'mali-ivorycoast': { baseRate: 1.05, minCharge: 60, volumetricFactor: 300 },
+      'ivorycoast-mali': { baseRate: 1.05, minCharge: 60, volumetricFactor: 300 },
+      'mali-burkinafaso': { baseRate: 0.75, minCharge: 45, volumetricFactor: 300 },
+      'burkinafaso-mali': { baseRate: 0.75, minCharge: 45, volumetricFactor: 300 },
+      'mali-guinea': { baseRate: 0.85, minCharge: 50, volumetricFactor: 300 },
+      'guinea-mali': { baseRate: 0.85, minCharge: 50, volumetricFactor: 300 },
+      'mali-niger': { baseRate: 0.90, minCharge: 52, volumetricFactor: 300 },
+      'niger-mali': { baseRate: 0.90, minCharge: 52, volumetricFactor: 300 },
+
+      'senegal-ivorycoast': { baseRate: 1.15, minCharge: 65, volumetricFactor: 300 },
+      'ivorycoast-senegal': { baseRate: 1.15, minCharge: 65, volumetricFactor: 300 },
+      'senegal-burkinafaso': { baseRate: 0.98, minCharge: 58, volumetricFactor: 300 },
+      'burkinafaso-senegal': { baseRate: 0.98, minCharge: 58, volumetricFactor: 300 },
+      'senegal-guinea': { baseRate: 0.88, minCharge: 52, volumetricFactor: 300 },
+      'guinea-senegal': { baseRate: 0.88, minCharge: 52, volumetricFactor: 300 },
+      'senegal-niger': { baseRate: 1.05, minCharge: 62, volumetricFactor: 300 },
+      'niger-senegal': { baseRate: 1.05, minCharge: 62, volumetricFactor: 300 },
+
+      'ivorycoast-burkinafaso': { baseRate: 0.92, minCharge: 54, volumetricFactor: 300 },
+      'burkinafaso-ivorycoast': { baseRate: 0.92, minCharge: 54, volumetricFactor: 300 },
+      'ivorycoast-guinea': { baseRate: 0.98, minCharge: 57, volumetricFactor: 300 },
+      'guinea-ivorycoast': { baseRate: 0.98, minCharge: 57, volumetricFactor: 300 },
+      'ivorycoast-niger': { baseRate: 1.10, minCharge: 64, volumetricFactor: 300 },
+      'niger-ivorycoast': { baseRate: 1.10, minCharge: 64, volumetricFactor: 300 },
+
+      'burkinafaso-guinea': { baseRate: 0.82, minCharge: 48, volumetricFactor: 300 },
+      'guinea-burkinafaso': { baseRate: 0.82, minCharge: 48, volumetricFactor: 300 },
+      'burkinafaso-niger': { baseRate: 0.70, minCharge: 42, volumetricFactor: 300 },
+      'niger-burkinafaso': { baseRate: 0.70, minCharge: 42, volumetricFactor: 300 },
+
+      'guinea-niger': { baseRate: 1.00, minCharge: 60, volumetricFactor: 300 },
+      'niger-guinea': { baseRate: 1.00, minCharge: 60, volumetricFactor: 300 }
     }
   };
 
@@ -78,21 +262,6 @@ console.log('🚀 Quote Calculator Script Loaded!');
 
     console.log('Quote calculator form found');
 
-    // Populate route options based on transport type
-    const transportTypeSelect = document.getElementById('transportType');
-    const routeSelect = document.getElementById('route');
-
-    if (transportTypeSelect && routeSelect) {
-      transportTypeSelect.addEventListener('change', function() {
-        updateRouteOptions(this.value, routeSelect);
-      });
-      
-      // Initial population
-      if (transportTypeSelect.value) {
-        updateRouteOptions(transportTypeSelect.value, routeSelect);
-      }
-    }
-
     // Form submission - Multiple ways to prevent default
     calculatorForm.addEventListener('submit', function(e) {
       e.preventDefault();
@@ -134,57 +303,84 @@ console.log('🚀 Quote Calculator Script Loaded!');
     console.log('Quote calculator initialized successfully');
   }
 
-  function updateRouteOptions(transportType, routeSelect) {
-    const routes = pricingMatrix[transportType];
-    
-    routeSelect.innerHTML = '<option value="">Sélectionnez une route</option>';
-    
-    Object.keys(routes).forEach(route => {
-      const option = document.createElement('option');
-      option.value = route;
-      option.textContent = formatRouteName(route);
-      routeSelect.appendChild(option);
-    });
+  // Format country name for display
+  function formatCountryName(countryCode) {
+    const countryNames = {
+      'mali': 'Mali',
+      'france': 'France',
+      'turkey': 'Turkey',
+      'dubai': 'Dubai (UAE)',
+      'senegal': 'Sénégal',
+      'ivorycoast': 'Côte d\'Ivoire',
+      'burkinafaso': 'Burkina Faso',
+      'guinea': 'Guinée Conakry',
+      'niger': 'Niger',
+      'usa': 'United States'
+    };
+    return countryNames[countryCode] || countryCode;
   }
 
-  function formatRouteName(route) {
-    return route.split('-').map(word => 
-      word.charAt(0).toUpperCase() + word.slice(1)
-    ).join(' → ');
-  }
-
-  // Make formatRouteName globally accessible for action buttons
-  window.formatRouteName = formatRouteName;
+  // Make formatCountryName globally accessible
+  window.formatCountryName = formatCountryName;
 
   function calculateQuote() {
     console.log('calculateQuote() called');
-    
+
     try {
       // Get form values
-      const currency = document.getElementById('currency')?.value || 'USD';
-      const transportType = document.getElementById('transportType').value;
-      const route = document.getElementById('route').value;
-      const weight = parseFloat(document.getElementById('weight').value) || 0;
-      const length = parseFloat(document.getElementById('length').value) || 0;
-      const width = parseFloat(document.getElementById('width').value) || 0;
-      const height = parseFloat(document.getElementById('height').value) || 0;
-      const declaredValue = parseFloat(document.getElementById('declaredValue').value) || 0;
+      console.log('Step 1: Getting form elements...');
+      const currencyElement = document.getElementById('currency');
+      const transportTypeElement = document.getElementById('transportType');
+      const originCountryElement = document.getElementById('originCountry');
+      const destinationCountryElement = document.getElementById('destinationCountry');
+      const weightElement = document.getElementById('weight');
+
+      console.log('Elements found:', {
+        currency: !!currencyElement,
+        transportType: !!transportTypeElement,
+        originCountry: !!originCountryElement,
+        destinationCountry: !!destinationCountryElement,
+        weight: !!weightElement
+      });
+
+      const currency = currencyElement?.value || 'USD';
+      const transportType = transportTypeElement?.value;
+      const originCountry = originCountryElement?.value;
+      const destinationCountry = destinationCountryElement?.value;
+      const weight = parseFloat(weightElement?.value) || 0;
+      const length = parseFloat(document.getElementById('length')?.value) || 0;
+      const width = parseFloat(document.getElementById('width')?.value) || 0;
+      const height = parseFloat(document.getElementById('height')?.value) || 0;
+      const declaredValue = parseFloat(document.getElementById('declaredValue')?.value) || 0;
       const isContainer = document.getElementById('isContainer')?.checked || false;
 
-      console.log('Form values:', { currency, transportType, route, weight, length, width, height, declaredValue, isContainer });
+      // Construct route from origin and destination
+      const route = `${originCountry}-${destinationCountry}`;
+
+      console.log('Form values:', { currency, transportType, originCountry, destinationCountry, route, weight, length, width, height, declaredValue, isContainer });
 
       // Validate inputs
       if (!currency) {
         showError('Veuillez sélectionner une devise.');
         return;
       }
-      
-      if (!transportType || !route || weight <= 0) {
-        showError('Veuillez remplir tous les champs obligatoires (Type de transport, Route, Poids).');
+
+      if (!transportType || !originCountry || !destinationCountry || weight <= 0) {
+        console.error('Validation failed:', { transportType, originCountry, destinationCountry, weight });
+        showError('Veuillez remplir tous les champs obligatoires (Type de transport, Pays d\'origine, Pays de destination, Poids).');
         return;
       }
 
-      const pricing = pricingMatrix[transportType][route];
+      if (originCountry === destinationCountry) {
+        showError('Le pays d\'origine et de destination doivent être différents.');
+        return;
+      }
+
+      console.log('Step 2: Looking up pricing for:', transportType, route);
+      console.log('Available transport types:', Object.keys(pricingMatrix));
+      console.log('Available routes for', transportType, ':', pricingMatrix[transportType] ? Object.keys(pricingMatrix[transportType]).slice(0, 5) : 'NONE');
+
+      const pricing = pricingMatrix[transportType]?.[route];
       
       if (!pricing) {
         showError('Route non disponible pour ce type de transport.');
@@ -245,6 +441,8 @@ console.log('🚀 Quote Calculator Script Loaded!');
         currencySymbol: currencySymbols[currency],
         transportType,
         route,
+        originCountry,
+        destinationCountry,
         weight,
         volumetricWeight,
         chargeableWeight,
@@ -298,7 +496,7 @@ console.log('🚀 Quote Calculator Script Loaded!');
             </div>
             <div class="quote-row">
               <span data-translate="quote-route">Route:</span>
-              <strong>${formatRouteName(quote.route)}</strong>
+              <strong>${formatCountryName(quote.originCountry)} → ${formatCountryName(quote.destinationCountry)}</strong>
             </div>
             ${!quote.isContainer ? `
               <div class="quote-row">

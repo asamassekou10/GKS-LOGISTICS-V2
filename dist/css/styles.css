@@ -3391,6 +3391,17 @@ p {
   overflow: hidden;
 }
 
+/* Remove underlines from country card links */
+.presence a.card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.presence a.card h3,
+.presence a.card p {
+  color: inherit;
+}
+
 .presence .card::before {
   content: '📍';
   position: absolute;

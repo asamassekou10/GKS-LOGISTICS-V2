@@ -5,14 +5,17 @@
   // WhatsApp numbers for different offices
   const whatsappNumbers = {
     'mali': '+22390929273',
-    'ivoire': '+2250709090909',  // Abidjan
-    'cote-ivoire': '+2250709090909',
-    'senegal': '+221781234567',  // Dakar
-    'dubai': '+971501234567',
-    'burkina': '+22671234567',  // Burkina Faso
-    'burkinafaso': '+22671234567',
-    'niger': '+22791234567',
-    'guinea': '+224621234567',
+    'niger': '+22798257225',  // Niger
+    'france': '+33769423631',  // France
+    'dubai': '+971545835717',  // Dubai
+    'ivoire': '+22507584218',  // Abidjan (Côte d'Ivoire)
+    'cote-ivoire': '+22507584218',
+    'usa': '+18323524313',  // Houston, USA
+    'senegal': '+22390929273',  // Use Mali number
+    'burkina': '+22390929273',  // Use Mali number
+    'burkinafaso': '+22390929273',
+    'guinea': '+22390929273',  // Use Mali number
+    'turkey': '+22390929273',  // Use Mali number
     'default': '+22390929273'  // Default to Mali HQ
   };
 

@@ -384,7 +384,7 @@
         </div>
       </div>
       <div class="services-cta-group" style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
-        <a href="#contact" class="btn btn-explore" data-translate="services-explore">Explorez Tous Nos Services</a>
+        <a href="all-services.html" class="btn btn-explore" data-translate="services-explore">Explorez Tous Nos Services</a>
       </div>
     </div>
   </section>
@@ -444,11 +444,40 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-route">
-                  Route <span class="required">*</span>
+                <label data-translate="calculator-origin">
+                  Pays d'origine <span class="required">*</span>
                 </label>
-                <select id="route" required>
-                  <option value="" data-translate="calculator-select-route-placeholder">Sélectionnez d'abord le type</option>
+                <select id="originCountry" required>
+                  <option value="" data-translate="calculator-select-country">Sélectionnez un pays</option>
+                  <option value="mali">🇲🇱 Mali</option>
+                  <option value="france">🇫🇷 France</option>
+                  <option value="turkey">🇹🇷 Turkey</option>
+                  <option value="dubai">🇦🇪 Dubai (UAE)</option>
+                  <option value="senegal">🇸🇳 Sénégal</option>
+                  <option value="ivorycoast">🇨🇮 Côte d'Ivoire</option>
+                  <option value="burkinafaso">🇧🇫 Burkina Faso</option>
+                  <option value="guinea">🇬🇳 Guinée Conakry</option>
+                  <option value="niger">🇳🇪 Niger</option>
+                  <option value="usa">🇺🇸 United States</option>
+                </select>
+              </div>
+
+              <div class="form-group-calc">
+                <label data-translate="calculator-destination">
+                  Pays de destination <span class="required">*</span>
+                </label>
+                <select id="destinationCountry" required>
+                  <option value="" data-translate="calculator-select-country">Sélectionnez un pays</option>
+                  <option value="mali">🇲🇱 Mali</option>
+                  <option value="france">🇫🇷 France</option>
+                  <option value="turkey">🇹🇷 Turkey</option>
+                  <option value="dubai">🇦🇪 Dubai (UAE)</option>
+                  <option value="senegal">🇸🇳 Sénégal</option>
+                  <option value="ivorycoast">🇨🇮 Côte d'Ivoire</option>
+                  <option value="burkinafaso">🇧🇫 Burkina Faso</option>
+                  <option value="guinea">🇬🇳 Guinée Conakry</option>
+                  <option value="niger">🇳🇪 Niger</option>
+                  <option value="usa">🇺🇸 United States</option>
                 </select>
               </div>
             </div>
@@ -460,55 +489,13 @@
               <i class="fas fa-box"></i>
               <span data-translate="calculator-section-shipment">Détails de l'Envoi</span>
             </h3>
-            <div class="form-grid">
-              <div class="form-group-calc">
-                <label data-translate="calculator-weight">
-                  Poids (kg) <span class="required">*</span>
-                </label>
-                <div class="input-with-unit">
-                  <input type="number" id="weight" min="0.1" step="0.1" required placeholder="Ex: 50">
-                  <span class="input-unit">kg</span>
-                </div>
-              </div>
-
-              <div class="form-group-calc">
-                <label data-translate="calculator-length">
-                  Longueur (cm)
-                </label>
-                <div class="input-with-unit">
-                  <input type="number" id="length" min="0" step="0.1" placeholder="Ex: 100">
-                  <span class="input-unit">cm</span>
-                </div>
-              </div>
-
-              <div class="form-group-calc">
-                <label data-translate="calculator-width">
-                  Largeur (cm)
-                </label>
-                <div class="input-with-unit">
-                  <input type="number" id="width" min="0" step="0.1" placeholder="Ex: 80">
-                  <span class="input-unit">cm</span>
-                </div>
-              </div>
-
-              <div class="form-group-calc">
-                <label data-translate="calculator-height">
-                  Hauteur (cm)
-                </label>
-                <div class="input-with-unit">
-                  <input type="number" id="height" min="0" step="0.1" placeholder="Ex: 60">
-                  <span class="input-unit">cm</span>
-                </div>
-              </div>
-
-              <div class="form-group-calc">
-                <label data-translate="calculator-declared-value">
-                  Valeur déclarée (USD)
-                </label>
-                <div class="input-with-unit">
-                  <input type="number" id="declaredValue" min="0" step="0.01" placeholder="Ex: 1000">
-                  <span class="input-unit">$</span>
-                </div>
+            <div class="form-group-calc">
+              <label data-translate="calculator-weight">
+                Poids (kg) <span class="required">*</span>
+              </label>
+              <div class="input-with-unit">
+                <input type="number" id="weight" min="0.1" step="0.1" required placeholder="Ex: 50">
+                <span class="input-unit">kg</span>
               </div>
             </div>
 
@@ -955,51 +942,51 @@
         </button>
         <div class="slider-wrapper">
           <div class="slider-track" id="sliderTrack">
-            <div class="card" data-country="Mali">
+            <a href="gks-mali.html" class="card" data-country="Mali">
               <img src="/assets/mali.png" alt="GKS Logistics Mali" loading="lazy">
               <h3 data-translate="presence-mali-title">Mali</h3>
               <p data-translate="presence-mali-desc">Services logistiques complets pour vos activités locales.</p>
-            </div>
-            <div class="card" data-country="Turquie">
+            </a>
+            <a href="gks-turkey.html" class="card" data-country="Turquie">
               <img src="/assets/turkish.png" alt="GKS Logistics Turquie" loading="lazy">
               <h3 data-translate="presence-turkey-title">Turquie</h3>
               <p data-translate="presence-turkey-desc">Liaisons dynamiques entre l'Afrique et l'Asie.</p>
-            </div>
-            <div class="card" data-country="France">
+            </a>
+            <a href="gks-france.html" class="card" data-country="France">
               <img src="/assets/france.png" alt="GKS Logistics France" loading="lazy">
               <h3 data-translate="presence-france-title">France</h3>
               <p data-translate="presence-france-desc">Solutions avancées pour l'Europe.</p>
-            </div>
-            <div class="card" data-country="USA">
+            </a>
+            <a href="gks-usa.html" class="card" data-country="USA">
               <img src="/assets/usa.png" alt="GKS Logistics États-Unis" loading="lazy">
               <h3 data-translate="presence-usa-title">États-Unis</h3>
               <p data-translate="presence-usa-desc">Réseau robuste pour le commerce international.</p>
-            </div>
-            <div class="card" data-country="Dubai">
+            </a>
+            <a href="gks-dubai.html" class="card" data-country="Dubai">
               <img src="/assets/Dubai.png" alt="GKS Logistics Dubai" loading="lazy">
               <h3 data-translate="presence-dubai-title">Dubai</h3>
               <p data-translate="presence-dubai-desc">Dubaï est un point de passage essentiel pour le commerce international.</p>
-            </div>
-            <div class="card" data-country="CÃ´te d'Ivoire">
+            </a>
+            <a href="gks-ivoire.html" class="card" data-country="CÃ´te d'Ivoire">
               <img src="/assets/ivory coast.png" alt="GKS Logistics Côte d'Ivoire" loading="lazy">
               <h3 data-translate="presence-ivorycoast-title">Côte d'Ivoire</h3>
               <p data-translate="presence-ivorycoast-desc">Logistique adaptée aux besoins régionaux.</p>
-            </div>
-            <div class="card" data-country="Guinée">
+            </a>
+            <a href="gks-guinea.html" class="card" data-country="Guinée">
               <img src="/assets/guinea.png" alt="GKS Logistics Guinée" loading="lazy">
               <h3 data-translate="presence-guinea-title">Guinée</h3>
               <p data-translate="presence-guinea-desc">Services logistiques fiables en Afrique de l'Ouest.</p>
-            </div>
-            <div class="card" data-country="Burkina Faso">
+            </a>
+            <a href="gks-burkinafaso.html" class="card" data-country="Burkina Faso">
               <img src="/assets/burkina faso.png" alt="GKS Logistics Burkina Faso" loading="lazy">
               <h3 data-translate="presence-burkina-title">Burkina Faso</h3>
               <p data-translate="presence-burkina-desc">Solutions logistiques pour le commerce régional.</p>
-            </div>
-            <div class="card" data-country="Niger">
+            </a>
+            <a href="gks-niger.html" class="card" data-country="Niger">
               <img src="/assets/niger.png" alt="GKS Logistics Niger" loading="lazy">
               <h3 data-translate="presence-niger-title">Niger</h3>
               <p data-translate="presence-niger-desc">Services logistiques en Afrique de l'Ouest.</p>
-            </div>
+            </a>
           </div>
         </div>
         <button class="arrow right-arrow" id="rightArrow" data-translate-attr="aria-label:accessibility-next" aria-label="Suivant">
