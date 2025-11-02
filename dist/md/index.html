@@ -279,21 +279,21 @@
               <i class="fas fa-globe"></i>
             </div>
             <span class="stat-value">10+</span>
-            <span class="stat-label" data-translate="welcome-stat-countries">Pays</span>
+            <span class="stat-label" data-translate="welcome-stat-countries">国家</span>
           </div>
           <div class="welcome-stat-item">
             <div class="stat-icon-mini">
               <i class="fas fa-shipping-fast"></i>
             </div>
             <span class="stat-value">50K+</span>
-            <span class="stat-label" data-translate="welcome-stat-shipments">Expéditions</span>
+            <span class="stat-label" data-translate="welcome-stat-shipments">货运</span>
           </div>
           <div class="welcome-stat-item">
             <div class="stat-icon-mini">
               <i class="fas fa-clock"></i>
             </div>
             <span class="stat-value">90%</span>
-            <span class="stat-label" data-translate="welcome-stat-ontime">À Temps</span>
+            <span class="stat-label" data-translate="welcome-stat-ontime">准时</span>
           </div>
         </div>
         
@@ -403,8 +403,8 @@
       </button>
       
       <div class="calculator-header">
-        <h2 data-translate="calculator-title">Calculateur de Devis Instantané</h2>
-        <p data-translate="calculator-subtitle">Obtenez un devis précis en quelques secondes pour votre expédition</p>
+        <h2 data-translate="calculator-title">即时报价计算器</h2>
+        <p data-translate="calculator-subtitle">在几秒钟内获得您货件的准确报价</p>
       </div>
 
       <div class="quote-calculator-card">
@@ -413,11 +413,10 @@
           <div class="form-section form-section-currency">
             <h3 class="form-section-title">
               <i class="fas fa-money-bill-wave"></i>
-              <span data-translate="calculator-section-currency">Devise de Paiement</span>
+              <span data-translate="calculator-section-currency">支付货币</span>
             </h3>
             <div class="form-group-calc">
-              <label data-translate="calculator-currency">
-                Choisissez votre devise <span class="required">*</span>
+              <label data-translate="calculator-currency">选择您的货币<span class="required">*</span>
               </label>
               <select id="currency" required>
                 <option value="XOF">🇲🇱 FCFA (XOF) - Franc CFA</option>
@@ -433,27 +432,25 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <i class="fas fa-shipping-fast"></i>
-              <span data-translate="calculator-section-transport">Détails du Transport</span>
+              <span data-translate="calculator-section-transport">运输详情</span>
             </h3>
             <div class="form-grid">
               <div class="form-group-calc">
-                <label data-translate="calculator-transport-type">
-                  Type de transport <span class="required">*</span>
+                <label data-translate="calculator-transport-type">运输类型<span class="required">*</span>
                 </label>
                 <select id="transportType" required>
-                  <option value="" data-translate="calculator-select-placeholder">Sélectionnez...</option>
-                  <option value="air" data-translate="calculator-type-air">Fret Aérien</option>
-                  <option value="sea" data-translate="calculator-type-sea">Fret Maritime</option>
-                  <option value="land" data-translate="calculator-type-land">Transport Terrestre</option>
+                  <option value="" data-translate="calculator-select-placeholder">选择...</option>
+                  <option value="air" data-translate="calculator-type-air">空运</option>
+                  <option value="sea" data-translate="calculator-type-sea">海运</option>
+                  <option value="land" data-translate="calculator-type-land">陆运</option>
                 </select>
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-origin">
-                  Pays d'origine <span class="required">*</span>
+                <label data-translate="calculator-origin">起运国家<span class="required">*</span>
                 </label>
                 <select id="originCountry" required>
-                  <option value="" data-translate="calculator-select-country">Sélectionnez un pays</option>
+                  <option value="" data-translate="calculator-select-country">选择一个国家</option>
                   <option value="mali">🇲🇱 Mali</option>
                   <option value="france">🇫🇷 France</option>
                   <option value="turkey">🇹🇷 Turkey</option>
@@ -468,11 +465,10 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-destination">
-                  Pays de destination <span class="required">*</span>
+                <label data-translate="calculator-destination">目的国家<span class="required">*</span>
                 </label>
                 <select id="destinationCountry" required>
-                  <option value="" data-translate="calculator-select-country">Sélectionnez un pays</option>
+                  <option value="" data-translate="calculator-select-country">选择一个国家</option>
                   <option value="mali">🇲🇱 Mali</option>
                   <option value="france">🇫🇷 France</option>
                   <option value="turkey">🇹🇷 Turkey</option>
@@ -492,11 +488,10 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <i class="fas fa-box"></i>
-              <span data-translate="calculator-section-shipment">Détails de l'Envoi</span>
+              <span data-translate="calculator-section-shipment">货件详情</span>
             </h3>
             <div class="form-group-calc">
-              <label data-translate="calculator-weight">
-                Poids (kg) <span class="required">*</span>
+              <label data-translate="calculator-weight">重量 (kg)<span class="required">*</span>
               </label>
               <div class="input-with-unit">
                 <input type="number" id="weight" min="0.1" step="0.1" required data-translate="calculator-weight_placeholder" placeholder="">
@@ -507,9 +502,7 @@
             <div class="checkbox-group checkbox-group-inline">
               <div class="checkbox-item">
                 <input type="checkbox" id="isContainer">
-                <label for="isContainer" data-translate="calculator-container">
-                  Container complet (fret maritime uniquement)
-                </label>
+                <label for="isContainer" data-translate="calculator-container">整箱（仅限海运）</label>
               </div>
             </div>
           </div>
@@ -518,35 +511,34 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <i class="fas fa-plus-circle"></i>
-              <span data-translate="calculator-section-services">Services Additionnels</span>
+              <span data-translate="calculator-section-services">附加服务</span>
             </h3>
 
             <div class="checkbox-group">
               <div class="checkbox-item">
                 <input type="checkbox" id="doorDelivery">
-                <label for="doorDelivery" data-translate="calculator-door-delivery">
-                  Livraison à domicile (+<span id="deliveryPriceDisplay">$10</span>)
+                <label for="doorDelivery" data-translate="calculator-door-delivery">门到门配送 (+$30)<span id="deliveryPriceDisplay">$10</span>)
                 </label>
               </div>
             </div>
 
             <div class="form-grid">
               <div class="form-group-calc">
-                <label data-translate="calculator-packaging">Type d'emballage</label>
+                <label data-translate="calculator-packaging">包装类型</label>
                 <select id="packaging">
-                  <option value="" data-translate="calculator-packaging-none">Sans emballage</option>
-                  <option value="standard" data-translate="calculator-packaging-standard">Standard (+$20)</option>
-                  <option value="fragile" data-translate="calculator-packaging-fragile">Fragile (+$50)</option>
-                  <option value="heavy" data-translate="calculator-packaging-heavy">Lourd (+$100)</option>
+                  <option value="" data-translate="calculator-packaging-none">无包装</option>
+                  <option value="standard" data-translate="calculator-packaging-standard">标准 (+$20)</option>
+                  <option value="fragile" data-translate="calculator-packaging-fragile">易碎 (+$50)</option>
+                  <option value="heavy" data-translate="calculator-packaging-heavy">重型 (+$100)</option>
                 </select>
               </div>
 
               <div class="form-group-calc">
                 <label data-translate="calculator-customs">清关</label>
                 <select id="customs">
-                  <option value="" data-translate="calculator-customs-none">Sans service douanier</option>
-                  <option value="standard" data-translate="calculator-customs-standard">Standard (+$50)</option>
-                  <option value="express" data-translate="calculator-customs-express">Express (+$150)</option>
+                  <option value="" data-translate="calculator-customs-none">无清关服务</option>
+                  <option value="standard" data-translate="calculator-customs-standard">标准 (+$50)</option>
+                  <option value="express" data-translate="calculator-customs-express">加急 (+$150)</option>
                 </select>
               </div>
             </div>
@@ -554,7 +546,7 @@
 
           <button type="button" class="calculate-btn" onclick="if(window.calculateQuoteNow) window.calculateQuoteNow(); else console.error('Function not loaded');">
             <i class="fas fa-calculator"></i>
-            <span data-translate="calculator-calculate-btn">Calculer mon devis</span>
+            <span data-translate="calculator-calculate-btn">计算我的报价</span>
           </button>
         </form>
 
@@ -589,7 +581,7 @@
                 </div>
                 <h3 data-translate="about-mission-title">我们的使命</h3>
                 <div class="philosophy-content">
-                    <p data-translate="about-mission-desc">Notre mission est d'offrir des solutions logistiques rapides, sécurisées et adaptées aux besoins de nos clients sur le plan national et international.</p>
+                    <p data-translate="about-mission-desc">我们的使命是在国内和国际上提供快速、安全且适应客户需求的物流解决方案。</p>
                 </div>
             </div>
 
@@ -1101,8 +1093,8 @@
           <div class="testimonial-header">
             <div class="client-info">
               <div class="client-details">
-                <h4 data-translate="testimonial-name-4">Fatou D.</h4>
-                <span data-translate="testimonial-role-4">Importatrice électronique, Dakar</span>
+                <h4 data-translate="testimonial-name-4">法图 D.</h4>
+                <span data-translate="testimonial-role-4">电子产品进口商，达喀尔</span>
               </div>
             </div>
             <div class="rating-stars">
@@ -1118,7 +1110,7 @@
             <div class="quote-icon">
               <i class="fas fa-quote-left"></i>
             </div>
-            <p data-translate="testimonial-4">Un service exceptionnel du début à la fin. L'équipe GKS est toujours disponible et les tarifs sont très compétitifs.</p>
+            <p data-translate="testimonial-4">从头到尾都是卓越的服务。GKS团队始终可用，价格非常有竞争力。</p>
           </div>
 
         </div>
@@ -1127,8 +1119,8 @@
           <div class="testimonial-header">
             <div class="client-info">
               <div class="client-details">
-                <h4 data-translate="testimonial-name-5">Oumar T.</h4>
-                <span data-translate="testimonial-role-5">Entreprise de construction, Abidjan</span>
+                <h4 data-translate="testimonial-name-5">奥马尔 T.</h4>
+                <span data-translate="testimonial-role-5">建筑公司，阿比让</span>
               </div>
             </div>
             <div class="rating-stars">
@@ -1144,7 +1136,7 @@
             <div class="quote-icon">
               <i class="fas fa-quote-left"></i>
             </div>
-            <p data-translate="testimonial-5">GKS Logistics gère nos importations de matériaux de construction avec une efficacité remarquable. Excellent suivi des expéditions.</p>
+            <p data-translate="testimonial-5">GKS物流以卓越的效率处理我们的建筑材料进口。出色的货运跟踪。</p>
           </div>
 
         </div>
@@ -1153,8 +1145,8 @@
           <div class="testimonial-header">
             <div class="client-info">
               <div class="client-details">
-                <h4 data-translate="testimonial-name-6">Mariam L.</h4>
-                <span data-translate="testimonial-role-6">Commerce de détail, Ouagadougou</span>
+                <h4 data-translate="testimonial-name-6">玛丽亚姆 L.</h4>
+                <span data-translate="testimonial-role-6">零售业务，瓦加杜古</span>
               </div>
             </div>
             <div class="rating-stars">
@@ -1170,7 +1162,7 @@
             <div class="quote-icon">
               <i class="fas fa-quote-left"></i>
             </div>
-            <p data-translate="testimonial-6">Bon service dans l'ensemble, mais il y a eu quelques retards sur mes dernières commandes. Cependant, l'équipe a bien communiqué.</p>
+            <p data-translate="testimonial-6">总体来说服务不错，但我最近的订单有一些延误。不过，团队沟通得很好。</p>
           </div>
 
         </div>
@@ -1434,8 +1426,8 @@
     <div class="tracking-widget">
       <div class="tracking-header">
         <i class="fas fa-box-open"></i>
-        <h3 data-translate="tracking-title">Suivez votre colis</h3>
-        <p data-translate="tracking-subtitle">Entrez votre numéro GKS pour suivre votre envoi en temps réel</p>
+        <h3 data-translate="tracking-title">追踪您的包裹</h3>
+        <p data-translate="tracking-subtitle">输入您的GKS编号实时追踪您的货件</p>
       </div>
       <form class="tracking-form" id="trackingForm">
         <div class="tracking-input-group">
@@ -1456,11 +1448,11 @@
         <div class="tracking-types">
           <label class="tracking-type-option">
             <input type="radio" name="trackingType" value="individual" checked>
-            <span data-translate="tracking-individual">Colis individuel</span>
+            <span data-translate="tracking-individual">单个包裹</span>
           </label>
           <label class="tracking-type-option">
             <input type="radio" name="trackingType" value="groupage">
-            <span data-translate="tracking-groupage">[object Object]</span>
+            <span data-translate="tracking-groupage">拼箱服务</span>
           </label>
         </div>
       </form>

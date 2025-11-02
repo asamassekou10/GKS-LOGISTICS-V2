@@ -279,21 +279,21 @@
               <i class="fas fa-globe"></i>
             </div>
             <span class="stat-value">10+</span>
-            <span class="stat-label" data-translate="welcome-stat-countries">Pays</span>
+            <span class="stat-label" data-translate="welcome-stat-countries">Countries</span>
           </div>
           <div class="welcome-stat-item">
             <div class="stat-icon-mini">
               <i class="fas fa-shipping-fast"></i>
             </div>
             <span class="stat-value">50K+</span>
-            <span class="stat-label" data-translate="welcome-stat-shipments">Expéditions</span>
+            <span class="stat-label" data-translate="welcome-stat-shipments">Shipments</span>
           </div>
           <div class="welcome-stat-item">
             <div class="stat-icon-mini">
               <i class="fas fa-clock"></i>
             </div>
             <span class="stat-value">90%</span>
-            <span class="stat-label" data-translate="welcome-stat-ontime">À Temps</span>
+            <span class="stat-label" data-translate="welcome-stat-ontime">On Time</span>
           </div>
         </div>
         
@@ -403,8 +403,8 @@
       </button>
       
       <div class="calculator-header">
-        <h2 data-translate="calculator-title">Calculateur de Devis Instantané</h2>
-        <p data-translate="calculator-subtitle">Obtenez un devis précis en quelques secondes pour votre expédition</p>
+        <h2 data-translate="calculator-title">Instant Quote Calculator</h2>
+        <p data-translate="calculator-subtitle">Get an accurate quote in seconds for your shipment</p>
       </div>
 
       <div class="quote-calculator-card">
@@ -413,11 +413,10 @@
           <div class="form-section form-section-currency">
             <h3 class="form-section-title">
               <i class="fas fa-money-bill-wave"></i>
-              <span data-translate="calculator-section-currency">Devise de Paiement</span>
+              <span data-translate="calculator-section-currency">Payment Currency</span>
             </h3>
             <div class="form-group-calc">
-              <label data-translate="calculator-currency">
-                Choisissez votre devise <span class="required">*</span>
+              <label data-translate="calculator-currency">Choose your currency<span class="required">*</span>
               </label>
               <select id="currency" required>
                 <option value="XOF">🇲🇱 FCFA (XOF) - Franc CFA</option>
@@ -433,27 +432,25 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <i class="fas fa-shipping-fast"></i>
-              <span data-translate="calculator-section-transport">Détails du Transport</span>
+              <span data-translate="calculator-section-transport">Transport Details</span>
             </h3>
             <div class="form-grid">
               <div class="form-group-calc">
-                <label data-translate="calculator-transport-type">
-                  Type de transport <span class="required">*</span>
+                <label data-translate="calculator-transport-type">Transport type<span class="required">*</span>
                 </label>
                 <select id="transportType" required>
-                  <option value="" data-translate="calculator-select-placeholder">Sélectionnez...</option>
-                  <option value="air" data-translate="calculator-type-air">Fret Aérien</option>
-                  <option value="sea" data-translate="calculator-type-sea">Fret Maritime</option>
-                  <option value="land" data-translate="calculator-type-land">Transport Terrestre</option>
+                  <option value="" data-translate="calculator-select-placeholder">Select...</option>
+                  <option value="air" data-translate="calculator-type-air">Air Freight</option>
+                  <option value="sea" data-translate="calculator-type-sea">Sea Freight</option>
+                  <option value="land" data-translate="calculator-type-land">Land Transport</option>
                 </select>
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-origin">
-                  Pays d'origine <span class="required">*</span>
+                <label data-translate="calculator-origin">Origin Country<span class="required">*</span>
                 </label>
                 <select id="originCountry" required>
-                  <option value="" data-translate="calculator-select-country">Sélectionnez un pays</option>
+                  <option value="" data-translate="calculator-select-country">Select a country</option>
                   <option value="mali">🇲🇱 Mali</option>
                   <option value="france">🇫🇷 France</option>
                   <option value="turkey">🇹🇷 Turkey</option>
@@ -468,11 +465,10 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-destination">
-                  Pays de destination <span class="required">*</span>
+                <label data-translate="calculator-destination">Destination Country<span class="required">*</span>
                 </label>
                 <select id="destinationCountry" required>
-                  <option value="" data-translate="calculator-select-country">Sélectionnez un pays</option>
+                  <option value="" data-translate="calculator-select-country">Select a country</option>
                   <option value="mali">🇲🇱 Mali</option>
                   <option value="france">🇫🇷 France</option>
                   <option value="turkey">🇹🇷 Turkey</option>
@@ -492,11 +488,10 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <i class="fas fa-box"></i>
-              <span data-translate="calculator-section-shipment">Détails de l'Envoi</span>
+              <span data-translate="calculator-section-shipment">Shipment Details</span>
             </h3>
             <div class="form-group-calc">
-              <label data-translate="calculator-weight">
-                Poids (kg) <span class="required">*</span>
+              <label data-translate="calculator-weight">Weight (kg)<span class="required">*</span>
               </label>
               <div class="input-with-unit">
                 <input type="number" id="weight" min="0.1" step="0.1" required data-translate="calculator-weight_placeholder" placeholder="">
@@ -507,9 +502,7 @@
             <div class="checkbox-group checkbox-group-inline">
               <div class="checkbox-item">
                 <input type="checkbox" id="isContainer">
-                <label for="isContainer" data-translate="calculator-container">
-                  Container complet (fret maritime uniquement)
-                </label>
+                <label for="isContainer" data-translate="calculator-container">Full container (sea freight only)</label>
               </div>
             </div>
           </div>
@@ -518,33 +511,32 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <i class="fas fa-plus-circle"></i>
-              <span data-translate="calculator-section-services">Services Additionnels</span>
+              <span data-translate="calculator-section-services">Additional Services</span>
             </h3>
 
             <div class="checkbox-group">
               <div class="checkbox-item">
                 <input type="checkbox" id="doorDelivery">
-                <label for="doorDelivery" data-translate="calculator-door-delivery">
-                  Livraison à domicile (+<span id="deliveryPriceDisplay">$10</span>)
+                <label for="doorDelivery" data-translate="calculator-door-delivery">Door delivery (+$30)<span id="deliveryPriceDisplay">$10</span>)
                 </label>
               </div>
             </div>
 
             <div class="form-grid">
               <div class="form-group-calc">
-                <label data-translate="calculator-packaging">Type d'emballage</label>
+                <label data-translate="calculator-packaging">Packaging type</label>
                 <select id="packaging">
-                  <option value="" data-translate="calculator-packaging-none">Sans emballage</option>
+                  <option value="" data-translate="calculator-packaging-none">No packaging</option>
                   <option value="standard" data-translate="calculator-packaging-standard">Standard (+$20)</option>
                   <option value="fragile" data-translate="calculator-packaging-fragile">Fragile (+$50)</option>
-                  <option value="heavy" data-translate="calculator-packaging-heavy">Lourd (+$100)</option>
+                  <option value="heavy" data-translate="calculator-packaging-heavy">Heavy (+$100)</option>
                 </select>
               </div>
 
               <div class="form-group-calc">
                 <label data-translate="calculator-customs">Customs Clearance</label>
                 <select id="customs">
-                  <option value="" data-translate="calculator-customs-none">Sans service douanier</option>
+                  <option value="" data-translate="calculator-customs-none">No customs service</option>
                   <option value="standard" data-translate="calculator-customs-standard">Standard (+$50)</option>
                   <option value="express" data-translate="calculator-customs-express">Express (+$150)</option>
                 </select>
@@ -554,7 +546,7 @@
 
           <button type="button" class="calculate-btn" onclick="if(window.calculateQuoteNow) window.calculateQuoteNow(); else console.error('Function not loaded');">
             <i class="fas fa-calculator"></i>
-            <span data-translate="calculator-calculate-btn">Calculer mon devis</span>
+            <span data-translate="calculator-calculate-btn">Calculate my quote</span>
           </button>
         </form>
 
@@ -589,7 +581,7 @@
                 </div>
                 <h3 data-translate="about-mission-title">Our Mission</h3>
                 <div class="philosophy-content">
-                    <p data-translate="about-mission-desc">Notre mission est d'offrir des solutions logistiques rapides, sécurisées et adaptées aux besoins de nos clients sur le plan national et international.</p>
+                    <p data-translate="about-mission-desc">Our mission is to provide fast, secure logistics solutions tailored to our clients' needs nationally and internationally.</p>
                 </div>
             </div>
 
@@ -680,7 +672,7 @@
     </div>
     <div class="container about-timeline">
       <h2 data-translate="about-history-title">Our History</h2>
-      <p class="timeline-intro" data-translate="about-timeline-intro">Découvrez les étapes clés de notre développement</p>
+      <p class="timeline-intro" data-translate="about-timeline-intro">Discover the key milestones of our development</p>
       <div class="timeline">
         <div class="timeline-item left">
           <div class="timeline-content">
@@ -696,8 +688,8 @@
         <div class="timeline-item right">
           <div class="timeline-content">
             <div class="timeline-year">2021</div>
-            <h3 data-translate="about-timeline-2021-title">Expansion à Abidjan</h3>
-            <p data-translate="about-timeline-2021-desc">Ouverture de notre bureau à Abidjan, Côte d'Ivoire, marquant notre première expansion régionale et renforçant notre présence en Afrique de l'Ouest.</p>
+            <h3 data-translate="about-timeline-2021-title">Expansion to Abidjan</h3>
+            <p data-translate="about-timeline-2021-desc">Opening of our office in Abidjan, Côte d'Ivoire, marking our first regional expansion and strengthening our presence in West Africa.</p>
             <div class="timeline-icon">
               <i class="fas fa-building"></i>
             </div>
@@ -707,8 +699,8 @@
         <div class="timeline-item left">
           <div class="timeline-content">
             <div class="timeline-year">2024</div>
-            <h3 data-translate="about-timeline-2024-title">Lancement Dubaï</h3>
-            <p data-translate="about-timeline-2024-desc">Ouverture stratégique de notre hub à Dubaï, EAU, nous positionnant comme un acteur international et facilitant les échanges entre l'Afrique, le Moyen-Orient et l'Asie.</p>
+            <h3 data-translate="about-timeline-2024-title">Dubai Launch</h3>
+            <p data-translate="about-timeline-2024-desc">Strategic opening of our hub in Dubai, UAE, positioning us as an international player and facilitating exchanges between Africa, the Middle East, and Asia.</p>
             <div class="timeline-icon">
               <i class="fas fa-globe-asia"></i>
             </div>
@@ -1102,7 +1094,7 @@
             <div class="client-info">
               <div class="client-details">
                 <h4 data-translate="testimonial-name-4">Fatou D.</h4>
-                <span data-translate="testimonial-role-4">Importatrice électronique, Dakar</span>
+                <span data-translate="testimonial-role-4">Electronics Importer, Dakar</span>
               </div>
             </div>
             <div class="rating-stars">
@@ -1118,7 +1110,7 @@
             <div class="quote-icon">
               <i class="fas fa-quote-left"></i>
             </div>
-            <p data-translate="testimonial-4">Un service exceptionnel du début à la fin. L'équipe GKS est toujours disponible et les tarifs sont très compétitifs.</p>
+            <p data-translate="testimonial-4">Exceptional service from start to finish. The GKS team is always available and the rates are very competitive.</p>
           </div>
 
         </div>
@@ -1128,7 +1120,7 @@
             <div class="client-info">
               <div class="client-details">
                 <h4 data-translate="testimonial-name-5">Oumar T.</h4>
-                <span data-translate="testimonial-role-5">Entreprise de construction, Abidjan</span>
+                <span data-translate="testimonial-role-5">Construction Company, Abidjan</span>
               </div>
             </div>
             <div class="rating-stars">
@@ -1144,7 +1136,7 @@
             <div class="quote-icon">
               <i class="fas fa-quote-left"></i>
             </div>
-            <p data-translate="testimonial-5">GKS Logistics gère nos importations de matériaux de construction avec une efficacité remarquable. Excellent suivi des expéditions.</p>
+            <p data-translate="testimonial-5">GKS Logistics handles our construction material imports with remarkable efficiency. Excellent shipment tracking.</p>
           </div>
 
         </div>
@@ -1154,7 +1146,7 @@
             <div class="client-info">
               <div class="client-details">
                 <h4 data-translate="testimonial-name-6">Mariam L.</h4>
-                <span data-translate="testimonial-role-6">Commerce de détail, Ouagadougou</span>
+                <span data-translate="testimonial-role-6">Retail Business, Ouagadougou</span>
               </div>
             </div>
             <div class="rating-stars">
@@ -1170,7 +1162,7 @@
             <div class="quote-icon">
               <i class="fas fa-quote-left"></i>
             </div>
-            <p data-translate="testimonial-6">Bon service dans l'ensemble, mais il y a eu quelques retards sur mes dernières commandes. Cependant, l'équipe a bien communiqué.</p>
+            <p data-translate="testimonial-6">Good service overall, but there have been some delays on my recent orders. However, the team communicated well.</p>
           </div>
 
         </div>
@@ -1434,8 +1426,8 @@
     <div class="tracking-widget">
       <div class="tracking-header">
         <i class="fas fa-box-open"></i>
-        <h3 data-translate="tracking-title">Suivez votre colis</h3>
-        <p data-translate="tracking-subtitle">Entrez votre numéro GKS pour suivre votre envoi en temps réel</p>
+        <h3 data-translate="tracking-title">Track your package</h3>
+        <p data-translate="tracking-subtitle">Enter your GKS number to track your shipment in real-time</p>
       </div>
       <form class="tracking-form" id="trackingForm">
         <div class="tracking-input-group">
@@ -1456,11 +1448,11 @@
         <div class="tracking-types">
           <label class="tracking-type-option">
             <input type="radio" name="trackingType" value="individual" checked>
-            <span data-translate="tracking-individual">Colis individuel</span>
+            <span data-translate="tracking-individual">Individual package</span>
           </label>
           <label class="tracking-type-option">
             <input type="radio" name="trackingType" value="groupage">
-            <span data-translate="tracking-groupage">[object Object]</span>
+            <span data-translate="tracking-groupage">Groupage</span>
           </label>
         </div>
       </form>

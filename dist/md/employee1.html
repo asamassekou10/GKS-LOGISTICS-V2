@@ -343,8 +343,8 @@
       </button>
       
       <div class="calculator-header">
-        <h2 data-translate="calculator-title">Calculateur de Devis Instantané</h2>
-        <p data-translate="calculator-subtitle">Obtenez un devis précis en quelques secondes pour votre expédition</p>
+        <h2 data-translate="calculator-title">即时报价计算器</h2>
+        <p data-translate="calculator-subtitle">在几秒钟内获得您货件的准确报价</p>
       </div>
 
       <div class="quote-calculator-card">
@@ -353,11 +353,10 @@
           <div class="form-section form-section-currency">
             <h3 class="form-section-title">
               <i class="fas fa-money-bill-wave"></i>
-              <span data-translate="calculator-section-currency">Devise de Paiement</span>
+              <span data-translate="calculator-section-currency">支付货币</span>
             </h3>
             <div class="form-group-calc">
-              <label data-translate="calculator-currency">
-                Choisissez votre devise <span class="required">*</span>
+              <label data-translate="calculator-currency">选择您的货币<span class="required">*</span>
               </label>
               <select id="currency" required>
                 <option value="XOF">🇲🇱 FCFA (XOF) - Franc CFA</option>
@@ -373,27 +372,25 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <i class="fas fa-shipping-fast"></i>
-              <span data-translate="calculator-section-transport">Détails du Transport</span>
+              <span data-translate="calculator-section-transport">运输详情</span>
             </h3>
             <div class="form-grid">
               <div class="form-group-calc">
-                <label data-translate="calculator-transport-type">
-                  Type de transport <span class="required">*</span>
+                <label data-translate="calculator-transport-type">运输类型<span class="required">*</span>
                 </label>
                 <select id="transportType" required>
-                  <option value="" data-translate="calculator-select-placeholder">Sélectionnez...</option>
-                  <option value="air" data-translate="calculator-type-air">Fret Aérien</option>
-                  <option value="sea" data-translate="calculator-type-sea">Fret Maritime</option>
-                  <option value="land" data-translate="calculator-type-land">Transport Terrestre</option>
+                  <option value="" data-translate="calculator-select-placeholder">选择...</option>
+                  <option value="air" data-translate="calculator-type-air">空运</option>
+                  <option value="sea" data-translate="calculator-type-sea">海运</option>
+                  <option value="land" data-translate="calculator-type-land">陆运</option>
                 </select>
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-origin">
-                  Pays d'origine <span class="required">*</span>
+                <label data-translate="calculator-origin">起运国家<span class="required">*</span>
                 </label>
                 <select id="originCountry" required>
-                  <option value="" data-translate="calculator-select-country">Sélectionnez un pays</option>
+                  <option value="" data-translate="calculator-select-country">选择一个国家</option>
                   <option value="mali">🇲🇱 Mali</option>
                   <option value="france">🇫🇷 France</option>
                   <option value="turkey">🇹🇷 Turkey</option>
@@ -408,11 +405,10 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-destination">
-                  Pays de destination <span class="required">*</span>
+                <label data-translate="calculator-destination">目的国家<span class="required">*</span>
                 </label>
                 <select id="destinationCountry" required>
-                  <option value="" data-translate="calculator-select-country">Sélectionnez un pays</option>
+                  <option value="" data-translate="calculator-select-country">选择一个国家</option>
                   <option value="mali">🇲🇱 Mali</option>
                   <option value="france">🇫🇷 France</option>
                   <option value="turkey">🇹🇷 Turkey</option>
@@ -432,12 +428,11 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <i class="fas fa-box"></i>
-              <span data-translate="calculator-section-shipment">Détails de l'Envoi</span>
+              <span data-translate="calculator-section-shipment">货件详情</span>
             </h3>
             <div class="form-grid">
               <div class="form-group-calc">
-                <label data-translate="calculator-weight">
-                  Poids (kg) <span class="required">*</span>
+                <label data-translate="calculator-weight">重量 (kg)<span class="required">*</span>
                 </label>
                 <div class="input-with-unit">
                   <input type="number" id="weight" min="0.1" step="0.1" required placeholder="Ex: 50">
@@ -446,9 +441,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-length">
-                  Longueur (cm)
-                </label>
+                <label data-translate="calculator-length">长度 (cm)</label>
                 <div class="input-with-unit">
                   <input type="number" id="length" min="0" step="0.1" placeholder="Ex: 100">
                   <span class="input-unit">cm</span>
@@ -456,9 +449,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-width">
-                  Largeur (cm)
-                </label>
+                <label data-translate="calculator-width">宽度 (cm)</label>
                 <div class="input-with-unit">
                   <input type="number" id="width" min="0" step="0.1" placeholder="Ex: 80">
                   <span class="input-unit">cm</span>
@@ -466,9 +457,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-height">
-                  Hauteur (cm)
-                </label>
+                <label data-translate="calculator-height">高度 (cm)</label>
                 <div class="input-with-unit">
                   <input type="number" id="height" min="0" step="0.1" placeholder="Ex: 60">
                   <span class="input-unit">cm</span>
@@ -476,9 +465,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-declared-value">
-                  Valeur déclarée (USD)
-                </label>
+                <label data-translate="calculator-declared-value">申报价值 (USD)</label>
                 <div class="input-with-unit">
                   <input type="number" id="declaredValue" min="0" step="0.01" placeholder="Ex: 1000">
                   <span class="input-unit">$</span>
@@ -489,9 +476,7 @@
             <div class="checkbox-group checkbox-group-inline">
               <div class="checkbox-item">
                 <input type="checkbox" id="isContainer">
-                <label for="isContainer" data-translate="calculator-container">
-                  Container complet (fret maritime uniquement)
-                </label>
+                <label for="isContainer" data-translate="calculator-container">整箱（仅限海运）</label>
               </div>
             </div>
           </div>
@@ -500,35 +485,33 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <i class="fas fa-plus-circle"></i>
-              <span data-translate="calculator-section-services">Services Additionnels</span>
+              <span data-translate="calculator-section-services">附加服务</span>
             </h3>
 
             <div class="checkbox-group">
               <div class="checkbox-item">
                 <input type="checkbox" id="doorDelivery">
-                <label for="doorDelivery" data-translate="calculator-door-delivery">
-                  Livraison à domicile (+$30)
-                </label>
+                <label for="doorDelivery" data-translate="calculator-door-delivery">门到门配送 (+$30)</label>
               </div>
             </div>
 
             <div class="form-grid">
               <div class="form-group-calc">
-                <label data-translate="calculator-packaging">Type d'emballage</label>
+                <label data-translate="calculator-packaging">包装类型</label>
                 <select id="packaging">
-                  <option value="" data-translate="calculator-packaging-none">Sans emballage</option>
-                  <option value="standard" data-translate="calculator-packaging-standard">Standard (+$20)</option>
-                  <option value="fragile" data-translate="calculator-packaging-fragile">Fragile (+$50)</option>
-                  <option value="heavy" data-translate="calculator-packaging-heavy">Lourd (+$100)</option>
+                  <option value="" data-translate="calculator-packaging-none">无包装</option>
+                  <option value="standard" data-translate="calculator-packaging-standard">标准 (+$20)</option>
+                  <option value="fragile" data-translate="calculator-packaging-fragile">易碎 (+$50)</option>
+                  <option value="heavy" data-translate="calculator-packaging-heavy">重型 (+$100)</option>
                 </select>
               </div>
 
               <div class="form-group-calc">
                 <label data-translate="calculator-customs">清关</label>
                 <select id="customs">
-                  <option value="" data-translate="calculator-customs-none">Sans service douanier</option>
-                  <option value="standard" data-translate="calculator-customs-standard">Standard (+$50)</option>
-                  <option value="express" data-translate="calculator-customs-express">Express (+$150)</option>
+                  <option value="" data-translate="calculator-customs-none">无清关服务</option>
+                  <option value="standard" data-translate="calculator-customs-standard">标准 (+$50)</option>
+                  <option value="express" data-translate="calculator-customs-express">加急 (+$150)</option>
                 </select>
               </div>
             </div>
@@ -536,7 +519,7 @@
 
           <button type="button" class="calculate-btn" onclick="if(window.calculateQuoteNow) window.calculateQuoteNow(); else console.error('Function not loaded');">
             <i class="fas fa-calculator"></i>
-            <span data-translate="calculator-calculate-btn">Calculer mon devis</span>
+            <span data-translate="calculator-calculate-btn">计算我的报价</span>
           </button>
         </form>
         <div id="quoteResult"></div>

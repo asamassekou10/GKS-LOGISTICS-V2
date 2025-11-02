@@ -603,8 +603,8 @@
       </button>
       
       <div class="calculator-header">
-        <h2 data-translate="calculator-title">Calculateur de Devis Instantané</h2>
-        <p data-translate="calculator-subtitle">Obtenez un devis précis en quelques secondes pour votre expédition</p>
+        <h2 data-translate="calculator-title">Instant Quote Calculator</h2>
+        <p data-translate="calculator-subtitle">Get an accurate quote in seconds for your shipment</p>
       </div>
 
       <div class="quote-calculator-card">
@@ -613,11 +613,10 @@
           <div class="form-section form-section-currency">
             <h3 class="form-section-title">
               <i class="fas fa-money-bill-wave"></i>
-              <span data-translate="calculator-section-currency">Devise de Paiement</span>
+              <span data-translate="calculator-section-currency">Payment Currency</span>
             </h3>
             <div class="form-group-calc">
-              <label data-translate="calculator-currency">
-                Choisissez votre devise <span class="required">*</span>
+              <label data-translate="calculator-currency">Choose your currency<span class="required">*</span>
               </label>
               <select id="currency" required>
                 <option value="XOF">🇲🇱 FCFA (XOF) - Franc CFA</option>
@@ -633,27 +632,25 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <i class="fas fa-shipping-fast"></i>
-              <span data-translate="calculator-section-transport">Détails du Transport</span>
+              <span data-translate="calculator-section-transport">Transport Details</span>
             </h3>
             <div class="form-grid">
               <div class="form-group-calc">
-                <label data-translate="calculator-transport-type">
-                  Type de transport <span class="required">*</span>
+                <label data-translate="calculator-transport-type">Transport type<span class="required">*</span>
                 </label>
                 <select id="transportType" required>
-                  <option value="" data-translate="calculator-select-placeholder">Sélectionnez...</option>
-                  <option value="air" data-translate="calculator-type-air">Fret Aérien</option>
-                  <option value="sea" data-translate="calculator-type-sea">Fret Maritime</option>
-                  <option value="land" data-translate="calculator-type-land">Transport Terrestre</option>
+                  <option value="" data-translate="calculator-select-placeholder">Select...</option>
+                  <option value="air" data-translate="calculator-type-air">Air Freight</option>
+                  <option value="sea" data-translate="calculator-type-sea">Sea Freight</option>
+                  <option value="land" data-translate="calculator-type-land">Land Transport</option>
                 </select>
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-origin">
-                  Pays d'origine <span class="required">*</span>
+                <label data-translate="calculator-origin">Origin Country<span class="required">*</span>
                 </label>
                 <select id="originCountry" required>
-                  <option value="" data-translate="calculator-select-country">Sélectionnez un pays</option>
+                  <option value="" data-translate="calculator-select-country">Select a country</option>
                   <option value="mali">🇲🇱 Mali</option>
                   <option value="france">🇫🇷 France</option>
                   <option value="turkey">🇹🇷 Turkey</option>
@@ -668,11 +665,10 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-destination">
-                  Pays de destination <span class="required">*</span>
+                <label data-translate="calculator-destination">Destination Country<span class="required">*</span>
                 </label>
                 <select id="destinationCountry" required>
-                  <option value="" data-translate="calculator-select-country">Sélectionnez un pays</option>
+                  <option value="" data-translate="calculator-select-country">Select a country</option>
                   <option value="mali">🇲🇱 Mali</option>
                   <option value="france">🇫🇷 France</option>
                   <option value="turkey">🇹🇷 Turkey</option>
@@ -692,12 +688,11 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <i class="fas fa-box"></i>
-              <span data-translate="calculator-section-shipment">Détails de l'Envoi</span>
+              <span data-translate="calculator-section-shipment">Shipment Details</span>
             </h3>
             <div class="form-grid">
               <div class="form-group-calc">
-                <label data-translate="calculator-weight">
-                  Poids (kg) <span class="required">*</span>
+                <label data-translate="calculator-weight">Weight (kg)<span class="required">*</span>
                 </label>
                 <div class="input-with-unit">
                   <input type="number" id="weight" min="0.1" step="0.1" required data-translate="calculator-weight_placeholder" placeholder="">
@@ -706,9 +701,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-length">
-                  Longueur (cm)
-                </label>
+                <label data-translate="calculator-length">Length (cm)</label>
                 <div class="input-with-unit">
                   <input type="number" id="length" min="0" step="0.1" data-translate="calculator-length_placeholder" placeholder="">
                   <span class="input-unit">cm</span>
@@ -716,9 +709,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-width">
-                  Largeur (cm)
-                </label>
+                <label data-translate="calculator-width">Width (cm)</label>
                 <div class="input-with-unit">
                   <input type="number" id="width" min="0" step="0.1" data-translate="calculator-width_placeholder" placeholder="">
                   <span class="input-unit">cm</span>
@@ -726,9 +717,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-height">
-                  Hauteur (cm)
-                </label>
+                <label data-translate="calculator-height">Height (cm)</label>
                 <div class="input-with-unit">
                   <input type="number" id="height" min="0" step="0.1" data-translate="calculator-height_placeholder" placeholder="">
                   <span class="input-unit">cm</span>
@@ -736,9 +725,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-declared-value">
-                  Valeur déclarée (USD)
-                </label>
+                <label data-translate="calculator-declared-value">Declared value (USD)</label>
                 <div class="input-with-unit">
                   <input type="number" id="declaredValue" min="0" step="0.01" data-translate="calculator-value_placeholder" placeholder="">
                   <span class="input-unit">$</span>
@@ -749,9 +736,7 @@
             <div class="checkbox-group checkbox-group-inline">
               <div class="checkbox-item">
                 <input type="checkbox" id="isContainer">
-                <label for="isContainer" data-translate="calculator-container">
-                  Container complet (fret maritime uniquement)
-                </label>
+                <label for="isContainer" data-translate="calculator-container">Full container (sea freight only)</label>
               </div>
             </div>
           </div>
@@ -760,33 +745,31 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <i class="fas fa-plus-circle"></i>
-              <span data-translate="calculator-section-services">Services Additionnels</span>
+              <span data-translate="calculator-section-services">Additional Services</span>
             </h3>
 
             <div class="checkbox-group">
               <div class="checkbox-item">
                 <input type="checkbox" id="doorDelivery">
-                <label for="doorDelivery" data-translate="calculator-door-delivery">
-                  Livraison à domicile (+$30)
-                </label>
+                <label for="doorDelivery" data-translate="calculator-door-delivery">Door delivery (+$30)</label>
               </div>
             </div>
 
             <div class="form-grid">
               <div class="form-group-calc">
-                <label data-translate="calculator-packaging">Type d'emballage</label>
+                <label data-translate="calculator-packaging">Packaging type</label>
                 <select id="packaging">
-                  <option value="" data-translate="calculator-packaging-none">Sans emballage</option>
+                  <option value="" data-translate="calculator-packaging-none">No packaging</option>
                   <option value="standard" data-translate="calculator-packaging-standard">Standard (+$20)</option>
                   <option value="fragile" data-translate="calculator-packaging-fragile">Fragile (+$50)</option>
-                  <option value="heavy" data-translate="calculator-packaging-heavy">Lourd (+$100)</option>
+                  <option value="heavy" data-translate="calculator-packaging-heavy">Heavy (+$100)</option>
                 </select>
               </div>
 
               <div class="form-group-calc">
                 <label data-translate="calculator-customs">Customs Clearance</label>
                 <select id="customs">
-                  <option value="" data-translate="calculator-customs-none">Sans service douanier</option>
+                  <option value="" data-translate="calculator-customs-none">No customs service</option>
                   <option value="standard" data-translate="calculator-customs-standard">Standard (+$50)</option>
                   <option value="express" data-translate="calculator-customs-express">Express (+$150)</option>
                 </select>
@@ -796,7 +779,7 @@
 
           <button type="button" class="calculate-btn" onclick="if(window.calculateQuoteNow) window.calculateQuoteNow(); else console.error('Function not loaded');">
             <i class="fas fa-calculator"></i>
-            <span data-translate="calculator-calculate-btn">Calculer mon devis</span>
+            <span data-translate="calculator-calculate-btn">Calculate my quote</span>
           </button>
         </form>
         <div id="quoteResult"></div>

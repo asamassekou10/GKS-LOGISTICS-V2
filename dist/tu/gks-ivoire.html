@@ -399,7 +399,7 @@
                                 <i class="fas fa-chevron-down accordion-arrow"></i>
                             </div>
                             <div class="accordion-content">
-                                <p data-translate="about-mission-desc">Notre mission est d'offrir des solutions logistiques rapides, sécurisées et adaptées aux besoins de nos clients sur le plan national et international.</p>
+                                <p data-translate="about-mission-desc">Misyonumuz, müşterilerimizin ulusal ve uluslararası ihtiyaçlarına göre uyarlanmış hızlı ve güvenli lojistik çözümler sunmaktır.</p>
                             </div>
                         </div>
 
@@ -699,8 +699,8 @@
       </button>
       
       <div class="calculator-header">
-        <h2 data-translate="calculator-title">Calculateur de Devis Instantané</h2>
-        <p data-translate="calculator-subtitle">Obtenez un devis précis en quelques secondes pour votre expédition</p>
+        <h2 data-translate="calculator-title">Anında Teklif Hesaplayıcı</h2>
+        <p data-translate="calculator-subtitle">Sevkiyatınız için birkaç saniye içinde kesin bir teklif alın</p>
       </div>
 
       <div class="quote-calculator-card">
@@ -709,11 +709,10 @@
           <div class="form-section form-section-currency">
             <h3 class="form-section-title">
               <i class="fas fa-money-bill-wave"></i>
-              <span data-translate="calculator-section-currency">Devise de Paiement</span>
+              <span data-translate="calculator-section-currency">Ödeme Para Birimi</span>
             </h3>
             <div class="form-group-calc">
-              <label data-translate="calculator-currency">
-                Choisissez votre devise <span class="required">*</span>
+              <label data-translate="calculator-currency">Para biriminizi seçin<span class="required">*</span>
               </label>
               <select id="currency" required>
                 <option value="XOF">🇲🇱 FCFA (XOF) - Franc CFA</option>
@@ -729,18 +728,17 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <i class="fas fa-shipping-fast"></i>
-              <span data-translate="calculator-section-transport">Détails du Transport</span>
+              <span data-translate="calculator-section-transport">Nakliye Detayları</span>
             </h3>
             <div class="form-grid">
               <div class="form-group-calc">
-                <label data-translate="calculator-transport-type">
-                  Type de transport <span class="required">*</span>
+                <label data-translate="calculator-transport-type">Nakliye türü<span class="required">*</span>
                 </label>
                 <select id="transportType" required>
-                  <option value="" data-translate="calculator-select-placeholder">Sélectionnez...</option>
-                  <option value="air" data-translate="calculator-type-air">Fret Aérien</option>
-                  <option value="sea" data-translate="calculator-type-sea">Fret Maritime</option>
-                  <option value="land" data-translate="calculator-type-land">Transport Terrestre</option>
+                  <option value="" data-translate="calculator-select-placeholder">Seçin...</option>
+                  <option value="air" data-translate="calculator-type-air">Hava Kargo</option>
+                  <option value="sea" data-translate="calculator-type-sea">Deniz Kargo</option>
+                  <option value="land" data-translate="calculator-type-land">Kara Taşımacılığı</option>
                 </select>
               </div>
 
@@ -788,12 +786,11 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <i class="fas fa-box"></i>
-              <span data-translate="calculator-section-shipment">Détails de l'Envoi</span>
+              <span data-translate="calculator-section-shipment">Sevkiyat Detayları</span>
             </h3>
             <div class="form-grid">
               <div class="form-group-calc">
-                <label data-translate="calculator-weight">
-                  Poids (kg) <span class="required">*</span>
+                <label data-translate="calculator-weight">Ağırlık (kg)<span class="required">*</span>
                 </label>
                 <div class="input-with-unit">
                   <input type="number" id="weight" min="0.1" step="0.1" required data-translate="calculator-weight_placeholder" placeholder="">
@@ -802,9 +799,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-length">
-                  Longueur (cm)
-                </label>
+                <label data-translate="calculator-length">Uzunluk (cm)</label>
                 <div class="input-with-unit">
                   <input type="number" id="length" min="0" step="0.1" data-translate="calculator-length_placeholder" placeholder="">
                   <span class="input-unit">cm</span>
@@ -812,9 +807,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-width">
-                  Largeur (cm)
-                </label>
+                <label data-translate="calculator-width">Genişlik (cm)</label>
                 <div class="input-with-unit">
                   <input type="number" id="width" min="0" step="0.1" data-translate="calculator-width_placeholder" placeholder="">
                   <span class="input-unit">cm</span>
@@ -822,9 +815,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-height">
-                  Hauteur (cm)
-                </label>
+                <label data-translate="calculator-height">Yükseklik (cm)</label>
                 <div class="input-with-unit">
                   <input type="number" id="height" min="0" step="0.1" data-translate="calculator-height_placeholder" placeholder="">
                   <span class="input-unit">cm</span>
@@ -832,9 +823,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-declared-value">
-                  Valeur déclarée (USD)
-                </label>
+                <label data-translate="calculator-declared-value">Beyan edilen değer (USD)</label>
                 <div class="input-with-unit">
                   <input type="number" id="declaredValue" min="0" step="0.01" data-translate="calculator-value_placeholder" placeholder="">
                   <span class="input-unit">$</span>
@@ -845,9 +834,7 @@
             <div class="checkbox-group checkbox-group-inline">
               <div class="checkbox-item">
                 <input type="checkbox" id="isContainer">
-                <label for="isContainer" data-translate="calculator-container">
-                  Container complet (fret maritime uniquement)
-                </label>
+                <label for="isContainer" data-translate="calculator-container">Tam konteyner (sadece deniz kargo)</label>
               </div>
             </div>
           </div>
@@ -856,35 +843,33 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <i class="fas fa-plus-circle"></i>
-              <span data-translate="calculator-section-services">Services Additionnels</span>
+              <span data-translate="calculator-section-services">Ek Hizmetler</span>
             </h3>
 
             <div class="checkbox-group">
               <div class="checkbox-item">
                 <input type="checkbox" id="doorDelivery">
-                <label for="doorDelivery" data-translate="calculator-door-delivery">
-                  Livraison à domicile (+$30)
-                </label>
+                <label for="doorDelivery" data-translate="calculator-door-delivery">Kapıdan teslimat (+$30)</label>
               </div>
             </div>
 
             <div class="form-grid">
               <div class="form-group-calc">
-                <label data-translate="calculator-packaging">Type d'emballage</label>
+                <label data-translate="calculator-packaging">Ambalaj türü</label>
                 <select id="packaging">
-                  <option value="" data-translate="calculator-packaging-none">Sans emballage</option>
-                  <option value="standard" data-translate="calculator-packaging-standard">Standard (+$20)</option>
-                  <option value="fragile" data-translate="calculator-packaging-fragile">Fragile (+$50)</option>
-                  <option value="heavy" data-translate="calculator-packaging-heavy">Lourd (+$100)</option>
+                  <option value="" data-translate="calculator-packaging-none">Ambalaj yok</option>
+                  <option value="standard" data-translate="calculator-packaging-standard">Standart (+$20)</option>
+                  <option value="fragile" data-translate="calculator-packaging-fragile">Kırılgan (+$50)</option>
+                  <option value="heavy" data-translate="calculator-packaging-heavy">Ağır (+$100)</option>
                 </select>
               </div>
 
               <div class="form-group-calc">
                 <label data-translate="calculator-customs">Gümrük Müşaviri</label>
                 <select id="customs">
-                  <option value="" data-translate="calculator-customs-none">Sans service douanier</option>
-                  <option value="standard" data-translate="calculator-customs-standard">Standard (+$50)</option>
-                  <option value="express" data-translate="calculator-customs-express">Express (+$150)</option>
+                  <option value="" data-translate="calculator-customs-none">Gümrük hizmeti yok</option>
+                  <option value="standard" data-translate="calculator-customs-standard">Standart (+$50)</option>
+                  <option value="express" data-translate="calculator-customs-express">Ekspres (+$150)</option>
                 </select>
               </div>
             </div>
@@ -892,7 +877,7 @@
 
           <button type="button" class="calculate-btn" onclick="if(window.calculateQuoteNow) window.calculateQuoteNow(); else console.error('Function not loaded');">
             <i class="fas fa-calculator"></i>
-            <span data-translate="calculator-calculate-btn">Calculer mon devis</span>
+            <span data-translate="calculator-calculate-btn">Teklifimi hesapla</span>
           </button>
         </form>
         <div id="quoteResult"></div>

@@ -124,7 +124,8 @@ function getTranslationValue(t, attributeKey) {
   }
 
   // Fallback: try the key directly on t (for some edge cases)
-  return t[fullKey] || t[key] || '';
+  // Also try the original attributeKey as-is (for top-level keys with dashes like "tracking-groupage")
+  return t[attributeKey] || t[fullKey] || t[key] || '';
 }
 
 // Replace hardcoded French content with translations
