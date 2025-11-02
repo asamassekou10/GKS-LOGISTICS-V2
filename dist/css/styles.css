@@ -5816,7 +5816,7 @@ p {
     visibility: visible;
     transform: none;
     box-shadow: none;
-    background: linear-gradient(135deg, #003087 0%, #1E90FF 100%);
+    background: #FFFFFF !important;
     border-radius: 0 0 12px 12px;
     margin: 0;
     padding: 0;
@@ -5846,7 +5846,7 @@ p {
   .dropdown-menu li a {
     padding: 1.125rem 1.5rem;
     font-size: 0.95rem;
-    color: #FFFFFF !important;
+    color: #003087 !important;
     border-radius: 0;
     white-space: normal;
     word-wrap: break-word;
@@ -5856,22 +5856,22 @@ p {
   .dropdown-menu li a::before {
     font-size: 0.7rem;
     flex-shrink: 0;
-    background: rgba(255, 255, 255, 0.15) !important;
-    color: #FFFFFF !important;
+    background: rgba(0, 48, 135, 0.1) !important;
+    color: #003087 !important;
   }
 
   .dropdown-menu li a:hover {
-    background: rgba(255, 255, 255, 0.15) !important;
-    color: #FFFFFF !important;
+    background: rgba(0, 48, 135, 0.08) !important;
+    color: #003087 !important;
     padding-left: 2rem;
     transform: none;
   }
 
   .dropdown-menu li a i {
-    color: #FFFFFF !important;
-    background: rgba(255, 255, 255, 0.15) !important;
+    color: #003087 !important;
+    background: rgba(0, 48, 135, 0.1) !important;
   }
-  
+
   .nav-link-dropdown::after {
     margin-left: auto;
   }
