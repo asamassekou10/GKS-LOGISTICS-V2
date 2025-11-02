@@ -1444,8 +1444,12 @@
     "origin_placeholder": "Şehir/Ülke",
     "destination": "Hedef *",
     "destination_placeholder": "Şehir/Ülke",
+    "cargo_nature": "Kargo Doğası",
+    "cargo_nature_placeholder": "Örn: Elektronik, Tekstil, Çabuk Bozulan Ürünler",
     "weight": "Ağırlık (kg)",
     "weight_placeholder": "Örn: 50",
+    "quantity": "Miktar / Paket Sayısı *",
+    "quantity_placeholder": "Örn: 5",
     "message": "Talep Detayları *",
     "message_placeholder": "İhtiyaçlarınızı açıklayın (boyutlar, ağırlık, istenen tarih, ek hizmetler...)"
   },
@@ -1476,7 +1480,12 @@
     "phone_placeholder": "+223 XX XX XX XX",
     "route_placeholder": "Rotayı seçin",
     "dubai_bamako": "Dubai → Bamako",
-    "turkey_bamako": "Türkiye → Bamako"
+    "turkey_bamako": "Türkiye → Bamako",
+    "firstname_placeholder": "Adınız",
+    "lastname_placeholder": "Soyadınız",
+    "weight_placeholder": "Örn: 50",
+    "volume_placeholder": "Örn: 1,5",
+    "description_placeholder": "Kargoyu kısaca açıklayın..."
   },
   "calculator": {
     "packaging_type": "Ambalaj Türü",
@@ -1485,7 +1494,12 @@
     "length_example": "Örn: 100",
     "width_example": "Örn: 80",
     "height_example": "Örn: 60",
-    "price_example": "Örn: 1000"
+    "price_example": "Örn: 1000",
+    "weight_placeholder": "Örn: 50",
+    "length_placeholder": "Örn: 100",
+    "width_placeholder": "Örn: 80",
+    "height_placeholder": "Örn: 60",
+    "value_placeholder": "Örn: 1000"
   },
   "form": {
     "honeypot": "İnsan iseniz bu alanı doldurmayın:",
@@ -1494,5 +1508,10 @@
   "newsletter": {
     "email_placeholder": "E-posta adresiniz",
     "subscribe": "Abone Ol"
+  },
+  "country_contact": {
+    "weight_placeholder": "Örn: 100",
+    "message_placeholder": "Talebinizi açıklayın",
+    "message_detailed_placeholder": "Talebinizi açıklayın (boyutlar, ağırlık, istenen tarih, ek hizmetler...)"
   }
 }

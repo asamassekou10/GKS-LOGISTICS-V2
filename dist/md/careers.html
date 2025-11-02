@@ -289,13 +289,14 @@
                             
                             <!-- Newsletter Signup -->
                             <div class="newsletter-signup">
-                                <form class="newsletter-form" id="careersNewsletterForm">
+                                <form class="newsletter-form" id="careersNewsletterForm" name="newsletter-signup" method="POST" data-netlify="true">
+                                    <input type="hidden" name="form-name" value="newsletter-signup">
                                     <div class="newsletter-input-group">
-                                        <input type="email" placeholder="Votre adresse email" data-translate="newsletter-email" required>
-                                        <button type="submit" data-translate="newsletter-subscribe">S'inscrire</button>
-        </div>
+                                        <input type="email" name="email" placeholder="..." data-translate-placeholder="newsletter_email_placeholder" required>
+                                        <button type="submit" data-translate="newsletter-subscribe">订阅</button>
+                                    </div>
                                 </form>
-        </div>
+                            </div>
                             
                             <!-- Spontaneous Application CTA -->
                             <div class="spontaneous-application">
@@ -479,10 +480,10 @@
                           <select id="freightType" name="freightType" required>
                               <option value="" data-translate="select-freight-type">Sélectionner le type de fret</option>
                               <option value="air" data-translate="freight-air">空运</option>
-                              <option value="fcl" data-translate="freight-fcl">海运（整箱 - FCL）</option>
-                              <option value="lcl" data-translate="freight-lcl">海运（拼箱 - LCL）</option>
+                              <option value="fcl" data-translate="freight-fcl">海运（整柜 - FCL）</option>
+                              <option value="lcl" data-translate="freight-lcl">海运（拼柜 - LCL）</option>
                               <option value="road" data-translate="freight-road">陆运</option>
-                              <option value="project" data-translate="freight-project">项目物流 / 超限货物</option>
+                              <option value="project" data-translate="freight-project">Logistique de Projet / Fret Hors Gabarit</option>
                               <option value="temp-controlled" data-translate="freight-temp-controlled">Logistique à Température Contrôlée</option>
                               <option value="other" data-translate="freight-other">其他</option>
                           </select>
@@ -531,7 +532,7 @@
                   <!-- Additional Services Section -->
                   <fieldset class="form-section">
                       <legend>
-                          <h3 data-translate="quote-modal-additional-services">附加服务（可选）</h3>
+                          <h3 data-translate="quote-modal-additional-services">Services Additionnels (Optionnel)</h3>
                       </legend>
                       
                       <div class="checkbox-group">
@@ -542,22 +543,22 @@
                           
                           <div class="checkbox-item">
                               <input type="checkbox" id="serviceInsurance" name="additionalServices[]" value="insurance">
-                              <label for="serviceInsurance" data-translate="service-insurance">货运保险</label>
+                              <label for="serviceInsurance" data-translate="service-insurance">Assurance Fret</label>
                           </div>
                           
                           <div class="checkbox-item">
                               <input type="checkbox" id="serviceWarehousing" name="additionalServices[]" value="warehousing">
-                              <label for="serviceWarehousing" data-translate="service-warehousing">仓储</label>
+                              <label for="serviceWarehousing" data-translate="service-warehousing">Entreposage</label>
                           </div>
                           
                           <div class="checkbox-item">
                               <input type="checkbox" id="serviceLastMile" name="additionalServices[]" value="lastMile">
-                              <label for="serviceLastMile" data-translate="service-last-mile">配送 / 最后一公里</label>
+                              <label for="serviceLastMile" data-translate="service-last-mile">Distribution / Dernier Kilomètre</label>
                           </div>
                           
                           <div class="checkbox-item">
                               <input type="checkbox" id="servicePackaging" name="additionalServices[]" value="packaging">
-                              <label for="servicePackaging" data-translate="service-packaging">专业包装</label>
+                              <label for="servicePackaging" data-translate="service-packaging">Emballage Spécialisé</label>
                           </div>
                       </div>
                   </fieldset>
@@ -569,9 +570,9 @@
                       </legend>
                       
                       <div class="form-group">
-                          <label for="message" data-translate="quote-modal-additional-message">您的需求详情 *</label>
+                          <label for="message" data-translate="quote-modal-additional-message">Message Supplémentaire</label>
                           <textarea id="message" name="message" rows="4" 
-                                    data-translate="message-placeholder"></textarea>
+                                    data-translate="message-placeholder">描述您的需求（尺寸、重量、所需日期、附加服务...）</textarea>
                       </div>
                   </fieldset>
                   
@@ -959,7 +960,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-customs">Dédouanement</label>
+                <label data-translate="calculator-customs">清关</label>
                 <select id="customs">
                   <option value="" data-translate="calculator-customs-none">Sans service douanier</option>
                   <option value="standard" data-translate="calculator-customs-standard">Standard (+$50)</option>

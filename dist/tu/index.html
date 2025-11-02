@@ -542,7 +542,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-customs">Dédouanement</label>
+                <label data-translate="calculator-customs">Gümrük Müşaviri</label>
                 <select id="customs">
                   <option value="" data-translate="calculator-customs-none">Sans service douanier</option>
                   <option value="standard" data-translate="calculator-customs-standard">Standard (+$50)</option>
@@ -1460,7 +1460,7 @@
           </label>
           <label class="tracking-type-option">
             <input type="radio" name="trackingType" value="groupage">
-            <span data-translate="tracking-groupage">Groupage</span>
+            <span data-translate="tracking-groupage">[object Object]</span>
           </label>
         </div>
       </form>
@@ -1534,14 +1534,14 @@
   <div id="quoteModal" class="quote-modal-overlay">
       <div class="quote-modal-content">
           <div class="quote-modal-header">
-              <h2 data-translate="quote-modal-title">Teklif İste</h2>
+              <h2 data-translate="quote-modal-title">Teklif Talep Et</h2>
               <button class="quote-modal-close" aria-label="Modalı kapat">
                   <i class="fas fa-times"></i>
               </button>
           </div>
           
           <div class="quote-modal-body">
-              <p class="quote-form-subtitle" data-translate="quote-modal-subtitle">Hızlı bir şekilde kişiselleştirilmiş teklif almak için bu basitleştirilmiş formu doldurun.</p>
+              <p class="quote-form-subtitle" data-translate="quote-modal-subtitle">Kişiselleştirilmiş bir teklif almak için bu formu doldurun</p>
               
               <form name="quote-request" data-netlify="true" data-netlify-honeypot="bot-field" id="quoteRequestForm">
                   <input type="hidden" name="form-name" value="quote-request">
@@ -1562,7 +1562,7 @@
                   
                   <div class="form-row">
                       <div class="form-group">
-                          <label for="email" data-translate="quote-modal-email-professional">E-posta *</label>
+                          <label for="email" data-translate="quote-modal-email-professional">Email *</label>
                           <input type="email" id="email" name="email" required>
                       </div>
                       
@@ -1576,33 +1576,33 @@
                       <label for="freightType" data-translate="quote-modal-freight-type">Kargo Türü *</label>
                       <select id="freightType" name="freightType" required>
                           <option value="" data-translate="quote-modal-freight-type-placeholder">Kargo türünü seçin</option>
-                          <option value="air" data-translate="quote-modal-freight-air">Hava Kargo</option>
-                          <option value="sea" data-translate="quote-modal-freight-sea">Deniz Kargo</option>
-                          <option value="road" data-translate="quote-modal-freight-road">Kara Kargo</option>
+                          <option value="air" data-translate="quote-modal-freight-air">Hava Taşımacılığı</option>
+                          <option value="sea" data-translate="quote-modal-freight-sea">Deniz Taşımacılığı</option>
+                          <option value="road" data-translate="quote-modal-freight-road">Karayolu Taşımacılığı</option>
                           <option value="warehousing" data-translate="quote-modal-freight-warehousing">Depolama</option>
-                          <option value="other" data-translate="quote-modal-freight-other">Diğerleri</option>
+                          <option value="other" data-translate="quote-modal-freight-other">Diğer</option>
                       </select>
                   </div>
                   
                   <div class="form-row">
                       <div class="form-group">
-                          <label for="origin" data-translate="quote-modal-origin">Menşe *</label>
+                          <label for="origin" data-translate="quote-modal-origin">Kaynak *</label>
                           <input type="text" id="origin" name="origin" required>
                       </div>
                       
                       <div class="form-group">
-                          <label for="destination" data-translate="quote-modal-destination">Varış *</label>
+                          <label for="destination" data-translate="quote-modal-destination">Hedef *</label>
                           <input type="text" id="destination" name="destination" required>
                       </div>
                   </div>
                   
                   <div class="form-group">
-                      <label for="weight" data-translate="quote-modal-weight">Poids (kg)</label>
+                      <label for="weight" data-translate="quote-modal-weight">Ağırlık (kg)</label>
                       <input type="number" id="weight" name="weight" min="0" step="0.01" placeholder="Ex: 100">
                   </div>
                   
                   <div class="form-group">
-                      <label for="message" data-translate="quote-modal-additional-message">Talebinizin detayları *</label>
+                      <label for="message" data-translate="quote-modal-additional-message">Détails de votre demande *</label>
                       <textarea id="message" name="message" rows="4" required placeholder="Décrivez votre besoin (dimensions, poids, date souhaitée, services additionnels...)"></textarea>
                   </div>
                   

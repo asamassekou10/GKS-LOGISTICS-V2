@@ -1504,8 +1504,12 @@
     "origin_placeholder": "Ville/Pays",
     "destination": "Destination *",
     "destination_placeholder": "Ville/Pays",
+    "cargo_nature": "Nature de la Marchandise",
+    "cargo_nature_placeholder": "Ex: Électronique, Textile, Produits périssables",
     "weight": "Poids (kg)",
     "weight_placeholder": "Ex: 50",
+    "quantity": "Quantité / Nombre de Colis *",
+    "quantity_placeholder": "Ex: 5",
     "message": "Détails de votre demande *",
     "message_placeholder": "Décrivez votre besoin (dimensions, poids, date souhaitée, services additionnels...)"
   },
@@ -1536,7 +1540,12 @@
     "phone_placeholder": "+223 XX XX XX XX",
     "route_placeholder": "Sélectionnez une route",
     "dubai_bamako": "Dubaï → Bamako",
-    "turkey_bamako": "Turquie → Bamako"
+    "turkey_bamako": "Turquie → Bamako",
+    "firstname_placeholder": "Votre prénom",
+    "lastname_placeholder": "Votre nom",
+    "weight_placeholder": "Ex: 50",
+    "volume_placeholder": "Ex: 1,5",
+    "description_placeholder": "Décrivez brièvement votre marchandise..."
   },
   "calculator": {
     "packaging_type": "Type d'Emballage",
@@ -1545,7 +1554,12 @@
     "length_example": "Ex: 100",
     "width_example": "Ex: 80",
     "height_example": "Ex: 60",
-    "price_example": "Ex: 1000"
+    "price_example": "Ex: 1000",
+    "weight_placeholder": "Ex: 50",
+    "length_placeholder": "Ex: 100",
+    "width_placeholder": "Ex: 80",
+    "height_placeholder": "Ex: 60",
+    "value_placeholder": "Ex: 1000"
   },
   "form": {
     "honeypot": "Ne remplissez pas ce champ si vous êtes humain :",
@@ -1554,5 +1568,10 @@
   "newsletter": {
     "email_placeholder": "Votre adresse email",
     "subscribe": "S'abonner"
+  },
+  "country_contact": {
+    "weight_placeholder": "Ex: 100",
+    "message_placeholder": "Décrivez votre besoin",
+    "message_detailed_placeholder": "Décrivez votre besoin (dimensions, poids, date souhaitée, services additionnels...)"
   }
 }

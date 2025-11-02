@@ -1446,8 +1446,12 @@
     "origin_placeholder": "城市/国家",
     "destination": "目的地 *",
     "destination_placeholder": "城市/国家",
+    "cargo_nature": "货物性质",
+    "cargo_nature_placeholder": "例：电子产品、纺织品、易腐物品",
     "weight": "重量（公斤）",
     "weight_placeholder": "例：50",
+    "quantity": "数量 / 包裹数 *",
+    "quantity_placeholder": "例：5",
     "message": "需求详情 *",
     "message_placeholder": "描述您的需求（尺寸、重量、所需日期、附加服务...）"
   },
@@ -1478,7 +1482,12 @@
     "phone_placeholder": "+223 XX XX XX XX",
     "route_placeholder": "选择路线",
     "dubai_bamako": "迪拜 → 巴马科",
-    "turkey_bamako": "土耳其 → 巴马科"
+    "turkey_bamako": "土耳其 → 巴马科",
+    "firstname_placeholder": "您的名字",
+    "lastname_placeholder": "您的姓氏",
+    "weight_placeholder": "例：50",
+    "volume_placeholder": "例：1.5",
+    "description_placeholder": "简要描述您的货物..."
   },
   "calculator": {
     "packaging_type": "包装类型",
@@ -1487,7 +1496,12 @@
     "length_example": "例：100",
     "width_example": "例：80",
     "height_example": "例：60",
-    "price_example": "例：1000"
+    "price_example": "例：1000",
+    "weight_placeholder": "例：50",
+    "length_placeholder": "例：100",
+    "width_placeholder": "例：80",
+    "height_placeholder": "例：60",
+    "value_placeholder": "例：1000"
   },
   "form": {
     "honeypot": "如果您是人类，请不要填写此字段：",
@@ -1496,5 +1510,10 @@
   "newsletter": {
     "email_placeholder": "您的电子邮件地址",
     "subscribe": "订阅"
+  },
+  "country_contact": {
+    "weight_placeholder": "例：100",
+    "message_placeholder": "描述您的需求",
+    "message_detailed_placeholder": "描述您的需求（尺寸、重量、所需日期、附加服务...）"
   }
 }

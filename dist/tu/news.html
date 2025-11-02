@@ -474,13 +474,13 @@
                           <label for="freightType" data-translate="freight-type-label">Type de Fret *</label>
                           <select id="freightType" name="freightType" required>
                               <option value="" data-translate="select-freight-type">Sélectionner le type de fret</option>
-                              <option value="air" data-translate="freight-air">Hava Kargo</option>
-                              <option value="fcl" data-translate="freight-fcl">Deniz Kargo (Tam Konteyner - FCL)</option>
-                              <option value="lcl" data-translate="freight-lcl">Deniz Kargo (Kısmi Konteyner - LCL)</option>
-                              <option value="road" data-translate="freight-road">Kara Kargo</option>
-                              <option value="project" data-translate="freight-project">Proje Lojistiği / Özel Boyut Kargo</option>
+                              <option value="air" data-translate="freight-air">Hava Taşımacılığı</option>
+                              <option value="fcl" data-translate="freight-fcl">Deniz Taşımacılığı (Tam Konteyner - FCL)</option>
+                              <option value="lcl" data-translate="freight-lcl">Deniz Taşımacılığı (Kısmi Konteyner - LCL)</option>
+                              <option value="road" data-translate="freight-road">Karayolu Taşımacılığı</option>
+                              <option value="project" data-translate="freight-project">Logistique de Projet / Fret Hors Gabarit</option>
                               <option value="temp-controlled" data-translate="freight-temp-controlled">Logistique à Température Contrôlée</option>
-                              <option value="other" data-translate="freight-other">Diğerleri</option>
+                              <option value="other" data-translate="freight-other">Diğer</option>
                           </select>
                       </div>
                       
@@ -527,7 +527,7 @@
                   <!-- Additional Services Section -->
                   <fieldset class="form-section">
                       <legend>
-                          <h3 data-translate="quote-modal-additional-services">Ek Hizmetler (İsteğe Bağlı)</h3>
+                          <h3 data-translate="quote-modal-additional-services">Services Additionnels (Optionnel)</h3>
                       </legend>
                       
                       <div class="checkbox-group">
@@ -538,22 +538,22 @@
                           
                           <div class="checkbox-item">
                               <input type="checkbox" id="serviceInsurance" name="additionalServices[]" value="insurance">
-                              <label for="serviceInsurance" data-translate="service-insurance">Kargo Sigortası</label>
+                              <label for="serviceInsurance" data-translate="service-insurance">Assurance Fret</label>
                           </div>
                           
                           <div class="checkbox-item">
                               <input type="checkbox" id="serviceWarehousing" name="additionalServices[]" value="warehousing">
-                              <label for="serviceWarehousing" data-translate="service-warehousing">Depolama</label>
+                              <label for="serviceWarehousing" data-translate="service-warehousing">Entreposage</label>
                           </div>
                           
                           <div class="checkbox-item">
                               <input type="checkbox" id="serviceLastMile" name="additionalServices[]" value="lastMile">
-                              <label for="serviceLastMile" data-translate="service-last-mile">Dağıtım / Son Mil</label>
+                              <label for="serviceLastMile" data-translate="service-last-mile">Distribution / Dernier Kilomètre</label>
                           </div>
                           
                           <div class="checkbox-item">
                               <input type="checkbox" id="servicePackaging" name="additionalServices[]" value="packaging">
-                              <label for="servicePackaging" data-translate="service-packaging">Özel Ambalajlama</label>
+                              <label for="servicePackaging" data-translate="service-packaging">Emballage Spécialisé</label>
                           </div>
                       </div>
                   </fieldset>
@@ -565,9 +565,9 @@
                       </legend>
                       
                       <div class="form-group">
-                          <label for="message" data-translate="quote-modal-additional-message">Talebinizin detayları *</label>
+                          <label for="message" data-translate="quote-modal-additional-message">Message Supplémentaire</label>
                           <textarea id="message" name="message" rows="4" 
-                                    data-translate="message-placeholder"></textarea>
+                                    data-translate="message-placeholder">İhtiyaçlarınızı açıklayın (boyutlar, ağırlık, istenen tarih, ek hizmetler...)</textarea>
                       </div>
                   </fieldset>
                   
@@ -784,7 +784,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-customs">Dédouanement</label>
+                <label data-translate="calculator-customs">Gümrük Müşaviri</label>
                 <select id="customs">
                   <option value="" data-translate="calculator-customs-none">Sans service douanier</option>
                   <option value="standard" data-translate="calculator-customs-standard">Standard (+$50)</option>

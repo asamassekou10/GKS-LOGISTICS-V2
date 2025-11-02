@@ -511,14 +511,14 @@
     <div id="quoteModal" class="quote-modal-overlay">
         <div class="quote-modal-content">
             <div class="quote-modal-header">
-                <h2 data-translate="quote-modal-title">获取报价</h2>
+                <h2 data-translate="quote-modal-title">请求报价</h2>
                 <button class="quote-modal-close" aria-label="关闭模态框">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             
             <div class="quote-modal-body">
-                <p class="quote-form-subtitle" data-translate="quote-modal-subtitle">填写此简化表格以快速获取个性化报价。</p>
+                <p class="quote-form-subtitle" data-translate="quote-modal-subtitle">填写此表格以获得个性化报价</p>
                 
                 <form name="quote-request" data-netlify="true" id="quoteRequestForm">
                     <div class="form-row">
@@ -535,7 +535,7 @@
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="email" data-translate="quote-modal-email-professional">邮箱 *</label>
+                            <label for="email" data-translate="quote-modal-email-professional">Email *</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         
@@ -559,7 +559,7 @@
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="origin" data-translate="quote-modal-origin">起运地 *</label>
+                            <label for="origin" data-translate="quote-modal-origin">起点 *</label>
                             <input type="text" id="origin" name="origin" required>
                         </div>
                         
@@ -570,12 +570,12 @@
                     </div>
                     
                     <div class="form-group">
-                        <label for="weight" data-translate="quote-modal-weight">Poids (kg)</label>
+                        <label for="weight" data-translate="quote-modal-weight">重量（公斤）</label>
                         <input type="number" id="weight" name="weight" min="0" step="0.01" placeholder="Ex: 100">
                     </div>
                     
                     <div class="form-group">
-                        <label for="message" data-translate="quote-modal-additional-message">您的需求详情 *</label>
+                        <label for="message" data-translate="quote-modal-additional-message">Détails de votre demande *</label>
                         <textarea id="message" name="message" rows="4" required placeholder="Décrivez votre besoin (dimensions, poids, date souhaitée, services additionnels...)"></textarea>
                     </div>
                     
@@ -791,7 +791,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-customs">Dédouanement</label>
+                <label data-translate="calculator-customs">清关</label>
                 <select id="customs">
                   <option value="" data-translate="calculator-customs-none">Sans service douanier</option>
                   <option value="standard" data-translate="calculator-customs-standard">Standard (+$50)</option>

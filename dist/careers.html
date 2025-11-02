@@ -289,13 +289,14 @@
                             
                             <!-- Newsletter Signup -->
                             <div class="newsletter-signup">
-                                <form class="newsletter-form" id="careersNewsletterForm">
+                                <form class="newsletter-form" id="careersNewsletterForm" name="newsletter-signup" method="POST" data-netlify="true">
+                                    <input type="hidden" name="form-name" value="newsletter-signup">
                                     <div class="newsletter-input-group">
-                                        <input type="email" placeholder="Votre adresse email" data-translate="newsletter-email" required>
-                                        <button type="submit" data-translate="newsletter-subscribe">S'inscrire</button>
-        </div>
+                                        <input type="email" name="email" placeholder="..." data-translate-placeholder="newsletter_email_placeholder" required>
+                                        <button type="submit" data-translate="newsletter-subscribe">S'abonner</button>
+                                    </div>
                                 </form>
-        </div>
+                            </div>
                             
                             <!-- Spontaneous Application CTA -->
                             <div class="spontaneous-application">
@@ -484,7 +485,7 @@
                               <option value="road" data-translate="freight-road">Fret Routier</option>
                               <option value="project" data-translate="freight-project">Logistique de Projet / Fret Hors Gabarit</option>
                               <option value="temp-controlled" data-translate="freight-temp-controlled">Logistique à Température Contrôlée</option>
-                              <option value="other" data-translate="freight-other">Autres</option>
+                              <option value="other" data-translate="freight-other">Autre</option>
                           </select>
                       </div>
                       
@@ -569,9 +570,9 @@
                       </legend>
                       
                       <div class="form-group">
-                          <label for="message" data-translate="quote-modal-additional-message">Détails de votre demande *</label>
+                          <label for="message" data-translate="quote-modal-additional-message">Message Supplémentaire</label>
                           <textarea id="message" name="message" rows="4" 
-                                    data-translate="message-placeholder"></textarea>
+                                    data-translate="message-placeholder">Décrivez votre besoin (dimensions, poids, date souhaitée, services additionnels...)</textarea>
                       </div>
                   </fieldset>
                   

@@ -432,18 +432,18 @@
                   <!-- Contact Information Section -->
                   <fieldset class="form-section">
                       <legend>
-                          <h3 data-translate="contact-info-headline">Your Contact Information</h3>
+                          <h3 data-translate="contact-info-headline">Vos Coordonnées</h3>
                       </legend>
                       
                       <div class="form-row">
                           <div class="form-group">
-                              <label for="fullName" data-translate="full-name-label" data-translate="form-full-name">Full Name *</label>
+                              <label for="fullName" data-translate="full-name-label" data-translate="form-full-name">Nom Complet *</label>
                               <input type="text" id="fullName" name="fullName" required 
                                      data-translate="full-name-placeholder">
                           </div>
                           
                           <div class="form-group">
-                              <label for="companyName" data-translate="company-name-label" data-translate="form-company-name">Company Name *</label>
+                              <label for="companyName" data-translate="company-name-label" data-translate="form-company-name">Nom de l'Entreprise *</label>
                               <input type="text" id="companyName" name="companyName" required 
                                      data-translate="company-name-placeholder">
                           </div>
@@ -467,45 +467,45 @@
                   <!-- Shipment Details Section -->
                   <fieldset class="form-section">
                       <legend>
-                          <h3 data-translate="shipment-details-headline">Shipment Details</h3>
+                          <h3 data-translate="shipment-details-headline">Détails de l'Expédition</h3>
                       </legend>
                       
                       <div class="form-group">
                           <label for="freightType" data-translate="freight-type-label">Type de Fret *</label>
                           <select id="freightType" name="freightType" required>
-                              <option value="" data-translate="select-freight-type">Select freight type</option>
+                              <option value="" data-translate="select-freight-type">Sélectionner le type de fret</option>
                               <option value="air" data-translate="freight-air">Air Freight</option>
                               <option value="fcl" data-translate="freight-fcl">Sea Freight (Full Container - FCL)</option>
                               <option value="lcl" data-translate="freight-lcl">Sea Freight (Partial Container - LCL)</option>
                               <option value="road" data-translate="freight-road">Road Freight</option>
-                              <option value="project" data-translate="freight-project">Project Logistics / Out-of-Gauge Freight</option>
-                              <option value="temp-controlled" data-translate="freight-temp-controlled">Temperature-Controlled Logistics</option>
-                              <option value="other" data-translate="freight-other">Others</option>
+                              <option value="project" data-translate="freight-project">Logistique de Projet / Fret Hors Gabarit</option>
+                              <option value="temp-controlled" data-translate="freight-temp-controlled">Logistique à Température Contrôlée</option>
+                              <option value="other" data-translate="freight-other">Other</option>
                           </select>
                       </div>
                       
                       <div class="form-group">
-                          <label for="cargoNature" data-translate="cargo-nature-label">Cargo Nature</label>
+                          <label for="cargoNature" data-translate="cargo-nature-label">Nature de la Marchandise</label>
                           <input type="text" id="cargoNature" name="cargoNature" 
                                  data-translate="cargo-nature-placeholder">
                       </div>
                       
                       <div class="form-row">
                           <div class="form-group">
-                              <label for="origin" data-translate="origin-label" data-translate="form-origin">Origin Country/City *</label>
+                              <label for="origin" data-translate="origin-label" data-translate="form-origin">Pays/Ville d'Origine *</label>
                               <input type="text" id="origin" name="origin" required 
                                      data-translate="origin-placeholder">
                           </div>
                           
                           <div class="form-group">
-                              <label for="destination" data-translate="destination-label" data-translate="form-destination">Destination Country/City *</label>
+                              <label for="destination" data-translate="destination-label" data-translate="form-destination">Pays/Ville de Destination *</label>
                               <input type="text" id="destination" name="destination" required 
                                      data-translate="destination-placeholder">
                           </div>
                       </div>
                       
                       <div class="form-group">
-                          <label for="preferredDate" data-translate="preferred-date-label">Preferred Shipment Date</label>
+                          <label for="preferredDate" data-translate="preferred-date-label">Date d'Expédition Souhaitée</label>
                           <input type="date" id="preferredDate" name="preferredDate">
                       </div>
                       
@@ -517,7 +517,7 @@
                           </div>
                           
                           <div class="form-group">
-                              <label for="quantityPackages" data-translate="quantity-packages-label" data-translate="form-quantity">Quantity / Number of Packages *</label>
+                              <label for="quantityPackages" data-translate="quantity-packages-label" data-translate="form-quantity">Quantité / Nombre de Colis *</label>
                               <input type="text" id="quantityPackages" name="quantityPackages" required 
                                      data-translate="quantity-packages-placeholder">
                           </div>
@@ -527,7 +527,7 @@
                   <!-- Additional Services Section -->
                   <fieldset class="form-section">
                       <legend>
-                          <h3 data-translate="quote-modal-additional-services">Additional Services (Optional)</h3>
+                          <h3 data-translate="quote-modal-additional-services">Services Additionnels (Optionnel)</h3>
                       </legend>
                       
                       <div class="checkbox-group">
@@ -538,22 +538,22 @@
                           
                           <div class="checkbox-item">
                               <input type="checkbox" id="serviceInsurance" name="additionalServices[]" value="insurance">
-                              <label for="serviceInsurance" data-translate="service-insurance">Freight Insurance</label>
+                              <label for="serviceInsurance" data-translate="service-insurance">Assurance Fret</label>
                           </div>
                           
                           <div class="checkbox-item">
                               <input type="checkbox" id="serviceWarehousing" name="additionalServices[]" value="warehousing">
-                              <label for="serviceWarehousing" data-translate="service-warehousing">Warehousing</label>
+                              <label for="serviceWarehousing" data-translate="service-warehousing">Entreposage</label>
                           </div>
                           
                           <div class="checkbox-item">
                               <input type="checkbox" id="serviceLastMile" name="additionalServices[]" value="lastMile">
-                              <label for="serviceLastMile" data-translate="service-last-mile">Distribution / Last Mile</label>
+                              <label for="serviceLastMile" data-translate="service-last-mile">Distribution / Dernier Kilomètre</label>
                           </div>
                           
                           <div class="checkbox-item">
                               <input type="checkbox" id="servicePackaging" name="additionalServices[]" value="packaging">
-                              <label for="servicePackaging" data-translate="service-packaging">Specialized Packaging</label>
+                              <label for="servicePackaging" data-translate="service-packaging">Emballage Spécialisé</label>
                           </div>
                       </div>
                   </fieldset>
@@ -561,13 +561,13 @@
                   <!-- Additional Message Section -->
                   <fieldset class="form-section">
                       <legend>
-                          <h3 data-translate="additional-message-headline">Your Message or Specific Needs</h3>
+                          <h3 data-translate="additional-message-headline">Votre Message ou Besoins Spécifiques</h3>
                       </legend>
                       
                       <div class="form-group">
-                          <label for="message" data-translate="quote-modal-additional-message">Your request details *</label>
+                          <label for="message" data-translate="quote-modal-additional-message">Message Supplémentaire</label>
                           <textarea id="message" name="message" rows="4" 
-                                    data-translate="message-placeholder"></textarea>
+                                    data-translate="message-placeholder">Describe your needs (dimensions, weight, desired date, additional services...)</textarea>
                       </div>
                   </fieldset>
                   
@@ -578,7 +578,7 @@
                   
                   <!-- Form Buttons -->
                   <div class="form-buttons">
-                      <button type="button" class="btn-cancel" data-translate="cancel-button">Cancel</button>
+                      <button type="button" class="btn-cancel" data-translate="cancel-button">Annuler</button>
                       <button type="submit" class="btn-submit" data-translate="submit-request">Envoyer ma Demande</button>
                   </div>
               </form>
@@ -784,7 +784,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-customs">Dédouanement</label>
+                <label data-translate="calculator-customs">Customs Clearance</label>
                 <select id="customs">
                   <option value="" data-translate="calculator-customs-none">Sans service douanier</option>
                   <option value="standard" data-translate="calculator-customs-standard">Standard (+$50)</option>
