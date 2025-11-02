@@ -1884,8 +1884,8 @@ a.article-link:hover .article-icon {
   
   .page-content > .section-title:first-child::before,
   .page-content > .section-title:first-child::after {
-      width: 40px;
-      height: 40px;
+      width: 60px;
+      height: 4px;
   }
   
   .page-content > .section-title:not(:first-child) {
