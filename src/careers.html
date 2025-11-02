@@ -284,13 +284,14 @@
                             
                             <!-- Newsletter Signup -->
                             <div class="newsletter-signup">
-                                <form class="newsletter-form" id="careersNewsletterForm">
+                                <form class="newsletter-form" id="careersNewsletterForm" name="newsletter-signup" method="POST" data-netlify="true">
+                                    <input type="hidden" name="form-name" value="newsletter-signup">
                                     <div class="newsletter-input-group">
-                                        <input type="email" placeholder="Votre adresse email" data-translate="newsletter-email" required>
+                                        <input type="email" name="email" placeholder="..." data-translate-placeholder="newsletter_email_placeholder" required>
                                         <button type="submit" data-translate="newsletter-subscribe">S'inscrire</button>
-        </div>
+                                    </div>
                                 </form>
-        </div>
+                            </div>
                             
                             <!-- Spontaneous Application CTA -->
                             <div class="spontaneous-application">

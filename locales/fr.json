@@ -1476,5 +1476,83 @@
   "all_services-cta-title": "Prêt à Optimiser Votre Chaîne Logistique ?",
   "all_services-cta-subtitle": "Contactez nos experts pour discuter de vos besoins et obtenir un devis personnalisé gratuitement",
   "all_services-cta-btn1": "Calculer Mon Devis",
-  "all_services-cta-btn2": "Nous Contacter"
+  "all_services-cta-btn2": "Nous Contacter",
+  "quote_modal": {
+    "title": "Demander un Devis",
+    "subtitle": "Remplissez ce formulaire pour recevoir un devis personnalisé",
+    "section_contact": "Vos Informations de Contact",
+    "section_shipment": "Détails de l'Expédition",
+    "section_message": "Votre Message",
+    "full_name": "Nom Complet *",
+    "full_name_placeholder": "Jean Dupont",
+    "company_name": "Nom de l'Entreprise",
+    "company_name_placeholder": "Votre Entreprise",
+    "email": "Email Professionnel *",
+    "email_placeholder": "votre@email.com",
+    "phone": "Téléphone *",
+    "phone_placeholder": "+223 XX XX XX XX",
+    "freight_type": "Type de Fret *",
+    "freight_type_placeholder": "Sélectionnez le type de fret",
+    "freight_air": "Fret Aérien",
+    "freight_sea": "Fret Maritime",
+    "freight_fcl": "Fret Maritime (Conteneur Complet - FCL)",
+    "freight_lcl": "Fret Maritime (Conteneur Partiel - LCL)",
+    "freight_road": "Fret Routier",
+    "freight_warehousing": "Entreposage",
+    "freight_other": "Autre",
+    "origin": "Origine *",
+    "origin_placeholder": "Ville/Pays",
+    "destination": "Destination *",
+    "destination_placeholder": "Ville/Pays",
+    "weight": "Poids (kg)",
+    "weight_placeholder": "Ex: 50",
+    "message": "Détails de votre demande *",
+    "message_placeholder": "Décrivez votre besoin (dimensions, poids, date souhaitée, services additionnels...)"
+  },
+  "contact_form": {
+    "name": "Votre Nom *",
+    "name_placeholder": "Jean Dupont",
+    "email": "Votre Email *",
+    "email_placeholder": "votre@email.com",
+    "message": "Votre Message *",
+    "message_placeholder": "Votre message...",
+    "service": "Service *",
+    "service_placeholder": "Sélectionnez un service",
+    "service_individual": "Particulier",
+    "service_small": "PME",
+    "service_enterprise": "Grande Entreprise",
+    "service_other": "Autre",
+    "submit": "Envoyer Maintenant"
+  },
+  "career_app": {
+    "position_placeholder": "Ex: Responsable Logistique",
+    "skills_placeholder": "Ex: Gestion de projet, Leadership, Logistique internationale...",
+    "motivation_placeholder": "Parlez-nous de votre motivation..."
+  },
+  "groupage": {
+    "first_name_placeholder": "Votre prénom",
+    "last_name_placeholder": "Votre nom",
+    "email_placeholder": "votre@email.com",
+    "phone_placeholder": "+223 XX XX XX XX",
+    "route_placeholder": "Sélectionnez une route",
+    "dubai_bamako": "Dubaï → Bamako",
+    "turkey_bamako": "Turquie → Bamako"
+  },
+  "calculator": {
+    "packaging_type": "Type d'Emballage",
+    "customs": "Dédouanement",
+    "weight_example": "Ex: 50",
+    "length_example": "Ex: 100",
+    "width_example": "Ex: 80",
+    "height_example": "Ex: 60",
+    "price_example": "Ex: 1000"
+  },
+  "form": {
+    "honeypot": "Ne remplissez pas ce champ si vous êtes humain :",
+    "required": "* Champ obligatoire"
+  },
+  "newsletter": {
+    "email_placeholder": "Votre adresse email",
+    "subscribe": "S'abonner"
+  }
 }

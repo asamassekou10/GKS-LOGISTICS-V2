@@ -1418,5 +1418,83 @@
   "all_services-cta-title": "准备优化您的供应链了吗？",
   "all_services-cta-subtitle": "联系我们的专家讨论您的需求并获得免费的个性化报价",
   "all_services-cta-btn1": "计算我的报价",
-  "all_services-cta-btn2": "联系我们"
+  "all_services-cta-btn2": "联系我们",
+  "quote_modal": {
+    "title": "请求报价",
+    "subtitle": "填写此表格以获得个性化报价",
+    "section_contact": "您的联系信息",
+    "section_shipment": "货运详情",
+    "section_message": "您的信息",
+    "full_name": "全名 *",
+    "full_name_placeholder": "John Doe",
+    "company_name": "公司名称",
+    "company_name_placeholder": "您的公司",
+    "email": "专业电子邮件 *",
+    "email_placeholder": "your@email.com",
+    "phone": "电话 *",
+    "phone_placeholder": "+223 XX XX XX XX",
+    "freight_type": "货运类型 *",
+    "freight_type_placeholder": "选择货运类型",
+    "freight_air": "空运",
+    "freight_sea": "海运",
+    "freight_fcl": "海运（整柜 - FCL）",
+    "freight_lcl": "海运（拼柜 - LCL）",
+    "freight_road": "陆运",
+    "freight_warehousing": "仓储",
+    "freight_other": "其他",
+    "origin": "起点 *",
+    "origin_placeholder": "城市/国家",
+    "destination": "目的地 *",
+    "destination_placeholder": "城市/国家",
+    "weight": "重量（公斤）",
+    "weight_placeholder": "例：50",
+    "message": "需求详情 *",
+    "message_placeholder": "描述您的需求（尺寸、重量、所需日期、附加服务...）"
+  },
+  "contact_form": {
+    "name": "您的名字 *",
+    "name_placeholder": "John Doe",
+    "email": "您的电子邮件 *",
+    "email_placeholder": "your@email.com",
+    "message": "您的信息 *",
+    "message_placeholder": "您的信息...",
+    "service": "服务 *",
+    "service_placeholder": "选择服务",
+    "service_individual": "个人",
+    "service_small": "小型企业",
+    "service_enterprise": "企业",
+    "service_other": "其他",
+    "submit": "发送"
+  },
+  "career_app": {
+    "position_placeholder": "例：物流经理",
+    "skills_placeholder": "例：项目管理、领导力、国际物流...",
+    "motivation_placeholder": "告诉我们您的动力..."
+  },
+  "groupage": {
+    "first_name_placeholder": "您的名字",
+    "last_name_placeholder": "您的姓氏",
+    "email_placeholder": "your@email.com",
+    "phone_placeholder": "+223 XX XX XX XX",
+    "route_placeholder": "选择路线",
+    "dubai_bamako": "迪拜 → 巴马科",
+    "turkey_bamako": "土耳其 → 巴马科"
+  },
+  "calculator": {
+    "packaging_type": "包装类型",
+    "customs": "清关",
+    "weight_example": "例：50",
+    "length_example": "例：100",
+    "width_example": "例：80",
+    "height_example": "例：60",
+    "price_example": "例：1000"
+  },
+  "form": {
+    "honeypot": "如果您是人类，请不要填写此字段：",
+    "required": "* 必填字段"
+  },
+  "newsletter": {
+    "email_placeholder": "您的电子邮件地址",
+    "subscribe": "订阅"
+  }
 }
