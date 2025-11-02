@@ -294,6 +294,13 @@ console.log('🚀 Quote Calculator Script Loaded!');
       console.error('Calculate button NOT found!');
     }
 
+    // Update delivery price on initial load and when currency changes
+    updateDeliveryPriceDisplay();
+    const currencyElement = document.getElementById('currency');
+    if (currencyElement) {
+      currencyElement.addEventListener('change', updateDeliveryPriceDisplay);
+    }
+
     // Real-time calculation toggle
     const realtimeToggle = document.getElementById('realtimeCalculation');
     if (realtimeToggle && realtimeToggle.checked) {
@@ -332,6 +339,35 @@ console.log('🚀 Quote Calculator Script Loaded!');
 
   // Make formatRouteName globally accessible
   window.formatRouteName = formatRouteName;
+
+  // Update delivery price display based on currency
+  function updateDeliveryPriceDisplay() {
+    const currencyElement = document.getElementById('currency');
+    const deliveryPriceDisplay = document.getElementById('deliveryPriceDisplay');
+
+    if (!currencyElement || !deliveryPriceDisplay) {
+      return;
+    }
+
+    const currency = currencyElement.value || 'USD';
+    const deliveryPriceUSD = 10; // $10 base price
+    const exchangeRate = exchangeRates[currency] || 1;
+    const convertedPrice = deliveryPriceUSD * exchangeRate;
+
+    const symbol = currencySymbols[currency] || '$';
+    let displayPrice;
+
+    if (currency === 'XOF') {
+      displayPrice = `${Math.round(convertedPrice).toLocaleString()} ${symbol}`;
+    } else {
+      displayPrice = `${symbol}${convertedPrice.toFixed(2)}`;
+    }
+
+    deliveryPriceDisplay.textContent = displayPrice;
+  }
+
+  // Make updateDeliveryPriceDisplay globally accessible
+  window.updateDeliveryPriceDisplay = updateDeliveryPriceDisplay;
 
   function calculateQuote() {
     console.log('calculateQuote() called');

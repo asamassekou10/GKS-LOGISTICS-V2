@@ -8,106 +8,106 @@ console.log('🚀 Quote Calculator Script Loaded!');
   const pricingMatrix = {
     air: {
       // From/To Mali
-      'mali-france': { baseRate: 4.5, minCharge: 80, volumetricFactor: 167 },
-      'france-mali': { baseRate: 4.5, minCharge: 80, volumetricFactor: 167 },
-      'mali-turkey': { baseRate: 3.8, minCharge: 65, volumetricFactor: 167 },
-      'turkey-mali': { baseRate: 3.8, minCharge: 65, volumetricFactor: 167 },
-      'mali-dubai': { baseRate: 3.2, minCharge: 55, volumetricFactor: 167 },
-      'dubai-mali': { baseRate: 3.2, minCharge: 55, volumetricFactor: 167 },
-      'mali-usa': { baseRate: 5.5, minCharge: 100, volumetricFactor: 167 },
-      'usa-mali': { baseRate: 5.5, minCharge: 100, volumetricFactor: 167 },
-      'mali-senegal': { baseRate: 2.5, minCharge: 40, volumetricFactor: 167 },
-      'senegal-mali': { baseRate: 2.5, minCharge: 40, volumetricFactor: 167 },
-      'mali-ivorycoast': { baseRate: 2.8, minCharge: 45, volumetricFactor: 167 },
-      'ivorycoast-mali': { baseRate: 2.8, minCharge: 45, volumetricFactor: 167 },
-      'mali-burkinafaso': { baseRate: 2.2, minCharge: 35, volumetricFactor: 167 },
-      'burkinafaso-mali': { baseRate: 2.2, minCharge: 35, volumetricFactor: 167 },
-      'mali-guinea': { baseRate: 2.6, minCharge: 42, volumetricFactor: 167 },
-      'guinea-mali': { baseRate: 2.6, minCharge: 42, volumetricFactor: 167 },
-      'mali-niger': { baseRate: 2.4, minCharge: 38, volumetricFactor: 167 },
-      'niger-mali': { baseRate: 2.4, minCharge: 38, volumetricFactor: 167 },
+      'mali-france': { baseRate: 3.0, minCharge: 50, volumetricFactor: 167 },
+      'france-mali': { baseRate: 3.0, minCharge: 50, volumetricFactor: 167 },
+      'mali-turkey': { baseRate: 2.5, minCharge: 40, volumetricFactor: 167 },
+      'turkey-mali': { baseRate: 2.5, minCharge: 40, volumetricFactor: 167 },
+      'mali-dubai': { baseRate: 2.1, minCharge: 35, volumetricFactor: 167 },
+      'dubai-mali': { baseRate: 2.1, minCharge: 35, volumetricFactor: 167 },
+      'mali-usa': { baseRate: 3.5, minCharge: 65, volumetricFactor: 167 },
+      'usa-mali': { baseRate: 3.5, minCharge: 65, volumetricFactor: 167 },
+      'mali-senegal': { baseRate: 1.6, minCharge: 25, volumetricFactor: 167 },
+      'senegal-mali': { baseRate: 1.6, minCharge: 25, volumetricFactor: 167 },
+      'mali-ivorycoast': { baseRate: 1.8, minCharge: 28, volumetricFactor: 167 },
+      'ivorycoast-mali': { baseRate: 1.8, minCharge: 28, volumetricFactor: 167 },
+      'mali-burkinafaso': { baseRate: 1.4, minCharge: 22, volumetricFactor: 167 },
+      'burkinafaso-mali': { baseRate: 1.4, minCharge: 22, volumetricFactor: 167 },
+      'mali-guinea': { baseRate: 1.7, minCharge: 27, volumetricFactor: 167 },
+      'guinea-mali': { baseRate: 1.7, minCharge: 27, volumetricFactor: 167 },
+      'mali-niger': { baseRate: 1.5, minCharge: 24, volumetricFactor: 167 },
+      'niger-mali': { baseRate: 1.5, minCharge: 24, volumetricFactor: 167 },
 
       // Inter-African routes
-      'senegal-ivorycoast': { baseRate: 2.9, minCharge: 48, volumetricFactor: 167 },
-      'ivorycoast-senegal': { baseRate: 2.9, minCharge: 48, volumetricFactor: 167 },
-      'senegal-burkinafaso': { baseRate: 2.4, minCharge: 40, volumetricFactor: 167 },
-      'burkinafaso-senegal': { baseRate: 2.4, minCharge: 40, volumetricFactor: 167 },
-      'senegal-guinea': { baseRate: 2.7, minCharge: 44, volumetricFactor: 167 },
-      'guinea-senegal': { baseRate: 2.7, minCharge: 44, volumetricFactor: 167 },
-      'senegal-niger': { baseRate: 2.6, minCharge: 42, volumetricFactor: 167 },
-      'niger-senegal': { baseRate: 2.6, minCharge: 42, volumetricFactor: 167 },
-      'ivorycoast-burkinafaso': { baseRate: 2.5, minCharge: 42, volumetricFactor: 167 },
-      'burkinafaso-ivorycoast': { baseRate: 2.5, minCharge: 42, volumetricFactor: 167 },
-      'ivorycoast-guinea': { baseRate: 2.8, minCharge: 46, volumetricFactor: 167 },
-      'guinea-ivorycoast': { baseRate: 2.8, minCharge: 46, volumetricFactor: 167 },
-      'ivorycoast-niger': { baseRate: 2.7, minCharge: 44, volumetricFactor: 167 },
-      'niger-ivorycoast': { baseRate: 2.7, minCharge: 44, volumetricFactor: 167 },
-      'burkinafaso-guinea': { baseRate: 2.4, minCharge: 40, volumetricFactor: 167 },
-      'guinea-burkinafaso': { baseRate: 2.4, minCharge: 40, volumetricFactor: 167 },
-      'burkinafaso-niger': { baseRate: 2.1, minCharge: 35, volumetricFactor: 167 },
-      'niger-burkinafaso': { baseRate: 2.1, minCharge: 35, volumetricFactor: 167 },
-      'guinea-niger': { baseRate: 2.8, minCharge: 46, volumetricFactor: 167 },
-      'niger-guinea': { baseRate: 2.8, minCharge: 46, volumetricFactor: 167 },
+      'senegal-ivorycoast': { baseRate: 1.9, minCharge: 30, volumetricFactor: 167 },
+      'ivorycoast-senegal': { baseRate: 1.9, minCharge: 30, volumetricFactor: 167 },
+      'senegal-burkinafaso': { baseRate: 1.5, minCharge: 25, volumetricFactor: 167 },
+      'burkinafaso-senegal': { baseRate: 1.5, minCharge: 25, volumetricFactor: 167 },
+      'senegal-guinea': { baseRate: 1.7, minCharge: 27, volumetricFactor: 167 },
+      'guinea-senegal': { baseRate: 1.7, minCharge: 27, volumetricFactor: 167 },
+      'senegal-niger': { baseRate: 1.6, minCharge: 26, volumetricFactor: 167 },
+      'niger-senegal': { baseRate: 1.6, minCharge: 26, volumetricFactor: 167 },
+      'ivorycoast-burkinafaso': { baseRate: 1.6, minCharge: 26, volumetricFactor: 167 },
+      'burkinafaso-ivorycoast': { baseRate: 1.6, minCharge: 26, volumetricFactor: 167 },
+      'ivorycoast-guinea': { baseRate: 1.8, minCharge: 29, volumetricFactor: 167 },
+      'guinea-ivorycoast': { baseRate: 1.8, minCharge: 29, volumetricFactor: 167 },
+      'ivorycoast-niger': { baseRate: 1.7, minCharge: 27, volumetricFactor: 167 },
+      'niger-ivorycoast': { baseRate: 1.7, minCharge: 27, volumetricFactor: 167 },
+      'burkinafaso-guinea': { baseRate: 1.5, minCharge: 25, volumetricFactor: 167 },
+      'guinea-burkinafaso': { baseRate: 1.5, minCharge: 25, volumetricFactor: 167 },
+      'burkinafaso-niger': { baseRate: 1.3, minCharge: 21, volumetricFactor: 167 },
+      'niger-burkinafaso': { baseRate: 1.3, minCharge: 21, volumetricFactor: 167 },
+      'guinea-niger': { baseRate: 1.8, minCharge: 29, volumetricFactor: 167 },
+      'niger-guinea': { baseRate: 1.8, minCharge: 29, volumetricFactor: 167 },
 
       // West Africa to International
-      'senegal-france': { baseRate: 4.2, minCharge: 75, volumetricFactor: 167 },
-      'france-senegal': { baseRate: 4.2, minCharge: 75, volumetricFactor: 167 },
-      'senegal-turkey': { baseRate: 3.6, minCharge: 62, volumetricFactor: 167 },
-      'turkey-senegal': { baseRate: 3.6, minCharge: 62, volumetricFactor: 167 },
-      'senegal-dubai': { baseRate: 3.0, minCharge: 52, volumetricFactor: 167 },
-      'dubai-senegal': { baseRate: 3.0, minCharge: 52, volumetricFactor: 167 },
-      'senegal-usa': { baseRate: 5.2, minCharge: 95, volumetricFactor: 167 },
-      'usa-senegal': { baseRate: 5.2, minCharge: 95, volumetricFactor: 167 },
+      'senegal-france': { baseRate: 2.8, minCharge: 47, volumetricFactor: 167 },
+      'france-senegal': { baseRate: 2.8, minCharge: 47, volumetricFactor: 167 },
+      'senegal-turkey': { baseRate: 2.4, minCharge: 39, volumetricFactor: 167 },
+      'turkey-senegal': { baseRate: 2.4, minCharge: 39, volumetricFactor: 167 },
+      'senegal-dubai': { baseRate: 2.0, minCharge: 33, volumetricFactor: 167 },
+      'dubai-senegal': { baseRate: 2.0, minCharge: 33, volumetricFactor: 167 },
+      'senegal-usa': { baseRate: 3.4, minCharge: 60, volumetricFactor: 167 },
+      'usa-senegal': { baseRate: 3.4, minCharge: 60, volumetricFactor: 167 },
 
-      'ivorycoast-france': { baseRate: 4.4, minCharge: 78, volumetricFactor: 167 },
-      'france-ivorycoast': { baseRate: 4.4, minCharge: 78, volumetricFactor: 167 },
-      'ivorycoast-turkey': { baseRate: 3.7, minCharge: 64, volumetricFactor: 167 },
-      'turkey-ivorycoast': { baseRate: 3.7, minCharge: 64, volumetricFactor: 167 },
-      'ivorycoast-dubai': { baseRate: 3.1, minCharge: 54, volumetricFactor: 167 },
-      'dubai-ivorycoast': { baseRate: 3.1, minCharge: 54, volumetricFactor: 167 },
-      'ivorycoast-usa': { baseRate: 5.3, minCharge: 98, volumetricFactor: 167 },
-      'usa-ivorycoast': { baseRate: 5.3, minCharge: 98, volumetricFactor: 167 },
+      'ivorycoast-france': { baseRate: 2.9, minCharge: 49, volumetricFactor: 167 },
+      'france-ivorycoast': { baseRate: 2.9, minCharge: 49, volumetricFactor: 167 },
+      'ivorycoast-turkey': { baseRate: 2.5, minCharge: 40, volumetricFactor: 167 },
+      'turkey-ivorycoast': { baseRate: 2.5, minCharge: 40, volumetricFactor: 167 },
+      'ivorycoast-dubai': { baseRate: 2.0, minCharge: 34, volumetricFactor: 167 },
+      'dubai-ivorycoast': { baseRate: 2.0, minCharge: 34, volumetricFactor: 167 },
+      'ivorycoast-usa': { baseRate: 3.5, minCharge: 62, volumetricFactor: 167 },
+      'usa-ivorycoast': { baseRate: 3.5, minCharge: 62, volumetricFactor: 167 },
 
-      'burkinafaso-france': { baseRate: 4.6, minCharge: 82, volumetricFactor: 167 },
-      'france-burkinafaso': { baseRate: 4.6, minCharge: 82, volumetricFactor: 167 },
-      'burkinafaso-turkey': { baseRate: 3.9, minCharge: 67, volumetricFactor: 167 },
-      'turkey-burkinafaso': { baseRate: 3.9, minCharge: 67, volumetricFactor: 167 },
-      'burkinafaso-dubai': { baseRate: 3.3, minCharge: 57, volumetricFactor: 167 },
-      'dubai-burkinafaso': { baseRate: 3.3, minCharge: 57, volumetricFactor: 167 },
-      'burkinafaso-usa': { baseRate: 5.6, minCharge: 102, volumetricFactor: 167 },
-      'usa-burkinafaso': { baseRate: 5.6, minCharge: 102, volumetricFactor: 167 },
+      'burkinafaso-france': { baseRate: 3.0, minCharge: 51, volumetricFactor: 167 },
+      'france-burkinafaso': { baseRate: 3.0, minCharge: 51, volumetricFactor: 167 },
+      'burkinafaso-turkey': { baseRate: 2.6, minCharge: 42, volumetricFactor: 167 },
+      'turkey-burkinafaso': { baseRate: 2.6, minCharge: 42, volumetricFactor: 167 },
+      'burkinafaso-dubai': { baseRate: 2.2, minCharge: 36, volumetricFactor: 167 },
+      'dubai-burkinafaso': { baseRate: 2.2, minCharge: 36, volumetricFactor: 167 },
+      'burkinafaso-usa': { baseRate: 3.6, minCharge: 64, volumetricFactor: 167 },
+      'usa-burkinafaso': { baseRate: 3.6, minCharge: 64, volumetricFactor: 167 },
 
-      'guinea-france': { baseRate: 4.3, minCharge: 76, volumetricFactor: 167 },
-      'france-guinea': { baseRate: 4.3, minCharge: 76, volumetricFactor: 167 },
-      'guinea-turkey': { baseRate: 3.8, minCharge: 65, volumetricFactor: 167 },
-      'turkey-guinea': { baseRate: 3.8, minCharge: 65, volumetricFactor: 167 },
-      'guinea-dubai': { baseRate: 3.2, minCharge: 55, volumetricFactor: 167 },
-      'dubai-guinea': { baseRate: 3.2, minCharge: 55, volumetricFactor: 167 },
-      'guinea-usa': { baseRate: 5.4, minCharge: 99, volumetricFactor: 167 },
-      'usa-guinea': { baseRate: 5.4, minCharge: 99, volumetricFactor: 167 },
+      'guinea-france': { baseRate: 2.8, minCharge: 47, volumetricFactor: 167 },
+      'france-guinea': { baseRate: 2.8, minCharge: 47, volumetricFactor: 167 },
+      'guinea-turkey': { baseRate: 2.5, minCharge: 40, volumetricFactor: 167 },
+      'turkey-guinea': { baseRate: 2.5, minCharge: 40, volumetricFactor: 167 },
+      'guinea-dubai': { baseRate: 2.1, minCharge: 35, volumetricFactor: 167 },
+      'dubai-guinea': { baseRate: 2.1, minCharge: 35, volumetricFactor: 167 },
+      'guinea-usa': { baseRate: 3.5, minCharge: 62, volumetricFactor: 167 },
+      'usa-guinea': { baseRate: 3.5, minCharge: 62, volumetricFactor: 167 },
 
-      'niger-france': { baseRate: 4.7, minCharge: 84, volumetricFactor: 167 },
-      'france-niger': { baseRate: 4.7, minCharge: 84, volumetricFactor: 167 },
-      'niger-turkey': { baseRate: 4.0, minCharge: 68, volumetricFactor: 167 },
-      'turkey-niger': { baseRate: 4.0, minCharge: 68, volumetricFactor: 167 },
-      'niger-dubai': { baseRate: 3.4, minCharge: 58, volumetricFactor: 167 },
-      'dubai-niger': { baseRate: 3.4, minCharge: 58, volumetricFactor: 167 },
-      'niger-usa': { baseRate: 5.7, minCharge: 104, volumetricFactor: 167 },
-      'usa-niger': { baseRate: 5.7, minCharge: 104, volumetricFactor: 167 },
+      'niger-france': { baseRate: 3.1, minCharge: 53, volumetricFactor: 167 },
+      'france-niger': { baseRate: 3.1, minCharge: 53, volumetricFactor: 167 },
+      'niger-turkey': { baseRate: 2.6, minCharge: 43, volumetricFactor: 167 },
+      'turkey-niger': { baseRate: 2.6, minCharge: 43, volumetricFactor: 167 },
+      'niger-dubai': { baseRate: 2.2, minCharge: 37, volumetricFactor: 167 },
+      'dubai-niger': { baseRate: 2.2, minCharge: 37, volumetricFactor: 167 },
+      'niger-usa': { baseRate: 3.7, minCharge: 66, volumetricFactor: 167 },
+      'usa-niger': { baseRate: 3.7, minCharge: 66, volumetricFactor: 167 },
 
       // International to International
-      'france-turkey': { baseRate: 2.8, minCharge: 50, volumetricFactor: 167 },
-      'turkey-france': { baseRate: 2.8, minCharge: 50, volumetricFactor: 167 },
-      'france-dubai': { baseRate: 3.2, minCharge: 55, volumetricFactor: 167 },
-      'dubai-france': { baseRate: 3.2, minCharge: 55, volumetricFactor: 167 },
-      'france-usa': { baseRate: 4.5, minCharge: 85, volumetricFactor: 167 },
-      'usa-france': { baseRate: 4.5, minCharge: 85, volumetricFactor: 167 },
-      'turkey-dubai': { baseRate: 2.5, minCharge: 45, volumetricFactor: 167 },
-      'dubai-turkey': { baseRate: 2.5, minCharge: 45, volumetricFactor: 167 },
-      'turkey-usa': { baseRate: 5.0, minCharge: 90, volumetricFactor: 167 },
-      'usa-turkey': { baseRate: 5.0, minCharge: 90, volumetricFactor: 167 },
-      'dubai-usa': { baseRate: 4.8, minCharge: 88, volumetricFactor: 167 },
-      'usa-dubai': { baseRate: 4.8, minCharge: 88, volumetricFactor: 167 }
+      'france-turkey': { baseRate: 1.8, minCharge: 32, volumetricFactor: 167 },
+      'turkey-france': { baseRate: 1.8, minCharge: 32, volumetricFactor: 167 },
+      'france-dubai': { baseRate: 2.1, minCharge: 35, volumetricFactor: 167 },
+      'dubai-france': { baseRate: 2.1, minCharge: 35, volumetricFactor: 167 },
+      'france-usa': { baseRate: 3.0, minCharge: 54, volumetricFactor: 167 },
+      'usa-france': { baseRate: 3.0, minCharge: 54, volumetricFactor: 167 },
+      'turkey-dubai': { baseRate: 1.6, minCharge: 28, volumetricFactor: 167 },
+      'dubai-turkey': { baseRate: 1.6, minCharge: 28, volumetricFactor: 167 },
+      'turkey-usa': { baseRate: 3.2, minCharge: 57, volumetricFactor: 167 },
+      'usa-turkey': { baseRate: 3.2, minCharge: 57, volumetricFactor: 167 },
+      'dubai-usa': { baseRate: 3.1, minCharge: 56, volumetricFactor: 167 },
+      'usa-dubai': { baseRate: 3.1, minCharge: 56, volumetricFactor: 167 }
     },
     sea: {
       // From/To Mali (via ports)
@@ -222,7 +222,7 @@ console.log('🚀 Quote Calculator Script Loaded!');
   const additionalServices = {
     packaging: { standard: 15, fragile: 35, heavy: 75 },
     customs: { standard: 35, express: 100 },
-    doorDelivery: 20,
+    doorDelivery: 10,
     warehousing: 3 // per day
   };
 
@@ -294,6 +294,13 @@ console.log('🚀 Quote Calculator Script Loaded!');
       console.error('Calculate button NOT found!');
     }
 
+    // Update delivery price on initial load and when currency changes
+    updateDeliveryPriceDisplay();
+    const currencyElement = document.getElementById('currency');
+    if (currencyElement) {
+      currencyElement.addEventListener('change', updateDeliveryPriceDisplay);
+    }
+
     // Real-time calculation toggle
     const realtimeToggle = document.getElementById('realtimeCalculation');
     if (realtimeToggle && realtimeToggle.checked) {
@@ -322,6 +329,45 @@ console.log('🚀 Quote Calculator Script Loaded!');
 
   // Make formatCountryName globally accessible
   window.formatCountryName = formatCountryName;
+
+  // Format route name for display
+  function formatRouteName(route) {
+    const parts = route.split('-');
+    if (parts.length !== 2) return route;
+    return `${formatCountryName(parts[0])} → ${formatCountryName(parts[1])}`;
+  }
+
+  // Make formatRouteName globally accessible
+  window.formatRouteName = formatRouteName;
+
+  // Update delivery price display based on currency
+  function updateDeliveryPriceDisplay() {
+    const currencyElement = document.getElementById('currency');
+    const deliveryPriceDisplay = document.getElementById('deliveryPriceDisplay');
+
+    if (!currencyElement || !deliveryPriceDisplay) {
+      return;
+    }
+
+    const currency = currencyElement.value || 'USD';
+    const deliveryPriceUSD = 10; // $10 base price
+    const exchangeRate = exchangeRates[currency] || 1;
+    const convertedPrice = deliveryPriceUSD * exchangeRate;
+
+    const symbol = currencySymbols[currency] || '$';
+    let displayPrice;
+
+    if (currency === 'XOF') {
+      displayPrice = `${Math.round(convertedPrice).toLocaleString()} ${symbol}`;
+    } else {
+      displayPrice = `${symbol}${convertedPrice.toFixed(2)}`;
+    }
+
+    deliveryPriceDisplay.textContent = displayPrice;
+  }
+
+  // Make updateDeliveryPriceDisplay globally accessible
+  window.updateDeliveryPriceDisplay = updateDeliveryPriceDisplay;
 
   function calculateQuote() {
     console.log('calculateQuote() called');
@@ -732,6 +778,11 @@ I would like to confirm and book this shipment. Please contact me to proceed wit
         destinationField.value = destination;
       }
 
+      const weightField = quoteForm.querySelector('#weight');
+      if (weightField && quote.weight) {
+        weightField.value = quote.weight;
+      }
+
       const messageField = quoteForm.querySelector('#message');
       if (messageField) {
         messageField.value = quoteDetails;
@@ -875,9 +926,15 @@ I would like to confirm and book this shipment. Please contact me to proceed wit
     printWindow.document.close();
     
     // Wait for content to load then print
-    setTimeout(() => {
+    printWindow.onload = function() {
       printWindow.print();
-      printWindow.close();
+    };
+    
+    // Fallback: also try after a timeout
+    setTimeout(() => {
+      if (printWindow && !printWindow.closed) {
+        printWindow.print();
+      }
     }, 250);
   };
 

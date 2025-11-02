@@ -3229,6 +3229,12 @@ p {
   box-shadow: 0 4px 12px rgba(0, 48, 135, 0.3);
 }
 
+/* Fix icon alignment for left timeline items (2019, 2025) */
+.timeline-item.left .timeline-icon {
+  right: auto;
+  left: 2rem;
+}
+
 .about-timeline .timeline-content h3 {
   font-size: 1.6rem;
   margin-bottom: 1rem;
@@ -5748,7 +5754,7 @@ p {
     top: 100%;
     left: 0;
     width: 100%;
-    background: #FFFFFF;
+    background: #FFFFFF !important;
     padding: 1rem 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     border-radius: 0 0 12px 12px;
@@ -5758,12 +5764,19 @@ p {
 
   .nav.active {
     display: block;
+    background: #FFFFFF !important;
+  }
+
+  /* Ensure header doesn't interfere with mobile nav */
+  .header {
+    background: transparent !important;
   }
 
   .nav ul {
     flex-direction: column;
     gap: 0;
     padding: 0.5rem 0;
+    background: transparent !important;
   }
 
   .nav ul li {
@@ -6870,7 +6883,7 @@ body {
     width: 85%;
     max-width: 380px;
     height: 100vh;
-    background: #FFFFFF;
+    background: #FFFFFF !important;
     transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 999;
     overflow-y: auto;
@@ -6879,12 +6892,19 @@ body {
 
   .nav.active {
     right: 0;
+    background: #FFFFFF !important;
+  }
+
+  /* Ensure header doesn't interfere with mobile nav */
+  .header {
+    background: transparent !important;
   }
 
   /* Mobile menu header */
   .nav ul {
     padding: 80px 0 2rem 0;
     margin: 0;
+    background: transparent !important;
   }
 
   /* Mobile menu items */

@@ -1,24 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(do sed -i 's|<html lang=\"\"fr\"\">|<html lang=\"\"tr\"\">|g' \"$file\")",
-      "Bash(do sed -i 's|<html lang=\"\"fr\"\">|<html lang=\"\"zh\"\">|g' \"$file\")",
-      "Bash(start:*)",
-      "Bash(python:*)",
-      "Bash(for file in our-representation.html gks-mali.html gks-senegal.html gks-burkinafaso.html gks-turkey.html gks-usa.html gks-guinea.html gks-france.html gks-dubai.html)",
-      "Bash(do cp \"$file\" \"en/$file\")",
-      "Bash(done)",
-      "Bash(timeout 3 bash:*)",
-      "Bash(npm run build:*)",
-      "Bash(git checkout:*)",
-      "Bash(awk:*)",
-      "Bash(git lfs:*)",
-      "Bash(git add:*)",
-      "Bash(find:*)",
-      "Bash(cat:*)",
-      "Bash(git config:*)",
-      "Bash(git commit -m \"$(cat <<''EOF''\nAdd Netlify deployment configuration and Git LFS setup\n\n- Configure Git LFS to track PDF files (266MB total)\n- Add netlify.toml for deployment configuration\n  - Build command and publish directory\n  - Security headers and cache optimization\n  - 404 fallback routing\n- Add SEO files:\n  - sitemap.xml with 88 URLs across 4 languages\n  - robots.txt for search engine crawlers\n- Update build script to copy SEO files to dist/\n- Update .gitignore for LFS-tracked PDFs\n\nAll 3 PDF brochures now tracked with Git LFS:\n- Company Brochure (152MB)\n- Services Catalog (77MB)  \n- Guinea Brochure (37MB)\n\nReady for Netlify deployment from dist/ folder.\nEOF\n)\")",
-      "Bash(git commit -m \"$(cat <<''EOF''\nStreamline resources section to show only Company Brochure\n\n- Remove Services Catalog and Guinea Brochure cards from main resources section\n- Keep only \"Brochure Entreprise\" card visible in resources section\n- All 3 PDFs remain accessible in footer:\n  - Company Brochure (Télécharger la Brochure)\n  - Services Catalog (Voir le Catalogue)\n  - Guinea Brochure (Brochure Guinée)\n- Applied across all 4 language versions (FR, EN, TR, ZH)\n\nThis creates a cleaner, more focused resources section while maintaining\nfull access to all brochures through the footer navigation.\nEOF\n)\")"
+      "Read(//c//**)",
+      "Bash(npm run build:*)"
     ],
     "deny": [],
     "ask": []
