@@ -358,13 +358,38 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Header scroll effect
-  window.addEventListener('scroll', () => {
-  const header = document.querySelector('.header');
-  if (header) {
-    header.classList.toggle('scrolled', window.scrollY > 50);
+  // Header scroll effect with hide/show on direction
+  let lastScrollY = 0;
+  let ticking = false;
+
+  function updateHeader() {
+    const header = document.querySelector('.header');
+    if (!header) return;
+
+    const currentScrollY = window.scrollY;
+    const isScrollingDown = currentScrollY > lastScrollY;
+    const hasScrolledPast = currentScrollY > 50;
+
+    // Add/remove scrolled class for styling changes
+    header.classList.toggle('scrolled', hasScrolledPast);
+
+    // Hide header when scrolling down past 50px, show when scrolling up
+    if (isScrollingDown && hasScrolledPast) {
+      header.classList.add('header-hidden');
+    } else {
+      header.classList.remove('header-hidden');
+    }
+
+    lastScrollY = currentScrollY;
+    ticking = false;
   }
-  });
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(updateHeader);
+      ticking = true;
+    }
+  }, { passive: true });
 
   // Mobile menu toggle
   const menuToggle = document.querySelector('.menu-toggle');
