@@ -1512,7 +1512,28 @@
     "subscribe": "订阅"
   },
   "country_contact": {
+    "full_name": "全名 *",
+    "full_name_placeholder": "王小明",
+    "company_name": "公司名称",
+    "company_name_placeholder": "您的公司",
+    "email": "电子邮件 *",
+    "email_placeholder": "您的@email.com",
+    "phone": "电话 *",
+    "phone_placeholder": "+86 XXX XXXX XXXX",
+    "freight_type": "货运类型 *",
+    "freight_type_placeholder": "选择",
+    "freight_type_air": "空运",
+    "freight_type_sea": "海运",
+    "freight_type_road": "陆路运输",
+    "freight_type_warehousing": "仓储",
+    "freight_type_other": "其他",
+    "origin": "起点 *",
+    "origin_placeholder": "城市/国家",
+    "destination": "终点 *",
+    "destination_placeholder": "城市/国家",
+    "weight": "重量",
     "weight_placeholder": "例：100",
+    "message": "详情 *",
     "message_placeholder": "描述您的需求",
     "message_detailed_placeholder": "描述您的需求（尺寸、重量、所需日期、附加服务...）"
   }

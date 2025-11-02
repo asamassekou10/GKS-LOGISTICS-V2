@@ -494,64 +494,64 @@
             <div class="quote-modal-body">
                 <p class="quote-form-subtitle" data-translate="quote-modal-subtitle">Fill out this form to receive a personalized quote</p>
                 
-                <form name="quote-request" data-netlify="true" id="quoteRequestForm">
+                                <form name="quote-request" data-netlify="true" id="quoteRequestForm">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="fullName">Nom Complet *</label>
-                            <input type="text" id="fullName" name="fullName" required>
+                            <label for="fullName" data-translate="country_contact-full_name">Full Name *</label>
+                            <input type="text" id="fullName" name="fullName" data-translate="country_contact-full_name_placeholder" placeholder="" required>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="companyName">Nom de l'Entreprise</label>
-                            <input type="text" id="companyName" name="companyName">
+                            <label for="companyName" data-translate="country_contact-company_name">Company Name</label>
+                            <input type="text" id="companyName" name="companyName" data-translate="country_contact-company_name_placeholder" placeholder="">
                         </div>
                     </div>
-                    
+
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="email">Email *</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email" data-translate="country_contact-email">Email *</label>
+                            <input type="email" id="email" name="email" data-translate="country_contact-email_placeholder" placeholder="" required>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="phoneNumber">Téléphone *</label>
-                            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                            <label for="phoneNumber" data-translate="country_contact-phone">Phone *</label>
+                            <input type="tel" id="phoneNumber" name="phoneNumber" data-translate="country_contact-phone_placeholder" placeholder="" required>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
-                        <label for="freightType">Type de Fret *</label>
+                        <label for="freightType" data-translate="country_contact-freight_type">Freight Type *</label>
                         <select id="freightType" name="freightType" required>
-                            <option value="">Sélectionner</option>
-                            <option value="air">Fret Aérien</option>
-                            <option value="sea">Fret Maritime</option>
-                            <option value="road">Fret Routier</option>
-                            <option value="warehousing">Entreposage</option>
-                            <option value="other">Autres</option>
+                            <option value="" data-translate="country_contact-freight_type_placeholder">Select</option>
+                            <option value="air" data-translate="country_contact-freight_type_air">Air Freight</option>
+                            <option value="sea" data-translate="country_contact-freight_type_sea">Sea Freight</option>
+                            <option value="road" data-translate="country_contact-freight_type_road">Road Transport</option>
+                            <option value="warehousing" data-translate="country_contact-freight_type_warehousing">Warehousing</option>
+                            <option value="other" data-translate="country_contact-freight_type_other">Other</option>
                         </select>
                     </div>
-                    
+
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="origin">Origine *</label>
-                            <input type="text" id="origin" name="origin" required>
+                            <label for="origin" data-translate="country_contact-origin">Origin *</label>
+                            <input type="text" id="origin" name="origin" data-translate="country_contact-origin_placeholder" placeholder="" required>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="destination">Destination *</label>
-                            <input type="text" id="destination" name="destination" required>
+                            <label for="destination" data-translate="country_contact-destination">Destination *</label>
+                            <input type="text" id="destination" name="destination" data-translate="country_contact-destination_placeholder" placeholder="" required>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
-                        <label for="message">Détails *</label>
-                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <label for="message" data-translate="country_contact-message">Details *</label>
+                        <textarea id="message" name="message" rows="4" data-translate="country_contact-message_placeholder" placeholder="" required>Describe your need</textarea>
                     </div>
-                    
+
                     <p class="required-fields-indicator">
                         * Champs obligatoires
                     </p>
-                    
+
                     <div class="form-buttons">
                         <button type="button" class="btn-cancel">Annuler</button>
                         <button type="submit" class="btn-submit">Envoyer</button>

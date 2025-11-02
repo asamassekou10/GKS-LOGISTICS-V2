@@ -1533,7 +1533,28 @@
       "subscribe": "S'abonner"
     },
     "country_contact": {
+      "full_name": "Nom Complet *",
+      "full_name_placeholder": "Jean Dupont",
+      "company_name": "Nom de l'Entreprise",
+      "company_name_placeholder": "Votre Entreprise",
+      "email": "Email *",
+      "email_placeholder": "votre@email.com",
+      "phone": "Téléphone *",
+      "phone_placeholder": "+33 X XX XX XX XX",
+      "freight_type": "Type de Fret *",
+      "freight_type_placeholder": "Sélectionner",
+      "freight_type_air": "Fret Aérien",
+      "freight_type_sea": "Fret Maritime",
+      "freight_type_road": "Fret Routier",
+      "freight_type_warehousing": "Entreposage",
+      "freight_type_other": "Autres",
+      "origin": "Origine *",
+      "origin_placeholder": "Ville/Pays d'origine",
+      "destination": "Destination *",
+      "destination_placeholder": "Ville/Pays de destination",
+      "weight": "Poids",
       "weight_placeholder": "Ex: 100",
+      "message": "Détails *",
       "message_placeholder": "Décrivez votre besoin",
       "message_detailed_placeholder": "Décrivez votre besoin (dimensions, poids, date souhaitée, services additionnels...)"
     }
