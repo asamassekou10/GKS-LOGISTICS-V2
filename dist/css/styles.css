@@ -1802,6 +1802,7 @@ p {
   font-size: 1.3rem;
   margin-bottom: 2rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  color: #FFFFFF;
 }
 
 .hero-buttons {
@@ -5774,7 +5775,7 @@ p {
 
   /* Ensure header doesn't interfere with mobile nav */
   .header {
-    background: transparent !important;
+    background: #FFFFFF !important;
   }
 
   .nav ul {
