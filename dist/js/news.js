@@ -1,15 +1,14 @@
 // News Page JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     // Language toggle functionality is now handled by language-manager.js
-    
+
     // Initialize news-specific features
     initializeNewsFeatures();
-    
+
     // Initialize scroll animations
     initializeScrollAnimations();
-    
-    // Initialize mobile menu
-    initializeMobileMenu();
+
+    // Mobile menu and header scroll handled by script.js
 });
 
 function initializeNewsFeatures() {
@@ -79,33 +78,6 @@ function initializeScrollAnimations() {
     });
 }
 
-function initializeMobileMenu() {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.nav');
-    
-    if (menuToggle && nav) {
-        menuToggle.addEventListener('click', function() {
-            nav.classList.toggle('active');
-            this.classList.toggle('active');
-        });
-        
-        // Close menu when clicking on links
-        nav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                nav.classList.remove('active');
-                menuToggle.classList.remove('active');
-            });
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
-                nav.classList.remove('active');
-                menuToggle.classList.remove('active');
-            }
-        });
-    }
-}
 
 // Back to top functionality
 const backToTopButton = document.querySelector('.back-to-top');
@@ -126,27 +98,7 @@ if (backToTopButton) {
     });
 }
 
-// Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
-// Header scroll effect
-window.addEventListener('scroll', function() {
-    const header = document.querySelector('.header');
-    if (header) {
-        header.classList.toggle('scrolled', window.scrollY > 50);
-    }
-});
+// Smooth scrolling for anchor links and header scroll effect handled by script.js
 
 // Add CSS animations
 const style = document.createElement('style');

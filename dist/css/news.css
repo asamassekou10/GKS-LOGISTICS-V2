@@ -2341,8 +2341,8 @@ a.article-link:hover .article-icon {
   
   .page-content > .section-title:first-child::before,
   .page-content > .section-title:first-child::after {
-      width: 35px;
-      height: 35px;
+      width: 60px;
+      height: 4px;
   }
   
   .page-content > .section-title:not(:first-child) {
@@ -2352,17 +2352,17 @@ a.article-link:hover .article-icon {
   
   /* Featured card - compact */
   .featured-story-card {
-      min-height: 280px;
+      min-height: 250px;
   }
-  
+
   .featured-overlay {
-      padding: 1rem;
+      padding: 0.75rem;
   }
-  
+
   .featured-overlay h2 {
-      font-size: 1.2rem;
-      line-height: 1.3;
-      margin: 0.5rem 0;
+      font-size: 1rem;
+      line-height: 1.2;
+      margin: 0.25rem 0;
   }
   
   .featured-badge {
