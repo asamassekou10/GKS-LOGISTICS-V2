@@ -5752,6 +5752,13 @@ p {
   /* Mobile Menu */
   .menu-toggle {
     display: block;
+    background: #FFFFFF !important;
+    color: #003087 !important;
+  }
+
+  .menu-toggle:hover {
+    background: #F8F9FA !important;
+    color: #003087 !important;
   }
 
   .nav {
