@@ -147,6 +147,8 @@
     border: 2px solid transparent;
     position: relative;
     overflow: hidden;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .btn-hero-primary::before,
