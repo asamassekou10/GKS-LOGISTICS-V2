@@ -1,17 +1,25 @@
 // Interactive Dot & Line Timeline
+let timelineInitialized = false;
+
 document.addEventListener('DOMContentLoaded', function() {
     // Wait for language manager to be available and translations to be loaded
     const waitForTranslations = setInterval(function() {
         if (typeof langManager !== 'undefined' && langManager.isInitialized) {
             clearInterval(waitForTranslations);
-            initInteractiveTimeline();
+            if (!timelineInitialized) {
+                timelineInitialized = true;
+                initInteractiveTimeline();
+            }
         }
     }, 100);
 
     // Fallback: Initialize after 3 seconds even if not fully loaded
     setTimeout(function() {
         clearInterval(waitForTranslations);
-        initInteractiveTimeline();
+        if (!timelineInitialized) {
+            timelineInitialized = true;
+            initInteractiveTimeline();
+        }
     }, 3000);
 });
 
@@ -46,7 +54,7 @@ function initInteractiveTimeline() {
             activityKey: "growth-timeline-2020-paris-activity",
             taglineKey: "growth-timeline-2020-paris-tagline",
             descriptionKey: "growth-timeline-2020-paris-desc",
-            image: "/assets/E7.jpg"
+            image: "/assets/E4.jpg"
         },
         {
             year: "2021",
@@ -66,7 +74,7 @@ function initInteractiveTimeline() {
             activityKey: "growth-timeline-2022-abidjan-activity",
             taglineKey: "growth-timeline-2022-abidjan-tagline",
             descriptionKey: "growth-timeline-2022-abidjan-desc",
-            image: "/assets/empIvoire.png"
+            image: "/assets/emgIvoire.jpeg"
         },
         {
             year: "2023",
