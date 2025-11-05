@@ -1612,5 +1612,23 @@
     "message": "Détails *",
     "message_placeholder": "Décrivez votre besoin",
     "message_detailed_placeholder": "Décrivez votre besoin (dimensions, poids, date souhaitée, services additionnels...)"
-  }
+  },
+  "growth-timeline-title": "Notre Présence Internationale",
+  "growth-timeline-intro": "Découvrez notre expansion mondiale étape par étape",
+  "growth-timeline-2019-mali-activity": "Établi le siège et lancé les premières opérations logistiques à Bamako avec une équipe de professionnels expérimentés.",
+  "growth-timeline-2019-mali-desc": "Fondation de notre présence en Afrique de l'Ouest",
+  "growth-timeline-2019-houston-activity": "Ouvert notre premier bureau en Amérique du Nord pour augmenter la capacité de service et accéder au marché américain.",
+  "growth-timeline-2019-houston-desc": "Expansion en Amérique du Nord",
+  "growth-timeline-2020-paris-activity": "Lancé les opérations européennes avec un hub dédié pour servir les clients en France et sur le continent.",
+  "growth-timeline-2020-paris-desc": "Établissement du hub européen",
+  "growth-timeline-2021-guinea-activity": "Étendu notre présence régionale en ouvrant des opérations à Conakry pour servir la Guinée et les pays voisins.",
+  "growth-timeline-2021-guinea-desc": "Renforcement de la couverture africaine",
+  "growth-timeline-2022-abidjan-activity": "Renforcé le réseau ouest-africain avec un nouveau bureau à Abidjan, Côte d'Ivoire.",
+  "growth-timeline-2022-abidjan-desc": "Expansion stratégique en Côte d'Ivoire",
+  "growth-timeline-2023-niamey-activity": "Étendu les services au Niger avec un nouveau hub opérationnel à Niamey pour servir la région du Sahel.",
+  "growth-timeline-2023-niamey-desc": "Extension du réseau au Sahel",
+  "growth-timeline-2024-dubai-activity": "Ouvert un hub stratégique à Dubaï pour connecter les marchés africains, moyen-orientaux et asiatiques.",
+  "growth-timeline-2024-dubai-desc": "Hub international au Moyen-Orient",
+  "growth-timeline-2025-istanbul-activity": "Établi une présence à Istanbul pour faciliter les échanges commerciaux entre l'Europe, l'Asie et l'Afrique.",
+  "growth-timeline-2025-istanbul-desc": "Porte vers l'Asie et le Moyen-Orient"
 }

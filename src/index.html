@@ -673,45 +673,35 @@
             </div>
         </div>
     </div>
-    <div class="container about-timeline">
-      <h2 data-translate="about-history-title">Notre Histoire depuis 2019</h2>
-      <p class="timeline-intro" data-translate="about-timeline-intro">Découvrez les étapes clés de notre développement</p>
-      <div class="timeline">
-        <div class="timeline-item left">
-          <div class="timeline-content">
-            <div class="timeline-year">2019</div>
-            <h3 data-translate="about-timeline-2019-title">Fondation à Bamako</h3>
-            <p data-translate="about-timeline-2019-desc">Créé en 2019, GKS Logistics démarre ses activités à Bamako, Mali, avec une vision claire : devenir un acteur majeur de la logistique en Afrique de l'Ouest.</p>
-            <div class="timeline-icon">
-              <i class="fas fa-rocket"></i>
+    <section class="interactive-timeline-section">
+      <div class="interactive-timeline-header">
+        <h2 data-translate="about-history-title">Notre Histoire depuis 2019</h2>
+        <p data-translate="about-timeline-intro">Découvrez les étapes clés de notre développement</p>
+      </div>
+
+      <div class="interactive-timeline-container">
+        <!-- Content Area -->
+        <div class="interactive-timeline-content">
+          <div class="content-wrapper">
+            <img src="" alt="" class="content-image">
+            <div class="content-text">
+              <h2 class="content-year"></h2>
+              <p class="content-location"></p>
+              <p class="content-tagline"></p>
+              <p class="content-description"></p>
             </div>
-            <img src="/assets/mali.png" alt="Fondation GKS Logistics à Bamako 2019" loading="lazy">
           </div>
         </div>
-        <div class="timeline-item right">
-          <div class="timeline-content">
-            <div class="timeline-year">2021</div>
-            <h3 data-translate="about-timeline-2021-title">Expansion à Abidjan</h3>
-            <p data-translate="about-timeline-2021-desc">Ouverture de notre bureau à Abidjan, Côte d'Ivoire, marquant notre première expansion régionale et renforçant notre présence en Afrique de l'Ouest.</p>
-            <div class="timeline-icon">
-              <i class="fas fa-building"></i>
-            </div>
-            <img src="/assets/Abidjan1.png" alt="Expansion GKS à Abidjan 2021" loading="lazy">
+
+        <!-- Timeline Track and Dots -->
+        <div class="timeline-track-wrapper">
+          <div class="timeline-track">
+            <div class="timeline-fill"></div>
           </div>
-        </div>
-        <div class="timeline-item left">
-          <div class="timeline-content">
-            <div class="timeline-year">2024</div>
-            <h3 data-translate="about-timeline-2024-title">Lancement Dubaï</h3>
-            <p data-translate="about-timeline-2024-desc">Ouverture stratégique de notre hub à Dubaï, EAU, nous positionnant comme un acteur international et facilitant les échanges entre l'Afrique, le Moyen-Orient et l'Asie.</p>
-            <div class="timeline-icon">
-              <i class="fas fa-globe-asia"></i>
-            </div>
-            <img src="/assets/Dubai.png" alt="Lancement GKS Dubaï 2024" loading="lazy">
-          </div>
+          <div class="timeline-dots"></div>
         </div>
       </div>
-    </div>
+    </section>
     
     <div class="about-stats" aria-label="Nos Réalisations">
       <div class="shade-overlay"></div>
@@ -1631,6 +1621,7 @@
   <script src="/js/ultimate-chatbot.js" defer></script>
   <script src="/js/chatbot-enhanced-ui.js" defer></script>
   <script src="/js/language-switcher.js" defer></script>
+  <script src="/js/interactive-timeline.js" defer></script>
   <!-- Swiper JS -->
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

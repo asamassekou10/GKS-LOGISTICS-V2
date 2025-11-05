@@ -664,6 +664,36 @@ if (document.readyState === 'loading') {
   initializeSlider();
 }
 
+// Timeline Features
+function initializeTimelineFeatures() {
+  // Timeline item interactions
+  const timelineItems = document.querySelectorAll('.timeline-item');
+  timelineItems.forEach(item => {
+    item.addEventListener('click', function() {
+      // Remove active class from all items
+      timelineItems.forEach(ti => ti.classList.remove('active'));
+      // Add active class to clicked item
+      this.classList.add('active');
+    });
+  });
+
+  // Animate timeline on scroll
+  const timelineObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('timeline-visible');
+      }
+    });
+  }, { threshold: 0.5 });
+
+  timelineItems.forEach(item => {
+    timelineObserver.observe(item);
+  });
+}
+
+  // Initialize timeline features
+  initializeTimelineFeatures();
+
   // Initialize everything when DOM is ready
   console.log('GKS Logistics website initialized');
   
