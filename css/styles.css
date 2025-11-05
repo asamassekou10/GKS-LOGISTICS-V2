@@ -2423,20 +2423,24 @@ p {
 
 .service-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 2rem;
-  justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
 }
 
+/* Each card spans 2 columns for proper alignment */
+.service-cards .card {
+  grid-column: span 2;
+}
+
 /* Center the last 2 cards (storage and customs) on their own row */
 .service-cards .card:nth-child(4) {
-  grid-column: 2 / 3;
+  grid-column: 2 / span 2;
 }
 
 .service-cards .card:nth-child(5) {
-  grid-column: 3 / 4;
+  grid-column: 4 / span 2;
 }
 
 .service-cards .card {
@@ -2581,15 +2585,15 @@ p {
 }
 
 .service-card-buttons .quote-btn {
-  background: var(--primary-color);
+  background: #CC3333;
   color: white;
-  box-shadow: 0 4px 12px rgba(0, 48, 135, 0.2);
+  box-shadow: 0 4px 12px rgba(204, 51, 51, 0.2);
 }
 
 .service-card-buttons .quote-btn:hover {
-  background: linear-gradient(135deg, var(--primary-color), #001a4d);
+  background: linear-gradient(135deg, #CC3333, #992222);
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 48, 135, 0.35);
+  box-shadow: 0 8px 20px rgba(204, 51, 51, 0.35);
 }
 
 .service-card-buttons .btn-read-more {
