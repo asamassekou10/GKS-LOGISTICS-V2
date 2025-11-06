@@ -274,7 +274,15 @@
 
     /* Hide timeline track wrapper on tablet and mobile */
     .timeline-track-wrapper {
-        display: none;
+        display: none !important;
+    }
+
+    .timeline-dots {
+        display: none !important;
+    }
+
+    .timeline-dot {
+        display: none !important;
     }
 
     .content-wrapper {
@@ -320,7 +328,15 @@
 
     /* Mobile: Hide entire timeline track, dots, and labels - show only content cards */
     .timeline-track-wrapper {
-        display: none;
+        display: none !important;
+    }
+
+    .timeline-dots {
+        display: none !important;
+    }
+
+    .timeline-dot {
+        display: none !important;
     }
 
     .content-wrapper {
@@ -368,7 +384,15 @@
     }
 
     .timeline-track-wrapper {
-        display: none;
+        display: none !important;
+    }
+
+    .timeline-dots {
+        display: none !important;
+    }
+
+    .timeline-dot {
+        display: none !important;
     }
 
     .content-year {
