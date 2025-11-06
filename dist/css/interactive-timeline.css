@@ -272,6 +272,11 @@
         font-size: 1rem;
     }
 
+    /* Hide timeline track wrapper on tablet and mobile */
+    .timeline-track-wrapper {
+        display: none;
+    }
+
     .content-wrapper {
         grid-template-columns: 1fr;
         gap: 20px;
