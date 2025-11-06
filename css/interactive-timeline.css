@@ -313,88 +313,9 @@
         font-size: 0.95rem;
     }
 
-    /* Mobile: Vertical Timeline */
+    /* Mobile: Hide entire timeline track, dots, and labels - show only content cards */
     .timeline-track-wrapper {
-        position: relative;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        gap: 0;
-        padding: 20px 20px 20px 60px;
-    }
-
-    .timeline-track {
-        position: absolute;
-        left: 20px;
-        top: 0;
-        bottom: 0;
-        width: 4px;
-        height: 100%;
-        transform: none;
-        background: #e0e0e0;
-        border-radius: 2px;
-        z-index: 1;
-    }
-
-    .timeline-fill {
         display: none;
-    }
-
-    .timeline-dots {
-        position: relative;
-        flex-direction: column;
-        width: 100%;
-        height: auto;
-        padding: 0;
-        gap: 30px;
-        align-items: flex-start;
-        margin-left: -40px;
-        z-index: 3;
-    }
-
-    .timeline-dot {
-        margin-left: 0;
-        width: 20px;
-        height: 20px;
-        border-width: 2px;
-        position: relative;
-        left: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-    }
-
-    .timeline-dot.active {
-        width: 28px;
-        height: 28px;
-        left: 8px;
-    }
-
-    .timeline-dot .dot-flag-img {
-        display: none;
-    }
-
-    .dot-label {
-        position: absolute;
-        left: 100%;
-        top: 50%;
-        transform: translateY(-50%);
-        opacity: 1;
-        background: none;
-        color: #333;
-        padding: 0;
-        margin: 0;
-        margin-left: 15px;
-        font-size: 0.9rem;
-        font-weight: 500;
-        pointer-events: auto;
-        white-space: nowrap;
-    }
-
-    .timeline-dot:hover .dot-label,
-    .timeline-dot.active .dot-label {
-        opacity: 1;
     }
 
     .content-wrapper {
@@ -442,61 +363,7 @@
     }
 
     .timeline-track-wrapper {
-        padding: 15px 15px 15px 50px;
-        gap: 0;
-    }
-
-    .timeline-track {
-        left: 15px;
-        width: 4px;
-    }
-
-    .timeline-fill {
         display: none;
-    }
-
-    .timeline-dots {
-        margin-left: -35px;
-        gap: 25px;
-    }
-
-    .timeline-dot {
-        margin-left: 0;
-        width: 18px;
-        height: 18px;
-        position: relative;
-        left: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-    }
-
-    .timeline-dot.active {
-        width: 24px;
-        height: 24px;
-        left: 7px;
-    }
-
-    .timeline-dot .dot-flag-img {
-        display: none;
-    }
-
-    .dot-label {
-        position: absolute;
-        left: 100%;
-        top: 50%;
-        transform: translateY(-50%);
-        opacity: 1;
-        background: none;
-        color: #333;
-        padding: 0;
-        margin: 0;
-        margin-left: 12px;
-        font-size: 0.85rem;
-        font-weight: 500;
-        pointer-events: auto;
-        white-space: nowrap;
     }
 
     .content-year {
