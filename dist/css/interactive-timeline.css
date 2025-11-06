@@ -348,6 +348,14 @@
 
     .timeline-dot {
         margin-left: -42px;
+        width: 20px;
+        height: 20px;
+        border-width: 2px;
+    }
+
+    .timeline-dot.active {
+        width: 28px;
+        height: 28px;
     }
 
     .dot-label {
@@ -396,5 +404,66 @@
 
     .timeline-container {
         gap: 30px;
+    }
+}
+
+/* Extra Small Screens (320px and below) */
+@media (max-width: 400px) {
+    .interactive-timeline-section {
+        padding: 20px 10px;
+    }
+
+    .timeline-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .timeline-header p {
+        font-size: 0.9rem;
+    }
+
+    .timeline-track-wrapper {
+        padding: 15px;
+        gap: 25px;
+    }
+
+    .timeline-dots {
+        margin-left: 30px;
+        gap: 25px;
+    }
+
+    .timeline-dot {
+        margin-left: -32px;
+        width: 18px;
+        height: 18px;
+    }
+
+    .timeline-dot.active {
+        width: 24px;
+        height: 24px;
+    }
+
+    .dot-label {
+        margin-left: 40px;
+        font-size: 0.85rem;
+    }
+
+    .content-year {
+        font-size: 1.5rem;
+    }
+
+    .content-location {
+        font-size: 1.1rem;
+    }
+
+    .content-tagline {
+        font-size: 0.9rem;
+    }
+
+    .content-description {
+        font-size: 0.95rem;
+    }
+
+    .content-image {
+        height: 200px;
     }
 }

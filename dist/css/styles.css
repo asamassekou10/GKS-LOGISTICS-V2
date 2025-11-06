@@ -6251,9 +6251,34 @@ p {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
-  
+
   .service-cards .card {
-    flex: 0 0 100%;
+    grid-column: span 1;
+    min-height: auto;
+  }
+
+  /* Reset grid positioning for 4th and 5th cards on tablet */
+  .service-cards .card:nth-child(4),
+  .service-cards .card:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .service-cards .card i {
+    font-size: 2.8rem;
+  }
+
+  .service-cards .card h3 {
+    font-size: 1.4rem;
+  }
+
+  .service-card-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .service-card-buttons .btn {
+    flex: 1;
+    min-width: 100px;
   }
 
   .btn-explore {
@@ -6886,15 +6911,46 @@ p {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-  
+
   .service-cards .card {
     min-height: auto;
     padding: 1.5rem 1rem;
   }
-  
+
+  .service-cards .card:nth-child(4),
+  .service-cards .card:nth-child(5) {
+    grid-column: auto;
+  }
+
+  .service-cards .card i {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .service-cards .card h3 {
+    font-size: 1.3rem;
+  }
+
   .service-cards .card p {
     font-size: 0.9rem;
     line-height: 1.4;
+  }
+
+  .service-card-buttons {
+    flex-direction: column;
+  }
+
+  .service-card-buttons .btn {
+    width: 100%;
+  }
+
+  .service-card-stats {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .service-card-stats .stat-item {
+    width: 100%;
   }
 
   /* Hide mobile bottom navigation */
