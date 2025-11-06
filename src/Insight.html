@@ -36,6 +36,7 @@
     <link rel="stylesheet" href="/css/language-switcher.css">
     <link rel="stylesheet" href="/css/quote-calculator.css">
     <link rel="stylesheet" href="/css/calculator-modal.css">
+    <link rel="stylesheet" href="/css/interactive-timeline.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
@@ -179,72 +180,32 @@
                         </p>
                     </section>
 
-                    <!-- Timeline Section -->
-                    <section class="timeline-section">
-                        <h2 data-translate="timeline-title">GKS Logistics: Chronologie de la Croissance</h2>
-                        <div class="timeline">
-                            <div class="timeline-item">
-                                <div class="timeline-marker">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
-                                <div class="timeline-content">
-                                    <h3>2019</h3>
-                                    <p data-translate="timeline-2019">Établissement du premier hub logistique en Afrique de l'Ouest avec des installations modernes à Bamako.</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-marker">
-                                    <i class="fas fa-plane"></i>
-                                </div>
-                                <div class="timeline-content">
-                                    <h3>2020</h3>
-                                    <p data-translate="timeline-2020">Expansion du réseau aérien avec des partenariats stratégiques internationaux malgré les défis de la pandémie.</p>
+                    <!-- Interactive Timeline Section -->
+                    <section class="interactive-timeline-section">
+                        <div class="timeline-header">
+                            <h2 data-translate="timeline-title">GKS Logistics: Chronologie de la Croissance</h2>
+                        </div>
+
+                        <div class="timeline-container">
+                            <!-- Content Area -->
+                            <div class="timeline-content">
+                                <div class="content-wrapper">
+                                    <img src="" alt="" class="content-image">
+                                    <div class="content-text">
+                                        <h2 class="content-year"></h2>
+                                        <p class="content-location"></p>
+                                        <p class="content-tagline"></p>
+                                        <p class="content-description"></p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="timeline-item">
-                                <div class="timeline-marker">
-                                    <i class="fas fa-route"></i>
+
+                            <!-- Timeline Track and Dots -->
+                            <div class="timeline-track-wrapper">
+                                <div class="timeline-track">
+                                    <div class="timeline-fill"></div>
                                 </div>
-                                <div class="timeline-content">
-                                    <h3>2021</h3>
-                                    <p data-translate="timeline-2021">Modernisation des systèmes de suivi en temps réel et optimisation des routes pour améliorer l'efficacité opérationnelle.</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-marker">
-                                    <i class="fas fa-ship"></i>
-                                </div>
-                                <div class="timeline-content">
-                                    <h3>2022</h3>
-                                    <p data-translate="timeline-2022">Lancement des services maritimes spécialisés et développement de solutions logistiques durables.</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-marker">
-                                    <i class="fas fa-globe-africa"></i>
-                                </div>
-                                <div class="timeline-content">
-                                    <h3>2023</h3>
-                                    <p data-translate="timeline-2023">Expansion en Afrique de l'Est avec l'ouverture de nouveaux centres de distribution régionaux.</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-marker">
-                                    <i class="fas fa-leaf"></i>
-                                </div>
-                                <div class="timeline-content">
-                                    <h3>2024</h3>
-                                    <p data-translate="timeline-2024">Initiative de neutralité carbone et adoption de technologies vertes dans toutes nos opérations.</p>
-                                </div>
-                            </div>
-                            <div class="timeline-item">
-                                <div class="timeline-marker">
-                                    <i class="fas fa-rocket"></i>
-                                </div>
-                                <div class="timeline-content">
-                                    <h3>2025</h3>
-                                    <p data-translate="timeline-2025">Objectif de neutralité carbone atteint et lancement de solutions logistiques intelligentes de nouvelle génération.</p>
-                                </div>
+                                <div class="timeline-dots"></div>
                             </div>
                         </div>
                     </section>
@@ -554,6 +515,7 @@
     <script src="/js/script.js" defer></script>
     <script src="/js/Insight.js" defer></script>
     <script src="/js/language-switcher.js" defer></script>
+    <script src="/js/interactive-timeline.js" defer></script>
 
   <!-- Quote Request Modal -->
   <link rel="stylesheet" href="/css/quote-modal.css">
