@@ -257,10 +257,12 @@ function initInteractiveTimeline() {
         }
     }
 
-    // Initialize
-    renderDots();
+    // Initialize - Only render dots on desktop (769px and above)
+    if (window.innerWidth > 768) {
+        renderDots();
+        updateLineFill(0);
+    }
     displayContent(0);
-    updateLineFill(0);
 
     // Start auto-play
     startAutoPlay();
@@ -271,10 +273,29 @@ function initInteractiveTimeline() {
 
     // Handle resize for responsive behavior
     let resizeTimer;
+    let wasDesktop = window.innerWidth > 768;
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
-            updateLineFill(currentIndex);
+            const isDesktop = window.innerWidth > 768;
+
+            // Check if viewport changed from mobile to desktop or vice versa
+            if (isDesktop !== wasDesktop) {
+                wasDesktop = isDesktop;
+                const dotsContainer = document.querySelector('.timeline-dots');
+
+                if (isDesktop && dotsContainer.innerHTML === '') {
+                    // Switched to desktop - render dots
+                    renderDots();
+                } else if (!isDesktop) {
+                    // Switched to mobile - clear dots
+                    dotsContainer.innerHTML = '';
+                }
+            }
+
+            if (window.innerWidth > 768) {
+                updateLineFill(currentIndex);
+            }
         }, 250);
     });
 }
