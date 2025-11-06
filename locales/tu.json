@@ -1,4 +1,4 @@
-﻿{
+{
   "meta": {
     "title": "GKS Logistics - Uluslararası Lojistik Çözümleri | Hava, Deniz ve Kara Taşımacılığı",
     "description": "GKS Logistics, Batı Afrika, Avrupa, Kuzey Amerika'da kapsamlı lojistik çözümleri sunar. 2019'dan beri hava kargo, denizcilik, kara taşımacılığı ve güvenli depolama.",
@@ -13,22 +13,26 @@
   "nav": {
     "logo_gks": "GKS",
     "logo_logistics": "LOGISTICS",
-    "services": "Hizmetler",
+    "services": "Services",
     "services_overview": "Hizmetlerimiz",
-    "about": "Hakkımızda",
+    "about": "À Propos",
     "about_overview": "Şirket Bilgisi",
     "blog": "Blog",
-    "careers": "Kariyer",
-    "news": "Haberler",
-    "contact": "İletişim",
-    "representation": "Temsilciliklerimiz",
+    "careers": "Carrières",
+    "news": "Actualités",
+    "contact": "Contact",
+    "representation": "Notre Présence",
     "groupage": "Konsolidasyon",
-    "green": "GKS Yeşil",
+    "green": "GKS Green",
     "quote": "Anında Teklif",
     "resources": "Kaynaklar",
     "team": "Ekibimiz",
     "team_gks": "GKS Ekibi",
-    "team_ceo": "CEO'muz"
+    "team_ceo": "CEO'muz",
+    "logo": {
+      "gks": "GKS",
+      "logistics": "LOGISTICS"
+    }
   },
   "hero": {
     "title_1": "Güvenilir Lojistik Çözümleri",
@@ -42,13 +46,33 @@
     "title_3": "Kaliteli Hizmetler",
     "subtitle_3": "İhtiyaçlarınızı karşılamak için adanmış ekip",
     "cta_5": "Müşteri Yorumları",
-    "cta_6": "İletişime Geçin"
+    "cta_6": "İletişime Geçin",
+    "title": {
+      "1": "Solutions Logistiques Fiables",
+      "2": "Présence Internationale",
+      "3": "Services de Qualité"
+    },
+    "subtitle": {
+      "1": "Votre partenaire pour un transport rapide et sécurisé",
+      "2": "Des solutions logistiques adaptées partout dans le monde",
+      "3": "Une équipe dédiée pour répondre à vos besoins"
+    },
+    "cta": {
+      "1": "Demander un Devis",
+      "2": "En savoir plus",
+      "3": {
+        "alt": "Calculer mon Devis"
+      },
+      "4": "Notre Réseau",
+      "5": "Avis Clients",
+      "6": "Contactez-nous"
+    }
   },
   "services": {
-    "title": "Bizim",
-    "subtitle": "Başarınız için tasarlanmış lojistik çözümleri.",
-    "cta": "Hizmetlerimizi Keşfedin",
-    "badge": "✨ Lojistik Ortağınız",
+    "title": "Nos",
+    "subtitle": "Des solutions logistiques conçues pour votre succès.",
+    "cta": "Découvrir Nos Services",
+    "badge": "✨ Votre Partenaire Logistique",
     "hero_title": "GKS LOGISTICS'e Hoş Geldiniz",
     "cta_quote": "Teklif Alın",
     "section_title": "Hizmetlerimiz",
@@ -60,7 +84,10 @@
     "service_maritime": "Deniz Nakliyesi",
     "service_air": "Hava Nakliyesi",
     "service_2": "Proje Lojistiği Afrika",
-    "discover": "Hizmetleri Keşfedin"
+    "discover": "Découvrir nos Services",
+    "hero": {
+      "title": "Welcome to GKS LOGISTICS"
+    }
   },
   "welcome-stat-countries": "Ülkeler",
   "welcome-stat-shipments": "Gönderiler",
@@ -105,11 +132,16 @@
     "strategic_axis_3": "Yüksek katma değerli lojistik sunmak için konsolidasyon faaliyetlerimizi sürdürmek.",
     "strategic_axis_4": "İnsan kaynaklarımızı koruyarak çalışanlarımıza ve müşterilerimize olan bağlılığımızı sürdürmek.",
     "strategic_axis_5": "Mükemmellik ve performans kültürü geliştirmek.",
-    "strategic_axis_6": "Yenilikçilik ve yeni teknolojilerin benimsenmesi yoluyla değer zincirimizi optimize etmek."
+    "strategic_axis_6": "Yenilikçilik ve yeni teknolojilerin benimsenmesi yoluyla değer zincirimizi optimize etmek.",
+    "stats": {
+      "countries": "Pays Desservis",
+      "shipments": "Expéditions",
+      "clients": "Clients Satisfaits"
+    }
   },
   "process": {
-    "title": "Lojistik Sürecimiz",
-    "subtitle": "Uçtan uca bir deneyim...",
+    "title": "Notre Processus Logistique",
+    "subtitle": "Une expérience de bout en bout...",
     "step_1_title": "Alım",
     "step_1_desc": "İlk kilometreden itibaren gerçek zamanlı takiple kapınızda ekspres alım",
     "step_2_title": "Depolama",
@@ -119,10 +151,32 @@
     "step_4_title": "Gümrük İşlemleri",
     "step_4_desc": "Sertifikalı uzman ekibimizle formalitelerin ekspres işlenmesi",
     "step_5_title": "Teslimat",
-    "step_5_desc": "Elektronik imza ve anında bildirimle onaylanmış teslim alma"
+    "step_5_desc": "Elektronik imza ve anında bildirimle onaylanmış teslim alma",
+    "step": {
+      "1": {
+        "title": "Prise en charge",
+        "desc": "Récupération express à votre porte avec suivi en temps réel dès le premier kilomètre"
+      },
+      "2": {
+        "title": "Entreposage",
+        "desc": "Stockage sécurisé dans nos installations certifiées avec contrôle climatique"
+      },
+      "3": {
+        "title": "Transport",
+        "desc": "Acheminement multimodal optimisé vers plus de 180 destinations mondiales"
+      },
+      "4": {
+        "title": "Dédouanement",
+        "desc": "Traitement express des formalités avec notre équipe d'experts certifiés"
+      },
+      "5": {
+        "title": "Livraison",
+        "desc": "Réception confirmée avec signature électronique et notification instantanée"
+      }
+    }
   },
   "presence": {
-    "title": "Uluslararası Varlığımız",
+    "title": "Notre Présence Internationale",
     "mali_title": "Mali",
     "mali_desc": "Yerel faaliyetleriniz için eksiksiz lojistik hizmetleri.",
     "turkey_title": "Türkiye",
@@ -140,10 +194,46 @@
     "burkina_title": "Burkina Faso",
     "burkina_desc": "Bölgesel ticaret için lojistik çözümleri.",
     "niger_title": "Nijer",
-    "niger_desc": "Batı Afrika'da lojistik hizmetleri."
+    "niger_desc": "Batı Afrika'da lojistik hizmetleri.",
+    "mali": {
+      "title": "Mali",
+      "desc": "Services logistiques complets pour vos activités locales."
+    },
+    "turkey": {
+      "title": "Turquie",
+      "desc": "Liaisons dynamiques entre l'Afrique et l'Asie."
+    },
+    "france": {
+      "title": "France",
+      "desc": "Solutions avancées pour l'Europe."
+    },
+    "usa": {
+      "title": "États-Unis",
+      "desc": "Réseau robuste pour le commerce international."
+    },
+    "dubai": {
+      "title": "Dubai",
+      "desc": "Dubaï est un point de passage essentiel pour le commerce international."
+    },
+    "ivorycoast": {
+      "title": "Côte d'Ivoire",
+      "desc": "Logistique adaptée aux besoins régionaux."
+    },
+    "guinea": {
+      "title": "Guinée",
+      "desc": "Services logistiques fiables en Afrique de l'Ouest."
+    },
+    "burkina": {
+      "title": "Burkina Faso",
+      "desc": "Solutions logistiques pour le commerce régional."
+    },
+    "niger": {
+      "title": "Niger",
+      "desc": "Services logistiques en Afrique de l'Ouest."
+    }
   },
   "partners": {
-    "title": "Ortaklarımız",
+    "title": "Nos Partenaires",
     "subtitle": "Size en iyi lojistik çözümleri sunmak için küresel liderlerle işbirliği yapıyoruz",
     "1_name": "DHL Express",
     "1_desc": "Ekspres kargo ve hızlı teslimatlar için küresel ortak",
@@ -172,13 +262,17 @@
     "role_3": "İlaç şirketi, Conakry",
     "testimonial_3": "Süreler karşılandı ve mallar mükemmel durumda. Şiddetle tavsiye ederim.",
     "cta_text": "Memnun müşterilerimize katılın",
-    "cta_button": "Teklif Alın"
+    "cta_button": "Teklif Alın",
+    "cta": {
+      "text": "Rejoignez nos clients satisfaits",
+      "button": "Obtenir un Devis"
+    }
   },
   "contact": {
-    "title": "İletişime Geçin",
-    "subtitle": "Özelleştirilmiş lojistik çözümler için ekibimizle bağlantı kurun.",
-    "call": "Ara",
-    "email": "E-posta",
+    "title": "Contactez-nous",
+    "subtitle": "Connectez-vous avec notre équipe pour des solutions logistiques sur mesure.",
+    "call": "Appeler",
+    "email": "Email",
     "whatsapp": "WhatsApp",
     "team_title": "Ekibimiz",
     "team_subtitle": "Başarınıza adanmış",
@@ -194,56 +288,86 @@
     "form_submit": "Şimdi Gönder",
     "success_message": "Mesaj başarıyla gönderildi!",
     "email_address": "sales@gkslogistics.com",
-    "phone_number": "+223 90929273"
+    "phone_number": "+223 90929273",
+    "info": {
+      "headline": "Vos Coordonnées"
+    },
+    "phone": "+223 90929273",
+    "us": "Contactez-nous",
+    "team": {
+      "title": "Notre Équipe",
+      "subtitle": "Dédiée à votre succès"
+    },
+    "form": {
+      "name": "Votre Nom",
+      "service": "Service",
+      "email": "Votre Email",
+      "message": "Votre Message",
+      "submit": "Envoyer Maintenant"
+    },
+    "or": {
+      "text": "Ou"
+    },
+    "quick": {
+      "quote": "obtenez un devis instantané en ligne"
+    },
+    "success": {
+      "message": "Message envoyé avec succès !"
+    }
   },
   "footer": {
-    "about": "Küresel lojistik ortağınız",
+    "about": {
+      "title": "À Propos de GKS",
+      "text": "Leader en solutions logistiques depuis 2019, opérant dans 10+ pays avec excellence et fiabilité."
+    },
     "links_title": "Faydalı Bağlantılar",
     "contact_title": "İletişime Geçin",
     "copyright": "© 2025 GKS Logistics. Tüm hakları saklıdır.",
     "email_label": "E-posta:",
-    "phone_label": "Telefon:"
+    "phone_label": "Telefon:",
+    "services": {
+      "title": "Services"
+    },
+    "copy": "© 2025 GKS Logistics. Tous droits réservés."
   },
   "quote_modal": {
-    "title": "Teklif İste",
-    "subtitle": "Hızlı bir şekilde kişiselleştirilmiş teklif almak için bu basitleştirilmiş formu doldurun.",
-    "contact_section": "İletişim Bilgileriniz",
+    "title": "Teklif Talep Et",
+    "subtitle": "Kişiselleştirilmiş bir teklif almak için bu formu doldurun",
+    "section_contact": "İletişim Bilgileriniz",
+    "section_shipment": "Gönderi Detayları",
+    "section_message": "Mesajınız",
     "full_name": "Ad Soyad *",
+    "full_name_placeholder": "John Doe",
     "company_name": "Şirket Adı",
-    "email_professional": "E-posta *",
+    "company_name_placeholder": "Şirketiniz",
+    "email": "Profesyonel E-posta *",
+    "email_placeholder": "your@email.com",
     "phone": "Telefon *",
-    "shipment_section": "Sevkiyat Detayları",
+    "phone_placeholder": "+223 XX XX XX XX",
     "freight_type": "Kargo Türü *",
     "freight_type_placeholder": "Kargo türünü seçin",
-    "freight_air": "Hava Kargo",
-    "freight_sea": "Deniz Kargo",
-    "freight_fcl": "Deniz Kargo (Tam Konteyner - FCL)",
-    "freight_lcl": "Deniz Kargo (Kısmi Konteyner - LCL)",
-    "freight_road": "Kara Kargo",
+    "freight_air": "Hava Taşımacılığı",
+    "freight_sea": "Deniz Taşımacılığı",
+    "freight_fcl": "Deniz Taşımacılığı (Tam Konteyner - FCL)",
+    "freight_lcl": "Deniz Taşımacılığı (Kısmi Konteyner - LCL)",
+    "freight_road": "Karayolu Taşımacılığı",
     "freight_warehousing": "Depolama",
-    "freight_project": "Proje Lojistiği / Özel Boyut Kargo",
-    "freight_temp": "Sıcaklık Kontrollü Lojistik",
-    "freight_other": "Diğerleri",
+    "freight_other": "Diğer",
+    "origin": "Kaynak *",
+    "origin_placeholder": "Şehir/Ülke",
+    "destination": "Hedef *",
+    "destination_placeholder": "Şehir/Ülke",
     "cargo_nature": "Kargo Doğası",
-    "origin": "Menşe *",
-    "destination": "Varış *",
-    "preferred_date": "Tercih Edilen Sevkiyat Tarihi",
-    "dimensions_weight": "Boyutlar ve Ağırlık *",
-    "quantity_packages": "Miktar / Paket Sayısı *",
-    "additional_services": "Ek Hizmetler (İsteğe Bağlı)",
-    "service_customs": "Gümrük İşlemleri",
-    "service_insurance": "Kargo Sigortası",
-    "service_warehousing": "Depolama",
-    "service_last_mile": "Dağıtım / Son Mil",
-    "service_packaging": "Özel Ambalajlama",
-    "message_section": "Mesajınız veya Özel İhtiyaçlarınız",
-    "additional_message": "Talebinizin detayları *",
-    "required_fields": "* Zorunlu alanlar",
-    "cancel": "İptal",
-    "submit": "Talebi Gönder"
+    "cargo_nature_placeholder": "Örn: Elektronik, Tekstil, Çabuk Bozulan Ürünler",
+    "weight": "Ağırlık (kg)",
+    "weight_placeholder": "Örn: 50",
+    "quantity": "Miktar / Paket Sayısı *",
+    "quantity_placeholder": "Örn: 5",
+    "message": "Talep Detayları *",
+    "message_placeholder": "İhtiyaçlarınızı açıklayın (boyutlar, ağırlık, istenen tarih, ek hizmetler...)"
   },
   "chatbot": {
-    "title": "GKS Asistan",
+    "title": "GKS Assistant",
     "welcome": "Merhaba! GKS Logistics'e hoş geldiniz. Bugün size nasıl yardımcı olabilirim?"
   },
   "floating_cta": "Ücretsiz Teklif",
@@ -328,7 +452,14 @@
     "cta_title": "Tedarik zincirinizi optimize etmeye hazır mısınız?",
     "cta_description": "Uzmanlarımız Afrika'daki lojistik projelerinizde size destek olmak için burada",
     "cta_contact": "Bize ulaşın",
-    "cta_quote": "Teklif alın"
+    "cta_quote": "Teklif alın",
+    "main": {
+      "title": "Actualités & Perspectives GKS Logistics",
+      "subtitle": "Découvrez nos dernières analyses du secteur, les actualités de l'entreprise et les avancées de la logistique en Afrique."
+    },
+    "filter": {
+      "title": "Filtrer par localisation"
+    }
   },
   "news": {
     "meta": {
@@ -373,7 +504,46 @@
     "insight_date": "15 Mart 2025",
     "insight_pages": "42 sayfa",
     "insight_read_report": "Tam Raporu Oku",
-    "company_news_title": "Şirket Haberleri"
+    "company_news_title": "Şirket Haberleri",
+    "hero": {
+      "subtitle": "Restez à jour avec GKS Logistics"
+    },
+    "section": {
+      "title": "Toutes les Actualités"
+    },
+    "title": {
+      "1": "Expansion de nos Services en Côte d'Ivoire"
+    },
+    "date": {
+      "1": "20 Janvier 2025"
+    },
+    "excerpt": {
+      "1": "GKS Logistics étend ses opérations logistiques pour mieux servir le marché ivoirien."
+    },
+    "updates": {
+      "news": {
+        "title": {
+          "2": {
+            "new": "GKS Logistics s'étend au Niger"
+          }
+        },
+        "date": {
+          "2": {
+            "new": "15 Janvier 2025"
+          }
+        },
+        "excerpt": {
+          "2": {
+            "new": "Ouverture de nouvelles opérations logistiques pour servir le marché nigérien."
+          }
+        }
+      },
+      "article1": {
+        "title": "Débloquer le Potentiel Économique de l'Afrique",
+        "date": "10 Janvier 2025",
+        "excerpt": "Analyse du rôle de la logistique intégrée et du développement des infrastructures dans la croissance économique africaine."
+      }
+    }
   },
   "careers": {
     "meta": {
@@ -510,7 +680,22 @@
     "agent_video_caption": "İşine tutku ve deneyim katan bir GKS Logistics çalışanının günlük yaşamını keşfedin.",
     "testimonial_1_name": "Issiaka COUMARE",
     "testimonial_1_title": "Depolama ve Güvenlik Müdürü",
-    "testimonial_1_quote": "\"GKS Logistics'te çalışmak, Afrika'nın gelişimine katkıda bulunurken profesyonel olarak büyümeme olanak sağladı.\""
+    "testimonial_1_quote": "\"GKS Logistics'te çalışmak, Afrika'nın gelişimine katkıda bulunurken profesyonel olarak büyümeme olanak sağladı.\"",
+    "hero": {
+      "title": "Rejoignez notre Équipe",
+      "subtitle": "Construisez l'avenir de la logistique en Afrique"
+    },
+    "why": {
+      "gks": {
+        "title": "Pourquoi Choisir GKS Logistics ?"
+      }
+    },
+    "sidebar": {
+      "social": {
+        "title": "Suivez-nous",
+        "desc": "Restez informé de nos dernières actualités et opportunités de carrière."
+      }
+    }
   },
   "employee1": {
     "employee_name": "Aboubacar Sidiki KONATE",
@@ -546,7 +731,53 @@
     "role_title": "Rolüm ve Misyonum",
     "responsibilities_title": "Temel Sorumluluklar",
     "passions_title": "İşin Ötesinde: Tutkular ve İlgi Alanları",
-    "years_experience": "Yıllık deneyim"
+    "years_experience": "Yıllık deneyim",
+    "employee": {
+      "name": "Alimata KONATE",
+      "title": "Directrice Générale Mali, GKS Logistics",
+      "quote": "\"L'excellence opérationnelle et le leadership inspirant sont au cœur de notre succès. Je m'engage à diriger nos équipes vers de nouveaux sommets avec détermination et vision stratégique.\""
+    },
+    "journey": {
+      "title": "Mon Parcours chez GKS Logistics",
+      "text": {
+        "1": "J'ai rejoint GKS Logistics dès sa création en 2019 avec une vision claire : bâtir une entreprise logistique d'excellence en Afrique de l'Ouest. Diplômée en gestion logistique et commerce international, mon expérience diversifiée dans différents secteurs m'a préparée à diriger avec innovation et détermination.",
+        "2": "En tant que Directrice Générale, je supervise l'ensemble de nos opérations stratégiques et opérationnelles. Mon leadership se concentre sur l'optimisation des processus, le développement de notre capital humain, et l'expansion de notre présence régionale. Je suis passionnée par la création d'une culture d'excellence et d'innovation."
+      }
+    },
+    "milestone": {
+      "1": "Coordinatrice Logistique",
+      "2": "Directrice des Opérations",
+      "3": "Directrice Générale"
+    },
+    "role": {
+      "title": "Mon Rôle & Mission",
+      "text": "En tant que Directrice Générale de GKS Logistics, je pilote la stratégie globale et supervise l'ensemble des opérations. Mon rôle est de garantir l'excellence opérationnelle, de développer nos talents, et d'assurer notre croissance durable en Afrique de l'Ouest. Je m'engage à créer un environnement de travail inclusif et performant où chacun peut s'épanouir."
+    },
+    "responsibilities": {
+      "title": "Responsabilités Clés"
+    },
+    "responsibility": {
+      "1": "Direction stratégique et transformation digitale",
+      "2": "Optimisation des performances opérationnelles",
+      "3": "Développement du capital humain",
+      "4": "Relations stratégiques et partenariats"
+    },
+    "passions": {
+      "title": "Au-delà du Travail : Passions & Intérêts",
+      "text": "Au-delà de mes responsabilités professionnelles, je suis profondément engagée dans l'autonomisation des femmes leaders africaines et le développement communautaire. Je suis convaincue que le leadership féminin est essentiel pour transformer notre continent. Je consacre également du temps au mentorat de jeunes talents et à la promotion de l'égalité dans le secteur de la logistique."
+    },
+    "interest": {
+      "1": "Leadership Féminin",
+      "2": "Mentorat & Formation",
+      "3": "Impact Social",
+      "4": "Lecture & Développement Personnel"
+    },
+    "cta": {
+      "title": "Découvrez Notre Équipe",
+      "text": "Rencontrez les autres professionnels qui font la force de GKS Logistics",
+      "team": "Notre Équipe",
+      "careers": "Carrières"
+    }
   },
   "employee3": {
     "employee_name": "Fatoumata KEITA",
@@ -631,7 +862,70 @@
     "category_2": "Altyapı Geliştirme",
     "category_3": "Ekonomik Büyüme",
     "category_4": "Tedarik Zinciri",
-    "category_5": "Sektör Analizi"
+    "category_5": "Sektör Analizi",
+    "article": {
+      "title": "Liste de Contrôle en 10 Points pour Choisir Votre Prochain Partenaire d'Entreposage et de Fret en Afrique",
+      "author": "Par l'Équipe GKS Logistics",
+      "date": "20 Janvier 2025",
+      "category": "Guide Logistique",
+      "read": {
+        "time": "10 min de lecture"
+      },
+      "intro": "Le continent africain est l'un des marchés les plus dynamiques et en croissance rapide au monde. Avec l'essor du commerce électronique et la mise en œuvre de la Zone de Libre-Échange Continentale Africaine (ZLECAf), les opportunités d'expansion pour les entreprises sont immenses."
+    },
+    "share": {
+      "text": "Partager :"
+    },
+    "intro": {
+      "text": {
+        "2": "Un partenaire peu fiable peut laisser vos marchandises bloquées à une frontière pendant des semaines. Un excellent partenaire peut ouvrir de nouveaux marchés. C'est pourquoi nous avons créé cette liste de contrôle essentielle en 10 points."
+      }
+    },
+    "point1": {
+      "check": "Demandez une démonstration de leur WMS. Pouvez-vous voir votre inventaire en temps réel ?"
+    },
+    "point2": {
+      "check": "Demandez-leur d'expliquer leur processus de dédouanement."
+    },
+    "point3": {
+      "check": "Renseignez-vous sur leur sécurité d'entrepôt."
+    },
+    "point4": {
+      "check": "Offrent-ils des services FTL et LTL/LCL ?"
+    },
+    "point5": {
+      "check": "Demandez comment ils gèrent les pics saisonniers."
+    },
+    "point6": {
+      "check": "Demandez des photos ou une visite de leur entrepôt."
+    },
+    "point7": {
+      "check": "Regardez leur carte."
+    },
+    "point8": {
+      "check": "Demandez un devis détaillé."
+    },
+    "point9": {
+      "check": "Demandez des études de cas."
+    },
+    "point10": {
+      "check": "Qui appelez-vous en cas de problème ?"
+    },
+    "conclusion": {
+      "text": {
+        "2": "GKS Logistics combine une expertise locale approfondie avec une technologie moderne. Cette liste de contrôle en 10 points n'est pas qu'un article, c'est le standard que nous respectons chaque jour."
+      }
+    },
+    "cta": {
+      "title": "Prêt à Participer à la Transformation de l'Afrique ?",
+      "subtitle": "Découvrez comment GKS Logistics peut vous accompagner dans vos projets logistiques en Afrique",
+      "contact": "Contactez-nous",
+      "quote": "Faire un devis",
+      "sidebar": {
+        "title": "Besoin d'Aide ?",
+        "desc": "Nos experts sont là pour vous accompagner dans vos projets logistiques"
+      }
+    }
   },
   "insight": {
     "meta": {
@@ -701,7 +995,15 @@
     "services_title": "Hizmetlerimiz",
     "service_1": "Sınır Ötesi Nakliye",
     "service_2": "Proje Lojistiği Afrika",
-    "service_3": "Depolama Çözümleri"
+    "service_3": "Depolama Çözümleri",
+    "badge": "Rapport 2025",
+    "title": "Tendances Logistiques 2025",
+    "description": "Découvrez les principales tendances qui façonneront l'industrie logistique cette année.",
+    "date": "Janvier 2025",
+    "pages": "24 pages",
+    "read": {
+      "report": "Lire le Rapport"
+    }
   },
   "article2": {
     "meta": {
@@ -761,7 +1063,17 @@
     "follow_title": "Bizi Takip Edin",
     "social_linkedin": "LinkedIn",
     "social_twitter": "Twitter",
-    "social_facebook": "Facebook"
+    "social_facebook": "Facebook",
+    "article": {
+      "title": "Naviguer dans l'Explosion : Pourquoi l'Afrique de l'Ouest est la Nouvelle Frontière Logistique",
+      "author": "Par GKS Logistics Insights",
+      "date": "10 Décembre 2024",
+      "category": "Logistique Afrique de l'Ouest, Croissance du Marché",
+      "read": {
+        "time": "10 min de lecture"
+      },
+      "intro": "L'Afrique de l'Ouest connaît actuellement une transformation économique sans précédent, marquée par une croissance démographique explosive, une urbanisation rapide, et une demande croissante pour des services logistiques sophistiqués. Cette région émergente représente l'une des opportunités les plus prometteuses du 21e siècle, et les entreprises qui sauront naviguer efficacement dans ce paysage en pleine évolution seront celles qui définiront l'avenir du commerce mondial."
+    }
   },
   "gks_ivoire": {
     "meta_title": "GKS Logistics Fildişi Sahili'nde - Abidjan Lojistik Çözümleri",
@@ -921,13 +1233,28 @@
   "representation": {
     "meta_title": "GKS Logistics - Küresel Temsilciliğimiz",
     "meta_desc": "Dünya çapındaki uluslararası varlığımızı keşfedin. GKS Logistics, 3 kıtada 10 ülkede faaliyet göstermektedir.",
-    "badge": "Küresel Varlık",
+    "badge": "Présence Mondiale",
     "hero_title": "Uluslararası Temsilciliğimiz",
     "hero_subtitle": "GKS Logistics, 3 kıtada 10 ülkede bulunarak, ihtiyacınız olan her yerde dünya standartlarında lojistik çözümleri sunmaktadır.",
     "map_title": "Küresel Varlığımızı Keşfedin",
     "map_subtitle": "Her ülkedeki ofislerimizi keşfetmek için işaretlere tıklayın",
     "countries_title": "Lokasyonlarımız",
-    "countries_subtitle": "Dünya genelindeki ofislerimizi ve operasyonlarımızı keşfedin"
+    "countries_subtitle": "Dünya genelindeki ofislerimizi ve operasyonlarımızı keşfedin",
+    "meta": {
+      "title": "GKS Logistics - Notre Représentation Mondiale"
+    },
+    "hero": {
+      "title": "Notre Représentation Internationale",
+      "subtitle": "GKS Logistics est présent dans 10 pays à travers 3 continents, offrant des solutions logistiques de classe mondiale partout où vous en avez besoin."
+    },
+    "map": {
+      "title": "Explorez Notre Présence Mondiale",
+      "subtitle": "Cliquez sur les marqueurs pour découvrir nos bureaux dans chaque pays"
+    },
+    "countries": {
+      "title": "Nos Bureaux dans le Monde",
+      "subtitle": "Découvrez nos services dans chaque pays"
+    }
   },
   "gks_mali": {
     "meta_title": "GKS Logistics Mali'de - Bamako Lojistik Çözümleri",
@@ -1447,42 +1774,6 @@
   "all_services-cta-subtitle": "İhtiyaçlarınızı görüşmek ve ücretsiz kişiselleştirilmiş teklif almak için uzmanlarımızla iletişime geçin",
   "all_services-cta-btn1": "Teklifimi Hesapla",
   "all_services-cta-btn2": "Bize Ulaşın",
-  "quote_modal": {
-    "title": "Teklif Talep Et",
-    "subtitle": "Kişiselleştirilmiş bir teklif almak için bu formu doldurun",
-    "section_contact": "İletişim Bilgileriniz",
-    "section_shipment": "Gönderi Detayları",
-    "section_message": "Mesajınız",
-    "full_name": "Ad Soyad *",
-    "full_name_placeholder": "John Doe",
-    "company_name": "Şirket Adı",
-    "company_name_placeholder": "Şirketiniz",
-    "email": "Profesyonel E-posta *",
-    "email_placeholder": "your@email.com",
-    "phone": "Telefon *",
-    "phone_placeholder": "+223 XX XX XX XX",
-    "freight_type": "Kargo Türü *",
-    "freight_type_placeholder": "Kargo türünü seçin",
-    "freight_air": "Hava Taşımacılığı",
-    "freight_sea": "Deniz Taşımacılığı",
-    "freight_fcl": "Deniz Taşımacılığı (Tam Konteyner - FCL)",
-    "freight_lcl": "Deniz Taşımacılığı (Kısmi Konteyner - LCL)",
-    "freight_road": "Karayolu Taşımacılığı",
-    "freight_warehousing": "Depolama",
-    "freight_other": "Diğer",
-    "origin": "Kaynak *",
-    "origin_placeholder": "Şehir/Ülke",
-    "destination": "Hedef *",
-    "destination_placeholder": "Şehir/Ülke",
-    "cargo_nature": "Kargo Doğası",
-    "cargo_nature_placeholder": "Örn: Elektronik, Tekstil, Çabuk Bozulan Ürünler",
-    "weight": "Ağırlık (kg)",
-    "weight_placeholder": "Örn: 50",
-    "quantity": "Miktar / Paket Sayısı *",
-    "quantity_placeholder": "Örn: 5",
-    "message": "Talep Detayları *",
-    "message_placeholder": "İhtiyaçlarınızı açıklayın (boyutlar, ağırlık, istenen tarih, ek hizmetler...)"
-  },
   "contact_form": {
     "name": "Adınız *",
     "name_placeholder": "John Doe",
@@ -1533,11 +1824,22 @@
   },
   "form": {
     "honeypot": "İnsan iseniz bu alanı doldurmayın:",
-    "required": "* Zorunlu alan"
+    "required": "* Zorunlu alan",
+    "full": {
+      "name": "Nom Complet *"
+    },
+    "company": {
+      "name": "Nom de l'Entreprise *"
+    },
+    "email": "Email Professionnel *",
+    "phone": "Téléphone *",
+    "origin": "Pays/Ville d'Origine *",
+    "destination": "Pays/Ville de Destination *",
+    "quantity": "Quantité / Nombre de Colis *"
   },
   "newsletter": {
     "email_placeholder": "E-posta adresiniz",
-    "subscribe": "Abone Ol"
+    "subscribe": "S'abonner"
   },
   "country_contact": {
     "full_name": "Tam Ad *",
@@ -1634,5 +1936,1559 @@
   "request-quote": "Teklif İste",
   "services-explore": "Tüm Hizmetlerimizi Keşfet",
   "stats-24-7": "24/7",
-  "stats-15-countries": "15+ ülke"
+  "stats-15-countries": "15+ ülke",
+  "logo": {
+    "gks": "GKS",
+    "logistics": "LOGISTICS"
+  },
+  "quote": {
+    "form": {
+      "title": "Demander un Devis",
+      "subtitle": "Veuillez remplir le formulaire ci-dessous pour obtenir un devis personnalisé pour vos besoins logistiques."
+    },
+    "modal": {
+      "full": {
+        "name": "Nom Complet *"
+      },
+      "company": {
+        "name": "Nom de l'Entreprise"
+      },
+      "email": {
+        "professional": "Email *"
+      },
+      "phone": "Téléphone *",
+      "cargo": {
+        "nature": "Nature de la Marchandise"
+      },
+      "origin": "Origine *",
+      "destination": "Destination *",
+      "weight": "Poids (kg)",
+      "quantity": "Quantité / Nombre de Colis *",
+      "additional": {
+        "services": "Services Additionnels (Optionnel)",
+        "message": "Message Supplémentaire"
+      },
+      "message": {
+        "section": "Votre Message ou Besoins Spécifiques"
+      },
+      "contact": {
+        "section": "Vos Coordonnées"
+      },
+      "shipment": {
+        "section": "Détails de l'Expédition"
+      },
+      "freight": {
+        "fcl": "Fret Maritime (Conteneur Complet - FCL)",
+        "lcl": "Fret Maritime (Conteneur Partiel - LCL)",
+        "type": {
+          "placeholder": "Sélectionner le type de fret"
+        },
+        "air": "Fret Aérien",
+        "sea": "Fret Maritime",
+        "road": "Fret Routier",
+        "warehousing": "Entreposage",
+        "other": "Autres"
+      },
+      "title": "Demander un Devis",
+      "subtitle": "Remplissez ce formulaire simplifié pour obtenir rapidement un devis personnalisé.",
+      "form": {
+        "title": "Demander un Devis",
+        "subtitle": "Veuillez remplir le formulaire ci-dessous pour obtenir un devis personnalisé pour vos besoins logistiques."
+      }
+    },
+    "button": "Demander un Devis"
+  },
+  "shipment": {
+    "details": {
+      "headline": "Détails de l'Expédition"
+    }
+  },
+  "freight": {
+    "type": {
+      "label": "Type de Fret *"
+    },
+    "air": "Fret Aérien",
+    "fcl": "Fret Maritime (FCL)",
+    "lcl": "Fret Maritime (LCL)",
+    "road": "Fret Routier",
+    "project": "Logistique de Projet",
+    "temp": {
+      "controlled": "Logistique à Température Contrôlée"
+    },
+    "other": "Autres"
+  },
+  "select": {
+    "freight": {
+      "type": "Sélectionner le type de fret"
+    }
+  },
+  "preferred": {
+    "date": {
+      "label": "Date d'Expédition Souhaitée"
+    }
+  },
+  "service": {
+    "1": "Fret Transfrontalier",
+    "2": "Logistique de Projet Afrique",
+    "3": "Solutions de Stockage",
+    "customs": "Dédouanement",
+    "insurance": "Assurance Fret",
+    "warehousing": "Entreposage",
+    "last": {
+      "mile": "Distribution / Dernier Kilomètre"
+    },
+    "packaging": "Emballage Spécialisé",
+    "network": "Réseau Local",
+    "multimodal": "Transport Multimodal",
+    "technology": "Technologie & Innovation"
+  },
+  "additional": {
+    "message": {
+      "headline": "Votre Message ou Besoins Spécifiques"
+    }
+  },
+  "required": {
+    "fields": {
+      "indicator": "* Champs obligatoires"
+    }
+  },
+  "cancel": {
+    "button": "Annuler"
+  },
+  "submit": {
+    "request": "Envoyer ma Demande"
+  },
+  "author": {
+    "name": "Équipe de Recherche GKS Logistics",
+    "bio": "Notre équipe de recherche se compose d'experts en logistique, d'analystes économiques et de spécialistes du développement africain. Nous nous engageons à fournir des insights approfondis sur les tendances logistiques et les opportunités de croissance en Afrique."
+  },
+  "popular": {
+    "posts": {
+      "title": "Articles Populaires"
+    },
+    "post": {
+      "1": "Débloquer le Potentiel Économique de l'Afrique",
+      "2": "Pourquoi l'Afrique de l'Ouest est la Nouvelle Frontière Logistique & Comment GKS Logistics Montre la Voie",
+      "3": "Transformation Numérique dans la Logistique"
+    },
+    "date": {
+      "1": "15 Novembre 2024",
+      "2": "5 Novembre 2024",
+      "3": "1 Novembre 2024"
+    }
+  },
+  "categories": {
+    "title": "Catégories"
+  },
+  "category": {
+    "1": "Logistique Africaine",
+    "2": "Développement des Infrastructures",
+    "3": "Croissance Économique",
+    "4": "Solutions de Supply Chain",
+    "5": "Insights GKS",
+    "west": {
+      "africa": "Logistique Ouest Africaine"
+    },
+    "insights": "Insights Industrie",
+    "company": "Actualités Entreprise"
+  },
+  "follow": {
+    "title": "Suivez-nous"
+  },
+  "social": {
+    "linkedin": "LinkedIn",
+    "twitter": "Twitter",
+    "facebook": "Facebook"
+  },
+  "cargo": {
+    "nature": {
+      "label": "Nature de la Marchandise"
+    }
+  },
+  "dimensions": {
+    "weight": {
+      "label": "Dimensions et Poids *"
+    }
+  },
+  "share": {
+    "text": "Partager :",
+    "title": "Partager cet Article"
+  },
+  "section1": {
+    "title": "L'Ascension Économique de l'Afrique de l'Ouest : Une Région en Plein Essor",
+    "text1": "L'Afrique de l'Ouest se positionne comme l'une des régions les plus dynamiques du continent africain, avec une population de plus de 400 millions d'habitants et un PIB combiné qui dépasse les 800 milliards de dollars. Cette région abrite certaines des économies les plus prometteuses d'Afrique, notamment le Nigeria, le Ghana, et la Côte d'Ivoire, qui connaissent une croissance économique soutenue et une transformation structurelle profonde.",
+    "text2": "Les moteurs de cette croissance sont multiples et interconnectés. L'urbanisation rapide, avec des villes comme Lagos, Accra, et Abidjan qui deviennent des centres économiques majeurs, crée une demande massive pour des biens et services. L'adoption croissante du e-commerce, stimulée par une population jeune et connectée, transforme les habitudes de consommation et nécessite des solutions logistiques innovantes. Parallèlement, le développement des ressources naturelles et l'industrialisation croissante créent de nouvelles opportunités commerciales."
+  },
+  "quote1": {
+    "cite": "- Dr. Ngozi Okonjo-Iweala, Directrice Générale de l'OMC"
+  },
+  "section2": {
+    "title": "L'Impératif Logistique : Connecter les Marchés et les Consommateurs",
+    "text1": "Dans ce contexte de croissance explosive, la logistique joue un rôle crucial en tant que catalyseur du développement économique. Cependant, l'Afrique de l'Ouest fait face à des défis infrastructurels significatifs qui nécessitent des solutions innovantes et adaptées. Les écarts en matière d'infrastructures de transport, les complexités douanières, et les défis de la livraison du dernier kilomètre représentent autant d'obstacles que d'opportunités pour les acteurs logistiques visionnaires.",
+    "text2": "La connectivité entre les marchés urbains et ruraux, l'efficacité des procédures douanières transfrontalières, et la fiabilité des chaînes d'approvisionnement sont des éléments essentiels pour libérer le potentiel commercial de la région. Les entreprises qui sauront surmonter ces défis en développant des solutions logistiques intégrées et efficaces seront celles qui bénéficieront le plus de cette croissance économique exceptionnelle."
+  },
+  "section3": {
+    "title": "GKS Logistics : Solutions Pionnières en Afrique de l'Ouest",
+    "text1": "GKS Logistics s'est positionné comme un leader incontournable dans le paysage logistique ouest-africain, grâce à une approche stratégique qui combine expertise locale et innovation technologique. Notre compréhension approfondie des réglementations locales, des procédures douanières, et des nuances opérationnelles de chaque marché nous permet de fournir des solutions sur mesure qui répondent aux besoins spécifiques de nos clients dans la région.",
+    "text2": "Notre réseau solide en Afrique de l'Ouest, avec des hubs stratégiques dans les principales villes économiques, nous permet d'offrir une couverture complète et des services intégrés. Nous adaptons nos solutions pour répondre aux besoins spécifiques de différents secteurs, qu'il s'agisse du transport multimodal, de la chaîne du froid, ou de la logistique de projet. Notre utilisation de technologies numériques avancées pour le suivi, l'efficacité opérationnelle, et la transparence garantit une expérience client exceptionnelle."
+  },
+  "section4": {
+    "title": "Prévoir l'Avenir : Croissance Accélérée pour GKS Logistics",
+    "text1": "GKS Logistics est parfaitement positionné pour une croissance rapide dans les années à venir, grâce à notre positionnement stratégique unique en Afrique de l'Ouest et à notre expertise reconnue. Les opportunités croissantes dans la région, combinées à nos investissements stratégiques, nos partenariats clients solides, et notre excellence opérationnelle, créent un environnement propice à une expansion significative.",
+    "text2": "Notre vision pour l'avenir inclut l'expansion de notre réseau de services, le développement de nouvelles solutions technologiques, et le renforcement de nos partenariats stratégiques. Nous continuons d'investir dans l'infrastructure, la formation de nos équipes locales, et l'adoption de technologies de pointe pour maintenir notre position de leader dans le secteur logistique ouest-africain."
+  },
+  "conclusion": {
+    "text": {
+      "2": "Alors que nous regardons vers 2025 et au-delà, nous continuons d'investir dans les technologies de pointe, de développer nos partenariats stratégiques, et de renforcer notre réseau international. Notre vision reste claire : connecter l'Afrique au monde à travers une logistique d'excellence."
+    },
+    "title": "Conclusion: L'Avenir de la Logistique avec GKS"
+  },
+  "cta": {
+    "title": "Prêt à optimiser votre chaîne d'approvisionnement ?",
+    "subtitle": "Découvrez comment GKS Logistics peut vous accompagner dans votre expansion en Afrique de l'Ouest",
+    "sidebar": {
+      "title": "Besoin d'Aide ?",
+      "desc": "Nos experts sont là pour vous accompagner dans vos projets logistiques"
+    },
+    "description": "Nos experts sont là pour vous accompagner dans vos projets logistiques en Afrique",
+    "contact": "Contactez-nous",
+    "quote": "Faire un devis",
+    "careers": "Notre Culture",
+    "text": "Rencontrez les autres professionnels qui font la force de GKS Logistics",
+    "team": "Notre Équipe"
+  },
+  "get": {
+    "a": {
+      "quote": "Faire un devis"
+    },
+    "free": {
+      "quote": "Faire un devis gratuit"
+    }
+  },
+  "discover": {
+    "articles": "Découvrez nos articles"
+  },
+  "post": {
+    "1": {
+      "title": "Naviguer dans l'Explosion : Pourquoi l'Afrique de l'Ouest est la Nouvelle Frontière Logistique",
+      "excerpt": "Découvrez comment l'Afrique de l'Ouest se transforme en hub logistique majeur et comment GKS Logistics mène cette révolution...",
+      "author": "Par GKS Logistics Insights",
+      "date": "10 Décembre 2024"
+    },
+    "2": {
+      "title": "Débloquer le Potentiel Économique de l'Afrique : Le Rôle de la Logistique Intégrée",
+      "excerpt": "Une analyse approfondie de la transformation économique africaine et du rôle crucial de la logistique dans cette évolution...",
+      "author": "Par l'Équipe de Recherche GKS",
+      "date": "15 Novembre 2024"
+    },
+    "3": {
+      "title": "Tendances Logistiques 2025 : Innovation et Croissance en Afrique",
+      "excerpt": "Notre rapport complet sur les tendances qui façonnent l'avenir de la logistique africaine et les opportunités à saisir...",
+      "author": "Par l'Équipe GKS Logistics",
+      "date": "15 Mars 2025"
+    }
+  },
+  "read": {
+    "more": "Lire la suite"
+  },
+  "pagination": {
+    "prev": "Précédent",
+    "next": "Suivant"
+  },
+  "sidebar": {
+    "about": {
+      "title": "À Propos de GKS Logistics",
+      "text": "GKS Logistics est votre partenaire de confiance pour tous vos besoins logistiques en Afrique. Avec notre expertise locale et notre réseau international, nous connectons les marchés africains au reste du monde.",
+      "desc": "Nous sommes une entreprise logistique leader connectant l'Afrique au monde à travers des solutions innovantes et un service exceptionnel."
+    },
+    "popular": {
+      "1": {
+        "title": "Naviguer dans l'Explosion : Afrique de l'Ouest",
+        "date": "10 Décembre 2024"
+      },
+      "2": {
+        "title": "Débloquer le Potentiel Économique de l'Afrique",
+        "date": "15 Novembre 2024"
+      },
+      "3": {
+        "title": "Tendances Logistiques 2025",
+        "date": "15 Mars 2025"
+      },
+      "title": "Posts Populaires"
+    },
+    "hr": {
+      "title": "Contactez notre Équipe RH",
+      "desc": "Prêt à rejoindre notre équipe ? Contactez notre département RH pour plus d'informations."
+    }
+  },
+  "learn": {
+    "more": "En savoir plus"
+  },
+  "view": {
+    "jobs": {
+      "button": "Voir les Offres"
+    },
+    "all": {
+      "articles": "Voir tous les articles"
+    }
+  },
+  "culture": {
+    "values": {
+      "title": "Notre Culture & Nos Valeurs"
+    },
+    "intro": "Chez GKS Logistics, nous croyons que notre succès repose sur notre culture d'entreprise et nos valeurs fondamentales qui guident chaque décision et action."
+  },
+  "value": {
+    "innovation": {
+      "title": "Innovation",
+      "desc": "Nous encourageons la créativité et l'innovation pour repousser les limites de la logistique moderne."
+    },
+    "collaboration": {
+      "title": "Collaboration",
+      "desc": "Nous travaillons ensemble pour atteindre des objectifs communs et créer un environnement de travail positif."
+    },
+    "integrity": {
+      "title": "Intégrité",
+      "desc": "Nous maintenons les plus hauts standards d'éthique et de transparence dans toutes nos interactions."
+    },
+    "excellence": {
+      "title": "Excellence",
+      "desc": "Nous nous efforçons d'offrir des services de qualité supérieure à nos clients et partenaires."
+    }
+  },
+  "video": {
+    "1": {
+      "title": "Journée de la Poste",
+      "desc": "Découvrez notre participation dynamique à la Journée de la Poste,"
+    },
+    "2": {
+      "title": "Journée du Don de Sang",
+      "desc": "Notre équipe s’engage pour sauver des vies"
+    },
+    "3": {
+      "title": "Journée du cancer du sein",
+      "desc": "GKS Soutien à la sensibilisation avec des actions communautaires pour la santé des femmes."
+    },
+    "4": {
+      "title": "Notre Équipe",
+      "desc": "Les professionnels derrière GKS"
+    },
+    "6": {
+      "title": "Family Day",
+      "desc": "Une journée mémorable pour renforcer les liens avec les familles de nos employés."
+    },
+    "7": {
+      "title": "Notre Expansion en Afrique",
+      "desc": "GKS Logistics au Niger"
+    },
+    "fallback": "Votre navigateur ne supporte pas la lecture vidéo.",
+    "spotlight": "VIDEO SPOTLIGHT",
+    "title": {
+      "2": "GKS Logistics au Niger"
+    }
+  },
+  "agent": {
+    "video": {
+      "caption": "Découvrez le quotidien d'un agent GKS Logistics qui partage son expérience et sa passion pour son métier."
+    }
+  },
+  "benefit": {
+    "growth": {
+      "title": "Développement Professionnel & Croissance",
+      "desc": "Programmes de formation continue et opportunités d'avancement de carrière."
+    },
+    "compensation": {
+      "title": "Innovation et Excellence",
+      "desc": "Salaire attractif et package d'avantages sociaux complet."
+    },
+    "balance": {
+      "title": "Responsabilité et Efficacité",
+      "desc": "Horaires flexibles et politiques favorisant l'équilibre entre vie privée et professionnelle."
+    },
+    "impact": {
+      "title": "Impact Mondial",
+      "desc": "Contribuez au développement économique de l'Afrique et au commerce international."
+    },
+    "health": {
+      "title": "Performance et Engagement",
+      "desc": "Assurance santé complète et programmes de bien-être pour nos employés."
+    },
+    "diversity": {
+      "title": "Diversité & Inclusion",
+      "desc": "Un environnement de travail inclusif qui valorise la diversité et l'égalité des chances."
+    }
+  },
+  "job": {
+    "opportunities": {
+      "title": "Nos Opportunités d'Emploi",
+      "intro": "Découvrez nos offres d'emploi actuelles et trouvez votre place dans notre équipe dynamique."
+    }
+  },
+  "no": {
+    "open": {
+      "positions": {
+        "title": "Aucun Poste Ouvert Actuellement",
+        "desc": "Nous n'avons actuellement aucun poste vacant. Inscrivez-vous à notre newsletter pour être informé des futures opportunités chez GKS Logistics."
+      }
+    }
+  },
+  "spontaneous": {
+    "application": {
+      "title": "Candidature Spontanée",
+      "desc": "Vous souhaitez rejoindre notre équipe ? Envoyez-nous votre candidature spontanée !",
+      "button": "Candidature Spontanée"
+    }
+  },
+  "testimonial": {
+    "1": "GKS Logistics a transformé notre chaîne d'approvisionnement avec des livraisons fiables et rapides.",
+    "2": "Service professionnel avec une excellente communication. Nous sommes très satisfaits de leur réactivité.",
+    "3": "Respect des délais et marchandises en parfait état. Je recommande vivement.",
+    "groupage": {
+      "1": "\"Service impeccable ! Mon envoi de Dubai est arrivé en 8 jours exactement comme prévu. Je recommande vivement GKS pour le groupage.\"",
+      "2": "\"Excellent rapport qualité-prix. J'utilise régulièrement la route Turquie-Bamako pour mes importations de textile. Très satisfait.\"",
+      "3": "\"Équipe professionnelle et réactive. Le suivi en temps réel est un vrai plus. Je ne passe plus que par GKS.\""
+    },
+    "name": {
+      "1": "Amadou K.",
+      "2": "Aïcha B.",
+      "3": "Mamadou S."
+    },
+    "role": {
+      "1": "Distributeur agroalimentaire, Bamako",
+      "2": "Entreprise textile, Niamey",
+      "3": "Société pharmaceutique, Conakry"
+    }
+  },
+  "article": {
+    "link": {
+      "unlocking": "Unlocking Africa's Economic Potential",
+      "west": {
+        "africa": "West Africa Logistics Frontier"
+      },
+      "trends": "Tendances Logistiques 2025"
+    },
+    "title": "GKS Logistics: Tendances Logistiques 2025 - Innovation et Croissance en Afrique",
+    "author": "Par l'Équipe GKS Logistics",
+    "date": "15 Mars 2025",
+    "intro": "Dans un monde en constante évolution, le secteur logistique africain connaît une transformation sans précédent. GKS Logistics, leader du transport et de la logistique en Afrique de l'Ouest, analyse les tendances qui façonnent l'avenir de notre industrie et présente notre vision pour 2025 et au-delà."
+  },
+  "career": {
+    "application": {
+      "modal": {
+        "title": "Candidature Spontanée",
+        "subtitle": "Remplissez le formulaire ci-dessous pour soumettre votre candidature."
+      }
+    },
+    "app": {
+      "personal": {
+        "info": "Informations Personnelles"
+      },
+      "full": {
+        "name": "Nom Complet *"
+      },
+      "email": "Adresse Email *",
+      "phone": "Numéro de Téléphone *",
+      "city": "Ville de Résidence *",
+      "position": "Poste *",
+      "department": "Département *",
+      "dept": {
+        "operations": "Opérations",
+        "commercial": "Commercial",
+        "hr": "Ressources Humaines",
+        "finance": "Finance",
+        "it": "Informatique",
+        "other": "Autre"
+      },
+      "experience": "Années d'Expérience *",
+      "exp": {
+        "0": {
+          "1": "0-1 an"
+        },
+        "1": {
+          "3": "1-3 ans"
+        },
+        "3": {
+          "5": "3-5 ans"
+        },
+        "5": {
+          "10": "5-10 ans"
+        },
+        "10plus": "10+ ans"
+      },
+      "qualifications": "Qualifications et Formation",
+      "education": "Niveau d'Études *",
+      "edu": {
+        "high": {
+          "school": "Lycée"
+        },
+        "bachelor": "Licence/Bachelor",
+        "master": "Master",
+        "phd": "Doctorat",
+        "other": "Autre"
+      },
+      "skills": "Compétences Clés",
+      "documents": "Documents",
+      "cv": {
+        "label": "CV/Curriculum Vitae *",
+        "help": "Format accepté: PDF, DOC, DOCX (Max 5MB)"
+      },
+      "cover": {
+        "letter": {
+          "help": "Format accepté: PDF, DOC, DOCX (Max 5MB)"
+        }
+      },
+      "additional": {
+        "info": "Informations Complémentaires"
+      },
+      "motivation": "Pourquoi souhaitez-vous rejoindre GKS Logistics ? *",
+      "availability": "Disponibilité *",
+      "avail": {
+        "immediate": "Immédiate",
+        "1month": "Dans 1 mois",
+        "2months": "Dans 2 mois",
+        "3months": "Dans 3+ mois",
+        "negotiate": "À négocier"
+      },
+      "required": {
+        "note": "* Champs obligatoires"
+      },
+      "cancel": "Annuler",
+      "submit": "Soumettre ma Candidature"
+    }
+  },
+  "back": {
+    "to": {
+      "news": "Retour aux Actualités"
+    }
+  },
+  "gks": {
+    "burkina": {
+      "meta": {
+        "title": "GKS Logistics au Burkina Faso - Solutions Logistiques Ouagadougou"
+      },
+      "hero": {
+        "title": "GKS Logistics au Burkina Faso",
+        "subtitle": "Des Solutions Logistiques Adaptées à Vos Besoins"
+      },
+      "section1": {
+        "title": "Notre Présence à Ouagadougou",
+        "text": "GKS Logistics est présent au Burkina Faso pour servir les besoins logistiques croissants du pays. Notre bureau à Ouagadougou offre des solutions de transport et de logistique adaptées au marché burkinabè."
+      },
+      "feature1": "Position centrale au Sahel",
+      "feature2": "Équipe locale qualifiée",
+      "feature3": "Solutions adaptées",
+      "feature4": "Service fiable",
+      "section2": {
+        "title": "Services Disponibles"
+      },
+      "service1": {
+        "desc": "Transport aérien international via Ouagadougou"
+      },
+      "service2": {
+        "desc": "Distribution terrestre dans tout le Burkina Faso"
+      },
+      "service3": {
+        "desc": "Gestion des procédures douanières locales"
+      },
+      "service4": {
+        "desc": "Solutions logistiques complètes et personnalisées"
+      },
+      "stats": {
+        "title": "Nos Chiffres au Burkina Faso"
+      },
+      "stat1": {
+        "num": "10+",
+        "label": "Services"
+      },
+      "stat2": {
+        "num": "20+",
+        "label": "Équipe Locale"
+      },
+      "stat3": {
+        "num": "24/7",
+        "label": "Support"
+      },
+      "cta": {
+        "title": "Besoin de Services Logistiques au Burkina Faso?"
+      }
+    },
+    "dubai": {
+      "meta": {
+        "title": "GKS Logistics à Dubai - Solutions Logistiques Moyen-Orient"
+      },
+      "hero": {
+        "title": "GKS Logistics à Dubai",
+        "subtitle": "Hub Logistique International du Moyen-Orient"
+      },
+      "section1": {
+        "title": "Notre Présence à Dubai",
+        "text": "GKS Logistics établit sa présence à Dubai, l'un des plus grands hubs logistiques mondiaux. Notre bureau à Dubai facilite le commerce entre l'Afrique, l'Asie et le Moyen-Orient, offrant des solutions logistiques de classe mondiale."
+      },
+      "feature1": "Hub logistique mondial",
+      "feature2": "Infrastructure de pointe",
+      "feature3": "Connectivité internationale",
+      "feature4": "Services 24/7",
+      "section2": {
+        "title": "Services Disponibles"
+      },
+      "service1": {
+        "desc": "Solutions aériennes via l'aéroport international de Dubai"
+      },
+      "service2": {
+        "desc": "Services portuaires via Jebel Ali, plus grand port du Moyen-Orient"
+      },
+      "service3": {
+        "desc": "Services en zone franche et dédouanement aux Émirats"
+      },
+      "service4": {
+        "desc": "Distribution vers le Moyen-Orient, l'Asie et l'Afrique"
+      },
+      "stats": {
+        "title": "Nos Chiffres à Dubai"
+      },
+      "stat1": {
+        "num": "30+",
+        "label": "Destinations"
+      },
+      "stat2": {
+        "num": "60+",
+        "label": "Partenaires"
+      },
+      "stat3": {
+        "num": "24/7",
+        "label": "Support"
+      },
+      "section3": {
+        "title": "Pourquoi Dubai?",
+        "text": "Dubai est le hub logistique le plus important du Moyen-Orient et l'un des plus grands au monde. Sa position géographique stratégique entre l'Europe, l'Afrique et l'Asie en fait une plaque tournante idéale pour le commerce international."
+      },
+      "cta": {
+        "title": "Besoin de Services Logistiques à Dubai?"
+      }
+    },
+    "france": {
+      "meta": {
+        "title": "GKS Logistics en France - Solutions Logistiques Européennes"
+      },
+      "hero": {
+        "title": "GKS Logistics en France",
+        "subtitle": "Votre Passerelle Logistique vers l'Europe"
+      },
+      "section1": {
+        "title": "Notre Présence en France",
+        "text": "GKS Logistics est présent en France pour faciliter les échanges entre l'Afrique et l'Europe. Notre bureau français sert de hub stratégique pour nos opérations européennes, offrant des solutions logistiques complètes pour le commerce euro-africain."
+      },
+      "feature1": "Porte d'entrée de l'Europe",
+      "feature2": "Infrastructure logistique moderne",
+      "feature3": "Expertise euro-africaine",
+      "feature4": "Service bilingue",
+      "section2": {
+        "title": "Services Disponibles"
+      },
+      "service1": {
+        "desc": "Liaisons aériennes directes entre l'Europe et l'Afrique de l'Ouest"
+      },
+      "service2": {
+        "desc": "Services maritimes via les ports français vers l'Afrique"
+      },
+      "service3": {
+        "desc": "Expertise en douane française et européenne"
+      },
+      "service4": {
+        "desc": "Réseau de distribution couvrant toute l'Europe"
+      },
+      "stats": {
+        "title": "Nos Chiffres en France"
+      },
+      "stat1": {
+        "num": "20+",
+        "label": "Destinations Européennes"
+      },
+      "stat2": {
+        "num": "40+",
+        "label": "Partenaires Européens"
+      },
+      "stat3": {
+        "num": "72h",
+        "label": "Livraison Express"
+      },
+      "section3": {
+        "title": "Pourquoi la France?",
+        "text": "La France, avec ses liens historiques et économiques forts avec l'Afrique, est notre hub européen stratégique. Notre présence française facilite les échanges commerciaux entre les deux continents et offre un accès privilégié au marché européen."
+      },
+      "cta": {
+        "title": "Besoin de Services Logistiques en France?"
+      }
+    },
+    "guinea": {
+      "meta": {
+        "title": "GKS Logistics en Guinée Conakry - Solutions Logistiques"
+      },
+      "hero": {
+        "title": "GKS Logistics en Guinée",
+        "subtitle": "Solutions Logistiques pour la Guinée"
+      },
+      "section1": {
+        "title": "Notre Présence en Guinée",
+        "text": "GKS Logistics étend ses services en Guinée Conakry, offrant des solutions logistiques adaptées aux besoins du marché guinéen. Notre présence à Conakry facilite le commerce et le transport dans la région."
+      },
+      "feature1": "Hub côtier stratégique",
+      "feature2": "Accès portuaire",
+      "feature3": "Équipe locale",
+      "feature4": "Services fiables",
+      "section2": {
+        "title": "Services Disponibles"
+      },
+      "service1": {
+        "desc": "Transport aérien international via Conakry"
+      },
+      "service2": {
+        "desc": "Services portuaires et fret maritime"
+      },
+      "service3": {
+        "desc": "Distribution locale et régionale"
+      },
+      "service4": {
+        "desc": "Gestion des procédures douanières"
+      },
+      "stats": {
+        "title": "Nos Chiffres en Guinée"
+      },
+      "stat1": {
+        "num": "10+",
+        "label": "Services"
+      },
+      "stat2": {
+        "num": "15+",
+        "label": "Équipe"
+      },
+      "stat3": {
+        "num": "24/7",
+        "label": "Support"
+      },
+      "section3": {
+        "title": "Pourquoi la Guinée?",
+        "text": "La Guinée Conakry, avec ses ressources minières abondantes et son port sur l'Atlantique, représente un marché stratégique en Afrique de l'Ouest. Notre présence locale facilite les échanges commerciaux et le développement économique de la région."
+      },
+      "cta": {
+        "title": "Besoin de Services Logistiques en Guinée?"
+      }
+    },
+    "ivoire": {
+      "meta": {
+        "title": "GKS Logistics en Côte d'Ivoire - Solutions Logistiques Abidjan"
+      },
+      "hero": {
+        "title": "GKS Logistics en Côte d'Ivoire",
+        "subtitle": "Expansion Stratégique pour Servir l'Afrique de l'Ouest"
+      },
+      "video": {
+        "title": "Voir la Vidéo",
+        "subtitle": "Explorez notre présence et nos opérations logistiques en Côte d'Ivoire"
+      },
+      "section1": {
+        "title": "Notre Présence à Abidjan",
+        "text": "En janvier 2025, GKS Logistics a officiellement étendu ses opérations en Côte d'Ivoire, marquant une étape importante dans notre stratégie de croissance régionale. Notre nouvelle base à Abidjan nous permet de mieux servir nos clients en offrant des solutions logistiques complètes adaptées au marché ivoirien dynamique."
+      },
+      "feature1": "Hub stratégique en Afrique de l'Ouest",
+      "feature2": "Accès au Port Autonome d'Abidjan",
+      "feature3": "Équipe locale expérimentée",
+      "feature4": "Solutions personnalisées",
+      "section2": {
+        "title": "Services Disponibles"
+      },
+      "service1": {
+        "desc": "Solutions de transport aérien rapides et fiables vers et depuis Abidjan"
+      },
+      "service2": {
+        "desc": "Gestion complète des opérations portuaires et du fret maritime"
+      },
+      "service3": {
+        "desc": "Expertise en procédures douanières et réglementations locales"
+      },
+      "service4": {
+        "desc": "Réseau de distribution étendu sur tout le territoire ivoirien"
+      },
+      "highlight1": {
+        "title": "Infrastructure Moderne",
+        "desc": "Installations de pointe à Abidjan"
+      },
+      "highlight2": {
+        "title": "Équipe Expérimentée",
+        "desc": "Professionnels qualifiés locaux"
+      },
+      "highlight3": {
+        "title": "Livraison Rapide",
+        "desc": "Solutions logistiques efficaces"
+      },
+      "stats": {
+        "title": "Nos Chiffres en Côte d'Ivoire"
+      },
+      "stat1": {
+        "num": "15+",
+        "label": "Services Disponibles"
+      },
+      "stat2": {
+        "num": "30+",
+        "label": "Partenaires Locaux"
+      },
+      "stat3": {
+        "num": "48h",
+        "label": "Délai de Livraison"
+      },
+      "section3": {
+        "title": "Pourquoi la Côte d'Ivoire?",
+        "text": "La Côte d'Ivoire représente un hub stratégique en Afrique de l'Ouest avec le Port Autonome d'Abidjan, l'un des plus importants de la région. Notre présence locale nous permet d'offrir des délais plus courts et un service personnalisé à nos clients ivoiriens et régionaux."
+      },
+      "cta": {
+        "title": "Besoin de Services Logistiques en Côte d'Ivoire?",
+        "button": "Contactez-nous"
+      }
+    },
+    "mali": {
+      "meta": {
+        "title": "GKS Logistics au Mali - Solutions Logistiques Bamako"
+      },
+      "hero": {
+        "title": "GKS Logistics au Mali",
+        "subtitle": "Notre Siège Social - Leader en Solutions Logistiques"
+      },
+      "section1": {
+        "title": "Notre Siège Social à Bamako",
+        "text": "Depuis 2019, GKS Logistics opère depuis Bamako, au Mali. Notre siège social est le cœur de nos opérations en Afrique de l'Ouest, offrant une gamme complète de services logistiques pour répondre aux besoins de nos clients locaux et internationaux."
+      },
+      "feature1": "Siège social et centre d'opérations",
+      "feature2": "Infrastructure complète",
+      "feature3": "Équipe expérimentée",
+      "feature4": "Solutions logistiques complètes",
+      "section2": {
+        "title": "Services Disponibles"
+      },
+      "service1": {
+        "desc": "Solutions de transport aérien vers et depuis l'aéroport de Bamako-Sénou"
+      },
+      "service2": {
+        "desc": "Gestion du fret maritime via les ports régionaux d'Abidjan et Dakar"
+      },
+      "service3": {
+        "desc": "Réseau de transport routier couvrant tout le territoire malien"
+      },
+      "service4": {
+        "desc": "Installations d'entreposage sécurisées et services de distribution à Bamako"
+      },
+      "stats": {
+        "title": "Nos Chiffres au Mali"
+      },
+      "stat1": {
+        "num": "2019",
+        "label": "Année de Création"
+      },
+      "stat2": {
+        "num": "50+",
+        "label": "Employés"
+      },
+      "stat3": {
+        "num": "500+",
+        "label": "Clients Satisfaits"
+      },
+      "section3": {
+        "title": "Notre Engagement au Mali",
+        "text": "Le Mali est notre base d'opérations principale. Depuis notre création en 2019, nous avons développé une expertise approfondie du marché malien et des défis logistiques de la région. Notre équipe locale qualifiée offre des solutions adaptées aux besoins spécifiques de nos clients."
+      },
+      "cta": {
+        "title": "Besoin de Services Logistiques au Mali?",
+        "button": "Contactez-nous"
+      }
+    },
+    "niger": {
+      "meta": {
+        "title": "GKS Logistics au Niger - Solutions Logistiques Niamey"
+      },
+      "hero": {
+        "title": "GKS Logistics au Niger",
+        "subtitle": "Extension de Nos Services en Afrique de l'Ouest"
+      },
+      "video": {
+        "title": "Voir la Vidéo",
+        "subtitle": "Découvrez notre expansion et nos activités logistiques au Niger"
+      },
+      "section1": {
+        "title": "Notre Présence à Niamey",
+        "text": "GKS Logistics est fier d'annoncer son expansion au Niger, un marché stratégique en pleine croissance. Notre bureau à Niamey offre une gamme complète de services logistiques pour répondre aux besoins croissants de nos clients dans la région sahélienne."
+      },
+      "feature1": "Position stratégique au Sahel",
+      "feature2": "Expertise régionale",
+      "feature3": "Partenaires locaux fiables",
+      "feature4": "Solutions adaptées au contexte local",
+      "section2": {
+        "title": "Services Disponibles"
+      },
+      "service1": {
+        "desc": "Connexions aériennes régionales et internationales depuis Niamey"
+      },
+      "service2": {
+        "desc": "Réseau de transport routier couvrant tout le territoire nigérien"
+      },
+      "service3": {
+        "desc": "Gestion complète des procédures douanières et administratives"
+      },
+      "service4": {
+        "desc": "Solutions end-to-end pour vos besoins logistiques complexes"
+      },
+      "highlight1": {
+        "title": "Infrastructure Moderne",
+        "desc": "Installations de pointe à Niamey"
+      },
+      "highlight2": {
+        "title": "Équipe Expérimentée",
+        "desc": "Professionnels qualifiés locaux"
+      },
+      "highlight3": {
+        "title": "Livraison Rapide",
+        "desc": "Solutions logistiques efficaces"
+      },
+      "stats": {
+        "title": "Nos Chiffres au Niger"
+      },
+      "stat1": {
+        "num": "12+",
+        "label": "Solutions Logistiques"
+      },
+      "stat2": {
+        "num": "25+",
+        "label": "Équipe Locale"
+      },
+      "stat3": {
+        "num": "100%",
+        "label": "Couverture Régionale"
+      },
+      "section3": {
+        "title": "Un Engagement Local",
+        "text": "Notre expansion au Niger reflète notre engagement envers le développement économique de la région. Nous travaillons en étroite collaboration avec des partenaires locaux pour offrir des solutions logistiques fiables et efficaces adaptées au contexte nigérien."
+      },
+      "cta": {
+        "title": "Besoin de Services Logistiques au Niger?",
+        "button": "Contactez-nous"
+      }
+    },
+    "senegal": {
+      "meta": {
+        "title": "GKS Logistics au Sénégal - Solutions Logistiques Dakar"
+      },
+      "hero": {
+        "title": "GKS Logistics au Sénégal",
+        "subtitle": "Votre Partenaire Logistique à Dakar et dans Toute la Région"
+      },
+      "section1": {
+        "title": "Notre Présence à Dakar",
+        "text": "GKS Logistics étend ses opérations au Sénégal, un hub économique majeur de l'Afrique de l'Ouest. Notre présence à Dakar nous permet d'offrir des solutions logistiques complètes adaptées aux besoins du marché sénégalais dynamique et en croissance."
+      },
+      "feature1": "Porte d'entrée de l'Afrique de l'Ouest",
+      "feature2": "Accès au Port Autonome de Dakar",
+      "feature3": "Équipe locale qualifiée",
+      "feature4": "Services personnalisés",
+      "section2": {
+        "title": "Services Disponibles"
+      },
+      "service1": {
+        "desc": "Solutions de transport aérien rapides via l'aéroport international de Dakar"
+      },
+      "service2": {
+        "desc": "Gestion complète des opérations portuaires au Port de Dakar"
+      },
+      "service3": {
+        "desc": "Expertise en procédures douanières et conformité réglementaire"
+      },
+      "service4": {
+        "desc": "Installations d'entreposage modernes et sécurisées à Dakar"
+      },
+      "stats": {
+        "title": "Nos Chiffres au Sénégal"
+      },
+      "stat1": {
+        "num": "15+",
+        "label": "Services Logistiques"
+      },
+      "stat2": {
+        "num": "35+",
+        "label": "Équipe Locale"
+      },
+      "stat3": {
+        "num": "24/7",
+        "label": "Support Client"
+      },
+      "section3": {
+        "title": "Pourquoi le Sénégal?",
+        "text": "Le Sénégal, avec sa stabilité politique et sa position géographique stratégique, est un acteur clé du commerce en Afrique de l'Ouest. Le Port Autonome de Dakar est l'un des ports les plus importants de la région atlantique africaine."
+      },
+      "cta": {
+        "title": "Besoin de Services Logistiques au Sénégal?",
+        "button": "Contactez-nous"
+      }
+    },
+    "turkey": {
+      "meta": {
+        "title": "GKS Logistics en Turquie - Solutions Logistiques"
+      },
+      "hero": {
+        "title": "GKS Logistics en Turquie",
+        "subtitle": "Pont entre l'Europe, l'Asie et l'Afrique"
+      },
+      "section1": {
+        "title": "Notre Présence en Turquie",
+        "text": "GKS Logistics établit sa présence en Turquie, un carrefour stratégique entre trois continents. Notre bureau en Turquie facilite les échanges entre l'Europe, l'Asie et l'Afrique, offrant des solutions logistiques multimodales performantes."
+      },
+      "feature1": "Carrefour intercontinental",
+      "feature2": "Infrastructure moderne",
+      "feature3": "Connectivité globale",
+      "feature4": "Expertise multilingue",
+      "section2": {
+        "title": "Services Disponibles"
+      },
+      "service1": {
+        "desc": "Liaisons aériennes entre Europe, Asie et Afrique via Istanbul"
+      },
+      "service2": {
+        "desc": "Services portuaires via les détroits et ports turcs"
+      },
+      "service3": {
+        "desc": "Réseau routier couvrant l'Europe et l'Asie"
+      },
+      "service4": {
+        "desc": "Solutions d'entreposage et de transit stratégique"
+      },
+      "stats": {
+        "title": "Nos Chiffres en Turquie"
+      },
+      "stat1": {
+        "num": "3",
+        "label": "Continents Connectés"
+      },
+      "stat2": {
+        "num": "50+",
+        "label": "Partenaires"
+      },
+      "stat3": {
+        "num": "48h",
+        "label": "Transit Moyen"
+      },
+      "section3": {
+        "title": "Pourquoi la Turquie?",
+        "text": "La Turquie occupe une position géographique unique, reliant l'Europe, l'Asie et l'Afrique. Istanbul, notamment, est un hub logistique majeur facilitant le commerce entre ces trois continents. Notre présence turque renforce notre réseau international."
+      },
+      "cta": {
+        "title": "Besoin de Services Logistiques en Turquie?"
+      }
+    },
+    "usa": {
+      "meta": {
+        "title": "GKS Logistics aux États-Unis - Solutions Logistiques"
+      },
+      "hero": {
+        "title": "GKS Logistics aux États-Unis",
+        "subtitle": "Votre Partenaire Logistique en Amérique du Nord"
+      },
+      "section1": {
+        "title": "Notre Présence aux États-Unis",
+        "text": "GKS Logistics étend ses opérations aux États-Unis pour faciliter le commerce transatlantique. Notre présence en Amérique du Nord nous permet d'offrir des solutions logistiques optimales entre l'Afrique, l'Europe et les Amériques."
+      },
+      "feature1": "Hub logistique stratégique",
+      "feature2": "Réseau de distribution étendu",
+      "feature3": "Expertise internationale",
+      "feature4": "Service premium",
+      "section2": {
+        "title": "Services Disponibles"
+      },
+      "service1": {
+        "desc": "Transport aérien express entre les USA, l'Afrique et l'Europe"
+      },
+      "service2": {
+        "desc": "Solutions maritimes via les principaux ports américains"
+      },
+      "service3": {
+        "desc": "Expertise en réglementations douanières américaines"
+      },
+      "service4": {
+        "desc": "Solutions d'entreposage modernes et distribution nationale"
+      },
+      "stats": {
+        "title": "Nos Chiffres aux États-Unis"
+      },
+      "stat1": {
+        "num": "15+",
+        "label": "Services Internationaux"
+      },
+      "stat2": {
+        "num": "50+",
+        "label": "Partenaires Locaux"
+      },
+      "stat3": {
+        "num": "48h",
+        "label": "Temps de Transit Moyen"
+      },
+      "section3": {
+        "title": "Pourquoi les États-Unis?",
+        "text": "Les États-Unis représentent le plus grand marché commercial au monde. Notre présence américaine facilite les échanges commerciaux entre l'Afrique de l'Ouest et l'Amérique du Nord, offrant à nos clients un accès direct au marché américain."
+      },
+      "cta": {
+        "title": "Besoin de Services Logistiques aux USA?"
+      }
+    }
+  },
+  "country": {
+    "contact": {
+      "full": {
+        "name": "Nom Complet *"
+      },
+      "company": {
+        "name": "Nom de l'Entreprise"
+      },
+      "email": "Email *",
+      "phone": "Téléphone *",
+      "freight": {
+        "type": {
+          "placeholder": "Sélectionner",
+          "air": "Fret Aérien",
+          "sea": "Fret Maritime",
+          "road": "Fret Routier",
+          "warehousing": "Entreposage",
+          "other": "Autres"
+        }
+      },
+      "origin": "Origine *",
+      "destination": "Destination *",
+      "message": "Détails *"
+    }
+  },
+  "green": {
+    "hero": {
+      "title": "🌱 GKS Green Logistics",
+      "subtitle": "Engagés pour un transport durable et une logistique responsable. Ensemble, construisons un avenir plus vert.",
+      "cta": "Découvrir nos actions"
+    },
+    "commitments": {
+      "title": "Nos Engagements RSE",
+      "subtitle": "La responsabilité environnementale au cœur de notre stratégie"
+    },
+    "initiatives": {
+      "title": "Nos Initiatives Concrètes",
+      "subtitle": "Actions mises en place depuis 2020"
+    },
+    "stats": {
+      "title": "Impact Environnemental en Chiffres",
+      "subtitle": "Nos résultats concrets"
+    },
+    "stat": {
+      "co2": {
+        "number": "-25%",
+        "label": "Réduction CO₂ depuis 2020"
+      },
+      "pallets": {
+        "number": "50K+",
+        "label": "Palettes recyclées"
+      },
+      "solar": {
+        "number": "200m²",
+        "label": "Panneaux solaires"
+      },
+      "efficiency": {
+        "number": "+30%",
+        "label": "Efficacité énergétique"
+      }
+    },
+    "actions": {
+      "title": "Agissons Ensemble",
+      "subtitle": "Vous aussi, contribuez à un transport plus durable"
+    },
+    "contact": {
+      "cta": "Contactez-nous pour en savoir plus"
+    }
+  },
+  "commitment": {
+    "co2": {
+      "title": "Réduction CO₂",
+      "desc": "Nous nous engageons à réduire nos émissions de CO₂ de 30% d'ici 2030 grâce à l'optimisation des routes et l'utilisation de véhicules moins polluants."
+    },
+    "recycle": {
+      "title": "Recyclage & Réutilisation",
+      "desc": "Programme de recyclage des palettes, emballages et matériaux. 85% de nos palettes sont recyclées ou réutilisées."
+    },
+    "energy": {
+      "title": "Énergies Renouvelables",
+      "desc": "Installation de panneaux solaires dans nos entrepôts pour réduire notre dépendance aux énergies fossiles."
+    },
+    "optimize": {
+      "title": "Optimisation Logistique",
+      "desc": "Utilisation d'algorithmes avancés pour optimiser les routes et réduire les kilomètres parcourus à vide."
+    },
+    "training": {
+      "title": "Formation & Sensibilisation",
+      "desc": "Formation continue de nos équipes aux pratiques éco-responsables et à la conduite écologique."
+    },
+    "certification": {
+      "title": "Certifications",
+      "desc": "Nous travaillons vers l'obtention de certifications environnementales internationales (ISO 14001)."
+    }
+  },
+  "initiative": {
+    "2020": {
+      "title": "🌍 Audit Environnemental",
+      "desc": "Premier audit environnemental complet de nos opérations pour identifier les axes d'amélioration prioritaires."
+    },
+    "2021": {
+      "title": "♻️ Programme de Recyclage",
+      "desc": "Lancement du programme de recyclage des palettes à Bamako et Abidjan. Plus de 10,000 palettes recyclées la première année."
+    },
+    "2022": {
+      "title": "🚛 Flotte Éco-responsable",
+      "desc": "Introduction de véhicules conformes aux normes Euro 6 et formation des chauffeurs à l'éco-conduite."
+    },
+    "2023": {
+      "title": "☀️ Énergie Solaire",
+      "desc": "Installation de 200 m² de panneaux solaires sur notre entrepôt principal à Bamako, réduisant de 40% notre consommation électrique."
+    },
+    "2024": {
+      "title": "📊 Digitalisation & Optimisation",
+      "desc": "Déploiement d'un système de gestion logistique intelligent pour optimiser les routes et réduire notre empreinte carbone."
+    },
+    "2025": {
+      "title": "🌱 Objectif Carbon Neutral",
+      "desc": "Lancement de notre feuille de route vers la neutralité carbone d'ici 2030, avec compensation des émissions résiduelles."
+    }
+  },
+  "action": {
+    "packaging": {
+      "title": "Emballages Éco-responsables",
+      "desc": "Optez pour nos solutions d'emballage recyclable et biodégradable"
+    },
+    "consolidation": {
+      "title": "Consolidation de Fret",
+      "desc": "Utilisez nos services de groupage pour réduire l'impact environnemental"
+    },
+    "reporting": {
+      "title": "Rapport Carbone",
+      "desc": "Recevez un rapport détaillé de l'empreinte carbone de vos expéditions"
+    }
+  },
+  "route": {
+    "dubai": {
+      "feature": {
+        "1": "Départs hebdomadaires",
+        "2": "Transit 7-10 jours",
+        "3": "Idéal pour électronique et marchandises",
+        "4": "Suivi en temps réel",
+        "5": "Assistance douanière incluse"
+      }
+    },
+    "france": {
+      "bamako": "Route France - Bamako"
+    },
+    "turkey": {
+      "feature": {
+        "1": "Départs bi-hebdomadaires",
+        "2": "Transit 10-14 jours",
+        "3": "Spécialiste textile et mobilier",
+        "4": "Tarifs compétitifs",
+        "5": "Consolidation optimisée"
+      }
+    }
+  },
+  "calendar": {
+    "month": "Novembre - Décembre 2025",
+    "route": "Route",
+    "status": "Statut",
+    "action": "Action"
+  },
+  "booking": {
+    "firstname": "Prénom *",
+    "lastname": "Nom *",
+    "email": "Email *",
+    "phone": "Téléphone *",
+    "route": "Route *",
+    "weight": "Poids estimé (kg)",
+    "volume": "Volume estimé (m³)",
+    "description": "Description de la marchandise"
+  },
+  "stats": {
+    "10": {
+      "plus": "10+"
+    },
+    "20": {
+      "plus": "50,000"
+    },
+    "1000": {
+      "plus": "1,000"
+    }
+  },
+  "floating": {
+    "cta": "Devis Gratuit"
+  },
+  "timeline": {
+    "title": "GKS Logistics: Chronologie de la Croissance"
+  },
+  "ceo": {
+    "quote": "\"Notre vision est de connecter l'Afrique au monde à travers une logistique d'excellence. Chaque innovation, chaque partenariat, chaque investissement technologique nous rapproche de notre objectif : être le pont logistique le plus fiable entre l'Afrique et le reste du globe.\"",
+    "cite": "- Aboubacar Sidiki KONATE, CEO, GKS Logistics"
+  },
+  "metrics": {
+    "title": "Métriques Clés & Réalisations"
+  },
+  "metric": {
+    "employees": "Employés",
+    "tons": "Tonnes Expédiées",
+    "delivery": "Livraison à Temps",
+    "countries": "Pays Desservis"
+  },
+  "africa": {
+    "title": "Naviguer dans le Paysage Logistique Dynamique de l'Afrique",
+    "text": {
+      "1": "L'Afrique représente l'une des régions les plus prometteuses pour la croissance logistique mondiale. Avec une population en expansion rapide et une urbanisation croissante, le continent offre des opportunités uniques pour l'innovation logistique.",
+      "2": "GKS Logistics joue un rôle central dans cette transformation, en connectant les marchés africains aux chaînes d'approvisionnement mondiales. Notre expertise locale combinée à notre réseau international nous permet de surmonter les défis uniques du continent.",
+      "3": "Les défis incluent les infrastructures en développement, la diversité réglementaire et les conditions géographiques variées. Cependant, ces défis créent également des opportunités d'innovation et de solutions sur mesure."
+    }
+  },
+  "trends": {
+    "title": "Tendances Mondiales Façonnant l'Avenir de la Logistique"
+  },
+  "sustainability": {
+    "title": "Durabilité & Logistique Verte",
+    "text": "La durabilité devient un impératif dans la logistique moderne. GKS Logistics investit massivement dans des solutions vertes : Panneaux solaires, énergies renouvelables, et emballages recyclables. Notre objectif de neutralité carbone d'ici 2025 guide toutes nos décisions stratégiques."
+  },
+  "technology": {
+    "title": "Innovation Technologique",
+    "text": "La technologie moderne transforme la logistique avec l'optimisation des routes, la gestion avancée des stocks, et l'automatisation des processus. GKS Logistics investit dans des solutions technologiques innovantes pour maximiser l'efficacité et réduire les coûts, tout en améliorant la satisfaction client."
+  },
+  "resilience": {
+    "title": "Résilience de la Chaîne d'Approvisionnement",
+    "text": "Les perturbations mondiales ont mis en évidence l'importance de la résilience. GKS Logistics développe des réseaux de fournisseurs diversifiés, des solutions de stockage stratégiques, et des protocoles de continuité pour assurer la fiabilité même en période d'incertitude.",
+    "stat": {
+      "1": "Réseau diversifié",
+      "2": "Stockage stratégique",
+      "3": "Protocoles continuité"
+    }
+  },
+  "recent": {
+    "news": {
+      "1": "Expansion de nos Services en Côte d'Ivoire",
+      "2": "GKS Logistics s'étend au Niger",
+      "3": "Guide du Partenaire Logistique en Afrique",
+      "title": "Actualités Récentes",
+      "date": {
+        "1": "20 Janvier 2025",
+        "2": "15 Janvier 2025",
+        "3": "10 Janvier 2025"
+      }
+    }
+  },
+  "resources": {
+    "title": "Ressources Pertinentes"
+  },
+  "resource": {
+    "1": {
+      "title": "Guide du Partenaire Logistique",
+      "desc": "10 points pour choisir votre partenaire"
+    },
+    "2": {
+      "title": "Logistique Intra-Africaine",
+      "desc": "Naviguer dans le commerce intra-africain"
+    },
+    "3": {
+      "title": "Blog & Articles",
+      "desc": "Analyses et perspectives du secteur"
+    }
+  },
+  "latest": {
+    "news": {
+      "media": "Dernières Actualités & Médias"
+    }
+  },
+  "featured": {
+    "badge": "Article Vedette",
+    "date": "15 Mars 2025"
+  },
+  "employee": {
+    "testimonials": {
+      "section": {
+        "title": "Portrait d'Équipe",
+        "subtitle": "Découvrez les professionnels qui font GKS"
+      },
+      "view": {
+        "profile": "Voir le profil"
+      },
+      "employee": {
+        "1": {
+          "name": "Aboubacar Sidiki KONATE",
+          "role": "CEO & Fondateur",
+          "quote": "\"Notre vision est de connecter le monde à travers une logistique d'excellence, en créant des ponts entre les marchés africains et le reste du globe.\""
+        },
+        "2": {
+          "name": "Alimata KONATE",
+          "role": "Directrice Générale Mali",
+          "quote": "\"L'excellence opérationnelle et le leadership inspirant sont au cœur de notre succès. Je m'engage à diriger nos équipes vers de nouveaux sommets.\""
+        },
+        "3": {
+          "name": "Notre Équipe",
+          "role": "Équipe Opérationnelle",
+          "quote": "\"Chaque membre de notre équipe contribue à l'excellence de GKS Logistics avec passion et professionnalisme.\""
+        }
+      }
+    },
+    "name": "Aboubacar Sidiki KONATE",
+    "title": "CEO, GKS Logistics",
+    "quote": "\"Notre vision est de connecter le monde à travers une logistique d'excellence, en créant des ponts entre les marchés africains et le reste du globe.\""
+  },
+  "articles": {
+    "title": "Derniers Articles",
+    "subtitle": "Restez informé de nos dernières actualités"
+  },
+  "insights": {
+    "title": "Insights Industrie",
+    "subtitle": "Analyses et tendances du secteur"
+  },
+  "company": {
+    "news": {
+      "title": "Actualités de l'Entreprise"
+    },
+    "story": {
+      "title": "Notre Histoire",
+      "text": {
+        "2": "Fondée avec une vision claire de connecter les marchés africains au reste du monde, notre entreprise a su évoluer et s'adapter aux défis de la mondialisation. Nous avons développé un réseau de partenaires stratégiques et investi dans des technologies de pointe pour offrir des services logistiques de qualité supérieure."
+      }
+    }
+  },
+  "years": {
+    "experience": "Années d'expérience"
+  },
+  "countries": {
+    "served": "Pays desservis"
+  },
+  "clients": {
+    "satisfied": "Clients satisfaits"
+  },
+  "journey": {
+    "title": "Mon Parcours chez GKS Logistics",
+    "text": {
+      "1": "Mon parcours entrepreneurial a commencé en 2019 lorsque j'ai fondé GKS Logistics avec une vision claire : révolutionner la logistique en Afrique de l'Ouest. Fort de mon expérience dans le secteur et de ma passion pour l'innovation, j'ai créé cette entreprise pour répondre aux défis logistiques croissants de la région.",
+      "2": "Depuis la fondation, j'ai dirigé l'expansion de GKS Logistics d'une startup ambitieuse à un leader reconnu dans le secteur logistique. Mon approche visionnaire et ma détermination ont permis à l'entreprise de se développer rapidement tout en maintenant notre engagement envers l'excellence et l'innovation."
+    }
+  },
+  "milestone": {
+    "1": "Fondation de GKS Logistics",
+    "2": "Expansion Régionale",
+    "3": "Leadership Continental"
+  },
+  "role": {
+    "title": "Mon Rôle & Mission",
+    "text": "En tant que CEO et Fondateur de GKS Logistics, ma mission est de définir la vision stratégique de l'entreprise et de diriger son expansion continue. Je supervise la direction générale, les partenariats stratégiques, et l'innovation technologique pour maintenir notre position de leader dans le secteur logistique africain."
+  },
+  "responsibilities": {
+    "title": "Responsabilités Clés"
+  },
+  "responsibility": {
+    "1": "Vision stratégique et leadership",
+    "2": "Partenariats stratégiques internationaux",
+    "3": "Innovation et expansion d'entreprise",
+    "4": "Développement du marché africain"
+  },
+  "passions": {
+    "title": "Au-delà du Travail : Passions & Intérêts",
+    "text": "En tant qu'entrepreneur et leader, je suis passionné par l'innovation technologique et le développement économique de l'Afrique. Je crois fermement que l'entrepreneuriat est la clé pour transformer les défis africains en opportunités de croissance et de prospérité."
+  },
+  "interest": {
+    "1": "Innovation & Technologies émergentes",
+    "2": "Développement économique africain",
+    "3": "Mentorat d'entrepreneurs",
+    "4": "Stratégie & Investissement"
+  },
+  "team": {
+    "page": {
+      "back": {
+        "to": {
+          "news": "Retour aux Actualités"
+        }
+      },
+      "team": {
+        "badge": "Notre Équipe",
+        "title": "Notre Équipe",
+        "subtitle": "Découvrez les professionnels passionnés qui font de GKS Logistics un leader de la logistique en Afrique",
+        "members": "Membres d'équipe"
+      },
+      "stats": {
+        "10": {
+          "plus": "10+"
+        },
+        "20": {
+          "plus": "20+"
+        }
+      },
+      "years": {
+        "experience": "Années d'expérience"
+      },
+      "countries": "Pays couverts",
+      "leadership": {
+        "badge": "Leadership",
+        "title": "Équipe de Direction",
+        "subtitle": "Nos leaders visionnaires qui guident GKS Logistics vers l'excellence"
+      },
+      "leader": {
+        "1": {
+          "name": "Aboubacar Sidiki Konate",
+          "role": "CEO & Fondateur",
+          "quote": "\"Notre vision est de connecter le monde à travers une logistique d'excellence...\""
+        },
+        "2": {
+          "name": "Alimata Konate",
+          "role": "Directrice Générale Mali",
+          "quote": "\"L'excellence en logistique ne consiste pas seulement à déplacer des marchandises...\""
+        }
+      },
+      "view": {
+        "profile": "Voir le profil"
+      },
+      "departments": {
+        "badge": "Départements",
+        "title": "Nos Départements",
+        "subtitle": "Des équipes spécialisées au service de l'excellence logistique"
+      },
+      "dept": {
+        "operations": {
+          "desc": "Gestion des flux logistiques et optimisation des processus",
+          "count": "10+ membres"
+        },
+        "commercial": {
+          "desc": "Relations clients et développement commercial",
+          "count": "5+ membres"
+        },
+        "hr": {
+          "desc": "Gestion du capital humain et développement des talents",
+          "count": "5+ membres"
+        }
+      },
+      "values": {
+        "badge": "Nos Valeurs",
+        "title": "Nos Valeurs d'Équipe",
+        "subtitle": "Les principes qui unissent et guident notre équipe"
+      },
+      "value": {
+        "excellence": {
+          "desc": "Nous nous efforçons d'atteindre les plus hauts standards dans tout ce que nous faisons"
+        },
+        "collaboration": {
+          "desc": "Nous croyons en la force du travail d'équipe et de la coopération"
+        },
+        "innovation": {
+          "desc": "Nous encourageons la créativité et l'amélioration continue"
+        },
+        "integrity": {
+          "desc": "Nous agissons avec honnêteté et transparence dans toutes nos relations"
+        }
+      },
+      "cta": {
+        "title": "Rejoignez Notre Équipe",
+        "text": "Découvrez les opportunités de carrière chez GKS Logistics et faites partie de notre mission",
+        "careers": "Voir les Offres",
+        "apply": "Candidature spontanée"
+      }
+    }
+  }
 }
