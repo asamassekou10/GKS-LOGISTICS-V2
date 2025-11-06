@@ -1,0 +1,468 @@
+================================================================================
+GKS LOGISTICS WEBSITE - TRANSLATION AUDIT REPORT
+================================================================================
+
+1. HTML FILES FOUND IN src/ DIRECTORY: 27
+--------------------------------------------------------------------------------
+    1. all-services.html
+    2. Article1.html
+    3. Article2.html
+    4. Blog.html
+    5. careers.html
+    6. DG-Mali.html
+    7. gks-burkinafaso.html
+    8. gks-dubai.html
+    9. gks-france.html
+   10. gks-guinea.html
+   11. gks-ivoire.html
+   12. gks-mali.html
+   13. gks-niger.html
+   14. gks-senegal.html
+   15. gks-turkey.html
+   16. gks-usa.html
+   17. green-logistics.html
+   18. groupage.html
+   19. index.html
+   20. Insight.html
+   21. news.html
+   22. Our-CEO.html
+   23. our-representation.html
+   24. Our-Team.html
+   25. Precess.html
+   26. quote-modal.html
+   27. template.html
+
+2. LOCALE FILE STATISTICS
+--------------------------------------------------------------------------------
+   EN: 1630 translation keys
+   FR: 1571 translation keys
+   TU: 1546 translation keys
+   MD: 1548 translation keys
+
+3. ANALYZING HTML FILES FOR TRANSLATION ISSUES
+--------------------------------------------------------------------------------
+   Total unique translation keys used: 1378
+   Pages with untranslated content: 26
+
+4. MISSING TRANSLATION KEYS IN HTML FILES
+--------------------------------------------------------------------------------
+   Found 1087 keys used in HTML but missing from ALL locale files:
+      - about-stats-clients
+      - about-stats-countries
+      - about-stats-shipments
+      - action-consolidation-desc
+      - action-consolidation-title
+      - action-packaging-desc
+      - action-packaging-title
+      - action-reporting-desc
+      - action-reporting-title
+      - additional-message-headline
+      - africa-text-1
+      - africa-text-2
+      - africa-text-3
+      - africa-title
+      - agent-video-caption
+      - article-author
+      - article-date
+      - article-intro
+      - article-link-trends
+      - article-link-unlocking
+      ... and 1067 more
+
+5. ORPHANED KEYS (In locale files but possibly unused)
+--------------------------------------------------------------------------------
+   Found 1339 keys in en.json not found in HTML files:
+      - about
+      - about-timeline-2021-desc
+      - about-timeline-2021-title
+      - about-timeline-2024-desc
+      - about-timeline-2024-title
+      - about.commitment_desc
+      - about.commitment_title
+      - about.history_title
+      - about.mission_1
+      - about.mission_title
+      - about.philosophy_subtitle
+      - about.philosophy_title
+      - about.stats_clients
+      - about.stats_countries
+      - about.stats_shipments
+      - about.strategic_axes_title
+      - about.strategic_axis_1
+      - about.strategic_axis_2
+      - about.strategic_axis_3
+      - about.strategic_axis_4
+      ... and 1319 more
+
+   Note: Some keys may be used dynamically in JavaScript
+
+6. MISSING TRANSLATIONS PER LOCALE
+--------------------------------------------------------------------------------
+   FR is missing 59 keys compared to EN:
+      - careers.sidebar_hr_desc
+      - careers.sidebar_hr_title
+      - careers.sidebar_social_desc
+      - careers.testimonial_2_title
+      - employee1.cta_team
+      - employee3.cta_team
+      - employee3.value_integrity
+      - footer.footer_copy
+      - growth-timeline
+      - growth-timeline.2019-houston-desc
+      ... and 49 more
+
+   TU is missing 103 keys compared to EN:
+      - about-timeline-2021-desc
+      - about-timeline-2021-title
+      - about-timeline-2024-desc
+      - about-timeline-2024-title
+      - booking-subtitle
+      - booking-title
+      - calculator-destination
+      - calculator-insurance
+      - calculator-origin
+      - calculator-select-country
+      ... and 93 more
+
+   MD is missing 100 keys compared to EN:
+      - about-timeline-2021-desc
+      - about-timeline-2021-title
+      - about-timeline-2024-desc
+      - about-timeline-2024-title
+      - booking-subtitle
+      - booking-title
+      - calculator-insurance
+      - calendar-subtitle
+      - calendar-title
+      - careers.sidebar_hr_desc
+      ... and 90 more
+
+7. DETAILED PAGE-BY-PAGE UNTRANSLATED CONTENT
+--------------------------------------------------------------------------------
+
+   FILE: all-services.html
+   Translation keys used: 266
+   Untranslated items: 72
+
+      ALT (19 items):
+         - GKS Logistics Logo
+           Context: <img alt="GKS Logistics Logo">
+         - GKS Logistics Services
+           Context: <img alt="GKS Logistics Services">
+         - Air Freight Services
+           Context: <img alt="Air Freight Services">
+         - Sea Freight Services
+           Context: <img alt="Sea Freight Services">
+         - Land Transport Services
+           Context: <img alt="Land Transport Services">
+         ... and 14 more
+
+      TEXT_CONTENT (53 items):
+         - FR
+           Context: <span>FR
+         - 🇫🇷
+           Context: <span>🇫🇷
+         - Français
+           Context: <span>Français
+         - 🇬🇧
+           Context: <span>🇬🇧
+         - English
+           Context: <span>English
+         ... and 48 more
+
+
+   FILE: Article1.html
+   Translation keys used: 179
+   Untranslated items: 64
+
+      TEXT_CONTENT (57 items):
+         - 10-Point Checklist: How to Choose Your Warehouse & Freight P...
+           Context: <title>10-Point Checklist: How to Choose Your Warehouse &...
+         - FR
+           Context: <span>FR
+         - Français
+           Context: <span>Français
+         - English
+           Context: <span>English
+         - Türkçe
+           Context: <span>Türkçe
+         ... and 52 more
+
+      ALT (7 items):
+         - GKS Logistics Logo
+           Context: <img alt="GKS Logistics Logo">
+         - African Logistics and Infrastructure Development
+           Context: <img alt="African Logistics and Infrastructure Development">
+         - GKS Logistics Network in Africa
+           Context: <img alt="GKS Logistics Network in Africa">
+         - GKS Logistics Research Team
+           Context: <img alt="GKS Logistics Research Team">
+         - Navigating Customs in SADC
+           Context: <img alt="Navigating Customs in SADC">
+         ... and 2 more
+
+
+   FILE: Article2.html
+   Translation keys used: 162
+   Untranslated items: 46
+
+      TEXT_CONTENT (37 items):
+         - West Africa: The Next Logistics Frontier - Market Opportunit...
+           Context: <title>West Africa: The Next Logistics Frontier - Market ...
+         - FR
+           Context: <span>FR
+         - Français
+           Context: <span>Français
+         - English
+           Context: <span>English
+         - Türkçe
+           Context: <span>Türkçe
+         ... and 32 more
+
+      ALT (9 items):
+         - GKS Logistics Logo
+           Context: <img alt="GKS Logistics Logo">
+         - West African Logistics and Economic Growth
+           Context: <img alt="West African Logistics and Economic Growth">
+         - West African Economic Growth
+           Context: <img alt="West African Economic Growth">
+         - West African Logistics Infrastructure
+           Context: <img alt="West African Logistics Infrastructure">
+         - GKS Logistics Future Growth
+           Context: <img alt="GKS Logistics Future Growth">
+         ... and 4 more
+
+
+   FILE: Blog.html
+   Translation keys used: 103
+   Untranslated items: 87
+
+      TEXT_CONTENT (76 items):
+         - Actualités & Perspectives GKS Logistics | Blog Officiel
+           Context: <title>Actualités & Perspectives GKS Logistics | Blog Off...
+         - FR
+           Context: <span>FR
+         - Français
+           Context: <span>Français
+         - English
+           Context: <span>English
+         - Türkçe
+           Context: <span>Türkçe
+         ... and 71 more
+
+      ALT (11 items):
+         - GKS Logistics Logo
+           Context: <img alt="GKS Logistics Logo">
+         - GKS Logistics Blog - Actualités & Perspectives
+           Context: <img alt="GKS Logistics Blog - Actualités & Perspectives">
+         - GKS Logistics Blog - Actualités & Perspectives
+           Context: <img alt="GKS Logistics Blog - Actualités & Perspectives">
+         - West African Logistics
+           Context: <img alt="West African Logistics">
+         - African Economic Growth
+           Context: <img alt="African Economic Growth">
+         ... and 6 more
+
+
+   FILE: careers.html
+   Translation keys used: 216
+   Untranslated items: 43
+
+      TEXT_CONTENT (38 items):
+         - Carrières - Rejoignez notre Équipe | GKS Logistics
+           Context: <title>Carrières - Rejoignez notre Équipe | GKS Logistics
+         - FR
+           Context: <span>FR
+         - Français
+           Context: <span>Français
+         - English
+           Context: <span>English
+         - Türkçe
+           Context: <span>Türkçe
+         ... and 33 more
+
+      ALT (5 items):
+         - GKS Logistics Logo
+           Context: <img alt="GKS Logistics Logo">
+         - Carrières GKS Logistics - Rejoignez notre Équipe
+           Context: <img alt="Carrières GKS Logistics - Rejoignez notre Équipe">
+         - Carrières GKS Logistics - Rejoignez notre Équipe
+           Context: <img alt="Carrières GKS Logistics - Rejoignez notre Équipe">
+         - Career Progression at GKS Logistics
+           Context: <img alt="Career Progression at GKS Logistics">
+         - GKS Logistics Logo
+           Context: <img alt="GKS Logistics Logo">
+
+
+   FILE: DG-Mali.html
+   Translation keys used: 124
+   Untranslated items: 46
+
+      TEXT_CONTENT (37 items):
+         - Alimata Konate - Directrice Générale | GKS Logistics Leaders...
+           Context: <title>Alimata Konate - Directrice Générale | GKS Logisti...
+         - FR
+           Context: <span>FR
+         - Français
+           Context: <span>Français
+         - English
+           Context: <span>English
+         - Türkçe
+           Context: <span>Türkçe
+         ... and 32 more
+
+      ALT (4 items):
+         - GKS Logistics Logo
+           Context: <img alt="GKS Logistics Logo">
+         - GKS Logistics Background
+           Context: <img alt="GKS Logistics Background">
+         - Alimata KONATE
+           Context: <img alt="Alimata KONATE">
+         - GKS Logistics Logo
+           Context: <img alt="GKS Logistics Logo">
+
+      PLACEHOLDER (5 items):
+         - Ex: 50
+           Context: <input placeholder="Ex: 50">
+         - Ex: 100
+           Context: <input placeholder="Ex: 100">
+         - Ex: 80
+           Context: <input placeholder="Ex: 80">
+         - Ex: 60
+           Context: <input placeholder="Ex: 60">
+         - Ex: 1000
+           Context: <input placeholder="Ex: 1000">
+
+
+   FILE: gks-burkinafaso.html
+   Translation keys used: 132
+   Untranslated items: 54
+
+      ALT (3 items):
+         - GKS Logistics Logo
+           Context: <img alt="GKS Logistics Logo">
+         - GKS Logistics Burkina Faso
+           Context: <img alt="GKS Logistics Burkina Faso">
+         - GKS Logistics Logo
+           Context: <img alt="GKS Logistics Logo">
+
+      TEXT_CONTENT (51 items):
+         - FR
+           Context: <span>FR
+         - 🇫🇷
+           Context: <span>🇫🇷
+         - Français
+           Context: <span>Français
+         - 🇬🇧
+           Context: <span>🇬🇧
+         - English
+           Context: <span>English
+         ... and 46 more
+
+
+   FILE: gks-dubai.html
+   Translation keys used: 132
+   Untranslated items: 59
+
+      ALT (4 items):
+         - GKS Logistics Logo
+           Context: <img alt="GKS Logistics Logo">
+         - GKS Logistics Dubai
+           Context: <img alt="GKS Logistics Dubai">
+         - Dubai
+           Context: <img alt="Dubai">
+         - GKS Logistics Logo
+           Context: <img alt="GKS Logistics Logo">
+
+      TEXT_CONTENT (55 items):
+         - FR
+           Context: <span>FR
+         - 🇫🇷
+           Context: <span>🇫🇷
+         - Français
+           Context: <span>Français
+         - 🇬🇧
+           Context: <span>🇬🇧
+         - English
+           Context: <span>English
+         ... and 50 more
+
+
+   FILE: gks-france.html
+   Translation keys used: 134
+   Untranslated items: 57
+
+      ALT (4 items):
+         - GKS Logistics Logo
+           Context: <img alt="GKS Logistics Logo">
+         - GKS Logistics France
+           Context: <img alt="GKS Logistics France">
+         - France
+           Context: <img alt="France">
+         - GKS Logistics Logo
+           Context: <img alt="GKS Logistics Logo">
+
+      TEXT_CONTENT (53 items):
+         - FR
+           Context: <span>FR
+         - 🇫🇷
+           Context: <span>🇫🇷
+         - Français
+           Context: <span>Français
+         - 🇬🇧
+           Context: <span>🇬🇧
+         - English
+           Context: <span>English
+         ... and 48 more
+
+
+   FILE: gks-guinea.html
+   Translation keys used: 132
+   Untranslated items: 59
+
+      ALT (4 items):
+         - GKS Logistics Logo
+           Context: <img alt="GKS Logistics Logo">
+         - GKS Logistics Guinée
+           Context: <img alt="GKS Logistics Guinée">
+         - Guinée
+           Context: <img alt="Guinée">
+         - GKS Logistics Logo
+           Context: <img alt="GKS Logistics Logo">
+
+      TEXT_CONTENT (55 items):
+         - FR
+           Context: <span>FR
+         - 🇫🇷
+           Context: <span>🇫🇷
+         - Français
+           Context: <span>Français
+         - 🇬🇧
+           Context: <span>🇬🇧
+         - English
+           Context: <span>English
+         ... and 50 more
+
+
+   ... and 16 more pages with issues
+
+8. SUMMARY STATISTICS
+--------------------------------------------------------------------------------
+   Total HTML pages: 27
+   Total translation keys used in HTML: 1378
+   Total keys in EN locale: 1630
+   Total keys in FR locale: 1571
+   Total keys in TU locale: 1546
+   Total keys in MD locale: 1548
+
+   FR coverage: 96.4%
+   TU coverage: 94.8%
+   MD coverage: 95.0%
+
+   Pages with untranslated content: 26
+   Keys missing from all locales: 1087
+   Potentially orphaned keys: 1339
+
+================================================================================
+END OF REPORT
+================================================================================

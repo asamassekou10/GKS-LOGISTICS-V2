@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Dot & Line Timeline - GKS Logistics</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8f9fa;
+            padding: 40px 20px;
+        }
+
+        .timeline-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .timeline-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .timeline-header h1 {
+            font-size: 2.5rem;
+            color: #003087;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .timeline-header p {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 400;
+        }
+
+        .timeline-container {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        /* Content Area */
+        .timeline-content {
+            width: 100%;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            width: 100%;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .content-image {
+            width: 100%;
+            max-width: 500px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0, 48, 135, 0.15);
+        }
+
+        .content-text {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .content-year {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #003087 0%, #0052cc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 0;
+        }
+
+        .content-location {
+            font-size: 2rem;
+            color: #333;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .content-description {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-top: 10px;
+        }
+
+        /* Animation for content fade in/out */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .content-wrapper.fade-out {
+            animation: fadeOut 0.4s ease-out;
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        /* Timeline Track and Dots */
+        .timeline-track-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .timeline-track {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #e0e0e0;
+            border-radius: 2px;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .timeline-fill {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: linear-gradient(90deg, #003087 0%, #0052cc 100%);
+            border-radius: 2px;
+            width: 0%;
+            transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            z-index: 2;
+        }
+
+        /* Dots Container */
+        .timeline-dots {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 3;
+            padding: 0 20px;
+        }
+
+        /* Individual Dot */
+        .timeline-dot {
+            width: 24px;
+            height: 24px;
+            background: white;
+            border: 3px solid #e0e0e0;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .timeline-dot:hover {
+            transform: scale(1.3);
+            border-color: #003087;
+            box-shadow: 0 0 0 4px rgba(0, 48, 135, 0.1);
+        }
+
+        .timeline-dot.active {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #003087 0%, #0052cc 100%);
+            border-color: #003087;
+            box-shadow: 0 4px 16px rgba(0, 48, 135, 0.3);
+        }
+
+        .timeline-dot.active::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(0.7);
+                opacity: 0.5;
+            }
+        }
+
+        /* Tooltip for dot labels */
+        .dot-label {
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 10;
+        }
+
+        .timeline-dot:hover .dot-label,
+        .timeline-dot.active .dot-label {
+            opacity: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .timeline-section {
+                padding: 40px 20px;
+            }
+
+            .timeline-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .timeline-header p {
+                font-size: 1rem;
+            }
+
+            .content-wrapper {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .content-image {
+                max-width: 100%;
+                height: 300px;
+            }
+
+            .content-year {
+                font-size: 2.5rem;
+            }
+
+            .content-location {
+                font-size: 1.5rem;
+            }
+
+            .timeline-container {
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .timeline-section {
+                padding: 30px 15px;
+            }
+
+            .timeline-header h1 {
+                font-size: 1.5rem;
+                margin-bottom: 8px;
+            }
+
+            .timeline-header p {
+                font-size: 0.95rem;
+            }
+
+            /* Mobile: Vertical Timeline */
+            .timeline-track-wrapper {
+                flex-direction: column;
+                width: auto;
+                height: auto;
+                gap: 30px;
+                padding: 20px;
+            }
+
+            .timeline-track {
+                position: static;
+                width: 4px;
+                height: 100%;
+                min-height: 400px;
+                transform: none;
+            }
+
+            .timeline-fill {
+                width: 100%;
+                height: 0%;
+                transition: height 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            }
+
+            .timeline-dots {
+                flex-direction: column;
+                width: 100%;
+                height: auto;
+                padding: 0;
+                gap: 30px;
+                align-items: flex-start;
+                margin-left: 40px;
+            }
+
+            .timeline-dot {
+                margin-left: -42px;
+            }
+
+            .dot-label {
+                position: static;
+                opacity: 1;
+                transform: none;
+                background: none;
+                color: #333;
+                padding: 0;
+                margin-left: 50px;
+                margin-top: -28px;
+                font-size: 0.9rem;
+                font-weight: 500;
+                pointer-events: auto;
+            }
+
+            .timeline-dot:hover .dot-label,
+            .timeline-dot.active .dot-label {
+                opacity: 1;
+            }
+
+            .content-wrapper {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .content-image {
+                height: 250px;
+            }
+
+            .content-year {
+                font-size: 2rem;
+            }
+
+            .content-location {
+                font-size: 1.3rem;
+            }
+
+            .timeline-container {
+                gap: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="timeline-section">
+        <div class="timeline-header">
+            <h1>Our Growth Journey</h1>
+            <p>From our founding in Mali to our global expansion, discover the key milestones that shaped GKS Logistics</p>
+        </div>
+
+        <div class="timeline-container">
+            <!-- Content Area -->
+            <div class="timeline-content">
+                <div class="content-wrapper">
+                    <img src="" alt="" class="content-image">
+                    <div class="content-text">
+                        <h2 class="content-year"></h2>
+                        <p class="content-location"></p>
+                        <p class="content-description"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Timeline Track and Dots -->
+            <div class="timeline-track-wrapper">
+                <div class="timeline-track">
+                    <div class="timeline-fill"></div>
+                </div>
+                <div class="timeline-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Timeline Data
+        const timelineData = [
+            {
+                year: "2019",
+                location: "Mali",
+                description: "Foundation of our presence in West Africa",
+                image: "https://placehold.co/600x400/003087/FFFFFF?text=Mali+2019"
+            },
+            {
+                year: "2019",
+                location: "Houston (USA)",
+                description: "Expansion to North America",
+                image: "https://placehold.co/600x400/CC3333/FFFFFF?text=Houston+2019"
+            },
+            {
+                year: "2020",
+                location: "Paris",
+                description: "Entry into European markets",
+                image: "https://placehold.co/600x400/003087/FFFFFF?text=Paris+2020"
+            },
+            {
+                year: "2021",
+                location: "Guinée Conakry",
+                description: "Regional expansion in Guinea",
+                image: "https://placehold.co/600x400/CC3333/FFFFFF?text=Guinee+2021"
+            },
+            {
+                year: "2022",
+                location: "Abidjan",
+                description: "Strengthening our position in Ivory Coast",
+                image: "https://placehold.co/600x400/003087/FFFFFF?text=Abidjan+2022"
+            },
+            {
+                year: "2023",
+                location: "Niamey",
+                description: "Extension to Niger",
+                image: "https://placehold.co/600x400/CC3333/FFFFFF?text=Niamey+2023"
+            },
+            {
+                year: "2024",
+                location: "Dubaï",
+                description: "Gateway to Middle Eastern markets",
+                image: "https://placehold.co/600x400/003087/FFFFFF?text=Dubai+2024"
+            },
+            {
+                year: "2025",
+                location: "Istanbul (Turquie)",
+                description: "Connection to Asian markets",
+                image: "https://placehold.co/600x400/CC3333/FFFFFF?text=Istanbul+2025"
+            }
+        ];
+
+        let currentIndex = 0;
+
+        // Initialize Timeline
+        function initTimeline() {
+            renderDots();
+            displayContent(0);
+        }
+
+        // Render Dots
+        function renderDots() {
+            const dotsContainer = document.querySelector('.timeline-dots');
+            dotsContainer.innerHTML = '';
+
+            timelineData.forEach((item, index) => {
+                const dot = document.createElement('div');
+                dot.className = 'timeline-dot' + (index === 0 ? ' active' : '');
+                dot.innerHTML = `<span class="dot-label">${item.year}</span>`;
+                dot.addEventListener('click', () => selectDot(index));
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        // Select Dot and Update Content
+        function selectDot(index) {
+            if (index === currentIndex) return;
+
+            // Add fade-out effect
+            const wrapper = document.querySelector('.content-wrapper');
+            wrapper.classList.add('fade-out');
+
+            setTimeout(() => {
+                // Update content after fade-out
+                displayContent(index);
+
+                // Remove fade-out and add fade-in
+                wrapper.classList.remove('fade-out');
+            }, 200);
+
+            // Update active dot
+            document.querySelectorAll('.timeline-dot').forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+
+            // Update line fill position
+            updateLineFill(index);
+
+            currentIndex = index;
+        }
+
+        // Display Content
+        function displayContent(index) {
+            const data = timelineData[index];
+            document.querySelector('.content-image').src = data.image;
+            document.querySelector('.content-image').alt = data.location;
+            document.querySelector('.content-year').textContent = data.year;
+            document.querySelector('.content-location').textContent = data.location;
+            document.querySelector('.content-description').textContent = data.description;
+        }
+
+        // Update Line Fill
+        function updateLineFill(index) {
+            const fill = document.querySelector('.timeline-fill');
+            const isMobile = window.innerWidth < 600;
+
+            if (isMobile) {
+                // On mobile, fill height based on position
+                const percentage = ((index + 1) / timelineData.length) * 100;
+                fill.style.width = '100%';
+                fill.style.height = percentage + '%';
+            } else {
+                // On desktop, fill width based on position
+                const percentage = ((index + 1) / timelineData.length) * 100;
+                fill.style.height = '100%';
+                fill.style.width = percentage + '%';
+            }
+        }
+
+        // Handle resize for responsive behavior
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(() => {
+                updateLineFill(currentIndex);
+            }, 250);
+        });
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', initTimeline);
+    </script>
+</body>
+</html>

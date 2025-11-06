@@ -1,0 +1,22 @@
+Priority,Category,Issue,Location,Action Required,Estimated Hours,Status
+1,Architecture,Key naming mismatch,All HTML + Locale files,"Decide on hyphen vs dot notation, convert all keys to match",16,Not Started
+1,Architecture,Dual translation systems,build-translations.js + HTML data-translate,Choose single system and remove the other,8,Not Started
+1,Missing Keys,1087 keys missing from all locales,HTML files,"Add missing keys to locale files OR remove data-translate attributes",8,Not Started
+2,French Translations,59 missing keys,locales/fr.json,Translate missing keys from English,4,Not Started
+2,Turkish Translations,103 missing keys,locales/tu.json,Translate missing keys from English,6,Not Started
+2,Mandarin Translations,100 missing keys,locales/md.json,Translate missing keys from English,6,Not Started
+2,UI Elements,Language switcher hardcoded,All pages header,Add data-translate for FR/EN/TU/MD labels,2,Not Started
+2,UI Elements,Flag emojis hardcoded,All pages header,Add data-translate or leave as-is (emojis are universal),1,Not Started
+2,Accessibility,Image alt text missing translation,all-services.html,Add data-translate-alt for 19 images,1,Not Started
+2,Accessibility,Image alt text missing translation,Article1.html,Add data-translate-alt for 7 images,1,Not Started
+2,Accessibility,Image alt text missing translation,Article2.html,Add data-translate-alt for 9 images,1,Not Started
+2,Accessibility,Image alt text missing translation,Blog.html,Add data-translate-alt for 11 images,1,Not Started
+2,Accessibility,Image alt text missing translation,careers.html,Add data-translate-alt for 5 images,1,Not Started
+2,Accessibility,Image alt text missing translation,DG-Mali.html,Add data-translate-alt for 4 images,1,Not Started
+2,Accessibility,Image alt text missing translation,Country pages (10 files),Add data-translate-alt for all country page images,3,Not Started
+2,Forms,Placeholder text missing translation,DG-Mali.html,Add data-translate-placeholder for 5 calculator inputs,1,Not Started
+2,SEO,Page titles hardcoded,All pages <title> tags,Add translation keys for all page titles,2,Not Started
+3,Cleanup,1339 potentially orphaned keys,locales/en.json,Audit if used in build system or JavaScript,4,Not Started
+3,Documentation,Translation system not documented,Project root,Create translation guide for developers,2,Not Started
+3,Testing,No automated translation checks,Project root,Add tests to verify translation coverage,4,Not Started
+3,Process,No translation workflow,Project root,Set up process for adding new translatable content,2,Not Started

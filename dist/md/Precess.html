@@ -708,13 +708,13 @@
               <label for="freightType" data-translate="freight-type-label">Type de Fret *</label>
               <select id="freightType" name="freightType" required>
                 <option value="" data-translate="select-freight-type">Sélectionner le type de fret</option>
-                <option value="air" data-translate="freight-air">空运</option>
-                <option value="fcl" data-translate="freight-fcl">海运（整柜 - FCL）</option>
-                <option value="lcl" data-translate="freight-lcl">海运（拼柜 - LCL）</option>
-                <option value="road" data-translate="freight-road">陆运</option>
+                <option value="air" data-translate="freight-air">Fret Aérien</option>
+                <option value="fcl" data-translate="freight-fcl">Fret Maritime (FCL)</option>
+                <option value="lcl" data-translate="freight-lcl">Fret Maritime (LCL)</option>
+                <option value="road" data-translate="freight-road">Fret Routier</option>
                 <option value="project" data-translate="freight-project">Logistique de Projet</option>
                 <option value="temp-controlled" data-translate="freight-temp-controlled">Logistique à Température Contrôlée</option>
-                <option value="other" data-translate="freight-other">其他</option>
+                <option value="other" data-translate="freight-other">Autres</option>
               </select>
             </div>
             <div class="form-group">
@@ -752,7 +752,7 @@
             <div class="checkbox-group">
               <div class="checkbox-item">
                 <input type="checkbox" id="serviceCustoms" name="additionalServices[]" value="customs">
-                <label for="serviceCustoms" data-translate="service-customs">海关和法规</label>
+                <label for="serviceCustoms" data-translate="service-customs">Dédouanement</label>
               </div>
               <div class="checkbox-item">
                 <input type="checkbox" id="serviceInsurance" name="additionalServices[]" value="insurance">
