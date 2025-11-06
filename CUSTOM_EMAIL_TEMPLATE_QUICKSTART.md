@@ -33,9 +33,13 @@ email-templates/form-notification.html
 
 ### Step 4: Add Custom Template
 
-1. In the email customization section, copy all the HTML from `email-templates/form-notification.html`
+1. In the email customization section, copy all the HTML from `EMAIL_TEMPLATE_INLINE_CSS.html` ⭐
+   - **NOT** `EMAIL_TEMPLATE_COPY_PASTE.html` (that one has `<style>` tags that don't work)
+   - Use the **inline CSS** version for email clients
 2. Paste it into Netlify's template editor
 3. Click **Save**
+
+**Why inline CSS?** Email clients strip `<style>` tags for security. Inline styles work perfectly. See `FIX_CSS_RENDERING.md` for details.
 
 ### Step 5: Test!
 

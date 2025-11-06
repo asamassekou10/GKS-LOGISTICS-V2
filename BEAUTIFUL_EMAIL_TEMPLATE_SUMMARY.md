@@ -80,8 +80,13 @@ netlify.toml                        ← Updated with function config
 ## 🚀 Quick Setup (5 Minutes)
 
 ### Step 1: Copy the Template
-1. Open `EMAIL_TEMPLATE_COPY_PASTE.html` in this repository
+1. Open `EMAIL_TEMPLATE_INLINE_CSS.html` in this repository ⭐ **USE THIS VERSION (with inline CSS)**
 2. Copy the entire HTML code
+
+⚠️ **Important:** Use the **INLINE CSS** version, not the copy-paste version
+   - Email clients strip `<style>` tags for security
+   - Inline CSS (styles directly on elements) works perfectly
+   - See `FIX_CSS_RENDERING.md` for details
 
 ### Step 2: Add to Netlify Dashboard
 1. Go to https://app.netlify.com
