@@ -5,6 +5,10 @@
 [build.environment]
   NODE_VERSION = "18"
 
+# Form configuration with serverless function support
+[functions]
+  node_bundler = "esbuild"
+
 # Redirects for clean URLs and language fallbacks
 [[redirects]]
   from = "/fr/*"
