@@ -275,14 +275,24 @@
     /* Hide timeline track wrapper on tablet and mobile */
     .timeline-track-wrapper {
         display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        overflow: hidden !important;
     }
 
     .timeline-dots {
         display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
     }
 
     .timeline-dot {
         display: none !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     .content-wrapper {
@@ -329,14 +339,24 @@
     /* Mobile: Hide entire timeline track, dots, and labels - show only content cards */
     .timeline-track-wrapper {
         display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        overflow: hidden !important;
     }
 
     .timeline-dots {
         display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
     }
 
     .timeline-dot {
         display: none !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     .content-wrapper {
@@ -385,14 +405,24 @@
 
     .timeline-track-wrapper {
         display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
+        overflow: hidden !important;
     }
 
     .timeline-dots {
         display: none !important;
+        visibility: hidden !important;
+        height: 0 !important;
     }
 
     .timeline-dot {
         display: none !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
     .content-year {
