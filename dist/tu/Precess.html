@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="tu">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GKS Logistics - Uluslararası Lojistik Çözümleri | Hava, Deniz ve Kara Taşımacılığı</title>
+    <title>GKS Logistics - Processus Moderne</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -434,11 +434,6 @@
     </style>
     <link rel="stylesheet" href="/css/quote-calculator.css">
     <link rel="stylesheet" href="/css/calculator-modal.css">
-  <link rel="alternate" hreflang="x-default" href="https://www.gkslogistics.com/Precess.html" />
-  <link rel="alternate" hreflang="fr" href="https://www.gkslogistics.com/Precess.html" />
-  <link rel="alternate" hreflang="en" href="https://www.gkslogistics.com/en/Precess.html" />
-  <link rel="alternate" hreflang="tu" href="https://www.gkslogistics.com/tu/Precess.html" />
-  <link rel="alternate" hreflang="md" href="https://www.gkslogistics.com/md/Precess.html" />
 </head>
 <body>
 
@@ -659,6 +654,138 @@
         });
     </script>
 
+  <!-- Quote Request Modal -->
+  <link rel="stylesheet" href="/css/quote-modal.css">
+  <script src="/js/quote-modal.js"></script>
+
+  <div id="quoteModal" class="quote-modal-overlay">
+    <div class="quote-modal-content">
+      <div class="quote-modal-header">
+        <h2 data-translate="quote-form-title">Demander un Devis</h2>
+        <button class="quote-modal-close" aria-label="Close modal">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <div class="quote-modal-body">
+        <p class="quote-form-subtitle" data-translate="quote-form-subtitle">
+          Veuillez remplir le formulaire ci-dessous pour obtenir un devis personnalisé pour vos besoins logistiques.
+        </p>
+
+        <form name="quote-request" data-netlify="true" id="quoteRequestForm">
+          <fieldset class="form-section">
+            <legend><h3 data-translate="contact-info-headline">Vos Coordonnées</h3></legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName" data-translate="quote_modal-full_name">Nom Complet *</label>
+                <input type="text" id="fullName" name="fullName" required data-translate="quote_modal-full_name_placeholder" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="companyName" data-translate="quote_modal-company_name">Nom de l'Entreprise *</label>
+                <input type="text" id="companyName" name="companyName" required data-translate="quote_modal-company_name_placeholder" placeholder="">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email" data-translate="quote_modal-email">Email Professionnel *</label>
+                <input type="email" id="email" name="email" required data-translate="quote_modal-email_placeholder" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="phoneNumber" data-translate="quote_modal-phone">Téléphone *</label>
+                <input type="tel" id="phoneNumber" name="phoneNumber" required data-translate="quote_modal-phone_placeholder" placeholder="">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend><h3 data-translate="shipment-details-headline">Détails de l'Expédition</h3></legend>
+            <div class="form-group">
+              <label for="freightType" data-translate="freight-type-label">Type de Fret *</label>
+              <select id="freightType" name="freightType" required>
+                <option value="" data-translate="select-freight-type">Sélectionner le type de fret</option>
+                <option value="air" data-translate="freight-air">Fret Aérien</option>
+                <option value="fcl" data-translate="freight-fcl">Fret Maritime (FCL)</option>
+                <option value="lcl" data-translate="freight-lcl">Fret Maritime (LCL)</option>
+                <option value="road" data-translate="freight-road">Fret Routier</option>
+                <option value="project" data-translate="freight-project">Logistique de Projet</option>
+                <option value="temp-controlled" data-translate="freight-temp-controlled">Logistique à Température Contrôlée</option>
+                <option value="other" data-translate="freight-other">Autres</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cargoNature" data-translate="quote_modal-cargo_nature">Nature de la Marchandise</label>
+              <input type="text" id="cargoNature" name="cargoNature" data-translate="quote_modal-cargo_nature_placeholder" placeholder="">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="origin" data-translate="quote_modal-origin">Pays/Ville d'Origine *</label>
+                <input type="text" id="origin" name="origin" required data-translate="quote_modal-origin_placeholder" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="destination" data-translate="quote_modal-destination">Pays/Ville de Destination *</label>
+                <input type="text" id="destination" name="destination" required data-translate="quote_modal-destination_placeholder" placeholder="">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="preferredDate" data-translate="preferred-date-label">Date d'Expédition Souhaitée</label>
+              <input type="date" id="preferredDate" name="preferredDate">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="dimensionsWeight" data-translate="quote_modal-weight">Dimensions et Poids *</label>
+                <input type="text" id="dimensionsWeight" name="dimensionsWeight" required data-translate="quote_modal-weight_placeholder" placeholder="">
+              </div>
+              <div class="form-group">
+                <label for="quantityPackages" data-translate="quote_modal-quantity">Quantité / Nombre de Colis *</label>
+                <input type="text" id="quantityPackages" name="quantityPackages" required data-translate="quote_modal-quantity_placeholder" placeholder="">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend><h3 data-translate="quote-modal-additional-services">Services Additionnels (Optionnel)</h3></legend>
+            <div class="checkbox-group">
+              <div class="checkbox-item">
+                <input type="checkbox" id="serviceCustoms" name="additionalServices[]" value="customs">
+                <label for="serviceCustoms" data-translate="service-customs">Dédouanement</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="serviceInsurance" name="additionalServices[]" value="insurance">
+                <label for="serviceInsurance" data-translate="service-insurance">Assurance Fret</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="serviceWarehousing" name="additionalServices[]" value="warehousing">
+                <label for="serviceWarehousing" data-translate="service-warehousing">Entreposage</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="serviceLastMile" name="additionalServices[]" value="lastMile">
+                <label for="serviceLastMile" data-translate="service-last-mile">Distribution / Dernier Kilomètre</label>
+              </div>
+              <div class="checkbox-item">
+                <input type="checkbox" id="servicePackaging" name="additionalServices[]" value="packaging">
+                <label for="servicePackaging" data-translate="service-packaging">Emballage Spécialisé</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend><h3 data-translate="additional-message-headline">Votre Message ou Besoins Spécifiques</h3></legend>
+            <div class="form-group">
+              <label for="message" data-translate="quote_modal-message">Message Supplémentaire</label>
+              <textarea id="message" name="message" rows="4" data-translate="quote_modal-message_placeholder" placeholder=""></textarea>
+            </div>
+          </fieldset>
+
+          <p class="required-fields-indicator" data-translate="required-fields-indicator">* Champs obligatoires</p>
+
+          <div class="form-buttons">
+            <button type="button" class="btn-cancel" data-translate="cancel-button">Annuler</button>
+            <button type="submit" class="btn-submit" data-translate="submit-request">Envoyer ma Demande</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <!-- Quote Calculator Modal -->
   <div id="quoteCalculatorModal" class="calculator-modal">
@@ -669,8 +796,8 @@
       </button>
       
       <div class="calculator-header">
-        <h2 data-translate="calculator-title">Anında Teklif Hesaplayıcı</h2>
-        <p data-translate="calculator-subtitle">Sevkiyatınız için birkaç saniye içinde kesin bir teklif alın</p>
+        <h2 data-translate="calculator-title">Calculateur de Devis Instantané</h2>
+        <p data-translate="calculator-subtitle">Obtenez un devis précis en quelques secondes pour votre expédition</p>
       </div>
 
       <div class="quote-calculator-card">
@@ -679,10 +806,11 @@
           <div class="form-section form-section-currency">
             <h3 class="form-section-title">
               <i class="fas fa-money-bill-wave"></i>
-              <span data-translate="calculator-section-currency">Ödeme Para Birimi</span>
+              <span data-translate="calculator-section-currency">Devise de Paiement</span>
             </h3>
             <div class="form-group-calc">
-              <label data-translate="calculator-currency">Para biriminizi seçin<span class="required">*</span>
+              <label data-translate="calculator-currency">
+                Choisissez votre devise <span class="required">*</span>
               </label>
               <select id="currency" required>
                 <option value="XOF">🇲🇱 FCFA (XOF) - Franc CFA</option>
@@ -698,17 +826,18 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <i class="fas fa-shipping-fast"></i>
-              <span data-translate="calculator-section-transport">Nakliye Detayları</span>
+              <span data-translate="calculator-section-transport">Détails du Transport</span>
             </h3>
             <div class="form-grid">
               <div class="form-group-calc">
-                <label data-translate="calculator-transport-type">Nakliye türü<span class="required">*</span>
+                <label data-translate="calculator-transport-type">
+                  Type de transport <span class="required">*</span>
                 </label>
                 <select id="transportType" required>
-                  <option value="" data-translate="calculator-select-placeholder">Seçin...</option>
-                  <option value="air" data-translate="calculator-type-air">Hava Kargo</option>
-                  <option value="sea" data-translate="calculator-type-sea">Deniz Kargo</option>
-                  <option value="land" data-translate="calculator-type-land">Kara Taşımacılığı</option>
+                  <option value="" data-translate="calculator-select-placeholder">Sélectionnez...</option>
+                  <option value="air" data-translate="calculator-type-air">Fret Aérien</option>
+                  <option value="sea" data-translate="calculator-type-sea">Fret Maritime</option>
+                  <option value="land" data-translate="calculator-type-land">Transport Terrestre</option>
                 </select>
               </div>
 
@@ -756,11 +885,12 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <i class="fas fa-box"></i>
-              <span data-translate="calculator-section-shipment">Sevkiyat Detayları</span>
+              <span data-translate="calculator-section-shipment">Détails de l'Envoi</span>
             </h3>
             <div class="form-grid">
               <div class="form-group-calc">
-                <label data-translate="calculator-weight">Ağırlık (kg)<span class="required">*</span>
+                <label data-translate="calculator-weight">
+                  Poids (kg) <span class="required">*</span>
                 </label>
                 <div class="input-with-unit">
                   <input type="number" id="weight" min="0.1" step="0.1" required data-translate="calculator-weight_placeholder" placeholder="">
@@ -769,7 +899,9 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-length">Uzunluk (cm)</label>
+                <label data-translate="calculator-length">
+                  Longueur (cm)
+                </label>
                 <div class="input-with-unit">
                   <input type="number" id="length" min="0" step="0.1" data-translate="calculator-length_placeholder" placeholder="">
                   <span class="input-unit">cm</span>
@@ -777,7 +909,9 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-width">Genişlik (cm)</label>
+                <label data-translate="calculator-width">
+                  Largeur (cm)
+                </label>
                 <div class="input-with-unit">
                   <input type="number" id="width" min="0" step="0.1" data-translate="calculator-width_placeholder" placeholder="">
                   <span class="input-unit">cm</span>
@@ -785,7 +919,9 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-height">Yükseklik (cm)</label>
+                <label data-translate="calculator-height">
+                  Hauteur (cm)
+                </label>
                 <div class="input-with-unit">
                   <input type="number" id="height" min="0" step="0.1" data-translate="calculator-height_placeholder" placeholder="">
                   <span class="input-unit">cm</span>
@@ -793,7 +929,9 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-declared-value">Beyan edilen değer (USD)</label>
+                <label data-translate="calculator-declared-value">
+                  Valeur déclarée (USD)
+                </label>
                 <div class="input-with-unit">
                   <input type="number" id="declaredValue" min="0" step="0.01" data-translate="calculator-value_placeholder" placeholder="">
                   <span class="input-unit">$</span>
@@ -804,7 +942,9 @@
             <div class="checkbox-group checkbox-group-inline">
               <div class="checkbox-item">
                 <input type="checkbox" id="isContainer">
-                <label for="isContainer" data-translate="calculator-container">Tam konteyner (sadece deniz kargo)</label>
+                <label for="isContainer" data-translate="calculator-container">
+                  Container complet (fret maritime uniquement)
+                </label>
               </div>
             </div>
           </div>
@@ -813,33 +953,35 @@
           <div class="form-section">
             <h3 class="form-section-title">
               <i class="fas fa-plus-circle"></i>
-              <span data-translate="calculator-section-services">Ek Hizmetler</span>
+              <span data-translate="calculator-section-services">Services Additionnels</span>
             </h3>
 
             <div class="checkbox-group">
               <div class="checkbox-item">
                 <input type="checkbox" id="doorDelivery">
-                <label for="doorDelivery" data-translate="calculator-door-delivery">Kapıdan teslimat (+$30)</label>
+                <label for="doorDelivery" data-translate="calculator-door-delivery">
+                  Livraison à domicile (+$30)
+                </label>
               </div>
             </div>
 
             <div class="form-grid">
               <div class="form-group-calc">
-                <label data-translate="calculator-packaging">Ambalaj türü</label>
+                <label data-translate="calculator-packaging">Type d'emballage</label>
                 <select id="packaging">
-                  <option value="" data-translate="calculator-packaging-none">Ambalaj yok</option>
-                  <option value="standard" data-translate="calculator-packaging-standard">Standart (+$20)</option>
-                  <option value="fragile" data-translate="calculator-packaging-fragile">Kırılgan (+$50)</option>
-                  <option value="heavy" data-translate="calculator-packaging-heavy">Ağır (+$100)</option>
+                  <option value="" data-translate="calculator-packaging-none">Sans emballage</option>
+                  <option value="standard" data-translate="calculator-packaging-standard">Standard (+$20)</option>
+                  <option value="fragile" data-translate="calculator-packaging-fragile">Fragile (+$50)</option>
+                  <option value="heavy" data-translate="calculator-packaging-heavy">Lourd (+$100)</option>
                 </select>
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-customs">Gümrük Müşaviri</label>
+                <label data-translate="calculator-customs">Dédouanement</label>
                 <select id="customs">
-                  <option value="" data-translate="calculator-customs-none">Gümrük hizmeti yok</option>
-                  <option value="standard" data-translate="calculator-customs-standard">Standart (+$50)</option>
-                  <option value="express" data-translate="calculator-customs-express">Ekspres (+$150)</option>
+                  <option value="" data-translate="calculator-customs-none">Sans service douanier</option>
+                  <option value="standard" data-translate="calculator-customs-standard">Standard (+$50)</option>
+                  <option value="express" data-translate="calculator-customs-express">Express (+$150)</option>
                 </select>
               </div>
             </div>
@@ -847,7 +989,7 @@
 
           <button type="button" class="calculate-btn" onclick="if(window.calculateQuoteNow) window.calculateQuoteNow(); else console.error('Function not loaded');">
             <i class="fas fa-calculator"></i>
-            <span data-translate="calculator-calculate-btn">Teklifimi hesapla</span>
+            <span data-translate="calculator-calculate-btn">Calculer mon devis</span>
           </button>
         </form>
         <div id="quoteResult"></div>
