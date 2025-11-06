@@ -283,6 +283,9 @@ body {
 /* Timeline Section */
 .timeline-section {
   margin-bottom: 4rem;
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
 }
 
 .timeline-section h2 {
