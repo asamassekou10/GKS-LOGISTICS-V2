@@ -258,9 +258,18 @@ function initInteractiveTimeline() {
     }
 
     // Initialize - Only render dots on desktop (769px and above)
+    const trackWrapper = document.querySelector('.timeline-track-wrapper');
     if (window.innerWidth > 768) {
         renderDots();
         updateLineFill(0);
+        trackWrapper.style.display = 'block';
+    } else {
+        // Explicitly hide on mobile
+        trackWrapper.style.display = 'none';
+        const track = document.querySelector('.timeline-track');
+        const fill = document.querySelector('.timeline-fill');
+        if (track) track.style.display = 'none';
+        if (fill) fill.style.display = 'none';
     }
     displayContent(0);
 
@@ -283,13 +292,24 @@ function initInteractiveTimeline() {
             if (isDesktop !== wasDesktop) {
                 wasDesktop = isDesktop;
                 const dotsContainer = document.querySelector('.timeline-dots');
+                const trackWrapper = document.querySelector('.timeline-track-wrapper');
+                const track = document.querySelector('.timeline-track');
+                const fill = document.querySelector('.timeline-fill');
 
-                if (isDesktop && dotsContainer.innerHTML === '') {
-                    // Switched to desktop - render dots
-                    renderDots();
-                } else if (!isDesktop) {
-                    // Switched to mobile - clear dots
+                if (isDesktop) {
+                    // Switched to desktop - render dots and show lines
+                    if (dotsContainer.innerHTML === '') {
+                        renderDots();
+                    }
+                    if (trackWrapper) trackWrapper.style.display = 'block';
+                    if (track) track.style.display = 'block';
+                    if (fill) fill.style.display = 'block';
+                } else {
+                    // Switched to mobile - clear dots and hide lines
                     dotsContainer.innerHTML = '';
+                    if (trackWrapper) trackWrapper.style.display = 'none';
+                    if (track) track.style.display = 'none';
+                    if (fill) fill.style.display = 'none';
                 }
             }
 
