@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- SEO Meta Tags -->
-  <title>GKS Green Logistics - Transport Durable & RSE | Logistique Responsable</title>
-  <meta name="description" content="GKS Logistics s'engage pour un transport durable. Découvrez nos initiatives RSE, réduction CO₂, recyclage, et solutions logistiques éco-responsables.">
-  <meta name="keywords" content="logistique verte, transport durable, RSE, GKS Green, réduction CO2, recyclage, logistique responsable">
+  <title>GKS Logistics - Solutions Logistiques Internationales | Fret Aérien, Maritime & Terrestre</title>
+  <meta name="description" content="GKS Logistics offre des solutions logistiques complètes en Afrique de l'Ouest, Europe, Amérique du Nord. Fret aérien, maritime, transport terrestre et entreposage sécurisé depuis 2019.">
+  <meta name="keywords" content="logistique Mali, fret aérien Afrique, transport maritime, GKS Logistics, logistique internationale, entreposage Bamako, transport Afrique de l'Ouest, fret international, douane Mali">
   
   <link rel="icon" href="/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="/css/styles.css">
@@ -230,6 +230,11 @@
       }
     }
   </style>
+  <link rel="alternate" hreflang="x-default" href="https://www.gkslogistics.com/green-logistics.html" />
+  <link rel="alternate" hreflang="fr" href="https://www.gkslogistics.com/green-logistics.html" />
+  <link rel="alternate" hreflang="en" href="https://www.gkslogistics.com/en/green-logistics.html" />
+  <link rel="alternate" hreflang="tu" href="https://www.gkslogistics.com/tu/green-logistics.html" />
+  <link rel="alternate" hreflang="md" href="https://www.gkslogistics.com/md/green-logistics.html" />
 </head>
 <body>
 
@@ -288,19 +293,19 @@
           <i class="fas fa-chevron-down"></i>
         </button>
         <div class="language-dropdown-menu" role="menu">
-          <a href="{{FR_URL}}" class="language-option" role="menuitem" data-lang="fr">
+          <a href="/green-logistics.html" class="language-option" role="menuitem" data-lang="fr">
             <i class="fas fa-flag"></i>
             <span>Français</span>
           </a>
-          <a href="{{EN_URL}}" class="language-option" role="menuitem" data-lang="en">
+          <a href="/en/green-logistics.html" class="language-option" role="menuitem" data-lang="en">
             <i class="fas fa-flag"></i>
             <span>English</span>
           </a>
-          <a href="{{TU_URL}}" class="language-option" role="menuitem" data-lang="tu">
+          <a href="/tu/green-logistics.html" class="language-option" role="menuitem" data-lang="tu">
             <i class="fas fa-flag"></i>
             <span>Türkçe</span>
           </a>
-          <a href="{{MD_URL}}" class="language-option" role="menuitem" data-lang="md">
+          <a href="/md/green-logistics.html" class="language-option" role="menuitem" data-lang="md">
             <i class="fas fa-flag"></i>
             <span>中文</span>
           </a>
@@ -543,8 +548,7 @@
               <span data-translate="calculator-section-currency">Devise de Paiement</span>
             </h3>
             <div class="form-group-calc">
-              <label data-translate="calculator-currency">
-                Choisissez votre devise <span class="required">*</span>
+              <label data-translate="calculator-currency">Choisissez votre devise<span class="required">*</span>
               </label>
               <select id="currency" required>
                 <option value="XOF">🇲🇱 FCFA (XOF) - Franc CFA</option>
@@ -564,8 +568,7 @@
             </h3>
             <div class="form-grid">
               <div class="form-group-calc">
-                <label data-translate="calculator-transport-type">
-                  Type de transport <span class="required">*</span>
+                <label data-translate="calculator-transport-type">Type de transport<span class="required">*</span>
                 </label>
                 <select id="transportType" required>
                   <option value="" data-translate="calculator-select-placeholder">Sélectionnez...</option>
@@ -576,8 +579,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-origin">
-                  Pays d'origine <span class="required">*</span>
+                <label data-translate="calculator-origin">Pays d'origine<span class="required">*</span>
                 </label>
                 <select id="originCountry" required>
                   <option value="" data-translate="calculator-select-country">Sélectionnez un pays</option>
@@ -595,8 +597,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-destination">
-                  Pays de destination <span class="required">*</span>
+                <label data-translate="calculator-destination">Pays de destination<span class="required">*</span>
                 </label>
                 <select id="destinationCountry" required>
                   <option value="" data-translate="calculator-select-country">Sélectionnez un pays</option>
@@ -623,8 +624,7 @@
             </h3>
             <div class="form-grid">
               <div class="form-group-calc">
-                <label data-translate="calculator-weight">
-                  Poids (kg) <span class="required">*</span>
+                <label data-translate="calculator-weight">Poids (kg)<span class="required">*</span>
                 </label>
                 <div class="input-with-unit">
                   <input type="number" id="weight" min="0.1" step="0.1" required data-translate="calculator-weight_placeholder" placeholder="">
@@ -633,9 +633,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-length">
-                  Longueur (cm)
-                </label>
+                <label data-translate="calculator-length">Longueur (cm)</label>
                 <div class="input-with-unit">
                   <input type="number" id="length" min="0" step="0.1" data-translate="calculator-length_placeholder" placeholder="">
                   <span class="input-unit">cm</span>
@@ -643,9 +641,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-width">
-                  Largeur (cm)
-                </label>
+                <label data-translate="calculator-width">Largeur (cm)</label>
                 <div class="input-with-unit">
                   <input type="number" id="width" min="0" step="0.1" data-translate="calculator-width_placeholder" placeholder="">
                   <span class="input-unit">cm</span>
@@ -653,9 +649,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-height">
-                  Hauteur (cm)
-                </label>
+                <label data-translate="calculator-height">Hauteur (cm)</label>
                 <div class="input-with-unit">
                   <input type="number" id="height" min="0" step="0.1" data-translate="calculator-height_placeholder" placeholder="">
                   <span class="input-unit">cm</span>
@@ -663,9 +657,7 @@
               </div>
 
               <div class="form-group-calc">
-                <label data-translate="calculator-declared-value">
-                  Valeur déclarée (USD)
-                </label>
+                <label data-translate="calculator-declared-value">Valeur déclarée (USD)</label>
                 <div class="input-with-unit">
                   <input type="number" id="declaredValue" min="0" step="0.01" data-translate="calculator-value_placeholder" placeholder="">
                   <span class="input-unit">$</span>
@@ -676,9 +668,7 @@
             <div class="checkbox-group checkbox-group-inline">
               <div class="checkbox-item">
                 <input type="checkbox" id="isContainer">
-                <label for="isContainer" data-translate="calculator-container">
-                  Container complet (fret maritime uniquement)
-                </label>
+                <label for="isContainer" data-translate="calculator-container">Container complet (fret maritime uniquement)</label>
               </div>
             </div>
           </div>
@@ -693,9 +683,7 @@
             <div class="checkbox-group">
               <div class="checkbox-item">
                 <input type="checkbox" id="doorDelivery">
-                <label for="doorDelivery" data-translate="calculator-door-delivery">
-                  Livraison à domicile (+$30)
-                </label>
+                <label for="doorDelivery" data-translate="calculator-door-delivery">Livraison à domicile (+$30)</label>
               </div>
             </div>
 
@@ -758,7 +746,7 @@
                 <input type="text" id="fullName" name="fullName" required data-translate="quote_modal-full_name_placeholder" placeholder="">
               </div>
               <div class="form-group">
-                <label for="companyName" data-translate="quote_modal-company_name">Nom de l'Entreprise *</label>
+                <label for="companyName" data-translate="quote_modal-company_name">Nom de l'Entreprise</label>
                 <input type="text" id="companyName" name="companyName" required data-translate="quote_modal-company_name_placeholder" placeholder="">
               </div>
             </div>
@@ -781,12 +769,12 @@
               <select id="freightType" name="freightType" required>
                 <option value="" data-translate="select-freight-type">Sélectionner le type de fret</option>
                 <option value="air" data-translate="freight-air">Fret Aérien</option>
-                <option value="fcl" data-translate="freight-fcl">Fret Maritime (FCL)</option>
-                <option value="lcl" data-translate="freight-lcl">Fret Maritime (LCL)</option>
+                <option value="fcl" data-translate="freight-fcl">Fret Maritime (Conteneur Complet - FCL)</option>
+                <option value="lcl" data-translate="freight-lcl">Fret Maritime (Conteneur Partiel - LCL)</option>
                 <option value="road" data-translate="freight-road">Fret Routier</option>
                 <option value="project" data-translate="freight-project">Logistique de Projet</option>
                 <option value="temp-controlled" data-translate="freight-temp-controlled">Logistique à Température Contrôlée</option>
-                <option value="other" data-translate="freight-other">Autres</option>
+                <option value="other" data-translate="freight-other">Autre</option>
               </select>
             </div>
             <div class="form-group">
@@ -795,11 +783,11 @@
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label for="origin" data-translate="quote_modal-origin">Pays/Ville d'Origine *</label>
+                <label for="origin" data-translate="quote_modal-origin">Origine *</label>
                 <input type="text" id="origin" name="origin" required data-translate="quote_modal-origin_placeholder" placeholder="">
               </div>
               <div class="form-group">
-                <label for="destination" data-translate="quote_modal-destination">Pays/Ville de Destination *</label>
+                <label for="destination" data-translate="quote_modal-destination">Destination *</label>
                 <input type="text" id="destination" name="destination" required data-translate="quote_modal-destination_placeholder" placeholder="">
               </div>
             </div>
@@ -809,7 +797,7 @@
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label for="dimensionsWeight" data-translate="quote_modal-weight">Dimensions et Poids *</label>
+                <label for="dimensionsWeight" data-translate="quote_modal-weight">Poids (kg)</label>
                 <input type="text" id="dimensionsWeight" name="dimensionsWeight" required data-translate="quote_modal-weight_placeholder" placeholder="">
               </div>
               <div class="form-group">
@@ -824,7 +812,7 @@
             <div class="checkbox-group">
               <div class="checkbox-item">
                 <input type="checkbox" id="serviceCustoms" name="additionalServices[]" value="customs">
-                <label for="serviceCustoms" data-translate="service-customs">Dédouanement</label>
+                <label for="serviceCustoms" data-translate="service-customs">Douanes & Réglementation</label>
               </div>
               <div class="checkbox-item">
                 <input type="checkbox" id="serviceInsurance" name="additionalServices[]" value="insurance">
@@ -848,8 +836,8 @@
           <fieldset class="form-section">
             <legend><h3 data-translate="additional-message-headline">Votre Message ou Besoins Spécifiques</h3></legend>
             <div class="form-group">
-              <label for="message" data-translate="quote_modal-message">Message Supplémentaire</label>
-              <textarea id="message" name="message" rows="4" data-translate="quote_modal-message_placeholder" placeholder=""></textarea>
+              <label for="message" data-translate="quote_modal-message">Détails de votre demande *</label>
+              <textarea id="message" name="message" rows="4" data-translate="quote_modal-message_placeholder" placeholder="">Décrivez votre besoin (dimensions, poids, date souhaitée, services additionnels...)</textarea>
             </div>
           </fieldset>
 

@@ -17,7 +17,10 @@
                 Veuillez remplir le formulaire ci-dessous pour obtenir un devis personnalisé pour vos besoins logistiques.
             </p>
             
-            <form name="quote-request" data-netlify="true" id="quoteRequestForm">
+            <form name="quote-request" data-netlify="true" data-netlify-honeypot="bot-field" id="quoteRequestForm">
+                <!-- Honeypot field for spam protection -->
+                <input type="hidden" name="bot-field">
+
                 <!-- Contact Information Section -->
                 <fieldset class="form-section">
                     <legend>
@@ -33,7 +36,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="companyName" data-translate="quote_modal-company_name">Nom de l'Entreprise</label>
+                            <label for="companyName" data-translate="quote_modal-company_name">Nom de l'Entreprise *</label>
                             <input type="text" id="companyName" name="companyName" required
                                    data-translate="quote_modal-company_name_placeholder"
                                    placeholder="">
@@ -73,7 +76,7 @@
                             <option value="road" data-translate="freight-road">Fret Routier</option>
                             <option value="project" data-translate="freight-project">Logistique de Projet / Fret Hors Gabarit</option>
                             <option value="temp-controlled" data-translate="freight-temp-controlled">Logistique à Température Contrôlée</option>
-                            <option value="other" data-translate="freight-other">Autre</option>
+                            <option value="other" data-translate="freight-other">Autres</option>
                         </select>
                     </div>
                     
@@ -86,14 +89,14 @@
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="origin" data-translate="quote_modal-origin">Origine *</label>
+                            <label for="origin" data-translate="quote_modal-origin">Pays/Ville d'Origine *</label>
                             <input type="text" id="origin" name="origin" required
                                    data-translate="quote_modal-origin_placeholder"
                                    placeholder="">
                         </div>
 
                         <div class="form-group">
-                            <label for="destination" data-translate="quote_modal-destination">Destination *</label>
+                            <label for="destination" data-translate="quote_modal-destination">Pays/Ville de Destination *</label>
                             <input type="text" id="destination" name="destination" required
                                    data-translate="quote_modal-destination_placeholder"
                                    placeholder="">
@@ -107,7 +110,7 @@
                     
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="dimensionsWeight" data-translate="quote_modal-weight">Poids (kg)</label>
+                            <label for="dimensionsWeight" data-translate="quote_modal-weight">Dimensions et Poids *</label>
                             <input type="text" id="dimensionsWeight" name="dimensionsWeight" required
                                    data-translate="quote_modal-weight_placeholder"
                                    placeholder="">
@@ -131,7 +134,7 @@
                     <div class="checkbox-group">
                         <div class="checkbox-item">
                             <input type="checkbox" id="serviceCustoms" name="additionalServices[]" value="customs">
-                            <label for="serviceCustoms" data-translate="service-customs">Douanes & Réglementation</label>
+                            <label for="serviceCustoms" data-translate="service-customs">Dédouanement</label>
                         </div>
                         
                         <div class="checkbox-item">
@@ -163,10 +166,10 @@
                     </legend>
                     
                     <div class="form-group">
-                        <label for="message" data-translate="quote_modal-message">Détails de votre demande *</label>
+                        <label for="message" data-translate="quote_modal-message">Message Supplémentaire</label>
                         <textarea id="message" name="message" rows="4"
                                   data-translate="quote_modal-message_placeholder"
-                                  placeholder="">Décrivez votre besoin (dimensions, poids, date souhaitée, services additionnels...)</textarea>
+                                  placeholder=""></textarea>
                     </div>
                 </fieldset>
                 
