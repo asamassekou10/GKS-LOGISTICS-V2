@@ -60,9 +60,7 @@
     "cta": {
       "1": "Demander un Devis",
       "2": "En savoir plus",
-      "3": {
-        "alt": "Calculer mon Devis"
-      },
+      "3": "计算我的报价",
       "4": "Notre Réseau",
       "5": "Avis Clients",
       "6": "Contactez-nous"

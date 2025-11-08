@@ -15,7 +15,14 @@
       "Bash(node extract_english.js:*)",
       "Bash(node add_missing_keys.js:*)",
       "Bash(node verify_translations.js:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(cat:*)",
+      "Bash(__NEW_LINE__ cd \"c:\\Users\\alhas\\GKS-FINAL-WEBSITE\\GKS-LOGISTICS-V2\")",
+      "Bash(__NEW_LINE__ echo \"=== TRANSLATION KEYS SUMMARY ===\")",
+      "Bash(translation_summary.txt)",
+      "Bash(__NEW_LINE__ cat translation_summary.txt)",
+      "Bash(python3:*)",
+      "Bash(jq:*)"
     ],
     "deny": [],
     "ask": []

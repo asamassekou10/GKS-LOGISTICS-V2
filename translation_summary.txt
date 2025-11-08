@@ -1,0 +1,20 @@
+=== TRANSLATION KEYS SUMMARY ===
+Total Unique Keys: 1374
+
+=== CATEGORY BREAKDOWN ===
+
+Navigation Keys (nav-): 18
+Service Keys (all_services-): 157
+Calculator Keys (calculator-): 37
+Quote Modal Keys (quote): 50
+Country Keys (gks_): 308
+Contact Keys (contact-): 23
+Footer Keys (footer-): 24
+Blog/Article Keys: 92
+Team Keys (team_page-, employee): 87
+Green Logistics Keys (green-, commitment-, initiative-, action-): 50
+Groupage Keys (groupage-, route-, booking-, calendar-): 40
+Career Keys: 71
+Process Keys: 12
+About/Presence Keys: 53
+Miscellaneous Keys: 139

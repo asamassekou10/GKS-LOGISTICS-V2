@@ -60,9 +60,7 @@
     "cta": {
       "1": "Request Quote",
       "2": "Learn More",
-      "3": {
-        "alt": "Calculer mon Devis"
-      },
+      "3": "Calculate My Quote",
       "4": "Our Network",
       "5": "Client Reviews",
       "6": "Contact Us"
