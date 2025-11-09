@@ -15,6 +15,7 @@ const getEmailTemplate = (formName, data) => {
     contact: getContactFormEmail(data),
     'quote-request': getQuoteRequestEmail(data),
     'career-application': getCareerApplicationEmail(data),
+    'groupage-booking': getGroupageBookingEmail(data),
     'newsletter-signup': getNewsletterSignupEmail(data)
   };
 
@@ -244,16 +245,228 @@ www.gkslogistics.com
   `
 });
 
-// Placeholder for career application email
+// Professional email template for career application
 const getCareerApplicationEmail = (data) => ({
-  subject: `Career Application from ${data.fullName || 'Guest'}`,
-  html: `<p>Career application received from ${escapeHtml(data.fullName || 'N/A')}</p>`
+  subject: `Career Application: ${data.desiredPosition} from ${data.applicantName}`,
+  html: `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <style>
+          body { font-family: 'Roboto', sans-serif; color: #333; }
+          .container { max-width: 600px; margin: 0 auto; padding: 20px; background: #f9f9f9; }
+          .header { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); padding: 30px; color: white; text-align: center; border-radius: 8px 8px 0 0; }
+          .header h1 { margin: 0; font-size: 24px; }
+          .header p { margin: 5px 0 0 0; opacity: 0.9; }
+          .content { background: white; padding: 30px; border-radius: 0 0 8px 8px; }
+          .section { margin-bottom: 30px; }
+          .section-title { font-size: 16px; font-weight: 700; color: #1e3a8a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; border-bottom: 2px solid #1e3a8a; padding-bottom: 10px; }
+          .field { margin-bottom: 15px; }
+          .label { font-weight: 600; color: #666; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+          .value { margin-top: 5px; padding: 10px; background: #f0f7ff; border-left: 4px solid #1e3a8a; }
+          .footer { text-align: center; padding: 20px; color: #666; font-size: 12px; border-top: 1px solid #eee; }
+          .badge { display: inline-block; background: #10b981; color: white; padding: 6px 12px; border-radius: 20px; font-weight: 600; font-size: 12px; }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <h1>📋 New Career Application</h1>
+            <p>Received via GKS Logistics Careers Portal</p>
+          </div>
+          <div class="content">
+            <div class="section">
+              <div class="section-title">Applicant Information</div>
+              <div class="field">
+                <div class="label">Name</div>
+                <div class="value">${escapeHtml(data.applicantName || 'N/A')}</div>
+              </div>
+              <div class="field">
+                <div class="label">Email</div>
+                <div class="value">${escapeHtml(data.applicantEmail || 'N/A')}</div>
+              </div>
+              <div class="field">
+                <div class="label">Phone</div>
+                <div class="value">${escapeHtml(data.applicantPhone || 'N/A')}</div>
+              </div>
+              <div class="field">
+                <div class="label">City</div>
+                <div class="value">${escapeHtml(data.applicantCity || 'N/A')}</div>
+              </div>
+            </div>
+            <div class="section">
+              <div class="section-title">Position Details</div>
+              <div class="field">
+                <div class="label">Desired Position</div>
+                <div class="value">${escapeHtml(data.desiredPosition || 'N/A')}</div>
+              </div>
+              <div class="field">
+                <div class="label">Department</div>
+                <div class="value">${escapeHtml(data.department || 'N/A')}</div>
+              </div>
+              <div class="field">
+                <div class="label">Experience</div>
+                <div class="value">${escapeHtml(data.experience || 'N/A')}</div>
+              </div>
+              <div class="field">
+                <div class="label">Availability</div>
+                <div class="value">${escapeHtml(data.availability || 'N/A')}</div>
+              </div>
+            </div>
+            <div class="section">
+              <div class="section-title">Qualifications</div>
+              <div class="field">
+                <div class="label">Education</div>
+                <div class="value">${escapeHtml(data.education || 'N/A')}</div>
+              </div>
+              <div class="field">
+                <div class="label">Key Skills</div>
+                <div class="value">${escapeHtml(data.skills || 'Not specified')}</div>
+              </div>
+            </div>
+            <div class="section">
+              <div class="section-title">Motivation</div>
+              <div class="field">
+                <div class="value">${escapeHtml(data.motivation || 'Not specified')}</div>
+              </div>
+            </div>
+            <div class="section">
+              <div class="section-title">Documents</div>
+              <div class="field">
+                <div class="label">CV File</div>
+                <div class="value"><span class="badge">📎 ${escapeHtml(data.cvFileName || 'Attached')}</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <p>This email was sent automatically when a career application was submitted through the GKS Logistics website.</p>
+          </div>
+        </div>
+      </body>
+    </html>
+  `,
+  text: `Career Application from ${data.applicantName}\n\nPosition: ${data.desiredPosition}\nEmail: ${data.applicantEmail}\nPhone: ${data.applicantPhone}`
 });
 
-// Placeholder for newsletter signup email
+// Professional email template for groupage booking
+const getGroupageBookingEmail = (data) => ({
+  subject: `New Groupage Booking: ${data.route || 'Consolidated Shipment'}`,
+  html: `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <style>
+          body { font-family: 'Roboto', sans-serif; color: #333; }
+          .container { max-width: 600px; margin: 0 auto; padding: 20px; background: #f9f9f9; }
+          .header { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); padding: 30px; color: white; text-align: center; border-radius: 8px 8px 0 0; }
+          .header h1 { margin: 0; font-size: 24px; }
+          .header p { margin: 5px 0 0 0; opacity: 0.9; }
+          .content { background: white; padding: 30px; border-radius: 0 0 8px 8px; }
+          .section { margin-bottom: 30px; }
+          .section-title { font-size: 16px; font-weight: 700; color: #1e3a8a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; border-bottom: 2px solid #1e3a8a; padding-bottom: 10px; }
+          .field { margin-bottom: 15px; }
+          .label { font-weight: 600; color: #666; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+          .value { margin-top: 5px; padding: 10px; background: #f0f7ff; border-left: 4px solid #1e3a8a; }
+          .footer { text-align: center; padding: 20px; color: #666; font-size: 12px; border-top: 1px solid #eee; }
+          .badge { display: inline-block; background: #10b981; color: white; padding: 6px 12px; border-radius: 20px; font-weight: 600; font-size: 12px; }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <h1>📦 New Groupage Booking</h1>
+            <p>Consolidated Shipment Request</p>
+          </div>
+          <div class="content">
+            <div class="section">
+              <div class="section-title">Shipper Information</div>
+              <div class="field">
+                <div class="label">Name</div>
+                <div class="value">${escapeHtml(data.firstname || '')} ${escapeHtml(data.lastname || '')}</div>
+              </div>
+              <div class="field">
+                <div class="label">Email</div>
+                <div class="value">${escapeHtml(data.email || 'N/A')}</div>
+              </div>
+              <div class="field">
+                <div class="label">Phone</div>
+                <div class="value">${escapeHtml(data.phone || 'N/A')}</div>
+              </div>
+            </div>
+            <div class="section">
+              <div class="section-title">Shipment Details</div>
+              <div class="field">
+                <div class="label">Route</div>
+                <div class="value"><span class="badge">🌍 ${escapeHtml(data.route || 'Not specified')}</span></div>
+              </div>
+              <div class="field">
+                <div class="label">Weight (kg)</div>
+                <div class="value">${escapeHtml(data.weight || 'Not specified')} kg</div>
+              </div>
+              <div class="field">
+                <div class="label">Volume (m³)</div>
+                <div class="value">${escapeHtml(data.volume || 'Not specified')} m³</div>
+              </div>
+              <div class="field">
+                <div class="label">Cargo Description</div>
+                <div class="value">${escapeHtml(data.description || 'Not specified')}</div>
+              </div>
+            </div>
+          </div>
+          <div class="footer">
+            <p>This email was sent automatically when a groupage booking was submitted through the GKS Logistics website. Our team will review the request and contact the shipper shortly.</p>
+          </div>
+        </div>
+      </body>
+    </html>
+  `,
+  text: `New Groupage Booking\n\nRoute: ${data.route}\nWeight: ${data.weight}kg\nVolume: ${data.volume}m³\nContact: ${data.firstname} ${data.lastname} (${data.email})`
+});
+
+// Professional email template for newsletter signup
 const getNewsletterSignupEmail = (data) => ({
-  subject: `Newsletter Signup: ${data.email || 'Unknown'}`,
-  html: `<p>New newsletter signup from ${escapeHtml(data.email || 'N/A')}</p>`
+  subject: `Newsletter Subscription Confirmation: ${data.email}`,
+  html: `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <style>
+          body { font-family: 'Roboto', sans-serif; color: #333; }
+          .container { max-width: 600px; margin: 0 auto; padding: 20px; background: #f9f9f9; }
+          .header { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); padding: 30px; color: white; text-align: center; border-radius: 8px 8px 0 0; }
+          .header h1 { margin: 0; font-size: 24px; }
+          .header p { margin: 5px 0 0 0; opacity: 0.9; }
+          .content { background: white; padding: 30px; border-radius: 0 0 8px 8px; text-align: center; }
+          .badge { display: inline-block; background: #10b981; color: white; padding: 8px 16px; border-radius: 20px; font-weight: 600; margin: 20px 0; }
+          .footer { text-align: center; padding: 20px; color: #666; font-size: 12px; border-top: 1px solid #eee; }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <h1>📧 Newsletter Signup Confirmation</h1>
+            <p>Welcome to GKS Logistics Updates</p>
+          </div>
+          <div class="content">
+            <p style="font-size: 16px; color: #333; margin: 20px 0;">Thank you for subscribing to the GKS Logistics newsletter!</p>
+            <p style="font-size: 14px; color: #666;">Your email:</p>
+            <div class="badge">${escapeHtml(data.email || 'N/A')}</div>
+            <p style="font-size: 14px; color: #666; margin-top: 30px;">You will now receive updates about:</p>
+            <ul style="text-align: left; color: #666; font-size: 14px;">
+              <li>📦 Latest logistics solutions and services</li>
+              <li>🌍 Expansion news and new routes</li>
+              <li>💼 Industry insights and best practices</li>
+              <li>🎯 Special offers and promotions</li>
+            </ul>
+          </div>
+          <div class="footer">
+            <p>This email was sent automatically when your email was subscribed to our newsletter through the GKS Logistics website.</p>
+          </div>
+        </div>
+      </body>
+    </html>
+  `,
+  text: `Thank you for subscribing to the GKS Logistics newsletter! Email: ${data.email}`
 });
 
 // Helper function to format service type

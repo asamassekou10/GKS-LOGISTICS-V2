@@ -447,9 +447,11 @@
       <h2 style="text-align: center; margin-bottom: 1rem;" data-translate="booking-title">现在预订</h2>
       <p style="text-align: center; color: #6c757d;" data-translate="booking-subtitle">提前规划您的拼箱运输</p>
       
-      <form class="booking-form" id="groupageBookingForm" name="groupage-booking" data-netlify="true" method="POST">
+      <form class="booking-form" id="groupageBookingForm" name="groupage-booking" data-netlify-honeypot="bot-field" method="POST">
         <!-- Hidden field for Netlify form routing -->
         <input type="hidden" name="form-name" value="groupage-booking">
+        <!-- Honeypot field for spam protection -->
+        <input type="hidden" name="bot-field">
 
         <div class="form-row">
           <div class="form-group">
@@ -788,7 +790,7 @@
           Veuillez remplir le formulaire ci-dessous pour obtenir un devis personnalisé pour vos besoins logistiques.
         </p>
 
-        <form name="quote-request" data-netlify="true" id="quoteRequestForm">
+        <form name="quote-request" data-netlify-honeypot="bot-field" id="quoteRequestForm">
           <!-- Contact Information Section -->
           <fieldset class="form-section">
             <legend>

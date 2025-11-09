@@ -97,15 +97,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Form submission handling
+    // Form submission handling - HANDLED BY form-handler.js
+    // This handler has been moved to form-handler.js for better organization
+    // and integration with Brevo email service
+    /*
     if (quoteForm) {
         quoteForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             // Basic form validation
             const requiredFields = quoteForm.querySelectorAll('[required]');
             let isValid = true;
-            
+
             requiredFields.forEach(field => {
                 if (!field.value.trim()) {
                     isValid = false;
@@ -114,26 +117,26 @@ document.addEventListener('DOMContentLoaded', function() {
                     field.style.borderColor = '#ddd';
                 }
             });
-            
+
             if (!isValid) {
                 alert('Veuillez remplir tous les champs obligatoires.');
                 return;
             }
-            
+
             // Show loading state
             const submitButton = quoteForm.querySelector('.btn-submit');
             const originalText = submitButton.textContent;
             submitButton.textContent = 'Envoi en cours...';
             submitButton.disabled = true;
-            
+
             // Submit form to Netlify
             const formData = new FormData(quoteForm);
-            
+
             // Ensure form-name is included for Netlify
             if (!formData.get('form-name')) {
                 formData.append('form-name', 'quote-request');
             }
-            
+
             fetch('/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -155,6 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    */
     
     // Initialize quote buttons
     initializeQuoteButtons();

@@ -440,7 +440,9 @@
             <div class="career-modal-body">
                 <p class="career-form-subtitle" data-translate="career-application-modal-subtitle">Remplissez le formulaire ci-dessous pour soumettre votre candidature.</p>
                 
-                <form name="career-application" data-netlify="true" id="careerApplicationForm" enctype="multipart/form-data">
+                <form name="career-application" data-netlify-honeypot="bot-field" id="careerApplicationForm" enctype="multipart/form-data">
+                    <!-- Honeypot field for spam protection -->
+                    <input type="hidden" name="bot-field">
                     <!-- Personal Information Section -->
                     <fieldset class="form-section">
                         <legend>
@@ -621,7 +623,7 @@
           Veuillez remplir le formulaire ci-dessous pour obtenir un devis personnalisé pour vos besoins logistiques.
         </p>
 
-        <form name="quote-request" data-netlify="true" id="quoteRequestForm">
+        <form name="quote-request" data-netlify-honeypot="bot-field" id="quoteRequestForm">
           <fieldset class="form-section">
             <legend><h3 data-translate="contact-info-headline">Vos Coordonnées</h3></legend>
             <div class="form-row">

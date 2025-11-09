@@ -244,35 +244,38 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }, 500);
 
-  // Contact Form
+  // Contact Form - HANDLED BY form-handler.js
+  // This handler has been moved to form-handler.js for better organization
+  // and integration with Brevo email service
+  /*
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      
+
       // Get form data
       const formData = new FormData(contactForm);
       const name = formData.get('name');
       const email = formData.get('email');
       const service = formData.get('service');
       const message = formData.get('message');
-      
+
       // Simple validation
       if (!name || !email || !message) {
         const errorMsg = window.langManager ? window.langManager.translations['contact-error'] || 'Please fill in all required fields.' : 'Please fill in all required fields.';
         alert(errorMsg);
         return;
       }
-      
+
       // Add form-name for Netlify
       formData.append('form-name', 'contact');
-      
+
       // Show loading state
       const submitButton = contactForm.querySelector('button[type="submit"]');
       const originalText = submitButton.textContent;
       submitButton.textContent = window.langManager ? window.langManager.translations['contact-sending'] || 'Sending...' : 'Sending...';
       submitButton.disabled = true;
-      
+
       // Submit to Netlify Forms
       fetch('/', {
         method: 'POST',
@@ -284,13 +287,13 @@ document.addEventListener('DOMContentLoaded', function() {
           submitButton.textContent = originalText;
           submitButton.disabled = false;
           contactForm.reset();
-          
+
           // Show success message
           const successMessage = document.createElement('div');
           successMessage.className = 'success-message';
           successMessage.textContent = window.langManager ? window.langManager.translations['contact-confirmation'] || 'Message sent successfully!' : 'Message sent successfully!';
           contactForm.appendChild(successMessage);
-          
+
           setTimeout(() => {
             successMessage.remove();
           }, 5000);
@@ -307,6 +310,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
   }
+  */
 
   // Newsletter Form
   const newsletterForm = document.getElementById('newsletterForm');
