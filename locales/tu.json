@@ -86,7 +86,19 @@
     "hero": {
       "title": "Welcome to GKS LOGISTICS"
     },
-    "service_network": "Yerel Ağ"
+    "service_network": "Yerel Ağ",
+    "air_title": "Hava Kargo",
+    "air_desc": "Zaman duyarlı gönderimleri hızlı ve güvenilir hava taşımacılığı hizmetleri. Küresel ağ kapsamı ile rekabetçi fiyatlar.",
+    "air_progress": "%98",
+    "sea_title": "Deniz Taşımacılığı",
+    "sea_desc": "Büyük hacim kargo için uygun maliyetli deniz taşımacılığı. FCL ve LCL seçenekleri tam konteyner takibi ile.",
+    "sea_progress": "%95",
+    "land_title": "Kara Taşımacılığı",
+    "land_desc": "Batı Afrika ve ötesinde verimli karayolu taşımacılığı hizmetleri. Profesyonel şoförler ile özel filo.",
+    "land_progress": "%97",
+    "storage_title": "Depolama Çözümleri",
+    "storage_desc": "Stratejik konumlarda güvenli depo tesisleri. Sıcaklık kontrollü ve iklim izlemeli depolama.",
+    "storage_progress": "%99"
   },
   "welcome-stat-countries": "Ülkeler",
   "welcome-stat-shipments": "Gönderiler",
@@ -136,7 +148,8 @@
       "countries": "Pays Desservis",
       "shipments": "Expéditions",
       "clients": "Clients Satisfaits"
-    }
+    },
+    "mission_desc": "Misyonumuz, işletmeleri kıtalar arasında bağlayan güvenilir, verimli ve yenilikçi lojistik çözümleri sağlamaktır."
   },
   "process": {
     "title": "Notre Processus Logistique",
@@ -3648,5 +3661,9 @@
   "quote-confirm": "Onayla",
   "quote-print": "Yazdır",
   "quote-email": "E-posta Gönder",
-  "quote-disclaimer": "Uyarı: Fiyatlar tahminidir"
+  "quote-disclaimer": "Uyarı: Fiyatlar tahminidir",
+  "process-title": "Lojistik Sürecimiz",
+  "process-subtitle": "Teslim almadan teslimatına kadar kusursuz uçtan uca deneyim",
+  "presence-title": "Uluslararası Varlık",
+  "presence-subtitle": "Batı Afrika, Avrupa ve Kuzey Amerika'da müşterilere hizmet etme"
 }

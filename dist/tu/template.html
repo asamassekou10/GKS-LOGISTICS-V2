@@ -335,7 +335,7 @@
                     <i class="fas fa-rocket"></i>
                 </div>
                 <h3>Misyonumuz</h3>
-                <p></p>
+                <p>Misyonumuz, işletmeleri kıtalar arasında bağlayan güvenilir, verimli ve yenilikçi lojistik çözümleri sağlamaktır.</p>
             </div>
             
             <div class="philosophy-card">
@@ -441,7 +441,8 @@
           </div>
         </div>
         <div class="contact-card">
-          <form class="contact-form" id="contactForm">
+          <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="bot-field" />
             <div class="form-row">
               <div class="form-group">
                 <input type="text" id="name" name="name" required>

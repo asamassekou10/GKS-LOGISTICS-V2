@@ -86,7 +86,19 @@
     "hero": {
       "title": "Welcome to GKS LOGISTICS"
     },
-    "service_network": "本地网络"
+    "service_network": "本地网络",
+    "air_title": "空运",
+    "air_desc": "快速可靠的航空货运服务，适用于时间敏感的货物。全球网络覆盖，竞争性价格。",
+    "air_progress": "98%",
+    "sea_title": "海运",
+    "sea_desc": "大容量货物经济高效的海运。FCL和LCL选项，提供完整的集装箱跟踪。",
+    "sea_progress": "95%",
+    "land_title": "陆运",
+    "land_desc": "西非及以外地区高效的公路货运服务。专业车队和专业驾驶员。",
+    "land_progress": "97%",
+    "storage_title": "仓储解决方案",
+    "storage_desc": "战略位置的安全仓库设施。温度控制和气候监控的仓储。",
+    "storage_progress": "99%"
   },
   "welcome-stat-countries": "国家",
   "welcome-stat-shipments": "货运",
@@ -136,7 +148,8 @@
       "countries": "Pays Desservis",
       "shipments": "Expéditions",
       "clients": "Clients Satisfaits"
-    }
+    },
+    "mission_desc": "我们的使命是提供可靠、高效和创新的物流解决方案，连接各大陆的企业。"
   },
   "process": {
     "title": "Notre Processus Logistique",
@@ -3647,5 +3660,9 @@
   "quote-confirm": "确认",
   "quote-print": "打印",
   "quote-email": "发送电子邮件",
-  "quote-disclaimer": "免责声明：价格仅供参考"
+  "quote-disclaimer": "免责声明：价格仅供参考",
+  "process-title": "我们的物流流程",
+  "process-subtitle": "从取件到交付的无缝端到端体验",
+  "presence-title": "国际存在",
+  "presence-subtitle": "为非洲西部、欧洲和北美的客户提供服务"
 }

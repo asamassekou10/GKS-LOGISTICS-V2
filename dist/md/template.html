@@ -335,7 +335,7 @@
                     <i class="fas fa-rocket"></i>
                 </div>
                 <h3>我们的使命</h3>
-                <p></p>
+                <p>我们的使命是提供可靠、高效和创新的物流解决方案，连接各大陆的企业。</p>
             </div>
             
             <div class="philosophy-card">
@@ -441,7 +441,8 @@
           </div>
         </div>
         <div class="contact-card">
-          <form class="contact-form" id="contactForm">
+          <form class="contact-form" id="contactForm" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="bot-field" />
             <div class="form-row">
               <div class="form-group">
                 <input type="text" id="name" name="name" required>

@@ -85,7 +85,19 @@
     "discover": "Découvrir nos Services",
     "hero": {
       "title": "Welcome to GKS LOGISTICS"
-    }
+    },
+    "air_title": "Fret Aérien",
+    "air_desc": "Services de fret aérien rapides et fiables pour les expéditions sensibles au temps. Couverture réseau mondiale avec tarifs compétitifs.",
+    "air_progress": "98%",
+    "sea_title": "Fret Maritime",
+    "sea_desc": "Expédition maritime rentable pour les cargaisons en gros volume. Options FCL et LCL avec suivi complet des conteneurs.",
+    "sea_progress": "95%",
+    "land_title": "Transport Routier",
+    "land_desc": "Services efficaces de fret routier à travers l'Afrique de l'Ouest et au-delà. Flotte dédiée avec conducteurs professionnels.",
+    "land_progress": "97%",
+    "storage_title": "Solutions de Stockage",
+    "storage_desc": "Installations d'entrepôt sécurisées dans des emplacements stratégiques. Stockage à température contrôlée et climatisée.",
+    "storage_progress": "99%"
   },
   "welcome-stat-countries": "Pays",
   "welcome-stat-shipments": "Expéditions",
@@ -127,7 +139,8 @@
       "countries": "Pays Desservis",
       "shipments": "Expéditions",
       "clients": "Clients Satisfaits"
-    }
+    },
+    "mission_desc": "Notre mission est de fournir des solutions logistiques fiables, efficaces et innovantes qui connectent les entreprises à travers les continents."
   },
   "process": {
     "title": "Notre Processus Logistique",
@@ -3569,5 +3582,9 @@
   "sort-by": "Trier par",
   "read-more": "Lire la Suite",
   "show-more": "Afficher Plus",
-  "hide-less": "Afficher Moins"
+  "hide-less": "Afficher Moins",
+  "process-title": "Notre Processus Logistique",
+  "process-subtitle": "Une expérience de bout en bout fluide du ramassage à la livraison",
+  "presence-title": "Présence Internationale",
+  "presence-subtitle": "Servir les clients à travers l'Afrique de l'Ouest, l'Europe et l'Amérique du Nord"
 }

@@ -87,7 +87,19 @@
       "discover": "Discover Services",
       "hero": {
         "title": "Welcome to GKS LOGISTICS"
-      }
+      },
+      "air_title": "Air Freight",
+      "air_desc": "Fast and reliable air cargo services for time-sensitive shipments. Global network coverage with competitive rates.",
+      "air_progress": "98%",
+      "sea_title": "Sea Freight",
+      "sea_desc": "Cost-effective maritime shipping for large volume cargo. FCL and LCL options with full container tracking.",
+      "sea_progress": "95%",
+      "land_title": "Land Transport",
+      "land_desc": "Efficient road freight services across West Africa and beyond. Dedicated fleet with professional drivers.",
+      "land_progress": "97%",
+      "storage_title": "Storage Solutions",
+      "storage_desc": "Secure warehouse facilities in strategic locations. Temperature-controlled and climate-monitored storage.",
+      "storage_progress": "99%"
     },
     "welcome-stat-countries": "Countries",
     "welcome-stat-shipments": "Shipments",
@@ -129,7 +141,8 @@
         "countries": "Countries Served",
         "shipments": "Shipments",
         "clients": "Satisfied Clients"
-      }
+      },
+      "mission_desc": "Our mission is to provide reliable, efficient, and innovative logistics solutions that connect businesses across continents."
     },
     "process": {
       "title": "Our Logistics Process",
@@ -3630,7 +3643,11 @@
     "sort-by": "Sort by",
     "read-more": "Read More",
     "show-more": "Show More",
-    "hide-less": "Show Less"
+    "hide-less": "Show Less",
+    "process-title": "Our Logistics Process",
+    "process-subtitle": "A seamless end-to-end experience from pickup to delivery",
+    "presence-title": "International Presence",
+    "presence-subtitle": "Serving customers across West Africa, Europe, and North America"
   },
   "chatbotResponses": []
 }

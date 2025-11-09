@@ -4,10 +4,19 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  BREVO_API_KEY = ""
 
 # Form configuration with serverless function support
 [functions]
   node_bundler = "esbuild"
+
+# Form submission notifications - webhook configuration
+[[plugins]]
+  package = "@netlify/plugin-sitemap"
+
+# Environment variables (will be overridden by Netlify UI)
+[context.production.environment]
+  BREVO_API_KEY = ""
 
 # Redirects for clean URLs and language fallbacks
 [[redirects]]
