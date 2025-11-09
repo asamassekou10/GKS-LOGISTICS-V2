@@ -244,24 +244,37 @@ document.addEventListener('DOMContentLoaded', function() {
       };
 
       // Send to serverless function
+      const payload = {
+        form: { name: 'contact' },
+        data: formData
+      };
+
+      console.log('📨 Submitting contact form to serverless function...');
+      console.log('Endpoint: /.netlify/functions/send-email-brevo');
+      console.log('Payload:', payload);
+
       fetch('/.netlify/functions/send-email-brevo', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          form: { name: 'contact' },
-          data: formData
-        })
+        body: JSON.stringify(payload)
       })
       .then(response => {
-        if (!response.ok) throw new Error('Server error');
+        console.log('📡 Received response from serverless function:', response.status, response.statusText);
+        if (!response.ok) {
+          return response.text().then(text => {
+            throw new Error(`HTTP ${response.status}: ${text}`);
+          });
+        }
         return response.json();
       })
       .then(data => {
+        console.log('✅ Serverless function response:', data);
         showSuccessNotification('Your message has been received! We\'ll get back to you shortly.');
         contactForm.reset();
       })
       .catch(error => {
-        console.error('Form submission error:', error);
+        console.error('❌ Form submission error:', error);
+        console.error('Error details:', error.message);
         showErrorNotification('Failed to send message. Please try again or contact us directly.');
       })
       .finally(() => {
@@ -304,19 +317,31 @@ document.addEventListener('DOMContentLoaded', function() {
       };
 
       // Send to serverless function
+      const payload = {
+        form: { name: 'quote-request' },
+        data: formData
+      };
+
+      console.log('📨 Submitting quote form to serverless function...');
+      console.log('Endpoint: /.netlify/functions/send-email-brevo');
+      console.log('Payload:', payload);
+
       fetch('/.netlify/functions/send-email-brevo', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          form: { name: 'quote-request' },
-          data: formData
-        })
+        body: JSON.stringify(payload)
       })
       .then(response => {
-        if (!response.ok) throw new Error('Server error');
+        console.log('📡 Received response from serverless function:', response.status, response.statusText);
+        if (!response.ok) {
+          return response.text().then(text => {
+            throw new Error(`HTTP ${response.status}: ${text}`);
+          });
+        }
         return response.json();
       })
       .then(data => {
+        console.log('✅ Serverless function response:', data);
         showSuccessNotification('Quote request sent! Our team will review your request and contact you shortly.');
         quoteForm.reset();
         // Close quote modal if it's open
@@ -327,7 +352,8 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       })
       .catch(error => {
-        console.error('Quote form error:', error);
+        console.error('❌ Quote form error:', error);
+        console.error('Error details:', error.message);
         showErrorNotification('Failed to send quote request. Please try again or contact us directly.');
       })
       .finally(() => {
