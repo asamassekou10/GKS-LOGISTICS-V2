@@ -254,11 +254,12 @@ document.addEventListener('DOMContentLoaded', function() {
         data: formData
       };
 
+      const functionUrl = `${window.location.origin}/.netlify/functions/send-email-brevo`;
       console.log('📨 Submitting contact form to serverless function...');
-      console.log('Endpoint: /.netlify/functions/send-email-brevo');
+      console.log('Full Endpoint URL:', functionUrl);
       console.log('Payload:', payload);
 
-      fetch('/.netlify/functions/send-email-brevo', {
+      fetch(functionUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
@@ -329,11 +330,12 @@ document.addEventListener('DOMContentLoaded', function() {
         data: formData
       };
 
+      const functionUrl = `${window.location.origin}/.netlify/functions/send-email-brevo`;
       console.log('📨 Submitting quote form to serverless function...');
-      console.log('Endpoint: /.netlify/functions/send-email-brevo');
+      console.log('Full Endpoint URL:', functionUrl);
       console.log('Payload:', payload);
 
-      fetch('/.netlify/functions/send-email-brevo', {
+      fetch(functionUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
