@@ -410,38 +410,61 @@ document.addEventListener('DOMContentLoaded', function() {
       submitButton.textContent = '⏳ Sending...';
       submitButton.disabled = true;
 
-      // Collect form data
-      const coverLetterFile = careerForm.querySelector('input[name="coverLetterFile"]').files[0];
-      const formData = {
-        applicantName,
-        applicantEmail,
-        applicantPhone,
-        applicantCity: careerForm.querySelector('input[name="applicantCity"]').value.trim(),
-        desiredPosition,
-        department: careerForm.querySelector('select[name="department"]').value,
-        experience: careerForm.querySelector('select[name="experience"]').value,
-        education: careerForm.querySelector('select[name="education"]').value,
-        skills: careerForm.querySelector('textarea[name="skills"]').value.trim(),
-        motivation: careerForm.querySelector('textarea[name="motivation"]').value.trim(),
-        availability: careerForm.querySelector('select[name="availability"]').value,
-        cvFileName: cvFile.name,
-        coverLetterFileName: coverLetterFile ? coverLetterFile.name : null
+      // Helper function to read file as base64
+      const readFileAsBase64 = (file) => {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => {
+            const base64String = reader.result.split(',')[1]; // Remove data:...base64, prefix
+            resolve(base64String);
+          };
+          reader.onerror = reject;
+          reader.readAsDataURL(file);
+        });
       };
 
-      // Send to serverless function
-      const payload = {
-        form: { name: 'career-application' },
-        data: formData
-      };
+      // Read CV and cover letter files as base64
+      readFileAsBase64(cvFile).then(cvBase64 => {
+        const coverLetterFile = careerForm.querySelector('input[name="coverLetterFile"]').files[0];
 
-      const functionUrl = `${window.location.origin}/.netlify/functions/send-email-brevo`;
-      console.log('📨 Submitting career application to serverless function...');
-      console.log('Payload:', payload);
+        let coverLetterPromise = Promise.resolve(null);
+        if (coverLetterFile) {
+          coverLetterPromise = readFileAsBase64(coverLetterFile);
+        }
 
-      fetch(functionUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
+        coverLetterPromise.then(coverLetterBase64 => {
+          // Collect form data
+          const formData = {
+            applicantName,
+            applicantEmail,
+            applicantPhone,
+            applicantCity: careerForm.querySelector('input[name="applicantCity"]').value.trim(),
+            desiredPosition,
+            department: careerForm.querySelector('select[name="department"]').value,
+            experience: careerForm.querySelector('select[name="experience"]').value,
+            education: careerForm.querySelector('select[name="education"]').value,
+            skills: careerForm.querySelector('textarea[name="skills"]').value.trim(),
+            motivation: careerForm.querySelector('textarea[name="motivation"]').value.trim(),
+            availability: careerForm.querySelector('select[name="availability"]').value,
+            cvFileName: cvFile.name,
+            cvFileData: cvBase64,
+            coverLetterFileName: coverLetterFile ? coverLetterFile.name : null,
+            coverLetterFileData: coverLetterBase64
+          };
+
+          // Send to serverless function
+          const payload = {
+            form: { name: 'career-application' },
+            data: formData
+          };
+
+          const functionUrl = `${window.location.origin}/.netlify/functions/send-email-brevo`;
+          console.log('📨 Submitting career application with attachments...');
+
+          fetch(functionUrl, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
       })
       .then(response => {
         console.log('📡 Received response:', response.status, response.statusText);
@@ -465,6 +488,8 @@ document.addEventListener('DOMContentLoaded', function() {
       .finally(() => {
         submitButton.textContent = originalText;
         submitButton.disabled = false;
+      });
+        });
       });
     });
   }

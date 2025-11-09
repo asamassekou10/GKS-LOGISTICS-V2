@@ -507,8 +507,8 @@ exports.handler = async (event) => {
     // Get the appropriate email template
     const emailTemplate = getEmailTemplate(form.name, formData);
 
-    // Send email to company via Brevo
-    await sendEmailViaBrevo({
+    // Build email parameters
+    const emailParams = {
       to: [{ email: RECIPIENT_EMAIL, name: 'GKS Logistics Forms' }],
       subject: emailTemplate.subject,
       htmlContent: emailTemplate.html,
@@ -517,7 +517,38 @@ exports.handler = async (event) => {
         name: 'GKS Logistics',
         email: 'gksforms@googlegroups.com'
       }
-    });
+    };
+
+    // Handle file attachments for career applications
+    if (form.name === 'career-application') {
+      const attachments = [];
+
+      // Add CV file if present
+      if (formData.cvFileData && formData.cvFileName) {
+        attachments.push({
+          content: formData.cvFileData,
+          name: formData.cvFileName
+        });
+        console.log(`Added CV attachment: ${formData.cvFileName}`);
+      }
+
+      // Add cover letter file if present
+      if (formData.coverLetterFileData && formData.coverLetterFileName) {
+        attachments.push({
+          content: formData.coverLetterFileData,
+          name: formData.coverLetterFileName
+        });
+        console.log(`Added cover letter attachment: ${formData.coverLetterFileName}`);
+      }
+
+      if (attachments.length > 0) {
+        emailParams.attachment = attachments;
+        console.log(`Total attachments: ${attachments.length}`);
+      }
+    }
+
+    // Send email to company via Brevo
+    await sendEmailViaBrevo(emailParams);
 
     console.log('Email sent successfully to', RECIPIENT_EMAIL);
 
