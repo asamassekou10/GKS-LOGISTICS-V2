@@ -6,9 +6,24 @@
 
 // This log will fire immediately when the script is loaded
 console.log('✅ form-handler.js script file loaded successfully!');
+console.log('📍 Current URL:', window.location.href);
+console.log('📍 Document readyState:', document.readyState);
+console.log('📍 Contact form exists?', document.getElementById('contactForm') ? 'YES' : 'NO');
+console.log('📍 Quote form exists?', document.getElementById('quoteRequestForm') ? 'YES' : 'NO');
 
+// Global error handler to catch any errors
+window.addEventListener('error', function(event) {
+  console.error('❌ GLOBAL ERROR in form-handler.js:', event.error);
+  console.error('Message:', event.message);
+  console.error('Filename:', event.filename);
+  console.error('Line:', event.lineno);
+});
+
+// Log when DOMContentLoaded fires
 document.addEventListener('DOMContentLoaded', function() {
-  console.log('🚀 Form Handler Initializing...');
+  console.log('🚀 Form Handler DOMContentLoaded Initializing...');
+  console.log('📍 Contact form NOW exists?', document.getElementById('contactForm') ? 'YES' : 'NO');
+  console.log('📍 Quote form NOW exists?', document.getElementById('quoteRequestForm') ? 'YES' : 'NO');
 
   // Custom success notification with GKS Logistics branding
   function showSuccessNotification(message = '') {
