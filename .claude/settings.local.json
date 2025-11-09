@@ -22,7 +22,8 @@
       "Bash(translation_summary.txt)",
       "Bash(__NEW_LINE__ cat translation_summary.txt)",
       "Bash(python3:*)",
-      "Bash(jq:*)"
+      "Bash(jq:*)",
+      "Bash(node fix_nav_translations.js:*)"
     ],
     "deny": [],
     "ask": []

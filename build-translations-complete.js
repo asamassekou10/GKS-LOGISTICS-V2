@@ -64,8 +64,27 @@ function generateHreflangTags(currentLang, currentPage) {
 }
 
 // Helper function to get nested translation value
-// Converts "hero-title-1" to access t.hero.title_1
+// Converts "hero-title-1" or "nav-services_overview" to access t.hero.title_1 or t.nav.services_overview
 function getTranslationValue(t, attributeKey) {
+  // First, try the key as-is with underscores (for root-level keys)
+  if (t[attributeKey]) return t[attributeKey];
+
+  // Convert underscores in the key to handle both dash and underscore formats
+  // "nav-services_overview" -> ["nav", "services_overview"] or ["nav", "services", "overview"]
+
+  // If key contains underscores, it might already be in the right format
+  if (attributeKey.includes('_')) {
+    const parts = attributeKey.split('-');
+    if (parts.length >= 2) {
+      const section = parts[0];
+      const keyPart = parts.slice(1).join('_');
+
+      if (t[section] && typeof t[section] === 'object' && t[section][keyPart]) {
+        return t[section][keyPart];
+      }
+    }
+  }
+
   // Split by dash: "hero-title-1" => ["hero", "title", "1"]
   const parts = attributeKey.split('-');
 
@@ -104,7 +123,8 @@ function getTranslationValue(t, attributeKey) {
   const fullKey = attributeKey.replace(/-/g, '_');
   const commonSections = ['services', 'about', 'hero', 'nav', 'contact', 'footer', 'testimonials', 'process', 'presence',
                          'article1', 'article2', 'blog', 'news', 'careers', 'insight', 'quote_modal', 'chatbot',
-                         'mobile_nav', 'accessibility', 'floating_cta', 'employee1', 'employee2', 'employee3', 'gallery'];
+                         'mobile_nav', 'accessibility', 'floating_cta', 'employee1', 'employee2', 'employee3', 'gallery',
+                         'groupage', 'quote', 'route'];
 
   for (const commonSection of commonSections) {
     if (t[commonSection] && typeof t[commonSection] === 'object') {
@@ -195,24 +215,94 @@ function replaceContentWithTranslations(html, translations, langCode, currentPag
     result = result.replace(/{{NAV_EMPLOYEE3}}/g, t.nav.employee3 || '');
   }
 
+  // GENERIC TEMPLATE VARIABLE REPLACEMENT
+  // Find all {{SECTION_KEY}} variables and replace with translations
+  const templateVarPattern = /{{([A-Z][A-Z0-9_]*)(?:_([A-Z0-9_]*))*}}/g;
+  result = result.replace(templateVarPattern, (match, ...groups) => {
+    // Extract the full key
+    const fullKey = groups.slice(0, -2).join('_');
+
+    // Convert from UPPER_CASE to lower_case_with_underscores
+    const lookupKey = fullKey.toLowerCase();
+
+    // Try to find the translation
+    // 1. First try direct lookup with underscores: "about_title" in t.about.title
+    const parts = lookupKey.split('_');
+    if (parts.length >= 2) {
+      const section = parts[0];
+      const key = parts.slice(1).join('_');
+
+      if (t[section] && typeof t[section] === 'object' && t[section][key]) {
+        return t[section][key];
+      }
+    }
+
+    // 2. Try direct root-level key: "about-title" -> about-title or about_title
+    if (t[lookupKey] || t[fullKey]) {
+      return t[lookupKey] || t[fullKey] || '';
+    }
+
+    // 3. Use getTranslationValue for more complex lookups
+    const translated = getTranslationValue(t, fullKey.replace(/_/g, '-'));
+    if (translated) {
+      return translated;
+    }
+
+    // 4. Fallback: return empty string (will show as blank instead of template variable)
+    console.warn(`⚠️  No translation found for template variable: {{${fullKey}}}`);
+    return '';
+  });
+
   // SMART DATA-TRANSLATE REPLACEMENT
   // Enhanced replacement that handles attributes in any order and nested content
-  
-  // Method 1: Handle standard tags with data-translate anywhere in the attributes
-  result = result.replace(/<([a-zA-Z0-9]+)([^>]*?)data-translate="([^"]+)"([^>]*?)>([^<]*?)<\/\1>/g, 
+
+  // Method 0: Handle tags with nested HTML including closing tags (e.g., <a><i class="fas"></i> Text</a>)
+  // Matches: <tag...data-translate="key"...>...<i...>...</i> Text</tag>
+  result = result.replace(/<([a-zA-Z]+)([^>]*?)data-translate="([^"]+)"([^>]*?)>((?:<[^>]+>)*)\s*([^<]*)\s*<\/\1>/g,
+    (match, tagName, beforeAttrs, attributeKey, afterAttrs, innerHtmlTags, textContent) => {
+      const translatedValue = getTranslationValue(t, attributeKey);
+
+      if (translatedValue && textContent && textContent.trim()) {
+        // Keep inner HTML tags (like <i></i>), replace text
+        return `<${tagName}${beforeAttrs}data-translate="${attributeKey}"${afterAttrs}>${innerHtmlTags} ${translatedValue}</${tagName}>`;
+      }
+
+      return match;
+    });
+
+  // Method 1b: Handle tags with nested HTML (e.g., <a data-translate="key"><i>icon</i> Text</a>)
+  result = result.replace(/<([a-zA-Z]+)([^>]*?)data-translate="([^"]+)"([^>]*?)>(.*?)<\/\1>/g,
+    (match, tagName, beforeAttrs, attributeKey, afterAttrs, innerContent) => {
+      // Skip if already processed (contains valid HTML that we shouldn't touch)
+      if (innerContent.includes('</i>') || innerContent.includes('</span>') || innerContent.includes('</strong>')) {
+        return match; // Already processed, skip
+      }
+
+      const translatedValue = getTranslationValue(t, attributeKey);
+
+      if (translatedValue && !innerContent.includes('<')) {
+        // Simple text content, no HTML
+        return `<${tagName}${beforeAttrs}data-translate="${attributeKey}"${afterAttrs}>${translatedValue}</${tagName}>`;
+      }
+
+      return match;
+    });
+
+  // Method 2: Handle tags with simple text content (no nested HTML)
+  result = result.replace(/<([a-zA-Z0-9]+)([^>]*?)data-translate="([^"]+)"([^>]*?)>([^<]+)<\/\1>/g,
     (match, tagName, beforeAttrs, attributeKey, afterAttrs, content) => {
       const translatedValue = getTranslationValue(t, attributeKey);
 
-      // Only replace if we found a translation
-      if (translatedValue) {
+      // Only replace if we found a translation and content is just text (no HTML)
+      if (translatedValue && content && !content.includes('<')) {
         return `<${tagName}${beforeAttrs}data-translate="${attributeKey}"${afterAttrs}>${translatedValue}</${tagName}>`;
       }
 
       return match; // Return original if no translation found
     });
-  
-  // Method 2: Handle simple cases with direct text content (catches remaining cases)
-  result = result.replace(/(<[^>]*\sdata-translate="([^"]+)"[^>]*>)([^<]+)(<)/g, 
+
+  // Method 3: Handle simple cases with direct text content (catches remaining cases)
+  result = result.replace(/(<[^>]*\sdata-translate="([^"]+)"[^>]*>)([^<]+)(<)/g,
     (match, openTag, attributeKey, content, closeStart) => {
       const translatedValue = getTranslationValue(t, attributeKey);
 
