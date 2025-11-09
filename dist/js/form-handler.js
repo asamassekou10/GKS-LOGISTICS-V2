@@ -322,21 +322,17 @@ document.addEventListener('DOMContentLoaded', function() {
         submitButton.disabled = true;
       }
 
-      // Collect form data
+      // Collect form data - simplified quote form fields
       const formData = {
         fullName: quoteForm.querySelector('input[name="fullName"]')?.value || '',
         companyName: quoteForm.querySelector('input[name="companyName"]')?.value || '',
         email: quoteForm.querySelector('input[name="email"]')?.value || '',
         phoneNumber: quoteForm.querySelector('input[name="phoneNumber"]')?.value || '',
         freightType: quoteForm.querySelector('select[name="freightType"]')?.value || '',
-        cargoNature: quoteForm.querySelector('input[name="cargoNature"]')?.value || '',
         origin: quoteForm.querySelector('input[name="origin"]')?.value || '',
         destination: quoteForm.querySelector('input[name="destination"]')?.value || '',
-        preferredDate: quoteForm.querySelector('input[name="preferredDate"]')?.value || '',
-        dimensionsWeight: quoteForm.querySelector('input[name="dimensionsWeight"]')?.value || '',
-        quantityPackages: quoteForm.querySelector('input[name="quantityPackages"]')?.value || '',
-        additionalServices: Array.from(quoteForm.querySelectorAll('input[name="additionalServices[]"]:checked'))
-          .map(cb => cb.value)
+        weight: quoteForm.querySelector('input[name="weight"]')?.value || '',
+        message: quoteForm.querySelector('textarea[name="message"]')?.value || ''
       };
 
       // Send to serverless function
@@ -415,6 +411,7 @@ document.addEventListener('DOMContentLoaded', function() {
       submitButton.disabled = true;
 
       // Collect form data
+      const coverLetterFile = careerForm.querySelector('input[name="coverLetterFile"]').files[0];
       const formData = {
         applicantName,
         applicantEmail,
@@ -427,7 +424,8 @@ document.addEventListener('DOMContentLoaded', function() {
         skills: careerForm.querySelector('textarea[name="skills"]').value.trim(),
         motivation: careerForm.querySelector('textarea[name="motivation"]').value.trim(),
         availability: careerForm.querySelector('select[name="availability"]').value,
-        cvFileName: cvFile.name
+        cvFileName: cvFile.name,
+        coverLetterFileName: coverLetterFile ? coverLetterFile.name : null
       };
 
       // Send to serverless function

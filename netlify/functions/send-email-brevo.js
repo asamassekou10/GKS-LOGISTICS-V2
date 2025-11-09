@@ -33,8 +33,8 @@ const getContactFormEmail = (data) => ({
           body { font-family: 'Roboto', sans-serif; color: #333; }
           .container { max-width: 600px; margin: 0 auto; padding: 20px; background: #f9f9f9; }
           .header { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); padding: 30px; color: white; text-align: center; border-radius: 8px 8px 0 0; }
-          .header h1 { margin: 0; font-size: 24px; }
-          .header p { margin: 5px 0 0 0; opacity: 0.9; }
+          .header h1 { margin: 0; font-size: 24px; color: white; }
+          .header p { margin: 5px 0 0 0; opacity: 0.9; color: white; }
           .content { background: white; padding: 30px; border-radius: 0 0 8px 8px; }
           .field { margin-bottom: 20px; }
           .label { font-weight: 600; color: #1e3a8a; text-transform: uppercase; font-size: 12px; letter-spacing: 1px; }
@@ -111,7 +111,8 @@ const getQuoteRequestEmail = (data) => ({
           body { font-family: 'Roboto', sans-serif; color: #333; }
           .container { max-width: 600px; margin: 0 auto; padding: 20px; background: #f9f9f9; }
           .header { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); padding: 30px; color: white; text-align: center; border-radius: 8px 8px 0 0; }
-          .header h1 { margin: 0; font-size: 24px; }
+          .header h1 { margin: 0; font-size: 24px; color: white; }
+          .header p { margin: 5px 0 0 0; opacity: 0.9; color: white; }
           .content { background: white; padding: 30px; border-radius: 0 0 8px 8px; }
           .section { margin-bottom: 30px; }
           .section-title { font-weight: 700; font-size: 16px; color: #1e3a8a; border-bottom: 2px solid #1e3a8a; padding-bottom: 10px; margin-bottom: 15px; }
@@ -119,7 +120,7 @@ const getQuoteRequestEmail = (data) => ({
           .field-row.full { grid-template-columns: 1fr; }
           .field { }
           .label { font-weight: 600; color: #1e3a8a; text-transform: uppercase; font-size: 11px; letter-spacing: 1px; }
-          .value { margin-top: 5px; padding: 10px; background: #f0f7ff; border-left: 4px solid #1e3a8a; }
+          .value { margin-top: 5px; padding: 10px; background: #f0f7ff; border-left: 4px solid #1e3a8a; word-wrap: break-word; white-space: pre-wrap; }
           .badge { display: inline-block; background: #1e3a8a; color: white; padding: 8px 16px; border-radius: 20px; font-weight: 600; margin-bottom: 20px; }
           .footer { text-align: center; padding: 20px; color: #666; font-size: 12px; }
         </style>
@@ -165,8 +166,8 @@ const getQuoteRequestEmail = (data) => ({
                   <div class="value">${escapeHtml(data.freightType || 'N/A')}</div>
                 </div>
                 <div class="field">
-                  <div class="label">Cargo Nature</div>
-                  <div class="value">${escapeHtml(data.cargoNature || 'N/A')}</div>
+                  <div class="label">Weight (kg)</div>
+                  <div class="value">${escapeHtml(data.weight || 'Not specified')}</div>
                 </div>
               </div>
               <div class="field-row">
@@ -179,30 +180,15 @@ const getQuoteRequestEmail = (data) => ({
                   <div class="value">${escapeHtml(data.destination || 'N/A')}</div>
                 </div>
               </div>
-              <div class="field-row">
-                <div class="field">
-                  <div class="label">Preferred Date</div>
-                  <div class="value">${data.preferredDate || 'Not specified'}</div>
-                </div>
-                <div class="field">
-                  <div class="label">Dimensions & Weight</div>
-                  <div class="value">${escapeHtml(data.dimensionsWeight || 'N/A')}</div>
-                </div>
-              </div>
-              <div class="field-row">
-                <div class="field">
-                  <div class="label">Quantity / Packages</div>
-                  <div class="value">${escapeHtml(data.quantityPackages || 'N/A')}</div>
-                </div>
-              </div>
             </div>
 
-            ${data.additionalServices && data.additionalServices.length > 0 ? `
             <div class="section">
-              <div class="section-title">🎁 Additional Services</div>
-              <div class="value">${Array.isArray(data.additionalServices) ? data.additionalServices.join(', ') : escapeHtml(data.additionalServices)}</div>
+              <div class="section-title">💬 Message & Details</div>
+              <div class="field">
+                <div class="label">Request Details</div>
+                <div class="value">${escapeHtml(data.message || 'No message provided').replace(/\n/g, '<br>')}</div>
+              </div>
             </div>
-            ` : ''}
 
             <div class="field">
               <div class="label">📅 Submitted Date</div>
@@ -228,14 +214,12 @@ Phone: ${data.phoneNumber || 'N/A'}
 
 SHIPMENT DETAILS
 Freight Type: ${data.freightType || 'N/A'}
-Cargo Nature: ${data.cargoNature || 'N/A'}
+Weight: ${data.weight || 'Not specified'} kg
 Origin: ${data.origin || 'N/A'}
 Destination: ${data.destination || 'N/A'}
-Preferred Date: ${data.preferredDate || 'Not specified'}
-Dimensions & Weight: ${data.dimensionsWeight || 'N/A'}
-Quantity / Packages: ${data.quantityPackages || 'N/A'}
 
-${data.additionalServices ? `ADDITIONAL SERVICES\n${Array.isArray(data.additionalServices) ? data.additionalServices.join('\n') : data.additionalServices}\n` : ''}
+MESSAGE & DETAILS
+${data.message || 'No message provided'}
 
 Submitted: ${new Date().toLocaleString()}
 
@@ -256,8 +240,8 @@ const getCareerApplicationEmail = (data) => ({
           body { font-family: 'Roboto', sans-serif; color: #333; }
           .container { max-width: 600px; margin: 0 auto; padding: 20px; background: #f9f9f9; }
           .header { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); padding: 30px; color: white; text-align: center; border-radius: 8px 8px 0 0; }
-          .header h1 { margin: 0; font-size: 24px; }
-          .header p { margin: 5px 0 0 0; opacity: 0.9; }
+          .header h1 { margin: 0; font-size: 24px; color: white; }
+          .header p { margin: 5px 0 0 0; opacity: 0.9; color: white; }
           .content { background: white; padding: 30px; border-radius: 0 0 8px 8px; }
           .section { margin-bottom: 30px; }
           .section-title { font-size: 16px; font-weight: 700; color: #1e3a8a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; border-bottom: 2px solid #1e3a8a; padding-bottom: 10px; }
@@ -331,10 +315,19 @@ const getCareerApplicationEmail = (data) => ({
               </div>
             </div>
             <div class="section">
-              <div class="section-title">Documents</div>
+              <div class="section-title">Uploaded Documents</div>
               <div class="field">
                 <div class="label">CV File</div>
                 <div class="value"><span class="badge">📎 ${escapeHtml(data.cvFileName || 'Attached')}</span></div>
+              </div>
+              ${data.coverLetterFileName ? `
+              <div class="field">
+                <div class="label">Cover Letter</div>
+                <div class="value"><span class="badge">📄 ${escapeHtml(data.coverLetterFileName)}</span></div>
+              </div>
+              ` : ''}
+              <div class="field" style="margin-top: 10px; font-size: 12px; color: #666;">
+                <strong>Note:</strong> Files were uploaded through the career application form. Applicant contact: ${escapeHtml(data.applicantEmail || 'N/A')}
               </div>
             </div>
           </div>
@@ -359,8 +352,8 @@ const getGroupageBookingEmail = (data) => ({
           body { font-family: 'Roboto', sans-serif; color: #333; }
           .container { max-width: 600px; margin: 0 auto; padding: 20px; background: #f9f9f9; }
           .header { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); padding: 30px; color: white; text-align: center; border-radius: 8px 8px 0 0; }
-          .header h1 { margin: 0; font-size: 24px; }
-          .header p { margin: 5px 0 0 0; opacity: 0.9; }
+          .header h1 { margin: 0; font-size: 24px; color: white; }
+          .header p { margin: 5px 0 0 0; opacity: 0.9; color: white; }
           .content { background: white; padding: 30px; border-radius: 0 0 8px 8px; }
           .section { margin-bottom: 30px; }
           .section-title { font-size: 16px; font-weight: 700; color: #1e3a8a; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px; border-bottom: 2px solid #1e3a8a; padding-bottom: 10px; }
@@ -434,8 +427,8 @@ const getNewsletterSignupEmail = (data) => ({
           body { font-family: 'Roboto', sans-serif; color: #333; }
           .container { max-width: 600px; margin: 0 auto; padding: 20px; background: #f9f9f9; }
           .header { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); padding: 30px; color: white; text-align: center; border-radius: 8px 8px 0 0; }
-          .header h1 { margin: 0; font-size: 24px; }
-          .header p { margin: 5px 0 0 0; opacity: 0.9; }
+          .header h1 { margin: 0; font-size: 24px; color: white; }
+          .header p { margin: 5px 0 0 0; opacity: 0.9; color: white; }
           .content { background: white; padding: 30px; border-radius: 0 0 8px 8px; text-align: center; }
           .badge { display: inline-block; background: #10b981; color: white; padding: 8px 16px; border-radius: 20px; font-weight: 600; margin: 20px 0; }
           .footer { text-align: center; padding: 20px; color: #666; font-size: 12px; border-top: 1px solid #eee; }
