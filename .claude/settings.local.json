@@ -25,7 +25,9 @@
       "Bash(jq:*)",
       "Bash(node fix_nav_translations.js:*)",
       "Bash(node -c:*)",
-      "Bash(echo:*)"
+      "Bash(echo:*)",
+      "Bash(__NEW_LINE__ echo \"=== Quote Form Names ===\" grep 'form name=\"\"\"\"quote-request' src/index.html src/careers.html src/groupage.html src/all-services.html)",
+      "Bash(__NEW_LINE__ grep -n 'name=\"\"\"\"quote-request' src/index.html src/careers.html)"
     ],
     "deny": [],
     "ask": []
