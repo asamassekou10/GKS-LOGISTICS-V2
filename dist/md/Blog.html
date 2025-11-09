@@ -391,160 +391,79 @@
                     Veuillez remplir le formulaire ci-dessous pour obtenir un devis personnalisé pour vos besoins logistiques.
                 </p>
                 
-                <form name="quote-request" data-netlify-honeypot="bot-field" id="quoteRequestForm">
-                    <!-- Contact Information Section -->
-                    <fieldset class="form-section">
-                        <legend>
-                            <h3 data-translate="quote-modal-contact-section">Vos Coordonnées</h3>
-                        </legend>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="fullName">Nom Complet *</label>
-                                <input type="text" id="fullName" name="fullName" required 
-                                      >
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="companyName">Nom de l'Entreprise *</label>
-                                <input type="text" id="companyName" name="companyName" required 
-                                      >
-                            </div>
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="email">Email Professionnel *</label>
-                                <input type="email" id="email" name="email" required 
-                                      >
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phoneNumber">Téléphone *</label>
-                                <input type="tel" id="phoneNumber" name="phoneNumber" required 
-                                      >
-                            </div>
-                        </div>
-                    </fieldset>
-                    
-                    <!-- Shipment Details Section -->
-                    <fieldset class="form-section">
-                        <legend>
-                            <h3 data-translate="quote-modal-shipment-section">Détails de l'Expédition</h3>
-                        </legend>
-                        
-                        <div class="form-group">
-                            <label for="freightType">Type de Fret *</label>
-                            <select id="freightType" name="freightType" required>
-                                <option value="">Sélectionner le type de fret</option>
-                                <option value="air">Fret Aérien</option>
-                                <option value="fcl" data-translate="quote-modal-freight-fcl">海运（整柜 - FCL）</option>
-                                <option value="lcl" data-translate="quote-modal-freight-lcl">海运（拼柜 - LCL）</option>
-                                <option value="road">Fret Routier</option>
-                                <option value="project">Logistique de Projet / Fret Hors Gabarit</option>
-                                <option value="temp-controlled">Logistique à Température Contrôlée</option>
-                                <option value="other">Autres</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="cargoNature">Nature de la Marchandise</label>
-                            <input type="text" id="cargoNature" name="cargoNature" 
-                                  >
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="origin">Pays/Ville d'Origine *</label>
-                                <input type="text" id="origin" name="origin" required 
-                                      >
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="destination">Pays/Ville de Destination *</label>
-                                <input type="text" id="destination" name="destination" required 
-                                      >
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="preferredDate">Date d'Expédition Souhaitée</label>
-                            <input type="date" id="preferredDate" name="preferredDate">
-                        </div>
-                        
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="dimensionsWeight">Dimensions et Poids *</label>
-                                <input type="text" id="dimensionsWeight" name="dimensionsWeight" required 
-                                      >
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="quantityPackages">Quantité / Nombre de Colis *</label>
-                                <input type="text" id="quantityPackages" name="quantityPackages" required 
-                                      >
-                            </div>
-                        </div>
-                    </fieldset>
-                    
-                    <!-- Additional Services Section -->
-                    <fieldset class="form-section">
-                        <legend>
-                            <h3 data-translate="quote-modal-additional-services">Services Additionnels (Optionnel)</h3>
-                        </legend>
-                        
-                        <div class="checkbox-group">
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="serviceCustoms" name="additionalServices[]" value="customs">
-                                <label for="serviceCustoms">Dédouanement</label>
-                            </div>
-                            
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="serviceInsurance" name="additionalServices[]" value="insurance">
-                                <label for="serviceInsurance">Assurance Fret</label>
-                            </div>
-                            
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="serviceWarehousing" name="additionalServices[]" value="warehousing">
-                                <label for="serviceWarehousing">Entreposage</label>
-                            </div>
-                            
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="serviceLastMile" name="additionalServices[]" value="lastMile">
-                                <label for="serviceLastMile">Distribution / Dernier Kilomètre</label>
-                            </div>
-                            
-                            <div class="checkbox-item">
-                                <input type="checkbox" id="servicePackaging" name="additionalServices[]" value="packaging">
-                                <label for="servicePackaging">Emballage Spécialisé</label>
-                            </div>
-                        </div>
-                    </fieldset>
-                    
-                    <!-- Additional Message Section -->
-                    <fieldset class="form-section">
-                        <legend>
-                            <h3 data-translate="quote-modal-message-section">Votre Message ou Besoins Spécifiques</h3>
-                        </legend>
-                        
-                        <div class="form-group">
-                            <label for="message" data-translate="quote-modal-additional-message">Message Supplémentaire</label>
-                            <textarea id="message" name="message" rows="4" 
-                                     ></textarea>
-                        </div>
-                    </fieldset>
-                    
-                    <!-- Required Fields Indicator -->
-                    <p class="required-fields-indicator">
-                        * Champs obligatoires
-                    </p>
-                    
-                    <!-- Form Buttons -->
-                    <div class="form-buttons">
-                        <button type="button" class="btn-cancel">Annuler</button>
-                        <button type="submit" class="btn-submit">Envoyer ma Demande</button>
-                    </div>
-                </form>
+                              <form name="quote-request-quick" data-netlify-honeypot="bot-field" id="quoteRequestForm">
+                  <input type="hidden" name="form-name" value="quote-request-quick">
+                  <p style="display: none;">
+                      <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                  </p>
+                  <div class="form-row">
+                      <div class="form-group">
+                          <label for="fullName" data-translate="quote-modal-full-name">全名 *</label>
+                          <input type="text" id="fullName" name="fullName" required>
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="companyName" data-translate="quote-modal-company-name">公司名称</label>
+                          <input type="text" id="companyName" name="companyName">
+                      </div>
+                  </div>
+                  
+                  <div class="form-row">
+                      <div class="form-group">
+                          <label for="email" data-translate="quote-modal-email-professional">Email *</label>
+                          <input type="email" id="email" name="email" required>
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="phoneNumber" data-translate="quote-modal-phone">电话 *</label>
+                          <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                      </div>
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="freightType" data-translate="quote-modal-freight-type">货运类型 *</label>
+                      <select id="freightType" name="freightType" required>
+                          <option value="" data-translate="quote-modal-freight-type-placeholder">选择货运类型</option>
+                          <option value="air" data-translate="quote-modal-freight-air">空运</option>
+                          <option value="sea" data-translate="quote-modal-freight-sea">海运</option>
+                          <option value="road" data-translate="quote-modal-freight-road">陆运</option>
+                          <option value="warehousing" data-translate="quote-modal-freight-warehousing">仓储</option>
+                          <option value="other" data-translate="quote-modal-freight-other">其他</option>
+                      </select>
+                  </div>
+                  
+                  <div class="form-row">
+                      <div class="form-group">
+                          <label for="origin" data-translate="quote-modal-origin">起点 *</label>
+                          <input type="text" id="origin" name="origin" required>
+                      </div>
+                      
+                      <div class="form-group">
+                          <label for="destination" data-translate="quote-modal-destination">目的地 *</label>
+                          <input type="text" id="destination" name="destination" required>
+                      </div>
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="weight" data-translate="quote-modal-weight">重量（公斤）</label>
+                      <input type="number" id="weight" name="weight" min="0" step="0.01" placeholder="Ex: 100">
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="message" data-translate="quote-modal-additional-message">Détails de votre demande *</label>
+                      <textarea id="message" name="message" rows="4" required placeholder="Décrivez votre besoin (dimensions, poids, date souhaitée, services additionnels...)"></textarea>
+                  </div>
+                  
+                  <p class="required-fields-indicator">
+                      * Champs obligatoires
+                  </p>
+                  
+                  <div class="form-buttons">
+                      <button type="button" class="btn-cancel">Annuler</button>
+                      <button type="submit" class="btn-submit">Envoyer ma Demande</button>
+                  </div>
+              </form>
+
             </div>
         </div>
     </div>
@@ -572,7 +491,7 @@
       </div>
 
       <div class="quote-calculator-card">
-        <form id="quoteCalculatorForm" class="calculator-form">
+                <form id="quoteCalculatorForm" class="calculator-form">
           <!-- Currency Selection -->
           <div class="form-section form-section-currency">
             <h3 class="form-section-title">
@@ -654,46 +573,12 @@
               <i class="fas fa-box"></i>
               <span data-translate="calculator-section-shipment">货件详情</span>
             </h3>
-            <div class="form-grid">
-              <div class="form-group-calc">
-                <label data-translate="calculator-weight">重量 (kg)<span class="required">*</span>
-                </label>
-                <div class="input-with-unit">
-                  <input type="number" id="weight" min="0.1" step="0.1" required data-translate="calculator-weight_placeholder" placeholder="">
-                  <span class="input-unit">kg</span>
-                </div>
-              </div>
-
-              <div class="form-group-calc">
-                <label data-translate="calculator-length">长度 (cm)</label>
-                <div class="input-with-unit">
-                  <input type="number" id="length" min="0" step="0.1" data-translate="calculator-length_placeholder" placeholder="">
-                  <span class="input-unit">cm</span>
-                </div>
-              </div>
-
-              <div class="form-group-calc">
-                <label data-translate="calculator-width">宽度 (cm)</label>
-                <div class="input-with-unit">
-                  <input type="number" id="width" min="0" step="0.1" data-translate="calculator-width_placeholder" placeholder="">
-                  <span class="input-unit">cm</span>
-                </div>
-              </div>
-
-              <div class="form-group-calc">
-                <label data-translate="calculator-height">高度 (cm)</label>
-                <div class="input-with-unit">
-                  <input type="number" id="height" min="0" step="0.1" data-translate="calculator-height_placeholder" placeholder="">
-                  <span class="input-unit">cm</span>
-                </div>
-              </div>
-
-              <div class="form-group-calc">
-                <label data-translate="calculator-declared-value">申报价值 (USD)</label>
-                <div class="input-with-unit">
-                  <input type="number" id="declaredValue" min="0" step="0.01" data-translate="calculator-value_placeholder" placeholder="">
-                  <span class="input-unit">$</span>
-                </div>
+            <div class="form-group-calc">
+              <label data-translate="calculator-weight">重量 (kg)<span class="required">*</span>
+              </label>
+              <div class="input-with-unit">
+                <input type="number" id="weight" min="0.1" step="0.1" required data-translate="calculator-weight_placeholder" placeholder="">
+                <span class="input-unit">kg</span>
               </div>
             </div>
 
@@ -746,6 +631,10 @@
             <span data-translate="calculator-calculate-btn">计算我的报价</span>
           </button>
         </form>
+
+        <!-- Quote Result -->
+        <div id="quoteResult"></div>
+
         <div id="quoteResult"></div>
       </div>
     </div>

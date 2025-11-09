@@ -418,7 +418,7 @@
       </div>
 
       <div class="quote-calculator-card">
-        <form id="quoteCalculatorForm" class="calculator-form">
+                <form id="quoteCalculatorForm" class="calculator-form">
           <!-- Currency Selection -->
           <div class="form-section form-section-currency">
             <h3 class="form-section-title">
@@ -535,7 +535,7 @@
               <div class="checkbox-item">
                 <input type="checkbox" id="doorDelivery">
                 <label for="doorDelivery" data-translate="calculator-door-delivery">
-                  Livraison à domicile (+<span id="deliveryPriceDisplay">$10</span>)
+                  Livraison à domicile
                 </label>
               </div>
             </div>
@@ -567,6 +567,10 @@
             <span data-translate="calculator-calculate-btn">Calculer mon devis</span>
           </button>
         </form>
+
+        <!-- Quote Result -->
+        <div id="quoteResult"></div>
+
 
         <!-- Quote Result -->
         <div id="quoteResult"></div>
@@ -1545,7 +1549,7 @@
                   Remplissez ce formulaire simplifié pour obtenir rapidement un devis personnalisé.
               </p>
               
-              <form name="quote-request-quick" data-netlify-honeypot="bot-field" id="quoteRequestForm">
+                            <form name="quote-request-quick" data-netlify-honeypot="bot-field" id="quoteRequestForm">
                   <input type="hidden" name="form-name" value="quote-request-quick">
                   <p style="display: none;">
                       <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -1617,6 +1621,7 @@
                       <button type="submit" class="btn-submit">Envoyer ma Demande</button>
                   </div>
               </form>
+
           </div>
       </div>
   </div>
