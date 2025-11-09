@@ -86,7 +86,8 @@
       "discover": "Découvrir nos Services",
       "hero": {
         "title": "Welcome to GKS LOGISTICS"
-      }
+      },
+      "service_network": "本地网络"
     },
     "welcome-stat-countries": "国家",
     "welcome-stat-shipments": "货运",
@@ -327,7 +328,8 @@
       "services": {
         "title": "Services"
       },
-      "copy": "© 2025 GKS Logistics. Tous droits réservés."
+      "copy": "© 2025 GKS Logistics. Tous droits réservés.",
+      "footer_copy": "© 2025 GKS 物流。版权所有。"
     },
     "quote_modal": {
       "title": "请求报价",
@@ -542,7 +544,22 @@
           "date": "10 Janvier 2025",
           "excerpt": "Analyse du rôle de la logistique intégrée et du développement des infrastructures dans la croissance économique africaine."
         }
-      }
+      },
+      "video_title": "视频",
+      "employee_1_name": "员工 1",
+      "articles_subtitle": "探索我们最新的文章",
+      "video_1_title": "视频 1",
+      "video_1_desc": "视频描述 1",
+      "video_2_title": "视频 2",
+      "video_2_desc": "视频描述 2",
+      "video_3_title": "视频 3",
+      "video_3_desc": "视频描述 3",
+      "video_4_title": "视频 4",
+      "video_4_desc": "视频描述 4",
+      "video_5_title": "视频 5",
+      "video_5_desc": "视频描述 5",
+      "video_6_title": "视频 6",
+      "video_6_desc": "视频描述 6"
     },
     "careers": {
       "meta": {
@@ -694,7 +711,11 @@
           "title": "Suivez-nous",
           "desc": "Restez informé de nos dernières actualités et opportunités de carrière."
         }
-      }
+      },
+      "testimonial_2_title": "客户评价 2",
+      "sidebar_hr_title": "人力资源服务",
+      "sidebar_hr_desc": "人力资源部信息",
+      "sidebar_social_desc": "社交媒体链接"
     },
     "employee1": {
       "employee_name": "Aboubacar Sidiki KONATE",
@@ -718,7 +739,8 @@
       "interest_2": "非洲经济发展",
       "interest_3": "企业家指导",
       "interest_4": "战略与投资",
-      "back_to_news": "返回新闻"
+      "back_to_news": "返回新闻",
+      "cta_team": "加入我们的团队"
     },
     "employee2": {
       "employee_name": "Mamadou DIARRA",
@@ -776,7 +798,33 @@
         "text": "Rencontrez les autres professionnels qui font la force de GKS Logistics",
         "team": "Notre Équipe",
         "careers": "Carrières"
-      }
+      },
+      "employee-name": "员工名称",
+      "employee-title": "职位",
+      "employee-quote": "引用",
+      "journey-title": "旅程",
+      "journey-text-1": "旅程文本 1",
+      "journey-text-2": "旅程文本 2",
+      "milestone-1": "里程碑 1",
+      "milestone-2": "里程碑 2",
+      "milestone-3": "里程碑 3",
+      "role-title": "角色",
+      "role-text": "角色描述",
+      "responsibilities-title": "职责",
+      "responsibility-1": "职责 1",
+      "responsibility-2": "职责 2",
+      "responsibility-3": "职责 3",
+      "responsibility-4": "职责 4",
+      "passions-title": "兴趣",
+      "passions-text": "兴趣描述",
+      "interest-1": "兴趣 1",
+      "interest-2": "兴趣 2",
+      "interest-3": "兴趣 3",
+      "interest-4": "兴趣 4",
+      "cta-title": "行动标题",
+      "cta-text": "行动文本",
+      "cta-team": "加入我们的团队",
+      "cta-careers": "职业机会"
     },
     "employee3": {
       "employee_name": "Fatoumata KEITA",
@@ -787,7 +835,9 @@
       "values_subtitle": "团结和指导我们团队的原则",
       "role_title": "我的角色与使命",
       "responsibilities_title": "核心职责",
-      "passions_title": "工作之外：激情与兴趣"
+      "passions_title": "工作之外：激情与兴趣",
+      "value_integrity": "完整性",
+      "cta_team": "加入我们的团队"
     },
     "article1": {
       "meta": {
@@ -1002,7 +1052,15 @@
       "pages": "24 pages",
       "read": {
         "report": "Lire le Rapport"
-      }
+      },
+      "timeline_2019": "2019",
+      "timeline_2020": "2020",
+      "timeline_2021": "2021",
+      "timeline_2022": "2022",
+      "timeline_2023": "2023",
+      "timeline_2024": "2024",
+      "timeline_2025": "2025",
+      "resource_1_desc": "资源描述"
     },
     "article2": {
       "meta": {
@@ -3547,7 +3605,50 @@
     "sort-by": "排序",
     "read-more": "阅读更多",
     "show-more": "显示更多",
-    "hide-less": "显示更少"
+    "hide-less": "显示更少",
+    "partners-subtitle": "与我们的合作伙伴合作",
+    "whatsapp-chat": "在 WhatsApp 上聊天",
+    "about-timeline-2021-title": "2021 - 扩展",
+    "about-timeline-2021-desc": "2021 年，我们扩展了服务网络",
+    "about-timeline-2024-title": "2024 - 创新",
+    "about-timeline-2024-desc": "2024 年，我们整合了新技术",
+    "nav-groupage": "拼箱运输",
+    "groupage-hero-title": "拼箱运输服务",
+    "groupage-hero-subtitle": "经济实惠、可靠的拼箱运输",
+    "groupage-hero-cta": "获取报价",
+    "groupage-routes-title": "我们的战略路线",
+    "groupage-routes-subtitle": "大型货物的优化拼箱运输",
+    "route-dubai-bamako": "迪拜 - 巴马科",
+    "route-france-bamako": "法国 - 巴马科",
+    "route-turkey-bamako": "土耳其 - 巴马科",
+    "route-cta": "预订此路线",
+    "calendar-title": "航班日历",
+    "calendar-subtitle": "查看航班日期",
+    "booking-title": "现在预订",
+    "booking-subtitle": "提前规划您的拼箱运输",
+    "testimonials-title": "客户评价",
+    "testimonials-subtitle": "我们的客户怎么说",
+    "nav-quote": "即时报价",
+    "calculator-insurance": "保险",
+    "quote-result-title": "报价结果",
+    "quote-shipment-details": "货物详情",
+    "quote-transport-type": "运输类型",
+    "quote-route": "路线",
+    "quote-actual-weight": "实际重量",
+    "quote-volumetric-weight": "体积重量",
+    "quote-chargeable-weight": "计费重量",
+    "quote-container": "集装箱",
+    "quote-price-breakdown": "价格明细",
+    "quote-base-price": "基价",
+    "quote-additional-services": "附加服务",
+    "quote-subtotal": "小计",
+    "quote-tax": "税",
+    "quote-total-usd": "总计 (USD)",
+    "quote-total-xof": "总计 (XOF)",
+    "quote-confirm": "确认",
+    "quote-print": "打印",
+    "quote-email": "发送电子邮件",
+    "quote-disclaimer": "免责声明：价格仅供参考"
   },
   "chatbotResponses": []
 }
