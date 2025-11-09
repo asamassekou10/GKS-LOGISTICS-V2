@@ -309,7 +309,7 @@ exports.handler = async (event) => {
       textContent: emailTemplate.text,
       sender: {
         name: 'GKS Logistics',
-        email: 'noreply@gkslogistics.com'
+        email: 'gksforms@googlegroups.com'
       }
     });
 
