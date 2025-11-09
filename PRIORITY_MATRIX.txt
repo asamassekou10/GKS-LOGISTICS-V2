@@ -1,0 +1,293 @@
+TRANSLATION FIXES - PRIORITY MATRIX & EXECUTION PLAN
+
+PHASE 1: CRITICAL (Do First - Affects All Pages)
+================================================================
+
+FILE: template.html
+MISSING COUNT: 43
+IMPORTANCE: CRITICAL - Master template
+TIME ESTIMATE: 2-3 hours
+
+Specific Issues to Fix:
+  [ ] Nav element needs data-translate attribute
+  [ ] Nav links need data-translate attributes
+  [ ] Footer element needs data-translate
+  [ ] 21 headings missing data-translate
+  [ ] 4 form labels missing data-translate
+  [ ] 10 buttons missing translation support
+
+Details:
+  - Lines 109: <nav class="nav"> - Add data-translate
+  - Lines 114-150: All nav links - Add data-translate
+  - Lines 542: <footer> - Add data-translate
+  - Lines 227, 236, 256, 276, 296, 324, 354, 412: Headings
+  - Lines 443, 460, 465, 533: Form labels
+  - Lines 106, 155, 577, 606: Buttons
+
+Expected Impact: Fixing this will improve coverage for all dependent pages
+
+---
+
+PHASE 2: HIGH PRIORITY (Week 1)
+================================================================
+
+FILE: Blog.html
+MISSING COUNT: 40
+IMPORTANCE: HIGH - Popular content page
+TIME ESTIMATE: 2-3 hours
+
+Specific Issues to Fix:
+  [ ] Nav element - Add data-translate
+  [ ] Nav links - Add data-translate  
+  [ ] Footer element - Add data-translate
+  [ ] 11 buttons missing translation
+  [ ] 16 form labels missing translation
+
+Details:
+  - Lines 72-112: Nav section needs data-translate on nav and all links
+  - Lines 333-371: Footer needs data-translate
+  - Lines 350: <h4>Liens Utiles</h4> - Add data-translate
+  - Lines 360: <h4>Contact heading - Add data-translate
+  - Quote modal form has 16 labels without data-translate
+
+Expected Impact: High traffic page, critical for user experience
+
+---
+
+FILE: index.html
+MISSING COUNT: 21
+IMPORTANCE: HIGH - Homepage, most visited
+TIME ESTIMATE: 1-2 hours
+
+Specific Issues to Fix:
+  [ ] Nav element - Add data-translate
+  [ ] Nav links - Add data-translate
+  [ ] Footer element - Add data-translate
+  [ ] 10 buttons missing translation
+  [ ] 2 headings missing
+
+Details:
+  - Navigation section needs data-translate attributes
+  - Footer section needs data-translate
+  - Menu toggle and other buttons need translation support
+  - Hero section headings
+
+Expected Impact: Affects most visitors first
+
+---
+
+PHASE 3: MEDIUM PRIORITY (Week 2)
+================================================================
+
+FILE: Insight.html
+MISSING COUNT: 14
+Specific Fixes: Nav, Footer, 6 buttons, 3 headings
+
+FILE: gks-dubai.html
+MISSING COUNT: 14
+Specific Fixes: Nav, Footer, 8 buttons, 1 heading
+
+FILE: gks-guinea.html
+MISSING COUNT: 14
+Specific Fixes: Nav, Footer, 8 buttons, 1 heading
+
+FILE: gks-turkey.html
+MISSING COUNT: 14
+Specific Fixes: Nav, Footer, 8 buttons, 1 heading
+
+FILE: gks-burkinafaso.html
+MISSING COUNT: 13
+Specific Fixes: Nav, Footer, 8 buttons, 5 headings
+
+FILE: Article1.html
+MISSING COUNT: 13
+Specific Fixes: Nav, Footer, 6 buttons, 7 headings
+
+FILE: gks-usa.html
+MISSING COUNT: 13
+Specific Fixes: Nav, Footer, 8 buttons, 5 headings
+
+FILE: Article2.html
+MISSING COUNT: 13
+Specific Fixes: Nav, Footer, 6 buttons, 7 headings
+
+FILE: gks-france.html
+MISSING COUNT: 13
+Specific Fixes: Nav, Footer, 8 buttons, 5 headings
+
+FILE: Precess.html
+MISSING COUNT: 13
+Specific Fixes: Footer (nav missing), 3 buttons, 10 headings
+
+FILE: gks-mali.html
+MISSING COUNT: 12
+Specific Fixes: Nav, Footer, 7 buttons, 5 headings
+
+FILE: gks-ivoire.html
+MISSING COUNT: 12
+Specific Fixes: Nav, Footer, 7 buttons, 5 headings
+
+FILE: careers.html
+MISSING COUNT: 12
+Specific Fixes: Nav, Footer, 7 buttons, 5 headings
+
+FILE: gks-senegal.html
+MISSING COUNT: 12
+Specific Fixes: Nav, Footer, 7 buttons, 5 headings
+
+FILE: gks-niger.html
+MISSING COUNT: 12
+Specific Fixes: Nav, Footer, 7 buttons, 5 headings
+
+FILE: Our-Team.html
+MISSING COUNT: 12
+Specific Fixes: Nav, Footer, 7 buttons, 5 headings
+
+---
+
+PHASE 4: LOW PRIORITY (Week 3-4)
+================================================================
+
+FILE: our-representation.html
+MISSING COUNT: 10
+Time Estimate: 30 minutes
+
+FILE: DG-Mali.html
+MISSING COUNT: 11
+Time Estimate: 30 minutes
+
+FILE: Our-CEO.html
+MISSING COUNT: 11
+Time Estimate: 30 minutes
+
+FILE: news.html
+MISSING COUNT: 11
+Time Estimate: 30 minutes
+
+FILE: green-logistics.html
+MISSING COUNT: 9
+Time Estimate: 30 minutes
+
+FILE: groupage.html
+MISSING COUNT: 9
+Time Estimate: 30 minutes
+
+FILE: all-services.html
+MISSING COUNT: 9
+Time Estimate: 30 minutes
+
+---
+
+PHASE 5: COMPLETE/NEAR-COMPLETE (Verify Only)
+================================================================
+
+FILE: quote-modal.html
+MISSING COUNT: 1
+Time Estimate: 5 minutes - Verify completeness
+Status: Ready to deploy
+
+---
+
+COMMON FIXES NEEDED ACROSS ALL FILES
+================================================================
+
+1. NAVIGATION PATTERN (Copy to all files):
+   Current (BROKEN):
+   <nav class="nav">
+     <ul>
+       <li class="nav-item-dropdown">
+         <a href="javascript:void(0);" class="nav-link-dropdown">Services</a>
+
+   Fixed:
+   <nav class="nav" data-translate="nav">
+     <ul>
+       <li class="nav-item-dropdown">
+         <a href="javascript:void(0);" class="nav-link-dropdown" data-translate="nav-services">Services</a>
+
+2. FOOTER PATTERN (Copy to all files):
+   Current (BROKEN):
+   <footer class="footer">
+     <h4>Liens Utiles</h4>
+
+   Fixed:
+   <footer class="footer" data-translate="footer">
+     <h4 data-translate="footer-links-title">Liens Utiles</h4>
+
+3. BUTTON PATTERN:
+   Current (BROKEN):
+   <button class="menu-toggle" aria-label="Toggle navigation">
+
+   Fixed (Option A - Data Translate):
+   <button class="menu-toggle" data-translate="btn-toggle-nav" aria-label="Toggle navigation">
+
+   Fixed (Option B - Aria Data):
+   <button class="menu-toggle" data-aria-label="btn-toggle-nav">
+
+4. FORM LABEL PATTERN:
+   Current (BROKEN):
+   <label for="name">Full Name</label>
+
+   Fixed:
+   <label for="name" data-translate="form-full-name">Full Name</label>
+
+5. HEADING PATTERN:
+   Current (BROKEN):
+   <h2>Our Services</h2>
+
+   Fixed:
+   <h2 data-translate="services-heading">Our Services</h2>
+
+---
+
+EXECUTION TIMELINE
+================================================================
+
+Week 1 (4-5 hours):
+  - Monday: Fix template.html (affects all pages)
+  - Tuesday-Wednesday: Fix Blog.html and index.html
+  - Thursday-Friday: Start on Insight.html, country pages
+
+Week 2 (6-8 hours):
+  - Complete all 15+ country/content pages
+  - Focus on pages with similar structure to batch fixes
+
+Week 3-4 (2-3 hours):
+  - Final cleanup and verification
+  - Test all pages in all 4 languages
+  - Verify no regressions
+
+---
+
+TOTAL EFFORT ESTIMATE
+================================================================
+
+Phase 1: 3-4 hours (template.html critical)
+Phase 2: 5-6 hours (Blog + Index)
+Phase 3: 8-10 hours (15 medium priority files)
+Phase 4: 3-4 hours (7 low priority files)
+Phase 5: < 1 hour (verify quote-modal)
+
+TOTAL: 20-25 hours of focused development
+
+---
+
+TESTING CHECKLIST AFTER FIXES
+================================================================
+
+Per File:
+- [ ] Navigation appears in all 4 languages
+- [ ] Footer appears in all 4 languages
+- [ ] All buttons have proper translations
+- [ ] All form labels translate
+- [ ] All headings translate
+- [ ] No console errors in browser
+
+Global:
+- [ ] Language switcher works on all pages
+- [ ] All pages display correctly in all 4 languages
+- [ ] Mobile navigation translates properly
+- [ ] Quote modals have complete translations
+- [ ] No untranslated aria-labels
+
+---
+

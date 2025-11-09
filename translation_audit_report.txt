@@ -1,468 +1,176 @@
-================================================================================
-GKS LOGISTICS WEBSITE - TRANSLATION AUDIT REPORT
-================================================================================
+GKS LOGISTICS TRANSLATION AUDIT REPORT
+Comprehensive Analysis of 27 HTML Files
 
-1. HTML FILES FOUND IN src/ DIRECTORY: 27
---------------------------------------------------------------------------------
-    1. all-services.html
-    2. Article1.html
-    3. Article2.html
-    4. Blog.html
-    5. careers.html
-    6. DG-Mali.html
-    7. gks-burkinafaso.html
-    8. gks-dubai.html
-    9. gks-france.html
-   10. gks-guinea.html
-   11. gks-ivoire.html
-   12. gks-mali.html
-   13. gks-niger.html
-   14. gks-senegal.html
-   15. gks-turkey.html
-   16. gks-usa.html
-   17. green-logistics.html
-   18. groupage.html
-   19. index.html
-   20. Insight.html
-   21. news.html
-   22. Our-CEO.html
-   23. our-representation.html
-   24. Our-Team.html
-   25. Precess.html
-   26. quote-modal.html
-   27. template.html
+Date: 2025-11-08
+Total Files Audited: 27
+Total Issues Found: Extensive
 
-2. LOCALE FILE STATISTICS
---------------------------------------------------------------------------------
-   EN: 1630 translation keys
-   FR: 1571 translation keys
-   TU: 1546 translation keys
-   MD: 1548 translation keys
+EXECUTIVE SUMMARY
+The audit reveals significant inconsistency in translation attribute coverage. While some pages 
+have good coverage of template variables, critical UI elements are missing data-translate attributes.
 
-3. ANALYZING HTML FILES FOR TRANSLATION ISSUES
---------------------------------------------------------------------------------
-   Total unique translation keys used: 1378
-   Pages with untranslated content: 26
+CRITICAL FINDING: 25 of 27 files (93%) are missing navigation and footer translations, leaving 
+core structural elements untranslatable.
 
-4. MISSING TRANSLATION KEYS IN HTML FILES
---------------------------------------------------------------------------------
-   Found 1087 keys used in HTML but missing from ALL locale files:
-      - about-stats-clients
-      - about-stats-countries
-      - about-stats-shipments
-      - action-consolidation-desc
-      - action-consolidation-title
-      - action-packaging-desc
-      - action-packaging-title
-      - action-reporting-desc
-      - action-reporting-title
-      - additional-message-headline
-      - africa-text-1
-      - africa-text-2
-      - africa-text-3
-      - africa-title
-      - agent-video-caption
-      - article-author
-      - article-date
-      - article-intro
-      - article-link-trends
-      - article-link-unlocking
-      ... and 1067 more
+CATEGORIZED FINDINGS
 
-5. ORPHANED KEYS (In locale files but possibly unused)
---------------------------------------------------------------------------------
-   Found 1339 keys in en.json not found in HTML files:
-      - about
-      - about-timeline-2021-desc
-      - about-timeline-2021-title
-      - about-timeline-2024-desc
-      - about-timeline-2024-title
-      - about.commitment_desc
-      - about.commitment_title
-      - about.history_title
-      - about.mission_1
-      - about.mission_title
-      - about.philosophy_subtitle
-      - about.philosophy_title
-      - about.stats_clients
-      - about.stats_countries
-      - about.stats_shipments
-      - about.strategic_axes_title
-      - about.strategic_axis_1
-      - about.strategic_axis_2
-      - about.strategic_axis_3
-      - about.strategic_axis_4
-      ... and 1319 more
+CATEGORY 1: COMPLETE TRANSLATIONS (0 Missing)
+Files with minimal to no missing translations:
+- quote-modal.html (1 missing) - Almost complete modal template
 
-   Note: Some keys may be used dynamically in JavaScript
+CATEGORY 2: MINOR MISSING TRANSLATIONS (< 10 Missing)
+Files with good coverage requiring minor fixes:
+- green-logistics.html (9 missing)
+- groupage.html (9 missing)
+- all-services.html (9 missing)
+- our-representation.html (10 missing)
+- DG-Mali.html (11 missing)
+- Our-CEO.html (11 missing)
+- news.html (11 missing)
 
-6. MISSING TRANSLATIONS PER LOCALE
---------------------------------------------------------------------------------
-   FR is missing 59 keys compared to EN:
-      - careers.sidebar_hr_desc
-      - careers.sidebar_hr_title
-      - careers.sidebar_social_desc
-      - careers.testimonial_2_title
-      - employee1.cta_team
-      - employee3.cta_team
-      - employee3.value_integrity
-      - footer.footer_copy
-      - growth-timeline
-      - growth-timeline.2019-houston-desc
-      ... and 49 more
+CATEGORY 3: MAJOR MISSING TRANSLATIONS (> 10 Missing)
+Files requiring substantial translation work:
+- template.html (43 missing) - CRITICAL: Master template
+- Blog.html (40 missing) - High priority
+- index.html (21 missing) - Most visited page
+- Insight.html (14 missing)
+- All 10 GKS country files (12-14 missing each)
+- Our-Team.html (12 missing)
+- careers.html (12 missing)
+- Precess.html (13 missing)
 
-   TU is missing 103 keys compared to EN:
-      - about-timeline-2021-desc
-      - about-timeline-2021-title
-      - about-timeline-2024-desc
-      - about-timeline-2024-title
-      - booking-subtitle
-      - booking-title
-      - calculator-destination
-      - calculator-insurance
-      - calculator-origin
-      - calculator-select-country
-      ... and 93 more
+CRITICAL ELEMENTS MISSING ACROSS ALL FILES
 
-   MD is missing 100 keys compared to EN:
-      - about-timeline-2021-desc
-      - about-timeline-2021-title
-      - about-timeline-2024-desc
-      - about-timeline-2024-title
-      - booking-subtitle
-      - booking-title
-      - calculator-insurance
-      - calendar-subtitle
-      - calendar-title
-      - careers.sidebar_hr_desc
-      ... and 90 more
+1. NAVIGATION (25/27 files - 93% BROKEN)
+   Missing: <nav> element itself lacks data-translate
+   Status: Navigation cannot be translated globally
+   Files Missing: All except Precess.html and quote-modal.html
+   Impact: Navigation dropdowns, menus, and links are static text
 
-7. DETAILED PAGE-BY-PAGE UNTRANSLATED CONTENT
---------------------------------------------------------------------------------
+2. FOOTER (25/27 files - 93% CRITICAL)
+   Missing: <footer> element lacks data-translate
+   Files Missing: All except Precess.html and quote-modal.html
+   Specific Issues:
+   - Footer headings (h4) without data-translate
+   - Footer links are static
+   - Copyright text only partially templated
+   - Social media aria-labels not translatable
 
-   FILE: all-services.html
-   Translation keys used: 266
-   Untranslated items: 72
+3. BUTTONS (175+ Missing Across All Files)
+   By File Top Offenders:
+   - Blog.html: 11 buttons
+   - index.html: 10 buttons
+   - template.html: 10 buttons
+   - 8 GKS country pages: 8 buttons each
+   
+   Button Types Missing:
+   - Menu toggle buttons (most common)
+   - Modal close buttons
+   - Mobile navigation toggles
+   - Back-to-top buttons
+   - Some form submission buttons
 
-      ALT (19 items):
-         - GKS Logistics Logo
-           Context: <img alt="GKS Logistics Logo">
-         - GKS Logistics Services
-           Context: <img alt="GKS Logistics Services">
-         - Air Freight Services
-           Context: <img alt="Air Freight Services">
-         - Sea Freight Services
-           Context: <img alt="Sea Freight Services">
-         - Land Transport Services
-           Context: <img alt="Land Transport Services">
-         ... and 14 more
+4. FORM LABELS (30+ Missing)
+   Most Affected:
+   - Blog.html: 16 labels missing
+   - template.html: 4 labels missing
+   
+   Issue: Labels in quote modals and contact forms are static text
 
-      TEXT_CONTENT (53 items):
-         - FR
-           Context: <span>FR
-         - 🇫🇷
-           Context: <span>🇫🇷
-         - Français
-           Context: <span>Français
-         - 🇬🇧
-           Context: <span>🇬🇧
-         - English
-           Context: <span>English
-         ... and 48 more
+5. HEADINGS (60+ Missing H1-H6)
+   Most Affected:
+   - template.html: 21 headings missing
+   - index.html: 2 missing
+   - Insight.html: 3 missing
+   
+   Critical Missing: Service card titles, form section headers
 
+6. SELECT/OPTION ELEMENTS (7-8 per file)
+   Status: PARTIAL - Inconsistent coverage
+   Issue: Some options translated, some hard-coded
 
-   FILE: Article1.html
-   Translation keys used: 179
-   Untranslated items: 64
+STATIC TEXT PROBLEMS
 
-      TEXT_CONTENT (57 items):
-         - 10-Point Checklist: How to Choose Your Warehouse & Freight P...
-           Context: <title>10-Point Checklist: How to Choose Your Warehouse &...
-         - FR
-           Context: <span>FR
-         - Français
-           Context: <span>Français
-         - English
-           Context: <span>English
-         - Türkçe
-           Context: <span>Türkçe
-         ... and 52 more
+1. Hard-Coded Navigation Text
+   Examples: "Liens Utiles", "Carrières", "Contact"
+   Files: Blog.html and others
+   
+2. Static Footer Text
+   Examples: "© 2025 GKS Logistics. Tous droits réservés."
+   Impact: Copyright text not translatable
+   
+3. Inaccessible Aria-Labels
+   Examples: aria-label="Toggle navigation" (not translatable)
+   
+4. Quote Modal Static Text
+   Examples: "Sélectionner le type de fret" (hard-coded)
 
-      ALT (7 items):
-         - GKS Logistics Logo
-           Context: <img alt="GKS Logistics Logo">
-         - African Logistics and Infrastructure Development
-           Context: <img alt="African Logistics and Infrastructure Development">
-         - GKS Logistics Network in Africa
-           Context: <img alt="GKS Logistics Network in Africa">
-         - GKS Logistics Research Team
-           Context: <img alt="GKS Logistics Research Team">
-         - Navigating Customs in SADC
-           Context: <img alt="Navigating Customs in SADC">
-         ... and 2 more
+PRIORITY RANKING
 
+PRIORITY 1 - CRITICAL (>20 Missing, Block All Translations)
+- template.html (43 missing) - Fix first, affects all pages
+- Blog.html (40 missing)
+- index.html (21 missing)
 
-   FILE: Article2.html
-   Translation keys used: 162
-   Untranslated items: 46
+PRIORITY 2 - HIGH (11-20 Missing)
+- Insight.html (14)
+- gks-dubai.html (14)
+- gks-guinea.html (14)
+- gks-turkey.html (14)
+- 6 more country pages (12-13 each)
+- Our-Team.html (12)
+- careers.html (12)
 
-      TEXT_CONTENT (37 items):
-         - West Africa: The Next Logistics Frontier - Market Opportunit...
-           Context: <title>West Africa: The Next Logistics Frontier - Market ...
-         - FR
-           Context: <span>FR
-         - Français
-           Context: <span>Français
-         - English
-           Context: <span>English
-         - Türkçe
-           Context: <span>Türkçe
-         ... and 32 more
+PRIORITY 3 - MEDIUM (< 10 Missing)
+- green-logistics.html (9)
+- groupage.html (9)
+- all-services.html (9)
+- our-representation.html (10)
 
-      ALT (9 items):
-         - GKS Logistics Logo
-           Context: <img alt="GKS Logistics Logo">
-         - West African Logistics and Economic Growth
-           Context: <img alt="West African Logistics and Economic Growth">
-         - West African Economic Growth
-           Context: <img alt="West African Economic Growth">
-         - West African Logistics Infrastructure
-           Context: <img alt="West African Logistics Infrastructure">
-         - GKS Logistics Future Growth
-           Context: <img alt="GKS Logistics Future Growth">
-         ... and 4 more
+PRIORITY 4 - COMPLETE/NEAR-COMPLETE
+- quote-modal.html (1 missing) - Ship as-is
 
+STATISTICS
 
-   FILE: Blog.html
-   Translation keys used: 103
-   Untranslated items: 87
+Total HTML Files: 27
+Files with NAV issues: 25 (93%)
+Files with FOOTER issues: 25 (93%)
+Total Missing Buttons: 175+
+Total Missing Labels: 30+
+Total Missing Headings: 60+
+Files with 0 issues: 1
+Files with < 10 issues: 7
+Files with > 10 issues: 19
 
-      TEXT_CONTENT (76 items):
-         - Actualités & Perspectives GKS Logistics | Blog Officiel
-           Context: <title>Actualités & Perspectives GKS Logistics | Blog Off...
-         - FR
-           Context: <span>FR
-         - Français
-           Context: <span>Français
-         - English
-           Context: <span>English
-         - Türkçe
-           Context: <span>Türkçe
-         ... and 71 more
+KEY RECOMMENDATIONS
 
-      ALT (11 items):
-         - GKS Logistics Logo
-           Context: <img alt="GKS Logistics Logo">
-         - GKS Logistics Blog - Actualités & Perspectives
-           Context: <img alt="GKS Logistics Blog - Actualités & Perspectives">
-         - GKS Logistics Blog - Actualités & Perspectives
-           Context: <img alt="GKS Logistics Blog - Actualités & Perspectives">
-         - West African Logistics
-           Context: <img alt="West African Logistics">
-         - African Economic Growth
-           Context: <img alt="African Economic Growth">
-         ... and 6 more
+IMMEDIATE ACTIONS:
+1. Fix template.html first (master template)
+2. Add data-translate to all nav elements
+3. Add data-translate to all footer elements
+4. Fix all 175+ buttons (use aria-label translation pattern)
+5. Fix all 30+ form labels
+6. Fix all 60+ headings
 
+MEDIUM-TERM:
+1. Update Blog.html and index.html
+2. Update all 10 GKS country pages
+3. Update all content pages (articles, team, careers)
 
-   FILE: careers.html
-   Translation keys used: 216
-   Untranslated items: 43
+LONG-TERM:
+1. Create component library with translation support
+2. Add pre-deployment validation script
+3. Implement translation attribute linter for CI/CD
 
-      TEXT_CONTENT (38 items):
-         - Carrières - Rejoignez notre Équipe | GKS Logistics
-           Context: <title>Carrières - Rejoignez notre Équipe | GKS Logistics
-         - FR
-           Context: <span>FR
-         - Français
-           Context: <span>Français
-         - English
-           Context: <span>English
-         - Türkçe
-           Context: <span>Türkçe
-         ... and 33 more
+VALIDATION CHECKLIST:
+- [ ] All nav elements have data-translate
+- [ ] All footer elements have data-translate
+- [ ] All buttons have translation support
+- [ ] All labels have data-translate
+- [ ] All headings have data-translate
+- [ ] All SELECT options are translatable
+- [ ] Aria-labels have translation support
+- [ ] No hard-coded text in critical sections
+- [ ] Navigation fully translatable in all 27 files
+- [ ] Quote modals have complete coverage
 
-      ALT (5 items):
-         - GKS Logistics Logo
-           Context: <img alt="GKS Logistics Logo">
-         - Carrières GKS Logistics - Rejoignez notre Équipe
-           Context: <img alt="Carrières GKS Logistics - Rejoignez notre Équipe">
-         - Carrières GKS Logistics - Rejoignez notre Équipe
-           Context: <img alt="Carrières GKS Logistics - Rejoignez notre Équipe">
-         - Career Progression at GKS Logistics
-           Context: <img alt="Career Progression at GKS Logistics">
-         - GKS Logistics Logo
-           Context: <img alt="GKS Logistics Logo">
-
-
-   FILE: DG-Mali.html
-   Translation keys used: 124
-   Untranslated items: 46
-
-      TEXT_CONTENT (37 items):
-         - Alimata Konate - Directrice Générale | GKS Logistics Leaders...
-           Context: <title>Alimata Konate - Directrice Générale | GKS Logisti...
-         - FR
-           Context: <span>FR
-         - Français
-           Context: <span>Français
-         - English
-           Context: <span>English
-         - Türkçe
-           Context: <span>Türkçe
-         ... and 32 more
-
-      ALT (4 items):
-         - GKS Logistics Logo
-           Context: <img alt="GKS Logistics Logo">
-         - GKS Logistics Background
-           Context: <img alt="GKS Logistics Background">
-         - Alimata KONATE
-           Context: <img alt="Alimata KONATE">
-         - GKS Logistics Logo
-           Context: <img alt="GKS Logistics Logo">
-
-      PLACEHOLDER (5 items):
-         - Ex: 50
-           Context: <input placeholder="Ex: 50">
-         - Ex: 100
-           Context: <input placeholder="Ex: 100">
-         - Ex: 80
-           Context: <input placeholder="Ex: 80">
-         - Ex: 60
-           Context: <input placeholder="Ex: 60">
-         - Ex: 1000
-           Context: <input placeholder="Ex: 1000">
-
-
-   FILE: gks-burkinafaso.html
-   Translation keys used: 132
-   Untranslated items: 54
-
-      ALT (3 items):
-         - GKS Logistics Logo
-           Context: <img alt="GKS Logistics Logo">
-         - GKS Logistics Burkina Faso
-           Context: <img alt="GKS Logistics Burkina Faso">
-         - GKS Logistics Logo
-           Context: <img alt="GKS Logistics Logo">
-
-      TEXT_CONTENT (51 items):
-         - FR
-           Context: <span>FR
-         - 🇫🇷
-           Context: <span>🇫🇷
-         - Français
-           Context: <span>Français
-         - 🇬🇧
-           Context: <span>🇬🇧
-         - English
-           Context: <span>English
-         ... and 46 more
-
-
-   FILE: gks-dubai.html
-   Translation keys used: 132
-   Untranslated items: 59
-
-      ALT (4 items):
-         - GKS Logistics Logo
-           Context: <img alt="GKS Logistics Logo">
-         - GKS Logistics Dubai
-           Context: <img alt="GKS Logistics Dubai">
-         - Dubai
-           Context: <img alt="Dubai">
-         - GKS Logistics Logo
-           Context: <img alt="GKS Logistics Logo">
-
-      TEXT_CONTENT (55 items):
-         - FR
-           Context: <span>FR
-         - 🇫🇷
-           Context: <span>🇫🇷
-         - Français
-           Context: <span>Français
-         - 🇬🇧
-           Context: <span>🇬🇧
-         - English
-           Context: <span>English
-         ... and 50 more
-
-
-   FILE: gks-france.html
-   Translation keys used: 134
-   Untranslated items: 57
-
-      ALT (4 items):
-         - GKS Logistics Logo
-           Context: <img alt="GKS Logistics Logo">
-         - GKS Logistics France
-           Context: <img alt="GKS Logistics France">
-         - France
-           Context: <img alt="France">
-         - GKS Logistics Logo
-           Context: <img alt="GKS Logistics Logo">
-
-      TEXT_CONTENT (53 items):
-         - FR
-           Context: <span>FR
-         - 🇫🇷
-           Context: <span>🇫🇷
-         - Français
-           Context: <span>Français
-         - 🇬🇧
-           Context: <span>🇬🇧
-         - English
-           Context: <span>English
-         ... and 48 more
-
-
-   FILE: gks-guinea.html
-   Translation keys used: 132
-   Untranslated items: 59
-
-      ALT (4 items):
-         - GKS Logistics Logo
-           Context: <img alt="GKS Logistics Logo">
-         - GKS Logistics Guinée
-           Context: <img alt="GKS Logistics Guinée">
-         - Guinée
-           Context: <img alt="Guinée">
-         - GKS Logistics Logo
-           Context: <img alt="GKS Logistics Logo">
-
-      TEXT_CONTENT (55 items):
-         - FR
-           Context: <span>FR
-         - 🇫🇷
-           Context: <span>🇫🇷
-         - Français
-           Context: <span>Français
-         - 🇬🇧
-           Context: <span>🇬🇧
-         - English
-           Context: <span>English
-         ... and 50 more
-
-
-   ... and 16 more pages with issues
-
-8. SUMMARY STATISTICS
---------------------------------------------------------------------------------
-   Total HTML pages: 27
-   Total translation keys used in HTML: 1378
-   Total keys in EN locale: 1630
-   Total keys in FR locale: 1571
-   Total keys in TU locale: 1546
-   Total keys in MD locale: 1548
-
-   FR coverage: 96.4%
-   TU coverage: 94.8%
-   MD coverage: 95.0%
-
-   Pages with untranslated content: 26
-   Keys missing from all locales: 1087
-   Potentially orphaned keys: 1339
-
-================================================================================
-END OF REPORT
-================================================================================

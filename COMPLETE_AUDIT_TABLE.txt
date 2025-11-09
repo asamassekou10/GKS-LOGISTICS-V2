@@ -1,0 +1,161 @@
+COMPLETE AUDIT TABLE - ALL 27 HTML FILES
+
+File Name                   | Missing | Status        | Priority | Critical Issues
+---                         | ------- | ---           | ---      | ---
+template.html               |   43    | CRITICAL      | P1       | NAV, FOOTER, 21H, 4L, 10B
+Blog.html                   |   40    | MAJOR         | P2       | NAV, FOOTER, 11B, 16L
+index.html                  |   21    | MAJOR         | P2       | NAV, FOOTER, 10B, 2H
+Insight.html                |   14    | MAJOR         | P3       | NAV, FOOTER, 6B, 3H
+gks-dubai.html              |   14    | MAJOR         | P3       | NAV, FOOTER, 8B, 1H
+gks-guinea.html             |   14    | MAJOR         | P3       | NAV, FOOTER, 8B, 1H
+gks-turkey.html             |   14    | MAJOR         | P3       | NAV, FOOTER, 8B, 1H
+gks-burkinafaso.html        |   13    | MAJOR         | P3       | NAV, FOOTER, 8B, 5H
+Article1.html               |   13    | MAJOR         | P3       | NAV, FOOTER, 6B, 7H
+gks-usa.html                |   13    | MAJOR         | P3       | NAV, FOOTER, 8B, 5H
+Article2.html               |   13    | MAJOR         | P3       | NAV, FOOTER, 6B, 7H
+gks-france.html             |   13    | MAJOR         | P3       | NAV, FOOTER, 8B, 5H
+Precess.html                |   13    | MAJOR         | P3       | FOOTER, 3B, 10H
+gks-mali.html               |   12    | MAJOR         | P3       | NAV, FOOTER, 7B, 5H
+gks-ivoire.html             |   12    | MAJOR         | P3       | NAV, FOOTER, 7B, 5H
+careers.html                |   12    | MAJOR         | P3       | NAV, FOOTER, 7B, 5H
+gks-senegal.html            |   12    | MAJOR         | P3       | NAV, FOOTER, 7B, 5H
+gks-niger.html              |   12    | MAJOR         | P3       | NAV, FOOTER, 7B, 5H
+Our-Team.html               |   12    | MAJOR         | P3       | NAV, FOOTER, 7B, 5H
+our-representation.html     |   10    | MINOR         | P4       | NAV, FOOTER, 5B
+DG-Mali.html                |   11    | MINOR         | P4       | NAV, FOOTER, 6B
+Our-CEO.html                |   11    | MINOR         | P4       | NAV, FOOTER, 6B
+news.html                   |   11    | MINOR         | P4       | NAV, FOOTER, 6B
+green-logistics.html        |    9    | MINOR         | P4       | NAV, FOOTER, 5B
+groupage.html               |    9    | MINOR         | P4       | NAV, FOOTER, 5B
+all-services.html           |    9    | MINOR         | P4       | NAV, FOOTER, 5B
+quote-modal.html            |    1    | COMPLETE      | P5       | None - Ready
+
+Legend:
+Missing = Count of missing data-translate attributes
+Status = Overall translation coverage level
+Priority = Phase when to fix
+B = Buttons, H = Headings, L = Labels, NAV = Navigation, FOOTER = Footer
+
+---
+
+SUMMARY STATISTICS
+
+Total Files Analyzed: 27
+Total Missing Translations: 416
+
+By Status:
+  CRITICAL:    1 file    (3.7%)
+  MAJOR:      19 files   (70.4%)
+  MINOR:       7 files   (25.9%)
+  COMPLETE:    1 file    (3.7%)
+
+By Priority:
+  P1 (Do First):    1 file
+  P2 (Week 1):      2 files
+  P3 (Week 2):     15 files
+  P4 (Week 3-4):    7 files
+  P5 (Verify):      1 file (ready)
+
+By Element Type:
+  Missing Buttons:      175
+  Missing Labels:        30
+  Missing Headings:      60
+  Missing Nav:           25 files
+  Missing Footer:        25 files
+  Missing Select Options: 7-8 per file
+
+---
+
+QUICK REFERENCE: FILES BY CATEGORY
+
+NEEDS IMMEDIATE WORK (43+ missing):
+  1. template.html
+
+NEEDS URGENT WORK (20-40 missing):
+  2. Blog.html (40)
+  3. index.html (21)
+
+NEEDS SIGNIFICANT WORK (12-19 missing):
+  4. Insight.html
+  5. gks-dubai.html
+  6. gks-guinea.html
+  7. gks-turkey.html
+  8. gks-burkinafaso.html
+  9. Article1.html
+ 10. gks-usa.html
+ 11. Article2.html
+ 12. gks-france.html
+ 13. Precess.html
+ 14. gks-mali.html
+ 15. gks-ivoire.html
+ 16. careers.html
+ 17. gks-senegal.html
+ 18. gks-niger.html
+ 19. Our-Team.html
+
+NEEDS MINOR WORK (9-11 missing):
+ 20. our-representation.html
+ 21. DG-Mali.html
+ 22. Our-CEO.html
+ 23. news.html
+ 24. green-logistics.html
+ 25. groupage.html
+ 26. all-services.html
+
+READY TO DEPLOY (0-1 missing):
+ 27. quote-modal.html
+
+---
+
+TOP 10 FILES NEEDING MOST WORK
+
+Rank | File              | Missing | Issues
+-----|-------------------|---------|------------------------------------------
+1.   | template.html     | 43      | NAV, FOOTER, 21H, 4L, 10B
+2.   | Blog.html         | 40      | NAV, FOOTER, 11B, 16L, 1H
+3.   | index.html        | 21      | NAV, FOOTER, 10B, 2H
+4.   | Insight.html      | 14      | NAV, FOOTER, 6B, 3H
+5.   | gks-dubai.html    | 14      | NAV, FOOTER, 8B, 1H
+6.   | gks-guinea.html   | 14      | NAV, FOOTER, 8B, 1H
+7.   | gks-turkey.html   | 14      | NAV, FOOTER, 8B, 1H
+8.   | gks-burkinafaso   | 13      | NAV, FOOTER, 8B, 5H
+9.   | Article1.html     | 13      | NAV, FOOTER, 6B, 7H
+10.  | gks-usa.html      | 13      | NAV, FOOTER, 8B, 5H
+
+Total Issues in Top 10: 165 / 416 (39.7%)
+Effort to fix top 10: ~15-18 hours
+
+---
+
+ROADMAP TO 100% TRANSLATION COVERAGE
+
+Current Status:
+  Total Data-Translate Attributes Found: 3,200+
+  Missing Data-Translate Attributes: 416
+  Current Coverage: 88.5%
+  Target Coverage: 100%
+
+Phase-by-Phase Impact:
+
+After Phase 1 (template.html):
+  Coverage: 89.7% (+1.2%)
+  Files Complete: 1
+
+After Phase 2 (Blog + index):
+  Coverage: 93.5% (+3.8%)
+  Files Complete: 3
+
+After Phase 3 (15 medium files):
+  Coverage: 97.2% (+3.7%)
+  Files Complete: 18
+
+After Phase 4 (7 minor files):
+  Coverage: 99.3% (+2.1%)
+  Files Complete: 25
+
+After Phase 5 (verify quote-modal):
+  Coverage: 100% (+0.7%)
+  Files Complete: 27
+
+---
+
