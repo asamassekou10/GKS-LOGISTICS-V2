@@ -217,10 +217,10 @@ function replaceContentWithTranslations(html, translations, langCode, currentPag
 
   // GENERIC TEMPLATE VARIABLE REPLACEMENT
   // Find all {{SECTION_KEY}} variables and replace with translations
-  const templateVarPattern = /{{([A-Z][A-Z0-9_]*)(?:_([A-Z0-9_]*))*}}/g;
-  result = result.replace(templateVarPattern, (match, ...groups) => {
-    // Extract the full key
-    const fullKey = groups.slice(0, -2).join('_');
+  const templateVarPattern = /{{([A-Z][A-Z0-9_]*)}}/g;
+  result = result.replace(templateVarPattern, (match, variableName) => {
+    // Extract the full key - variableName is the complete variable name
+    const fullKey = variableName;
 
     // Convert from UPPER_CASE to lower_case_with_underscores
     const lookupKey = fullKey.toLowerCase();
