@@ -4,6 +4,9 @@
  * Integrates with Netlify Functions to send emails via Brevo
  */
 
+// This log will fire immediately when the script is loaded
+console.log('✅ form-handler.js script file loaded successfully!');
+
 document.addEventListener('DOMContentLoaded', function() {
   console.log('🚀 Form Handler Initializing...');
 
