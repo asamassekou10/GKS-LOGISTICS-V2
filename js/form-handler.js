@@ -216,7 +216,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Handle Contact Form Submission
   const contactForm = document.getElementById('contactForm');
+  console.log('📋 Contact form found:', contactForm ? 'YES ✅' : 'NO ❌');
   if (contactForm) {
+    console.log('📌 Contact form event listener attached');
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
 
@@ -286,7 +288,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Handle Quote Request Form Submission
   const quoteForm = document.getElementById('quoteRequestForm');
+  console.log('📋 Quote form found:', quoteForm ? 'YES ✅' : 'NO ❌');
   if (quoteForm) {
+    console.log('📌 Quote form event listener attached');
     quoteForm.addEventListener('submit', function(e) {
       e.preventDefault();
 
