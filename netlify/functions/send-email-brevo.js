@@ -462,6 +462,132 @@ const getNewsletterSignupEmail = (data) => ({
   text: `Thank you for subscribing to the GKS Logistics newsletter! Email: ${data.email}`
 });
 
+// Confirmation email template sent to users after form submission
+const getConfirmationEmail = (userEmail, userName, formType) => ({
+  subject: `Thank you for contacting GKS Logistics - We'll respond within 24 hours`,
+  html: `
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <style>
+          body { font-family: 'Roboto', sans-serif; color: #333; margin: 0; padding: 0; }
+          .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+          .header { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); padding: 40px 30px; color: white; text-align: center; border-radius: 8px 8px 0 0; }
+          .logo { font-size: 14px; font-weight: 700; letter-spacing: 2px; margin-bottom: 20px; color: #10b981; }
+          .header h1 { margin: 0; font-size: 28px; color: white; font-weight: 700; }
+          .header p { margin: 10px 0 0 0; opacity: 0.95; color: rgba(255, 255, 255, 0.9); font-size: 16px; }
+          .content { background: white; padding: 40px 30px; }
+          .welcome-section { margin-bottom: 35px; }
+          .welcome-section h2 { margin: 0 0 15px 0; font-size: 20px; color: #1e3a8a; font-weight: 600; }
+          .welcome-section p { margin: 12px 0; line-height: 1.6; color: #555; font-size: 15px; }
+          .highlight { color: #10b981; font-weight: 600; }
+          .services-section { margin-bottom: 35px; background: #f8f9fa; padding: 25px; border-radius: 8px; border-left: 4px solid #1e3a8a; }
+          .services-section h3 { margin: 0 0 20px 0; font-size: 16px; color: #1e3a8a; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+          .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+          .service-card { background: white; padding: 15px; border-radius: 6px; text-align: center; border-top: 3px solid #10b981; }
+          .service-card h4 { margin: 0 0 10px 0; font-size: 14px; color: #1e3a8a; font-weight: 600; }
+          .service-card p { margin: 0 0 12px 0; font-size: 13px; color: #666; }
+          .cta-button { display: inline-block; background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); color: white; text-decoration: none; padding: 12px 28px; border-radius: 6px; font-weight: 600; font-size: 14px; transition: all 0.3s ease; }
+          .cta-button:hover { opacity: 0.9; transform: translateY(-2px); }
+          .footer-section { background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); color: white; padding: 30px; border-radius: 0 0 8px 8px; text-align: center; }
+          .footer-section p { margin: 10px 0; font-size: 14px; line-height: 1.6; }
+          .footer-section a { color: #10b981; text-decoration: none; font-weight: 600; }
+          .footer-section .contact-info { margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(255, 255, 255, 0.2); }
+          @media (max-width: 600px) {
+            .services-grid { grid-template-columns: 1fr; }
+            .header h1 { font-size: 24px; }
+            .content { padding: 25px 15px; }
+          }
+        </style>
+      </head>
+      <body>
+        <div class="container">
+          <div class="header">
+            <div class="logo">🌍 GKS LOGISTICS</div>
+            <h1>Thank You!</h1>
+            <p>We've received your submission and can't wait to help you</p>
+          </div>
+
+          <div class="content">
+            <div class="welcome-section">
+              <h2>Hello ${escapeHtml(userName || 'Valued Customer')},</h2>
+              <p>Thank you for choosing <span class="highlight">GKS Logistics</span> for your logistics and freight needs.</p>
+              <p>We've successfully received your submission and our team is reviewing it right now. Rest assured, we will respond to your inquiry <span class="highlight">within 24 hours</span>.</p>
+              <p>In the meantime, we'd like to introduce you to our comprehensive range of services that can support your shipping and logistics requirements.</p>
+            </div>
+
+            <div class="services-section">
+              <h3>✈️ Our Services</h3>
+              <div class="services-grid">
+                <div class="service-card">
+                  <h4>Air Freight</h4>
+                  <p>Fast and reliable international air shipping for urgent shipments</p>
+                  <a href="https://www.gkslogistics.com#quote-calculator" class="cta-button" style="font-size: 12px; padding: 8px 16px;">Get Quote</a>
+                </div>
+                <div class="service-card">
+                  <h4>Sea Freight</h4>
+                  <p>Cost-effective ocean shipping with full container and LCL options</p>
+                  <a href="https://www.gkslogistics.com#quote-calculator" class="cta-button" style="font-size: 12px; padding: 8px 16px;">Get Quote</a>
+                </div>
+                <div class="service-card">
+                  <h4>Land Transport</h4>
+                  <p>Regional road freight and last-mile delivery solutions</p>
+                  <a href="https://www.gkslogistics.com#quote-calculator" class="cta-button" style="font-size: 12px; padding: 8px 16px;">Get Quote</a>
+                </div>
+                <div class="service-card">
+                  <h4>Warehousing</h4>
+                  <p>Secure storage and inventory management services</p>
+                  <a href="https://www.gkslogistics.com" class="cta-button" style="font-size: 12px; padding: 8px 16px;">Learn More</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="welcome-section" style="text-align: center;">
+              <p style="font-size: 16px; color: #1e3a8a; font-weight: 600;">Get an Instant Quote</p>
+              <p style="margin-top: 5px;">Need a quick estimate? Visit our quote calculator to get pricing in seconds.</p>
+              <a href="https://www.gkslogistics.com#quote-calculator" class="cta-button" style="display: inline-block; margin-top: 15px;">Access Quote Calculator</a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <p style="font-size: 16px; font-weight: 600; margin-bottom: 5px;">We're here to help!</p>
+            <p>Have questions? Our expert team is ready to assist you.</p>
+            <div class="contact-info">
+              <p>📞 <strong>Phone:</strong> +223 90 92 92 73</p>
+              <p>📧 <strong>Email:</strong> <a href="mailto:sales@gkslogistics.com">sales@gkslogistics.com</a></p>
+              <p>🌐 <strong>Website:</strong> <a href="https://www.gkslogistics.com">www.gkslogistics.com</a></p>
+            </div>
+            <p style="margin-top: 20px; font-size: 12px; opacity: 0.8;">© 2025 GKS Logistics. All rights reserved. Your trusted partner in global logistics.</p>
+          </div>
+        </div>
+      </body>
+    </html>
+  `,
+  text: `
+Thank you for contacting GKS Logistics!
+
+Hello ${userName || 'Valued Customer'},
+
+We've received your submission and will respond within 24 hours.
+
+OUR SERVICES:
+- Air Freight: Fast international shipping
+- Sea Freight: Cost-effective ocean shipping
+- Land Transport: Regional road freight
+- Warehousing: Storage and inventory management
+
+Get an instant quote: https://www.gkslogistics.com#quote-calculator
+
+Contact us:
+Phone: +223 90 92 92 73
+Email: sales@gkslogistics.com
+Website: www.gkslogistics.com
+
+Best regards,
+GKS Logistics Team
+  `
+});
+
 // Helper function to format service type
 const formatServiceType = (service) => {
   const types = {
@@ -551,6 +677,32 @@ exports.handler = async (event) => {
     await sendEmailViaBrevo(emailParams);
 
     console.log('Email sent successfully to', RECIPIENT_EMAIL);
+
+    // Send confirmation email to user
+    const userEmail = formData.email || formData.applicantEmail;
+    const userName = formData.name || formData.fullName || formData.applicantName || formData.firstname;
+
+    if (userEmail) {
+      try {
+        const confirmationTemplate = getConfirmationEmail(userEmail, userName, form.name);
+        const confirmationParams = {
+          to: [{ email: userEmail }],
+          subject: confirmationTemplate.subject,
+          htmlContent: confirmationTemplate.html,
+          textContent: confirmationTemplate.text,
+          sender: {
+            name: 'GKS Logistics',
+            email: 'gksforms@googlegroups.com'
+          }
+        };
+
+        await sendEmailViaBrevo(confirmationParams);
+        console.log('Confirmation email sent successfully to', userEmail);
+      } catch (confirmationError) {
+        console.error('Failed to send confirmation email:', confirmationError.message);
+        // Don't fail the entire request if confirmation email fails
+      }
+    }
 
     return {
       statusCode: 200,
