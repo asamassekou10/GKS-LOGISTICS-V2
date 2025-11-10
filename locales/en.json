@@ -1672,7 +1672,7 @@
   "calculator-container": "Full container (sea freight only)",
   "calculator-section-services": "Additional Services",
   "calculator-insurance": "Cargo insurance (2% of declared value)",
-  "calculator-door-delivery": "Door delivery (+$30)",
+  "calculator-door-delivery": "Door delivery",
   "calculator-packaging": "Packaging type",
   "calculator-packaging-none": "No packaging",
   "calculator-packaging-standard": "Standard (+$20)",

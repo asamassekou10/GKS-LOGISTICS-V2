@@ -1640,7 +1640,7 @@
   "calculator-container": "Container complet (fret maritime uniquement)",
   "calculator-section-services": "Services Additionnels",
   "calculator-insurance": "Assurance marchandise (2% de la valeur déclarée)",
-  "calculator-door-delivery": "Livraison à domicile (+$30)",
+  "calculator-door-delivery": "Livraison à domicile",
   "calculator-packaging": "Type d'emballage",
   "calculator-packaging-none": "Sans emballage",
   "calculator-packaging-standard": "Standard (+$20)",
