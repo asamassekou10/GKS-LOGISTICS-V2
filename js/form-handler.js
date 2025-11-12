@@ -322,16 +322,21 @@ document.addEventListener('DOMContentLoaded', function() {
         submitButton.disabled = true;
       }
 
-      // Collect form data - simplified quote form fields
+      // Collect form data - all quote form fields
       const formData = {
         fullName: quoteForm.querySelector('input[name="fullName"]')?.value || '',
         companyName: quoteForm.querySelector('input[name="companyName"]')?.value || '',
         email: quoteForm.querySelector('input[name="email"]')?.value || '',
         phoneNumber: quoteForm.querySelector('input[name="phoneNumber"]')?.value || '',
         freightType: quoteForm.querySelector('select[name="freightType"]')?.value || '',
-        origin: quoteForm.querySelector('input[name="origin"]')?.value || '',
-        destination: quoteForm.querySelector('input[name="destination"]')?.value || '',
+        currency: quoteForm.querySelector('select[name="currency"]')?.value || '',
+        origin: quoteForm.querySelector('select[name="origin"]')?.value || '',
+        destination: quoteForm.querySelector('select[name="destination"]')?.value || '',
         weight: quoteForm.querySelector('input[name="weight"]')?.value || '',
+        volume: quoteForm.querySelector('input[name="volume"]')?.value || '',
+        packaging: quoteForm.querySelector('select[name="packaging"]')?.value || '',
+        clearance: quoteForm.querySelector('select[name="clearance"]')?.value || '',
+        doorDelivery: quoteForm.querySelector('input[name="doorDelivery"]')?.checked ? 'yes' : 'no',
         message: quoteForm.querySelector('textarea[name="message"]')?.value || ''
       };
 
