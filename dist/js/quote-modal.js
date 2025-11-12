@@ -8,9 +8,69 @@ document.addEventListener('DOMContentLoaded', function() {
         if (quoteModal) {
             quoteModal.classList.add('active');
             document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            // Re-setup country inputs when modal opens
+            setTimeout(setupCountryInputs, 100);
         }
     }
     
+    // Handle custom country input fields using event delegation
+    function setupCountryInputs() {
+        // Use event delegation on the form to handle country selections
+        if (quoteForm) {
+            quoteForm.addEventListener('change', function(e) {
+                // Handle origin dropdown
+                if (e.target.id === 'origin') {
+                    const originCustomWrapper = document.getElementById('originCustomWrapper');
+                    const originCustomInput = document.getElementById('originCustom');
+
+                    console.log('Origin changed to:', e.target.value);
+
+                    if (e.target.value === 'Other') {
+                        if (originCustomWrapper) {
+                            originCustomWrapper.style.display = 'block';
+                            if (originCustomInput) {
+                                originCustomInput.focus();
+                            }
+                        }
+                    } else {
+                        if (originCustomWrapper) {
+                            originCustomWrapper.style.display = 'none';
+                        }
+                        if (originCustomInput) {
+                            originCustomInput.value = '';
+                        }
+                    }
+                }
+
+                // Handle destination dropdown
+                if (e.target.id === 'destination') {
+                    const destinationCustomWrapper = document.getElementById('destinationCustomWrapper');
+                    const destinationCustomInput = document.getElementById('destinationCustom');
+
+                    console.log('Destination changed to:', e.target.value);
+
+                    if (e.target.value === 'Other') {
+                        if (destinationCustomWrapper) {
+                            destinationCustomWrapper.style.display = 'block';
+                            if (destinationCustomInput) {
+                                destinationCustomInput.focus();
+                            }
+                        }
+                    } else {
+                        if (destinationCustomWrapper) {
+                            destinationCustomWrapper.style.display = 'none';
+                        }
+                        if (destinationCustomInput) {
+                            destinationCustomInput.value = '';
+                        }
+                    }
+                }
+            });
+        } else {
+            console.warn('Quote form not found');
+        }
+    }
+
     // Close modal function
     function closeQuoteModal() {
         if (quoteModal) {
@@ -22,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-    
+
     // Add event listeners to all "Faire un devis" buttons
     function initializeQuoteButtons() {
         // Target specific quote buttons by their data-translate attributes and text content
@@ -159,58 +219,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     */
-    
-    // Handle custom country input fields (show when "Autre" is selected)
-    function setupCountryInputs() {
-        const originSelect = document.getElementById('origin');
-        const destinationSelect = document.getElementById('destination');
-        const originCustomWrapper = document.getElementById('originCustomWrapper');
-        const destinationCustomWrapper = document.getElementById('destinationCustomWrapper');
-        const originCustomInput = document.getElementById('originCustom');
-        const destinationCustomInput = document.getElementById('destinationCustom');
-
-        // Origin dropdown change
-        if (originSelect) {
-            originSelect.addEventListener('change', function() {
-                if (this.value === 'Other') {
-                    if (originCustomWrapper) {
-                        originCustomWrapper.style.display = 'block';
-                        if (originCustomInput) {
-                            originCustomInput.focus();
-                        }
-                    }
-                } else {
-                    if (originCustomWrapper) {
-                        originCustomWrapper.style.display = 'none';
-                    }
-                    if (originCustomInput) {
-                        originCustomInput.value = '';
-                    }
-                }
-            });
-        }
-
-        // Destination dropdown change
-        if (destinationSelect) {
-            destinationSelect.addEventListener('change', function() {
-                if (this.value === 'Other') {
-                    if (destinationCustomWrapper) {
-                        destinationCustomWrapper.style.display = 'block';
-                        if (destinationCustomInput) {
-                            destinationCustomInput.focus();
-                        }
-                    }
-                } else {
-                    if (destinationCustomWrapper) {
-                        destinationCustomWrapper.style.display = 'none';
-                    }
-                    if (destinationCustomInput) {
-                        destinationCustomInput.value = '';
-                    }
-                }
-            });
-        }
-    }
 
     // Initialize quote buttons
     initializeQuoteButtons();
