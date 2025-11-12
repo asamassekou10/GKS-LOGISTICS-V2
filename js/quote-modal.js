@@ -13,63 +13,61 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Handle custom country input fields using event delegation
+    // Set up listener that works on dynamically added forms or existing forms
     function setupCountryInputs() {
-        // Get fresh reference to form element
-        const quoteForm = document.getElementById('quoteRequestForm');
-        // Use event delegation on the form to handle country selections
-        if (quoteForm) {
-            quoteForm.addEventListener('change', function(e) {
-                // Handle origin dropdown
-                if (e.target.id === 'origin') {
-                    const originCustomWrapper = document.getElementById('originCustomWrapper');
-                    const originCustomInput = document.getElementById('originCustom');
+        // Use document-level delegation for maximum compatibility
+        // This will work even if the form is added later
+        document.addEventListener('change', function(e) {
+            const target = e.target;
 
-                    console.log('Origin changed to:', e.target.value);
+            // Handle origin dropdown
+            if (target.id === 'origin' && target.name === 'origin') {
+                const originCustomWrapper = document.getElementById('originCustomWrapper');
+                const originCustomInput = document.getElementById('originCustom');
 
-                    if (e.target.value === 'Other') {
-                        if (originCustomWrapper) {
-                            originCustomWrapper.style.display = 'block';
-                            if (originCustomInput) {
-                                originCustomInput.focus();
-                            }
-                        }
-                    } else {
-                        if (originCustomWrapper) {
-                            originCustomWrapper.style.display = 'none';
-                        }
+                console.log('Origin changed to:', target.value);
+
+                if (target.value === 'Other') {
+                    if (originCustomWrapper) {
+                        originCustomWrapper.style.display = 'block';
                         if (originCustomInput) {
-                            originCustomInput.value = '';
+                            originCustomInput.focus();
                         }
                     }
+                } else {
+                    if (originCustomWrapper) {
+                        originCustomWrapper.style.display = 'none';
+                    }
+                    if (originCustomInput) {
+                        originCustomInput.value = '';
+                    }
                 }
+            }
 
-                // Handle destination dropdown
-                if (e.target.id === 'destination') {
-                    const destinationCustomWrapper = document.getElementById('destinationCustomWrapper');
-                    const destinationCustomInput = document.getElementById('destinationCustom');
+            // Handle destination dropdown
+            if (target.id === 'destination' && target.name === 'destination') {
+                const destinationCustomWrapper = document.getElementById('destinationCustomWrapper');
+                const destinationCustomInput = document.getElementById('destinationCustom');
 
-                    console.log('Destination changed to:', e.target.value);
+                console.log('Destination changed to:', target.value);
 
-                    if (e.target.value === 'Other') {
-                        if (destinationCustomWrapper) {
-                            destinationCustomWrapper.style.display = 'block';
-                            if (destinationCustomInput) {
-                                destinationCustomInput.focus();
-                            }
-                        }
-                    } else {
-                        if (destinationCustomWrapper) {
-                            destinationCustomWrapper.style.display = 'none';
-                        }
+                if (target.value === 'Other') {
+                    if (destinationCustomWrapper) {
+                        destinationCustomWrapper.style.display = 'block';
                         if (destinationCustomInput) {
-                            destinationCustomInput.value = '';
+                            destinationCustomInput.focus();
                         }
                     }
+                } else {
+                    if (destinationCustomWrapper) {
+                        destinationCustomWrapper.style.display = 'none';
+                    }
+                    if (destinationCustomInput) {
+                        destinationCustomInput.value = '';
+                    }
                 }
-            });
-        } else {
-            console.warn('Quote form not found');
-        }
+            }
+        }, false); // Use capturing phase: false for bubbling
     }
 
     // Close modal function
