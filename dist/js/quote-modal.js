@@ -160,9 +160,64 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     */
     
+    // Handle custom country input fields (show when "Autre" is selected)
+    function setupCountryInputs() {
+        const originSelect = document.getElementById('origin');
+        const destinationSelect = document.getElementById('destination');
+        const originCustomWrapper = document.getElementById('originCustomWrapper');
+        const destinationCustomWrapper = document.getElementById('destinationCustomWrapper');
+        const originCustomInput = document.getElementById('originCustom');
+        const destinationCustomInput = document.getElementById('destinationCustom');
+
+        // Origin dropdown change
+        if (originSelect) {
+            originSelect.addEventListener('change', function() {
+                if (this.value === 'Other') {
+                    if (originCustomWrapper) {
+                        originCustomWrapper.style.display = 'block';
+                        if (originCustomInput) {
+                            originCustomInput.focus();
+                        }
+                    }
+                } else {
+                    if (originCustomWrapper) {
+                        originCustomWrapper.style.display = 'none';
+                    }
+                    if (originCustomInput) {
+                        originCustomInput.value = '';
+                    }
+                }
+            });
+        }
+
+        // Destination dropdown change
+        if (destinationSelect) {
+            destinationSelect.addEventListener('change', function() {
+                if (this.value === 'Other') {
+                    if (destinationCustomWrapper) {
+                        destinationCustomWrapper.style.display = 'block';
+                        if (destinationCustomInput) {
+                            destinationCustomInput.focus();
+                        }
+                    }
+                } else {
+                    if (destinationCustomWrapper) {
+                        destinationCustomWrapper.style.display = 'none';
+                    }
+                    if (destinationCustomInput) {
+                        destinationCustomInput.value = '';
+                    }
+                }
+            });
+        }
+    }
+
     // Initialize quote buttons
     initializeQuoteButtons();
-    
+
+    // Setup country input fields
+    setupCountryInputs();
+
     // Re-initialize when language changes (for dynamic content)
     const languageToggle = document.getElementById('languageToggle');
     if (languageToggle) {

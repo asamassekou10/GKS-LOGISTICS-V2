@@ -323,6 +323,18 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       // Collect form data - all quote form fields
+      // Handle origin: use custom input if "Other" is selected, otherwise use dropdown value
+      const originSelect = quoteForm.querySelector('select[name="origin"]');
+      const originValue = originSelect?.value || '';
+      const originCustom = quoteForm.querySelector('input[name="originCustom"]')?.value || '';
+      const finalOrigin = originValue === 'Other' && originCustom ? originCustom : originValue;
+
+      // Handle destination: use custom input if "Other" is selected, otherwise use dropdown value
+      const destinationSelect = quoteForm.querySelector('select[name="destination"]');
+      const destinationValue = destinationSelect?.value || '';
+      const destinationCustom = quoteForm.querySelector('input[name="destinationCustom"]')?.value || '';
+      const finalDestination = destinationValue === 'Other' && destinationCustom ? destinationCustom : destinationValue;
+
       const formData = {
         fullName: quoteForm.querySelector('input[name="fullName"]')?.value || '',
         companyName: quoteForm.querySelector('input[name="companyName"]')?.value || '',
@@ -330,8 +342,8 @@ document.addEventListener('DOMContentLoaded', function() {
         phoneNumber: quoteForm.querySelector('input[name="phoneNumber"]')?.value || '',
         freightType: quoteForm.querySelector('select[name="freightType"]')?.value || '',
         currency: quoteForm.querySelector('select[name="currency"]')?.value || '',
-        origin: quoteForm.querySelector('select[name="origin"]')?.value || '',
-        destination: quoteForm.querySelector('select[name="destination"]')?.value || '',
+        origin: finalOrigin,
+        destination: finalDestination,
         weight: quoteForm.querySelector('input[name="weight"]')?.value || '',
         volume: quoteForm.querySelector('input[name="volume"]')?.value || '',
         packaging: quoteForm.querySelector('select[name="packaging"]')?.value || '',
