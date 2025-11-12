@@ -1306,13 +1306,10 @@ Continuez à m'écrire ici! Je suis disponible 24/7 pour:
 📋 <strong>Formulaire de Contact Web:</strong>
 Cliquez sur le bouton "Contact" en haut de page ou remplissez le formulaire dans la section Contact.
 
-🎯 <strong>Départements Spécialisés:</strong>
-📦 <strong>Opérations:</strong> operations@gkslogistics.com
-💼 <strong>Commercial:</strong> sales@gkslogistics.com
-🔧 <strong>Support Client:</strong> support@gkslogistics.com
-👔 <strong>Direction:</strong> info@gkslogistics.com
+🎯 <strong>Contact Commercial:</strong>
+💼 <strong>Département Commercial:</strong> sales@gkslogistics.com
 
-<em>Préférez-vous que je vous oriente vers un service spécifique?</em>` :
+<em>Comment puis-je vous aider?</em>` :
             `📞 <strong>Contact GKS Logistics - 24/7 Support</strong>
 
 ✉️ <strong>By Email:</strong>
@@ -1358,13 +1355,10 @@ Keep chatting with me here! I'm available 24/7 for:
 📋 <strong>Web Contact Form:</strong>
 Click the "Contact" button at the top of the page or fill out the form in the Contact section.
 
-🎯 <strong>Specialized Departments:</strong>
-📦 <strong>Operations:</strong> operations@gkslogistics.com
-💼 <strong>Sales:</strong> sales@gkslogistics.com
-🔧 <strong>Customer Support:</strong> support@gkslogistics.com
-👔 <strong>Management:</strong> info@gkslogistics.com
+🎯 <strong>Sales Contact:</strong>
+💼 <strong>Sales Department:</strong> sales@gkslogistics.com
 
-<em>Would you like me to direct you to a specific service?</em>`
+<em>How can I assist you?</em>`
         },
 
         problems: {
