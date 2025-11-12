@@ -7,31 +7,31 @@ document.addEventListener('DOMContentLoaded', function() {
         if (quoteModal) {
             quoteModal.classList.add('active');
             document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            // Re-setup country inputs when modal opens
-            setTimeout(setupCountryInputs, 100);
         }
     }
 
     // Handle custom country input fields using event delegation
-    // Set up listener that works on dynamically added forms or existing forms
+    // Set up listener ONCE at startup - not on each modal open
     function setupCountryInputs() {
+        console.log('Setting up country input handlers...');
+
         // Use document-level delegation for maximum compatibility
-        // This will work even if the form is added later
         document.addEventListener('change', function(e) {
             const target = e.target;
 
             // Handle origin dropdown
-            if (target.id === 'origin' && target.name === 'origin') {
+            if (target && target.id === 'origin' && target.name === 'origin') {
                 const originCustomWrapper = document.getElementById('originCustomWrapper');
                 const originCustomInput = document.getElementById('originCustom');
 
-                console.log('Origin changed to:', target.value);
+                console.log('✅ Origin changed to:', target.value, 'Wrapper found:', !!originCustomWrapper);
 
                 if (target.value === 'Other') {
                     if (originCustomWrapper) {
                         originCustomWrapper.style.display = 'block';
                         if (originCustomInput) {
                             originCustomInput.focus();
+                            console.log('✅ Focused on origin custom input');
                         }
                     }
                 } else {
@@ -45,17 +45,18 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             // Handle destination dropdown
-            if (target.id === 'destination' && target.name === 'destination') {
+            if (target && target.id === 'destination' && target.name === 'destination') {
                 const destinationCustomWrapper = document.getElementById('destinationCustomWrapper');
                 const destinationCustomInput = document.getElementById('destinationCustom');
 
-                console.log('Destination changed to:', target.value);
+                console.log('✅ Destination changed to:', target.value, 'Wrapper found:', !!destinationCustomWrapper);
 
                 if (target.value === 'Other') {
                     if (destinationCustomWrapper) {
                         destinationCustomWrapper.style.display = 'block';
                         if (destinationCustomInput) {
                             destinationCustomInput.focus();
+                            console.log('✅ Focused on destination custom input');
                         }
                     }
                 } else {
@@ -67,7 +68,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 }
             }
-        }, false); // Use capturing phase: false for bubbling
+        }, false);
+
+        console.log('✅ Country input handlers attached');
     }
 
     // Close modal function
@@ -223,7 +226,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize quote buttons
     initializeQuoteButtons();
 
-    // Setup country input fields when modal opens (called from openQuoteModal)
+    // Setup country input fields (called once at startup)
+    setupCountryInputs();
+
     // Re-initialize when language changes (for dynamic content)
     const languageToggle = document.getElementById('languageToggle');
     if (languageToggle) {
