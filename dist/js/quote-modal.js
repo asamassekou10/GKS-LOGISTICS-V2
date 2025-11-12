@@ -1,74 +1,76 @@
 // Quote Modal JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     const quoteModal = document.getElementById('quoteModal');
-    const quoteForm = document.getElementById('quoteRequestForm');
-    
+
     // Open modal function
     function openQuoteModal() {
         if (quoteModal) {
             quoteModal.classList.add('active');
             document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            // Re-setup country inputs when modal opens
-            setTimeout(setupCountryInputs, 100);
         }
     }
-    
+
     // Handle custom country input fields using event delegation
+    // Set up listener ONCE at startup - not on each modal open
     function setupCountryInputs() {
-        // Use event delegation on the form to handle country selections
-        if (quoteForm) {
-            quoteForm.addEventListener('change', function(e) {
-                // Handle origin dropdown
-                if (e.target.id === 'origin') {
-                    const originCustomWrapper = document.getElementById('originCustomWrapper');
-                    const originCustomInput = document.getElementById('originCustom');
+        console.log('Setting up country input handlers...');
 
-                    console.log('Origin changed to:', e.target.value);
+        // Use document-level delegation for maximum compatibility
+        document.addEventListener('change', function(e) {
+            const target = e.target;
 
-                    if (e.target.value === 'Other') {
-                        if (originCustomWrapper) {
-                            originCustomWrapper.style.display = 'block';
-                            if (originCustomInput) {
-                                originCustomInput.focus();
-                            }
-                        }
-                    } else {
-                        if (originCustomWrapper) {
-                            originCustomWrapper.style.display = 'none';
-                        }
+            // Handle origin dropdown
+            if (target && target.id === 'origin' && target.name === 'origin') {
+                const originCustomWrapper = document.getElementById('originCustomWrapper');
+                const originCustomInput = document.getElementById('originCustom');
+
+                console.log('✅ Origin changed to:', target.value, 'Wrapper found:', !!originCustomWrapper);
+
+                if (target.value === 'Other') {
+                    if (originCustomWrapper) {
+                        originCustomWrapper.style.display = 'block';
                         if (originCustomInput) {
-                            originCustomInput.value = '';
+                            originCustomInput.focus();
+                            console.log('✅ Focused on origin custom input');
                         }
                     }
+                } else {
+                    if (originCustomWrapper) {
+                        originCustomWrapper.style.display = 'none';
+                    }
+                    if (originCustomInput) {
+                        originCustomInput.value = '';
+                    }
                 }
+            }
 
-                // Handle destination dropdown
-                if (e.target.id === 'destination') {
-                    const destinationCustomWrapper = document.getElementById('destinationCustomWrapper');
-                    const destinationCustomInput = document.getElementById('destinationCustom');
+            // Handle destination dropdown
+            if (target && target.id === 'destination' && target.name === 'destination') {
+                const destinationCustomWrapper = document.getElementById('destinationCustomWrapper');
+                const destinationCustomInput = document.getElementById('destinationCustom');
 
-                    console.log('Destination changed to:', e.target.value);
+                console.log('✅ Destination changed to:', target.value, 'Wrapper found:', !!destinationCustomWrapper);
 
-                    if (e.target.value === 'Other') {
-                        if (destinationCustomWrapper) {
-                            destinationCustomWrapper.style.display = 'block';
-                            if (destinationCustomInput) {
-                                destinationCustomInput.focus();
-                            }
-                        }
-                    } else {
-                        if (destinationCustomWrapper) {
-                            destinationCustomWrapper.style.display = 'none';
-                        }
+                if (target.value === 'Other') {
+                    if (destinationCustomWrapper) {
+                        destinationCustomWrapper.style.display = 'block';
                         if (destinationCustomInput) {
-                            destinationCustomInput.value = '';
+                            destinationCustomInput.focus();
+                            console.log('✅ Focused on destination custom input');
                         }
                     }
+                } else {
+                    if (destinationCustomWrapper) {
+                        destinationCustomWrapper.style.display = 'none';
+                    }
+                    if (destinationCustomInput) {
+                        destinationCustomInput.value = '';
+                    }
                 }
-            });
-        } else {
-            console.warn('Quote form not found');
-        }
+            }
+        }, false);
+
+        console.log('✅ Country input handlers attached');
     }
 
     // Close modal function
@@ -77,6 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
             quoteModal.classList.remove('active');
             document.body.style.overflow = ''; // Restore scrolling
             // Reset form
+            const quoteForm = document.getElementById('quoteRequestForm');
             if (quoteForm) {
                 quoteForm.reset();
             }
@@ -223,7 +226,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize quote buttons
     initializeQuoteButtons();
 
-    // Setup country input fields
+    // Setup country input fields (called once at startup)
     setupCountryInputs();
 
     // Re-initialize when language changes (for dynamic content)
