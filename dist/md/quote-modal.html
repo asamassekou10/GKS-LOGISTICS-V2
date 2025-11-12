@@ -6,89 +6,190 @@
 <div id="quoteModal" class="quote-modal-overlay">
     <div class="quote-modal-content">
         <div class="quote-modal-header">
-            <h2 data-translate="quote-form-title">Demander un Devis</h2>
+            <div class="quote-modal-header-logo">
+                <span class="gks-logo">GKS</span>
+                <span class="gks-logistics">LOGISTICS</span>
+            </div>
+            <h2 data-translate="quote-form-title">索取报价</h2>
             <button class="quote-modal-close" aria-label="关闭模态框">
                 <i class="fas fa-times"></i>
             </button>
         </div>
-        
+
         <div class="quote-modal-body">
-            <p class="quote-form-subtitle" data-translate="quote-form-subtitle">
-                Veuillez remplir le formulaire ci-dessous pour obtenir un devis personnalisé pour vos besoins logistiques.
-            </p>
-            
-                          <form name="quote-request-quick" data-netlify-honeypot="bot-field" id="quoteRequestForm">
-                  <input type="hidden" name="form-name" value="quote-request-quick">
-                  <p style="display: none;">
-                      <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                  </p>
-                  <div class="form-row">
-                      <div class="form-group">
-                          <label for="fullName" data-translate="quote-modal-full-name">全名 *</label>
-                          <input type="text" id="fullName" name="fullName" required>
-                      </div>
-                      
-                      <div class="form-group">
-                          <label for="companyName" data-translate="quote-modal-company-name">公司名称</label>
-                          <input type="text" id="companyName" name="companyName">
-                      </div>
-                  </div>
-                  
-                  <div class="form-row">
-                      <div class="form-group">
-                          <label for="email" data-translate="quote-modal-email-professional">Email *</label>
-                          <input type="email" id="email" name="email" required>
-                      </div>
-                      
-                      <div class="form-group">
-                          <label for="phoneNumber" data-translate="quote-modal-phone">电话 *</label>
-                          <input type="tel" id="phoneNumber" name="phoneNumber" required>
-                      </div>
-                  </div>
-                  
-                  <div class="form-group">
-                      <label for="freightType" data-translate="quote-modal-freight-type">货运类型 *</label>
-                      <select id="freightType" name="freightType" required>
-                          <option value="" data-translate="quote-modal-freight-type-placeholder">选择货运类型</option>
-                          <option value="air" data-translate="quote-modal-freight-air">空运</option>
-                          <option value="sea" data-translate="quote-modal-freight-sea">海运</option>
-                          <option value="road" data-translate="quote-modal-freight-road">陆运</option>
-                          <option value="warehousing" data-translate="quote-modal-freight-warehousing">仓储</option>
-                          <option value="other" data-translate="quote-modal-freight-other">其他</option>
-                      </select>
-                  </div>
-                  
-                  <div class="form-row">
-                      <div class="form-group">
-                          <label for="origin" data-translate="quote-modal-origin">起点 *</label>
-                          <input type="text" id="origin" name="origin" required>
-                      </div>
-                      
-                      <div class="form-group">
-                          <label for="destination" data-translate="quote-modal-destination">目的地 *</label>
-                          <input type="text" id="destination" name="destination" required>
-                      </div>
-                  </div>
-                  
-                  <div class="form-group">
-                      <label for="weight" data-translate="quote-modal-weight">重量（公斤）</label>
-                      <input type="number" id="weight" name="weight" min="0" step="0.01" placeholder="Ex: 100">
-                  </div>
-                  
-                  <div class="form-group">
-                      <label for="message" data-translate="quote-modal-additional-message">Détails de votre demande *</label>
-                      <textarea id="message" name="message" rows="4" required placeholder="Décrivez votre besoin (dimensions, poids, date souhaitée, services additionnels...)"></textarea>
-                  </div>
-                  
-                  <p class="required-fields-indicator">
-                      * Champs obligatoires
-                  </p>
-                  
-                  <div class="form-buttons">
-                      <button type="button" class="btn-cancel">Annuler</button>
-                      <button type="submit" class="btn-submit">Envoyer ma Demande</button>
-                  </div>
-              </form>
+            <p class="quote-form-subtitle" data-translate="quote-form-subtitle">请填写下表以获得您的物流需求的个性化报价。</p>
+
+            <form name="quote-request-quick" data-netlify-honeypot="bot-field" id="quoteRequestForm">
+                <input type="hidden" name="form-name" value="quote-request-quick">
+                <p style="display: none;">
+                    <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+
+                <!-- Contact Information Section -->
+                <div class="form-section-title" data-translate="quote-section-contact">联系信息</div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fullName" data-translate="quote-modal-full-name">全名 *</label>
+                        <input type="text" id="fullName" name="fullName" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="companyName" data-translate="quote-modal-company-name">公司名称</label>
+                        <input type="text" id="companyName" name="companyName">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email" data-translate="quote-modal-email-professional">电子邮件 *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phoneNumber" data-translate="quote-modal-phone">电话 *</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                    </div>
+                </div>
+
+                <!-- Shipment Details Section -->
+                <div class="form-section-title" data-translate="quote-section-shipment">货物详情</div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="freightType" data-translate="quote-modal-freight-type">货运类型 *</label>
+                        <select id="freightType" name="freightType" required>
+                            <option value="" data-translate="quote-modal-freight-type-placeholder">选择货运类型</option>
+                            <option value="air" data-translate="quote-modal-freight-air">空运</option>
+                            <option value="sea" data-translate="quote-modal-freight-sea">海运</option>
+                            <option value="road" data-translate="quote-modal-freight-road">陆运</option>
+                            <option value="warehousing" data-translate="quote-modal-freight-warehousing">仓储</option>
+                            <option value="other" data-translate="quote-modal-freight-other">其他</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="currency" data-translate="quote-modal-currency">货币 *</label>
+                        <select id="currency" name="currency" required>
+                            <option value="" data-translate="quote-modal-currency-placeholder">选择货币</option>
+                            <option value="USD">USD - Dollar Américain</option>
+                            <option value="EUR">EUR - Euro</option>
+                            <option value="GBP">GBP - Livre Sterling</option>
+                            <option value="XOF">XOF - Franc CFA</option>
+                            <option value="XAF">XAF - Franc CFA (CEMAC)</option>
+                            <option value="NGN">NGN - Naira Nigérian</option>
+                            <option value="GHS">GHS - Cedi Ghanéen</option>
+                            <option value="ZAR">ZAR - Rand Sud-Africain</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="origin" data-translate="quote-modal-origin">原产国 *</label>
+                        <select id="origin" name="origin" required>
+                            <option value="" data-translate="quote-modal-country-placeholder">选择国家</option>
+                            <option value="Mali">Mali</option>
+                            <option value="Senegal">Sénégal</option>
+                            <option value="Guinea">Guinée</option>
+                            <option value="Ivory Coast">Côte d'Ivoire</option>
+                            <option value="Burkina Faso">Burkina Faso</option>
+                            <option value="Niger">Niger</option>
+                            <option value="France">France</option>
+                            <option value="Turkey">Turquie</option>
+                            <option value="United States">États-Unis</option>
+                            <option value="United Arab Emirates">Émirats Arabes Unis</option>
+                            <option value="China">Chine</option>
+                            <option value="India">Inde</option>
+                            <option value="Germany">Allemagne</option>
+                            <option value="United Kingdom">Royaume-Uni</option>
+                            <option value="Spain">Espagne</option>
+                            <option value="Italy">Italie</option>
+                            <option value="Other">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="destination" data-translate="quote-modal-destination">目的国 *</label>
+                        <select id="destination" name="destination" required>
+                            <option value="" data-translate="quote-modal-country-placeholder">选择国家</option>
+                            <option value="Mali">Mali</option>
+                            <option value="Senegal">Sénégal</option>
+                            <option value="Guinea">Guinée</option>
+                            <option value="Ivory Coast">Côte d'Ivoire</option>
+                            <option value="Burkina Faso">Burkina Faso</option>
+                            <option value="Niger">Niger</option>
+                            <option value="France">France</option>
+                            <option value="Turkey">Turquie</option>
+                            <option value="United States">États-Unis</option>
+                            <option value="United Arab Emirates">Émirats Arabes Unis</option>
+                            <option value="China">Chine</option>
+                            <option value="India">Inde</option>
+                            <option value="Germany">Allemagne</option>
+                            <option value="United Kingdom">Royaume-Uni</option>
+                            <option value="Spain">Espagne</option>
+                            <option value="Italy">Italie</option>
+                            <option value="Other">Autre</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="weight" data-translate="quote-modal-weight">重量 (kg)</label>
+                        <input type="number" id="weight" name="weight" min="0" step="0.01" placeholder="Ex: 100">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="volume" data-translate="quote-modal-volume">体积 (m³)</label>
+                        <input type="number" id="volume" name="volume" min="0" step="0.01" placeholder="Ex: 0.5">
+                    </div>
+                </div>
+
+                <!-- Logistics Options Section -->
+                <div class="form-section-title" data-translate="quote-section-options">物流选项</div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="packaging" data-translate="quote-modal-packaging">包装类型</label>
+                        <select id="packaging" name="packaging">
+                            <option value="" data-translate="quote-modal-packaging-placeholder">选择类型</option>
+                            <option value="standard" data-translate="quote-modal-packaging-standard">标准</option>
+                            <option value="fragile" data-translate="quote-modal-packaging-fragile">易碎品</option>
+                            <option value="heavy" data-translate="quote-modal-packaging-heavy">重物</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="clearance" data-translate="quote-modal-clearance">清关</label>
+                        <select id="clearance" name="clearance">
+                            <option value="no-clearance" data-translate="quote-modal-clearance-no">不包括清关</option>
+                            <option value="with-clearance" data-translate="quote-modal-clearance-yes">包括清关</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="doorDelivery" name="doorDelivery" value="yes">
+                        <span data-translate="quote-modal-door-delivery">上门配送</span>
+                    </label>
+                </div>
+
+                <!-- Additional Details Section -->
+                <div class="form-section-title" data-translate="quote-section-details">附加详情</div>
+
+                <div class="form-group">
+                    <label for="message" data-translate="quote-modal-additional-message">请求详情 *</label>
+                    <textarea id="message" name="message" rows="4" required placeholder="Décrivez votre besoin (dimensions, poids, date souhaitée, services additionnels...)"></textarea>
+                </div>
+
+                <p class="required-fields-indicator" data-translate="quote-modal-required-fields">* 必填字段</p>
+
+                <div class="form-buttons">
+                    <button type="button" class="btn-cancel" data-translate="quote-modal-btn-cancel">取消</button>
+                    <button type="submit" class="btn-submit" data-translate="quote-modal-btn-submit">提交请求</button>
+                </div>
+            </form>
 
         </div>
     </div>

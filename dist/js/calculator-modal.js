@@ -8,41 +8,29 @@
   let isModalOpen = false;
 
   // Open modal function - globally accessible
+  // Redirects to the new enhanced quote request modal
   window.openQuoteCalculator = function() {
-    console.log('Opening quote calculator modal...');
-    
-    // Prevent opening if already open
-    if (isModalOpen) {
-      console.log('Modal is already open');
-      return;
-    }
-    
-    const modal = document.getElementById('quoteCalculatorModal');
-    if (modal) {
+    console.log('Opening quote request modal...');
+
+    // Redirect to the new enhanced quote modal
+    const quoteModal = document.getElementById('quoteModal');
+    if (quoteModal) {
       isModalOpen = true;
-      modal.classList.add('active');
-      
-      // Save current scroll position
-      const scrollY = window.scrollY;
-      document.body.style.position = 'fixed';
-      document.body.style.top = `-${scrollY}px`;
-      document.body.style.width = '100%';
+      quoteModal.classList.add('active');
       document.body.style.overflow = 'hidden';
-      
-      // Store scroll position for restoration
-      modal.setAttribute('data-scroll-y', scrollY.toString());
-      
+
       // Focus on first input for better UX
       setTimeout(() => {
-        const firstSelect = modal.querySelector('#currency');
-        if (firstSelect) {
-          firstSelect.focus();
+        const firstInput = quoteModal.querySelector('input, select, textarea');
+        if (firstInput) {
+          firstInput.focus();
         }
-      }, 400);
+      }, 100);
+
+      console.log('✅ Quote request modal opened');
     } else {
-      console.error('Calculator modal not found! Make sure the modal HTML is included in the page.');
-      // Try to show helpful error to user
-      alert('Calculator modal is not available on this page. Please try the homepage.');
+      console.error('Quote modal not found! Make sure the modal HTML is included in the page.');
+      alert('Quote form is not available on this page. Please try the homepage.');
     }
   };
 

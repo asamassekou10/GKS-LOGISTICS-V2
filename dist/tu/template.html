@@ -609,89 +609,190 @@
   <div id="quoteModal" class="quote-modal-overlay">
     <div class="quote-modal-content">
       <div class="quote-modal-header">
-        <h2 data-translate="quote-form-title">Demander un Devis</h2>
+        <div class="quote-modal-header-logo">
+          <span class="gks-logo">GKS</span>
+          <span class="gks-logistics">LOGISTICS</span>
+        </div>
+        <h2 data-translate="quote-form-title">Teklif İste</h2>
         <button class="quote-modal-close" aria-label="Modalı kapat">
           <i class="fas fa-times"></i>
         </button>
       </div>
 
       <div class="quote-modal-body">
-        <p class="quote-form-subtitle" data-translate="quote-form-subtitle">
-          Veuillez remplir le formulaire ci-dessous pour obtenir un devis personnalisé pour vos besoins logistiques.
-        </p>
+        <p class="quote-form-subtitle" data-translate="quote-form-subtitle">Lojistik ihtiyaçlarınız için kişiselleştirilmiş bir teklif almak için lütfen aşağıdaki formu doldurun.</p>
 
-                      <form name="quote-request-quick" data-netlify-honeypot="bot-field" id="quoteRequestForm">
-                  <input type="hidden" name="form-name" value="quote-request-quick">
-                  <p style="display: none;">
-                      <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                  </p>
-                  <div class="form-row">
-                      <div class="form-group">
-                          <label for="fullName" data-translate="quote-modal-full-name">Ad Soyad *</label>
-                          <input type="text" id="fullName" name="fullName" required>
-                      </div>
-                      
-                      <div class="form-group">
-                          <label for="companyName" data-translate="quote-modal-company-name">Şirket Adı</label>
-                          <input type="text" id="companyName" name="companyName">
-                      </div>
-                  </div>
-                  
-                  <div class="form-row">
-                      <div class="form-group">
-                          <label for="email" data-translate="quote-modal-email-professional">Email *</label>
-                          <input type="email" id="email" name="email" required>
-                      </div>
-                      
-                      <div class="form-group">
-                          <label for="phoneNumber" data-translate="quote-modal-phone">Telefon *</label>
-                          <input type="tel" id="phoneNumber" name="phoneNumber" required>
-                      </div>
-                  </div>
-                  
-                  <div class="form-group">
-                      <label for="freightType" data-translate="quote-modal-freight-type">Kargo Türü *</label>
-                      <select id="freightType" name="freightType" required>
-                          <option value="" data-translate="quote-modal-freight-type-placeholder">Kargo türünü seçin</option>
-                          <option value="air" data-translate="quote-modal-freight-air">Hava Taşımacılığı</option>
-                          <option value="sea" data-translate="quote-modal-freight-sea">Deniz Taşımacılığı</option>
-                          <option value="road" data-translate="quote-modal-freight-road">Karayolu Taşımacılığı</option>
-                          <option value="warehousing" data-translate="quote-modal-freight-warehousing">Depolama</option>
-                          <option value="other" data-translate="quote-modal-freight-other">Diğer</option>
-                      </select>
-                  </div>
-                  
-                  <div class="form-row">
-                      <div class="form-group">
-                          <label for="origin" data-translate="quote-modal-origin">Kaynak *</label>
-                          <input type="text" id="origin" name="origin" required>
-                      </div>
-                      
-                      <div class="form-group">
-                          <label for="destination" data-translate="quote-modal-destination">Hedef *</label>
-                          <input type="text" id="destination" name="destination" required>
-                      </div>
-                  </div>
-                  
-                  <div class="form-group">
-                      <label for="weight" data-translate="quote-modal-weight">Ağırlık (kg)</label>
-                      <input type="number" id="weight" name="weight" min="0" step="0.01" placeholder="Ex: 100">
-                  </div>
-                  
-                  <div class="form-group">
-                      <label for="message" data-translate="quote-modal-additional-message">Détails de votre demande *</label>
-                      <textarea id="message" name="message" rows="4" required placeholder="Décrivez votre besoin (dimensions, poids, date souhaitée, services additionnels...)"></textarea>
-                  </div>
-                  
-                  <p class="required-fields-indicator">
-                      * Champs obligatoires
-                  </p>
-                  
-                  <div class="form-buttons">
-                      <button type="button" class="btn-cancel">Annuler</button>
-                      <button type="submit" class="btn-submit">Envoyer ma Demande</button>
-                  </div>
-              </form>
+        <form name="quote-request-quick" data-netlify-honeypot="bot-field" id="quoteRequestForm">
+          <input type="hidden" name="form-name" value="quote-request-quick">
+          <p style="display: none;">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+
+          <!-- Contact Information Section -->
+          <div class="form-section-title" data-translate="quote-section-contact">İletişim Bilgileri</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName" data-translate="quote-modal-full-name">Tam Ad *</label>
+              <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <div class="form-group">
+              <label for="companyName" data-translate="quote-modal-company-name">Şirket Adı</label>
+              <input type="text" id="companyName" name="companyName">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email" data-translate="quote-modal-email-professional">E-posta *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phoneNumber" data-translate="quote-modal-phone">Telefon *</label>
+              <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            </div>
+          </div>
+
+          <!-- Shipment Details Section -->
+          <div class="form-section-title" data-translate="quote-section-shipment">Gönderi Detayları</div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="freightType" data-translate="quote-modal-freight-type">Kargo Türü *</label>
+              <select id="freightType" name="freightType" required>
+                <option value="" data-translate="quote-modal-freight-type-placeholder">Kargo türünü seçin</option>
+                <option value="air" data-translate="quote-modal-freight-air">Hava Kargo</option>
+                <option value="sea" data-translate="quote-modal-freight-sea">Deniz Kargo</option>
+                <option value="road" data-translate="quote-modal-freight-road">Kara Kargo</option>
+                <option value="warehousing" data-translate="quote-modal-freight-warehousing">Depolama</option>
+                <option value="other" data-translate="quote-modal-freight-other">Diğer</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="currency" data-translate="quote-modal-currency">Para Birimi *</label>
+              <select id="currency" name="currency" required>
+                <option value="" data-translate="quote-modal-currency-placeholder">Para birimi seçin</option>
+                <option value="USD">USD - Dollar Américain</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="GBP">GBP - Livre Sterling</option>
+                <option value="XOF">XOF - Franc CFA</option>
+                <option value="XAF">XAF - Franc CFA (CEMAC)</option>
+                <option value="NGN">NGN - Naira Nigérian</option>
+                <option value="GHS">GHS - Cedi Ghanéen</option>
+                <option value="ZAR">ZAR - Rand Sud-Africain</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="origin" data-translate="quote-modal-origin">Menşe Ülke *</label>
+              <select id="origin" name="origin" required>
+                <option value="" data-translate="quote-modal-country-placeholder">Ülke seçin</option>
+                <option value="Mali">Mali</option>
+                <option value="Senegal">Sénégal</option>
+                <option value="Guinea">Guinée</option>
+                <option value="Ivory Coast">Côte d'Ivoire</option>
+                <option value="Burkina Faso">Burkina Faso</option>
+                <option value="Niger">Niger</option>
+                <option value="France">France</option>
+                <option value="Turkey">Turquie</option>
+                <option value="United States">États-Unis</option>
+                <option value="United Arab Emirates">Émirats Arabes Unis</option>
+                <option value="China">Chine</option>
+                <option value="India">Inde</option>
+                <option value="Germany">Allemagne</option>
+                <option value="United Kingdom">Royaume-Uni</option>
+                <option value="Spain">Espagne</option>
+                <option value="Italy">Italie</option>
+                <option value="Other">Autre</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="destination" data-translate="quote-modal-destination">Hedef Ülke *</label>
+              <select id="destination" name="destination" required>
+                <option value="" data-translate="quote-modal-country-placeholder">Ülke seçin</option>
+                <option value="Mali">Mali</option>
+                <option value="Senegal">Sénégal</option>
+                <option value="Guinea">Guinée</option>
+                <option value="Ivory Coast">Côte d'Ivoire</option>
+                <option value="Burkina Faso">Burkina Faso</option>
+                <option value="Niger">Niger</option>
+                <option value="France">France</option>
+                <option value="Turkey">Turquie</option>
+                <option value="United States">États-Unis</option>
+                <option value="United Arab Emirates">Émirats Arabes Unis</option>
+                <option value="China">Chine</option>
+                <option value="India">Inde</option>
+                <option value="Germany">Allemagne</option>
+                <option value="United Kingdom">Royaume-Uni</option>
+                <option value="Spain">Espagne</option>
+                <option value="Italy">Italie</option>
+                <option value="Other">Autre</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="weight" data-translate="quote-modal-weight">Ağırlık (kg)</label>
+              <input type="number" id="weight" name="weight" min="0" step="0.01" placeholder="Ex: 100">
+            </div>
+
+            <div class="form-group">
+              <label for="volume" data-translate="quote-modal-volume">Hacim (m³)</label>
+              <input type="number" id="volume" name="volume" min="0" step="0.01" placeholder="Ex: 0.5">
+            </div>
+          </div>
+
+          <!-- Logistics Options Section -->
+          <div class="form-section-title" data-translate="quote-section-options">Lojistik Seçenekleri</div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="packaging" data-translate="quote-modal-packaging">Paketleme Türü</label>
+              <select id="packaging" name="packaging">
+                <option value="" data-translate="quote-modal-packaging-placeholder">Türü seçin</option>
+                <option value="standard" data-translate="quote-modal-packaging-standard">Standart</option>
+                <option value="fragile" data-translate="quote-modal-packaging-fragile">Kırılgan</option>
+                <option value="heavy" data-translate="quote-modal-packaging-heavy">Ağır</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="clearance" data-translate="quote-modal-clearance">Gümrük Tasfiyesi</label>
+              <select id="clearance" name="clearance">
+                <option value="no-clearance" data-translate="quote-modal-clearance-no">Gümrük Tasfiyesi Olmadan</option>
+                <option value="with-clearance" data-translate="quote-modal-clearance-yes">Gümrük Tasfiyesi İle</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="doorDelivery" name="doorDelivery" value="yes">
+              <span data-translate="quote-modal-door-delivery">Kapıdan Kapıya Teslimat</span>
+            </label>
+          </div>
+
+          <!-- Additional Details Section -->
+          <div class="form-section-title" data-translate="quote-section-details">Ek Detaylar</div>
+
+          <div class="form-group">
+            <label for="message" data-translate="quote-modal-additional-message">İstek Detayları *</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Décrivez votre besoin (dimensions, poids, date souhaitée, services additionnels...)"></textarea>
+          </div>
+
+          <p class="required-fields-indicator" data-translate="quote-modal-required-fields">* Zorunlu alanlar</p>
+
+          <div class="form-buttons">
+            <button type="button" class="btn-cancel" data-translate="quote-modal-btn-cancel">İptal</button>
+            <button type="submit" class="btn-submit" data-translate="quote-modal-btn-submit">İsteği Gönder</button>
+          </div>
+        </form>
 
       </div>
     </div>

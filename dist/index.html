@@ -278,7 +278,7 @@
             <div class="stat-icon-mini">
               <i class="fas fa-globe"></i>
             </div>
-            <span class="stat-value">10+</span>
+            <span class="stat-value">220+</span>
             <span class="stat-label" data-translate="welcome-stat-countries">Pays</span>
           </div>
           <div class="welcome-stat-item">
@@ -318,7 +318,7 @@
             </div>
             <div class="stat-item">
               <i class="fas fa-globe"></i>
-              <span data-translate="stats-15-countries">15+ pays</span>
+              <span data-translate="stats-15-countries">220+ pays</span>
             </div>
           </div>
           <div class="service-card-buttons">
@@ -337,7 +337,7 @@
             </div>
             <div class="stat-item">
               <i class="fas fa-globe"></i>
-              <span data-translate="stats-15-countries">15+ pays</span>
+              <span data-translate="stats-15-countries">220+ pays</span>
             </div>
           </div>
           <div class="service-card-buttons">
@@ -356,7 +356,7 @@
             </div>
             <div class="stat-item">
               <i class="fas fa-globe"></i>
-              <span data-translate="stats-15-countries">15+ pays</span>
+              <span data-translate="stats-15-countries">220+ pays</span>
             </div>
           </div>
           <div class="service-card-buttons">
@@ -375,7 +375,7 @@
             </div>
             <div class="stat-item">
               <i class="fas fa-globe"></i>
-              <span data-translate="stats-15-countries">15+ pays</span>
+              <span data-translate="stats-15-countries">220+ pays</span>
             </div>
           </div>
           <div class="service-card-buttons">
@@ -394,7 +394,7 @@
             </div>
             <div class="stat-item">
               <i class="fas fa-globe"></i>
-              <span data-translate="stats-15-countries">15+ pays</span>
+              <span data-translate="stats-15-countries">220+ pays</span>
             </div>
           </div>
           <div class="service-card-buttons">
@@ -725,7 +725,7 @@
           <div class="stat-icon">
             <i class="fas fa-globe"></i>
           </div>
-          <h3 class="stat-number" data-translate="stats-15-countries">15+ pays</h3>
+          <h3 class="stat-number" data-translate="stats-15-countries">220+ pays</h3>
           <p data-translate="about-stats-countries">Pays Desservis</p>
         </div>
         <div class="stat">
@@ -1531,93 +1531,249 @@
 
   <!-- Quote Modal -->
   <link rel="stylesheet" href="/css/quote-modal.css">
-  <div id="quoteModal" class="quote-modal-overlay">
-      <div class="quote-modal-content">
-          <div class="quote-modal-header">
-              <h2 data-translate="quote-modal-title">Demander un Devis</h2>
-              <button class="quote-modal-close" aria-label="Close modal">
-                  <i class="fas fa-times"></i>
-              </button>
-          </div>
-          
-          <div class="quote-modal-body">
-              <p class="quote-form-subtitle" data-translate="quote-modal-subtitle">Remplissez ce formulaire pour recevoir un devis personnalisé</p>
-              
-                            <form name="quote-request-quick" data-netlify-honeypot="bot-field" id="quoteRequestForm">
-                  <input type="hidden" name="form-name" value="quote-request-quick">
-                  <p style="display: none;">
-                      <label>Don't fill this out if you're human: <input name="bot-field" /></label>
-                  </p>
-                  <div class="form-row">
-                      <div class="form-group">
-                          <label for="fullName" data-translate="quote-modal-full-name">Nom Complet *</label>
-                          <input type="text" id="fullName" name="fullName" required>
-                      </div>
-                      
-                      <div class="form-group">
-                          <label for="companyName" data-translate="quote-modal-company-name">Nom de l'Entreprise</label>
-                          <input type="text" id="companyName" name="companyName">
-                      </div>
-                  </div>
-                  
-                  <div class="form-row">
-                      <div class="form-group">
-                          <label for="email" data-translate="quote-modal-email-professional">Email *</label>
-                          <input type="email" id="email" name="email" required>
-                      </div>
-                      
-                      <div class="form-group">
-                          <label for="phoneNumber" data-translate="quote-modal-phone">Téléphone *</label>
-                          <input type="tel" id="phoneNumber" name="phoneNumber" required>
-                      </div>
-                  </div>
-                  
-                  <div class="form-group">
-                      <label for="freightType" data-translate="quote-modal-freight-type">Type de Fret *</label>
-                      <select id="freightType" name="freightType" required>
-                          <option value="" data-translate="quote-modal-freight-type-placeholder">Sélectionnez le type de fret</option>
-                          <option value="air" data-translate="quote-modal-freight-air">Fret Aérien</option>
-                          <option value="sea" data-translate="quote-modal-freight-sea">Fret Maritime</option>
-                          <option value="road" data-translate="quote-modal-freight-road">Fret Routier</option>
-                          <option value="warehousing" data-translate="quote-modal-freight-warehousing">Entreposage</option>
-                          <option value="other" data-translate="quote-modal-freight-other">Autre</option>
-                      </select>
-                  </div>
-                  
-                  <div class="form-row">
-                      <div class="form-group">
-                          <label for="origin" data-translate="quote-modal-origin">Origine *</label>
-                          <input type="text" id="origin" name="origin" required>
-                      </div>
-                      
-                      <div class="form-group">
-                          <label for="destination" data-translate="quote-modal-destination">Destination *</label>
-                          <input type="text" id="destination" name="destination" required>
-                      </div>
-                  </div>
-                  
-                  <div class="form-group">
-                      <label for="weight" data-translate="quote-modal-weight">Poids (kg)</label>
-                      <input type="number" id="weight" name="weight" min="0" step="0.01" placeholder="Ex: 100">
-                  </div>
-                  
-                  <div class="form-group">
-                      <label for="message" data-translate="quote-modal-additional-message">Détails de votre demande *</label>
-                      <textarea id="message" name="message" rows="4" required placeholder="Décrivez votre besoin (dimensions, poids, date souhaitée, services additionnels...)"></textarea>
-                  </div>
-                  
-                  <p class="required-fields-indicator">
-                      * Champs obligatoires
-                  </p>
-                  
-                  <div class="form-buttons">
-                      <button type="button" class="btn-cancel">Annuler</button>
-                      <button type="submit" class="btn-submit">Envoyer ma Demande</button>
-                  </div>
-              </form>
+  <script src="/js/quote-modal.js"></script>
 
-          </div>
+  <div id="quoteModal" class="quote-modal-overlay">
+    <div class="quote-modal-content">
+      <div class="quote-modal-header">
+        <h2 data-translate="quote-form-title">Demander un Devis</h2>
+        <button class="quote-modal-close" aria-label="Close modal">
+          <i class="fas fa-times"></i>
+        </button>
       </div>
+
+      <div class="quote-modal-body">
+        <p class="quote-form-subtitle" data-translate="quote-form-subtitle">Veuillez remplir le formulaire ci-dessous pour obtenir un devis personnalisé pour vos besoins logistiques.</p>
+
+        <form name="quote-request-quick" data-netlify-honeypot="bot-field" id="quoteRequestForm">
+          <input type="hidden" name="form-name" value="quote-request-quick">
+          <p style="display: none;">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+
+          <!-- Contact Information Section -->
+          <div class="form-section-title" data-translate="quote-section-contact">Informations de Contact</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName" data-translate="quote-modal-full-name">Nom Complet *</label>
+              <input type="text" id="fullName" name="fullName" required>
+            </div>
+
+            <div class="form-group">
+              <label for="companyName" data-translate="quote-modal-company-name">Nom de l'Entreprise</label>
+              <input type="text" id="companyName" name="companyName">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email" data-translate="quote-modal-email-professional">Email *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phoneNumber" data-translate="quote-modal-phone">Téléphone *</label>
+              <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            </div>
+          </div>
+
+          <!-- Shipment Details Section -->
+          <div class="form-section-title" data-translate="quote-section-shipment">Détails de l'Expédition</div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="freightType" data-translate="quote-modal-freight-type">Type de Fret *</label>
+              <select id="freightType" name="freightType" required>
+                <option value="" data-translate="quote-modal-freight-type-placeholder">Sélectionner le type de fret</option>
+                <option value="air" data-translate="quote-modal-freight-air">Fret Aérien</option>
+                <option value="sea" data-translate="quote-modal-freight-sea">Fret Maritime</option>
+                <option value="road" data-translate="quote-modal-freight-road">Fret Routier</option>
+                <option value="warehousing" data-translate="quote-modal-freight-warehousing">Entreposage</option>
+                <option value="other" data-translate="quote-modal-freight-other">Autres</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="currency" data-translate="quote-modal-currency">Devise *</label>
+              <select id="currency" name="currency" required>
+                <option value="" data-translate="quote-modal-currency-placeholder">Sélectionner une devise</option>
+                <option value="USD">USD - Dollar Américain</option>
+                <option value="EUR">EUR - Euro</option>
+                <option value="GBP">GBP - Livre Sterling</option>
+                <option value="JPY">JPY - Yen Japonais</option>
+                <option value="AUD">AUD - Dollar Australien</option>
+                <option value="CAD">CAD - Dollar Canadien</option>
+                <option value="CHF">CHF - Franc Suisse</option>
+                <option value="CNY">CNY - Yuan Chinois</option>
+                <option value="INR">INR - Roupie Indienne</option>
+                <option value="AED">AED - Dirham des Émirats</option>
+                <option value="XOF">XOF - Franc CFA</option>
+                <option value="XAF">XAF - Franc CFA (CEMAC)</option>
+                <option value="NGN">NGN - Naira Nigérian</option>
+                <option value="GHS">GHS - Cedi Ghanéen</option>
+                <option value="ZAR">ZAR - Rand Sud-Africain</option>
+                <option value="KES">KES - Shilling Kenyan</option>
+                <option value="EGP">EGP - Livre Égyptienne</option>
+                <option value="SGD">SGD - Dollar de Singapour</option>
+                <option value="TRY">TRY - Lire Turque</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="origin" data-translate="quote-modal-origin">Pays d'Origine *</label>
+              <select id="origin" name="origin" required>
+                <option value="" data-translate="quote-modal-country-placeholder">Sélectionner un pays</option>
+                <option value="Mali">Mali</option>
+                <option value="Senegal">Sénégal</option>
+                <option value="Guinea">Guinée</option>
+                <option value="Ivory Coast">Côte d'Ivoire</option>
+                <option value="Burkina Faso">Burkina Faso</option>
+                <option value="Niger">Niger</option>
+                <option value="Benin">Bénin</option>
+                <option value="Cameroon">Cameroun</option>
+                <option value="Gabon">Gabon</option>
+                <option value="Mauritania">Mauritanie</option>
+                <option value="France">France</option>
+                <option value="Belgium">Belgique</option>
+                <option value="Netherlands">Pays-Bas</option>
+                <option value="Germany">Allemagne</option>
+                <option value="Spain">Espagne</option>
+                <option value="Italy">Italie</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Turkey">Turquie</option>
+                <option value="United Kingdom">Royaume-Uni</option>
+                <option value="United States">États-Unis</option>
+                <option value="Canada">Canada</option>
+                <option value="Brazil">Brésil</option>
+                <option value="China">Chine</option>
+                <option value="India">Inde</option>
+                <option value="Japan">Japon</option>
+                <option value="Singapore">Singapour</option>
+                <option value="United Arab Emirates">Émirats Arabes Unis</option>
+                <option value="Saudi Arabia">Arabie Saoudite</option>
+                <option value="Thailand">Thaïlande</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="Malaysia">Malaisie</option>
+                <option value="Australia">Australie</option>
+                <option value="Other">Autre</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="destination" data-translate="quote-modal-destination">Pays de Destination *</label>
+              <select id="destination" name="destination" required>
+                <option value="" data-translate="quote-modal-country-placeholder">Sélectionner un pays</option>
+                <option value="Mali">Mali</option>
+                <option value="Senegal">Sénégal</option>
+                <option value="Guinea">Guinée</option>
+                <option value="Ivory Coast">Côte d'Ivoire</option>
+                <option value="Burkina Faso">Burkina Faso</option>
+                <option value="Niger">Niger</option>
+                <option value="Benin">Bénin</option>
+                <option value="Cameroon">Cameroun</option>
+                <option value="Gabon">Gabon</option>
+                <option value="Mauritania">Mauritanie</option>
+                <option value="France">France</option>
+                <option value="Belgium">Belgique</option>
+                <option value="Netherlands">Pays-Bas</option>
+                <option value="Germany">Allemagne</option>
+                <option value="Spain">Espagne</option>
+                <option value="Italy">Italie</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Turkey">Turquie</option>
+                <option value="United Kingdom">Royaume-Uni</option>
+                <option value="United States">États-Unis</option>
+                <option value="Canada">Canada</option>
+                <option value="Brazil">Brésil</option>
+                <option value="China">Chine</option>
+                <option value="India">Inde</option>
+                <option value="Japan">Japon</option>
+                <option value="Singapore">Singapour</option>
+                <option value="United Arab Emirates">Émirats Arabes Unis</option>
+                <option value="Saudi Arabia">Arabie Saoudite</option>
+                <option value="Thailand">Thaïlande</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="Malaysia">Malaisie</option>
+                <option value="Australia">Australie</option>
+                <option value="Other">Autre</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Hidden conditional fields for "Autre" country selection -->
+          <div class="form-row" id="originOtherField" style="display: none;">
+            <div class="form-group">
+              <label for="originOther" data-translate="quote-modal-country-specify-origin">Veuillez préciser le pays d'origine</label>
+              <input type="text" id="originOther" name="originOther" placeholder="">
+            </div>
+          </div>
+
+          <div class="form-row" id="destinationOtherField" style="display: none;">
+            <div class="form-group">
+              <label for="destinationOther" data-translate="quote-modal-country-specify-destination">Veuillez préciser le pays de destination</label>
+              <input type="text" id="destinationOther" name="destinationOther" placeholder="">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="weight" data-translate="quote-modal-weight">Poids (kg)</label>
+              <input type="number" id="weight" name="weight" min="0" step="0.01" placeholder="Ex: 100">
+            </div>
+
+            <div class="form-group">
+              <label for="volume" data-translate="quote-modal-volume">Volume (m³)</label>
+              <input type="number" id="volume" name="volume" min="0" step="0.01" placeholder="Ex: 0.5">
+            </div>
+          </div>
+
+          <!-- Logistics Options Section -->
+          <div class="form-section-title" data-translate="quote-section-options">Options Logistiques</div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="packaging" data-translate="quote-modal-packaging">Type d'Emballage</label>
+              <select id="packaging" name="packaging">
+                <option value="" data-translate="quote-modal-packaging-placeholder">Sélectionner le type</option>
+                <option value="fragile" data-translate="quote-modal-packaging-fragile">Fragile</option>
+                <option value="heavy" data-translate="quote-modal-packaging-heavy">Lourd</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="clearance" data-translate="quote-modal-clearance">Dédouanement</label>
+              <select id="clearance" name="clearance">
+                <option value="no-clearance" data-translate="quote-modal-clearance-no">Sans Dédouanement</option>
+                <option value="with-clearance" data-translate="quote-modal-clearance-yes">Avec Dédouanement</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="doorDelivery" name="doorDelivery" value="yes">
+            <label for="doorDelivery" class="checkbox-label" data-translate="quote-modal-door-delivery">Livraison à Domicile</label>
+          </div>
+
+          <!-- Additional Details Section -->
+          <div class="form-section-title" data-translate="quote-section-details">Détails Supplémentaires</div>
+
+          <div class="form-group">
+            <label for="message" data-translate="quote-modal-additional-message">Détails de votre demande *</label>
+            <textarea id="message" name="message" rows="4" required placeholder="Décrivez votre besoin (dimensions, poids, date souhaitée, services additionnels...)"></textarea>
+          </div>
+
+          <p class="required-fields-indicator" data-translate="quote-modal-required-fields">* Champs obligatoires</p>
+
+          <div class="form-buttons">
+            <button type="button" class="btn-cancel" data-translate="quote-modal-btn-cancel">Annuler</button>
+            <button type="submit" class="btn-submit" data-translate="quote-modal-btn-submit">Envoyer ma Demande</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
   </div>
 
   <!-- JS Scripts -->
