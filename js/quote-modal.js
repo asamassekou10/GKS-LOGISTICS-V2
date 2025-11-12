@@ -1,8 +1,7 @@
 // Quote Modal JavaScript
 document.addEventListener('DOMContentLoaded', function() {
     const quoteModal = document.getElementById('quoteModal');
-    const quoteForm = document.getElementById('quoteRequestForm');
-    
+
     // Open modal function
     function openQuoteModal() {
         if (quoteModal) {
@@ -12,9 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(setupCountryInputs, 100);
         }
     }
-    
+
     // Handle custom country input fields using event delegation
     function setupCountryInputs() {
+        // Get fresh reference to form element
+        const quoteForm = document.getElementById('quoteRequestForm');
         // Use event delegation on the form to handle country selections
         if (quoteForm) {
             quoteForm.addEventListener('change', function(e) {
@@ -77,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
             quoteModal.classList.remove('active');
             document.body.style.overflow = ''; // Restore scrolling
             // Reset form
+            const quoteForm = document.getElementById('quoteRequestForm');
             if (quoteForm) {
                 quoteForm.reset();
             }
@@ -223,9 +225,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize quote buttons
     initializeQuoteButtons();
 
-    // Setup country input fields
-    setupCountryInputs();
-
+    // Setup country input fields when modal opens (called from openQuoteModal)
     // Re-initialize when language changes (for dynamic content)
     const languageToggle = document.getElementById('languageToggle');
     if (languageToggle) {
